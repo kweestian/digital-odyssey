@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  enverse-landing-production:
+    build: .
+    image: registry.gitlab.com/enverse-labs/enverse-landing:production
+    env_file:
+      - .env
+    environment:
+      VIRTUAL_HOST: landing.enverselabs.com, enverselabs.com
+      VIRTUAL_PORT: 4010
+      LETSENCRYPT_HOST: landing.enverselabs.com, enverselabs.com
+      PORT: 4010
+    ports:
+      - '4010:4010'
+    container_name: enverse-landing-production

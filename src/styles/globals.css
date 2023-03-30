@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img,
+  video {
+    max-width: initial;
+    height: initial;
+  }
+}
+
+:root {
+  --color-light: #f3f4f6;
+  --color-green-lightest: #fafffb;
+  --color-green-mint: #d8f3dc;
+  --color-green-medium: #52b788;
+  --color-green-army: #2d6a4f;
+  --color-black-light: #021710;
+  --color-black: #000000;
+  --color-gray: #4f5d58;
+}
+
+::selection {
+  background-color: var(--color-green-army);
+  color: white;
+}
+
+@media print {
+  header,
+  footer,
+  img {
+    display: none;
+  }
+}
+
+html,
+body {
+  height: 100% !important;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  line-height: 1.2;
+}
+
+body {
+  font-size: 18px;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3.9rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* section {
+  font-size: 1.5rem;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* MOBILE STUFF */
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 3.1rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+}

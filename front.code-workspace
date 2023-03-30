@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": "./"
+    }
+  ],
+  "settings": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "css.lint.validProperties": ["speak"],    
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Cascadia Code', 'Fira Code'",
+  }
+}

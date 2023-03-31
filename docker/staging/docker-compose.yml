@@ -4,7 +4,7 @@ services:
     build:
       context: ../../
       dockerfile: docker/staging/Dockerfile
-    image: registry.gitlab.com/heretictech/digital-odyssey:staging
+    image: registry.gitlab.com/enverse-labs/digital-odyssey:staging
     # volumes:
     #   - ./:/app
     #   - /app/node_modules

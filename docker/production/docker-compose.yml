@@ -4,7 +4,7 @@ services:
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
-    image: registry.gitlab.com/heretictech/digital-odyssey:production
+    image: registry.gitlab.com/enverse-labs/digital-odyssey:production
     # volumes:
     #   - ./:/app
     #   - /app/node_modules

@@ -16,4 +16,9 @@ services:
     ports:
       - '4010:4010'
     container_name: digital-odyssey-staging
-    network_mode: bridge
+    networks:
+      - nginx_proxy_network
+
+networks:
+  nginx_proxy_network:
+    external: true

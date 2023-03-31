@@ -16,4 +16,9 @@ services:
     ports:
       - '4009:4009'
     container_name: digital-odyssey-production
-    network_mode: bridge
+    networks:
+      - nginx_proxy_network
+
+networks:
+  nginx_proxy_network:
+    external: true

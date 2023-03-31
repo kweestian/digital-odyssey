@@ -27,7 +27,7 @@ push-staging: ## push the image to gitlab registry.
 	docker compose -f ./docker/staging/docker-compose.yml push
 
 .PHONY: pull-staging
-build-staging: ## Build the staging docker image.
+pull-staging: ## Build the staging docker image.
 	docker compose -f ./docker/staging/docker-compose.yml pull
   
 .PHONY: build-production
@@ -35,7 +35,7 @@ build-production: ## Build the production docker image.
 	docker compose -f ./docker/production/docker-compose.yml build
 
 .PHONY: pull-production
-build-production: ## Build the production docker image.
+pull-production: ## Build the production docker image.
 	docker compose -f ./docker/production/docker-compose.yml pull
 
 .PHONY: push-production

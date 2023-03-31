@@ -10,7 +10,7 @@ services:
 before_script:
   ## Add pnpm for linting etc
 
-  - yarn global add pnpm
+  - wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
   ##
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)

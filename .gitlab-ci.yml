@@ -1,6 +1,6 @@
 stages:
-  - deploy_staging
   - test
+  - deploy_staging
 
 image: docker:latest
 

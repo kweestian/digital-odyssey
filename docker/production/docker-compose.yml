@@ -10,11 +10,11 @@ services:
     #   - /app/node_modules
     environment:
       VIRTUAL_HOST: digital-odysser.enverselabs.com
-      VIRTUAL_PORT: 4009
+      VIRTUAL_PORT: 4112
       LETSENCRYPT_HOST: digital-odysser.enverselabs.com
-      PORT: 4009
+      PORT: 4112
     ports:
-      - '4009:4009'
+      - '4112:4112'
     container_name: digital-odyssey-production
     networks:
       - nginx_proxy_network

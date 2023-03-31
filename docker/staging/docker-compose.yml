@@ -10,11 +10,11 @@ services:
     #   - /app/node_modules
     environment:
       VIRTUAL_HOST: digital-odyssey-staging.enverselabs.com
-      VIRTUAL_PORT: 4010
+      VIRTUAL_PORT: 4111
       LETSENCRYPT_HOST: digital-odyssey-staging.enverselabs.com
-      PORT: 4010
+      PORT: 4111
     ports:
-      - '4010:4010'
+      - '4111:4111'
     container_name: digital-odyssey-staging
     networks:
       - nginx_proxy_network

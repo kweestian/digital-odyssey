@@ -53,6 +53,7 @@ test_feature_branches:
   stage: test
   script:
     - pnpm lint
+  when: always
   #   - pnpm test-ci
   # artifacts:
   #   when: always
@@ -67,7 +68,6 @@ deploy_staging:
   script:
     - make build-staging
     - make push-staging
-    - ls
     - scp -r ./docker/staging ./Makefile ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey
     - ssh ubuntu@46.226.106.181 "
       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&

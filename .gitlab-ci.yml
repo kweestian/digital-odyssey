@@ -12,6 +12,7 @@ before_script:
 
   - wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
   - source /root/.shrc
+  - pnpm install --frozen-lockfile
 
   ##
   ## Install ssh-agent if not already installed, it is required by Docker.

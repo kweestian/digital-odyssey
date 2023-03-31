@@ -11,6 +11,7 @@ before_script:
   ## Add pnpm, nodejs and npm for linting test, etc
   - apk --update add nodejs npm
   - npm i -g pnpm
+  - pnpm install --frozen-lockfile
 
   ##
   ## Install ssh-agent if not already installed, it is required by Docker.

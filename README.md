@@ -4,8 +4,7 @@ For all else, use [Astro.build](https://github.com/withastro/astro) :smiley:
 
 Recomended package manager: [pnpm](https://github.com/pnpm/pnpm)
 
-Preact + Typescript + Vite
-
+NextJs + GreenIT
 How to use:
 
 1. Fork this repo :fork_and_knife:
@@ -13,7 +12,7 @@ How to use:
 
 ```
 $ pnpm install
-$ pnpm start
+$ pnpm dev
 ```
 
 default to http://localhost:3000
@@ -27,5 +26,5 @@ $ pnpm build
 To view prodcution build in browser:
 
 ```
-$ pnpm preview
+$ pnpm start
 ```

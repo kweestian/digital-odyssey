@@ -2,7 +2,7 @@ stages:
   - test
   - deploy_staging
 
-image: docker:latest
+image: node:19.2.0
 
 services:
   - docker:dind

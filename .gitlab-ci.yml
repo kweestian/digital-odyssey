@@ -1,5 +1,6 @@
 stages:
-  - deploy
+  - deploy_staging
+  - test
 
 image: docker:latest
 
@@ -44,15 +45,27 @@ before_script:
   - touch .env
   - cat .env
 
-# deploy_prod:
-#   stage: deploy
-#   only:
-#     - main
-#   script:
-#     - make build-production
-#     - make push-production
-#     - ssh ubuntu@46.226.106.181 "
-#       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
-#       cd /home/enverse/internal/enverse-landing &&
-#       docker compose pull && docker compose up -d
-#       "
+test_feature_branches:
+  stage: test
+  script:
+    - pnpm lint
+  #   - pnpm test-ci
+  # artifacts:
+  #   when: always
+  #   reports:
+  #     junit:
+  #       - ./coverage/junit.xml
+
+deploy_staging:
+  stage: deploy_staging
+  only:
+    - dev
+  script:
+    - make build-staging
+    - make push-staging
+    - scp ./docker/{staging,production} ./Makefile ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey
+    - ssh ubuntu@46.226.106.181 "
+      docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
+      cd /home/enverse/clients/aldente/digital-odyssey &&
+      make pull staging && make start staging
+      "

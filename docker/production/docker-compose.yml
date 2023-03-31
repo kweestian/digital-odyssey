@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  digital-odyssey-production:
+    build:
+      context: ../../
+      dockerfile: docker/production/Dockerfile
+    image: registry.gitlab.com/heretictech/digital-odyssey:production
+    # volumes:
+    #   - ./:/app
+    #   - /app/node_modules
+    environment:
+      VIRTUAL_HOST: digital-odysser.enverselabs.com
+      VIRTUAL_PORT: 4009
+      LETSENCRYPT_HOST: digital-odysser.enverselabs.com
+      PORT: 4009
+    ports:
+      - '4009:4009'
+    container_name: digital-odyssey-production
+    network_mode: bridge

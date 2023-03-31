@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  digital-odyssey-development:
+    build:
+      context: ../../
+      dockerfile: ./docker/developement/Dockerfile
+    image: registry.gitlab.com/heretictech/digital-odyssey:developement
+    # volumes:
+    #   - ./:/app
+    #   - /app/node_modules
+    environment:
+      VIRTUAL_HOST: digital-odyssey-localhost.enverselabs.com
+      VIRTUAL_PORT: 4009
+      LETSENCRYPT_HOST: digital-odyssey-localhost.enverselabs.com
+      PORT: 4009
+    ports:
+      - '4009:4009'
+    container_name: digital-odyssey-development
+    network_mode: bridge

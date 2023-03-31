@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  digital-odyssey-staging:
+    build:
+      context: ../../
+      dockerfile: docker/staging/Dockerfile
+    image: registry.gitlab.com/heretictech/digital-odyssey:staging
+    # volumes:
+    #   - ./:/app
+    #   - /app/node_modules
+    environment:
+      VIRTUAL_HOST: digital-odyssey-staging.enverselabs.com
+      VIRTUAL_PORT: 4010
+      LETSENCRYPT_HOST: digital-odyssey-staging.enverselabs.com
+      PORT: 4010
+    ports:
+      - '4010:4010'
+    container_name: digital-odyssey-staging
+    network_mode: bridge

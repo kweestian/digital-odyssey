@@ -2,14 +2,14 @@ stages:
   - test
   - deploy_staging
 
-image: docker:latest-dind-node
+image: docker:latest
 
 services:
   - docker:dind
 
 before_script:
-  ## Add pnpm for linting etc
-
+  ## Add pnpm, nodejs and npm for linting test, etc
+  - apk --update add nodejs npm
   - npm i -g pnpm
 
   ##

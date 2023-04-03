@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
   <>
     <Header />
     <main className={styles.container}>
-      <Navbar menu={menu} />
+      <Navbar />
       {children}
     </main>
   </>

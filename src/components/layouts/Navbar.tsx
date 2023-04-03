@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-      {menuTitles.map((menuItem, i) => (
+      {menuTitles.map((menuItem) => (
         <Link key={menuItem.title} href={menuItem.title.toLowerCase()} className={styles.menuItem}>
           <Image src={menuItem.icon} alt="" className={styles.menuImage} />
           <h1>{menuItem.title}</h1>

@@ -3,10 +3,6 @@
   "defaultLocale": "fr",
   "pages": {
     "*": ["common"],
-    "/": ["home"],
-    "/rules": ["rules"],
-    "/map": ["map"],
-    "/cards": ["cards"],
-    "/chat": ["chat"]
+    "/": ["home"]
   }
 }

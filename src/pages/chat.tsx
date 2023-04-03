@@ -1,14 +1,15 @@
 import { NextPage } from 'next';
 import useTranslation from 'next-translate/useTranslation';
+import styles from '../styles/common.module.scss';
 
 type Props = {};
 
 const Chat: NextPage<Props> = () => {
   const { t } = useTranslation();
-  const title = t('chat:title');
+  const title = t('common:chatPageTitle');
 
   return (
-    <div className="bg-[#52b788] w-screen h-screen flex items-center justify-center text-center font-semibold text-4xl">
+    <div className={styles.mainScreen}>
       {title}
     </div>
   );

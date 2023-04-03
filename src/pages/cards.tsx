@@ -9,7 +9,7 @@ const Cards: NextPage<Props> = () => {
   const title = t('common:cardsPageTitle');
 
   return (
-    <div className={styles.mainScreen}q>
+    <div className={styles.mainScreen}>
       {title}
     </div>
   );

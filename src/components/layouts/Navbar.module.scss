@@ -13,9 +13,21 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  > h1 {
-    color: $TextMainColor
+  > div > h1 {
+    color: $TextMainColor;
+    font-size: 1.5em;
+    padding-top: 20px;
   }
+}
+
+.activeLink {
+  margin-top: 3px;
+  position: relative;
+  width: inherit;
+  height: 5px;
+  border-radius: 2px;
+  background-color: $TextMainColor;
+  align-self: center;
 }
 
 .menuImage {

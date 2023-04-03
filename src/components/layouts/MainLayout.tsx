@@ -10,7 +10,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     <Header />
     <main className={styles.container}>
       <Navbar />
-      {children}
+      <div className={styles.subLayoutContainer}>
+        {children}
+      </div>
     </main>
   </>
 );

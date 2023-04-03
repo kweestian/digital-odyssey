@@ -17,10 +17,10 @@ const Navbar = () => {
   const { t } = useTranslation('');
 
   const menuTitles = [
-    { title: t('common:rulesPageTitle'), icon: RulesIcon },
-    { title: t('common:mapPageTitle'), icon: MapIcon },
-    { title: t('common:cardsPageTitle'), icon: CardIcon },
-    { title: t('common:chatPageTitle'), icon: ChatIcon },
+    { title: t('common:rulesPageTitle'), href: t('common:rulesPageUrl'), icon: RulesIcon },
+    { title: t('common:mapPageTitle'), href: t('common:mapPageUrl'), icon: MapIcon },
+    { title: t('common:cardsPageTitle'), href: t('common:cardsPageUrl'), icon: CardIcon },
+    { title: t('common:chatPageTitle'), href: t('common:chatPageUrl'), icon: ChatIcon },
   ];
 
   return (
@@ -28,13 +28,13 @@ const Navbar = () => {
       {menuTitles.map((menuItem) => (
         <Link
           key={menuItem.title}
-          href={menuItem.title.toLowerCase()}
+          href={menuItem.href}
           className={styles.menuItem}
         >
           <Image src={menuItem.icon} alt="" className={styles.menuImage} />
           <div>
             <h1>{menuItem.title}</h1>
-            {router.pathname === `/${menuItem.title.toLowerCase()}` ? <div className={styles.activeLink} /> : null}
+            {router.pathname === menuItem.href ? <div className={styles.activeLink} /> : null}
           </div>
         </Link>
       ))}

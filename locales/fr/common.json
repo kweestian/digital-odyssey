@@ -3,5 +3,9 @@
   "rulesPageTitle": "Rules",
   "mapPageTitle": "Map",
   "cardsPageTitle": "Cards",
-  "chatPageTitle": "Chat"
+  "chatPageTitle": "Chat",
+  "rulesPageUrl": "/rules",
+  "mapPageUrl": "/map",
+  "cardsPageUrl": "/cards",
+  "chatPageUrl": "/chat"
 }

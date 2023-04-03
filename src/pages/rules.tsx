@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
 import useTranslation from 'next-translate/useTranslation';
-import styles from '../styles/common.module.scss';
 
 type Props = {};
 
@@ -9,7 +8,7 @@ const Rules: NextPage<Props> = () => {
   const title = t('common:rulesPageTitle');
 
   return (
-    <div className={styles.mainScreen}>
+    <div>
       {title}
     </div>
   );

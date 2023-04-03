@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $TextMainColor;
+  background-color: $BackgroundColor;
+}
+
+.menuItem {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menuImage {
+  align-self: center;
+}

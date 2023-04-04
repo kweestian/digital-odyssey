@@ -4,8 +4,8 @@ import useTranslation from 'next-translate/useTranslation';
 type Props = {};
 
 const Map: NextPage<Props> = () => {
-  const { t } = useTranslation();
-  const title = t('common:mapPageTitle');
+  const { t } = useTranslation('common');
+  const title = t('menuTitles.map');
 
   return (
     <div>

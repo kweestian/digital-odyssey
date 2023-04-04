@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Navbar = ({ menuItems }: Props) => {
-  const router = useRouter();
+  const { asPath } = useRouter();
 
   return (
     <div className={styles.container}>
@@ -19,7 +19,7 @@ const Navbar = ({ menuItems }: Props) => {
           <Image src={menuItem.icon} alt="" className={styles.menuImage} />
           <div>
             <h1>{menuItem.title}</h1>
-            {router.pathname === menuItem.href ? <div className={styles.activeLink} /> : null}
+            {asPath === menuItem.href ? <div className={styles.activeLink} /> : null}
           </div>
         </Link>
       ))}

@@ -15,15 +15,15 @@ import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { asPath } = useRouter();
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   // const {map, cards, } = t('common:menu', { returnObjects: true });
 
   const menuItems = [
-    { title: t('common:menu.rulesPageTitle', { returnObject: true }), href: '/rules', icon: RulesIcon },
-    { title: t('common:mapPageTitle'), href: '/map', icon: MapIcon },
-    { title: t('common:cardsPageTitle'), href: '/cards', icon: CardIcon },
-    { title: t('common:chatPageTitle'), href: '/chat', icon: ChatIcon },
+    { title: t('menuTitles.rules'), href: '/rules', icon: RulesIcon },
+    { title: t('menuTitles.map'), href: '/map', icon: MapIcon },
+    { title: t('menuTitles.cards'), href: '/cards', icon: CardIcon },
+    { title: t('menuTitles.chat'), href: '/chat', icon: ChatIcon },
   ];
 
   const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Home';

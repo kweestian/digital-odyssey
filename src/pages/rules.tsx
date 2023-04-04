@@ -4,8 +4,8 @@ import useTranslation from 'next-translate/useTranslation';
 type Props = {};
 
 const Rules: NextPage<Props> = () => {
-  const { t } = useTranslation();
-  const title = t('common:rulesPageTitle');
+  const { t } = useTranslation('common');
+  const title = t('menuTitles.rules');
 
   return (
     <div>

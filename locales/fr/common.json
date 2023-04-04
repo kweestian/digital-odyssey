@@ -1,1 +1,11 @@
-{ "meta_description": "meta_description" }
+{
+  "meta_description": "meta_description",
+  "rulesPageTitle": "Rules",
+  "mapPageTitle": "Map",
+  "cardsPageTitle": "Cards",
+  "chatPageTitle": "Chat",
+  "rulesPageUrl": "/rules",
+  "mapPageUrl": "/map",
+  "cardsPageUrl": "/cards",
+  "chatPageUrl": "/chat"
+}

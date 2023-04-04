@@ -3,9 +3,10 @@ import useTranslation from 'next-translate/useTranslation';
 
 type Props = {};
 
-const Home: NextPage<Props> = () => {
+const Map: NextPage<Props> = () => {
   const { t } = useTranslation();
-  const title = t('home:title');
+  const title = t('common:mapPageTitle');
+
   return (
     <div>
       {title}
@@ -13,4 +14,4 @@ const Home: NextPage<Props> = () => {
   );
 };
 
-export default Home;
+export default Map;

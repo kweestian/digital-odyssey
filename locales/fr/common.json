@@ -1,11 +1,9 @@
 {
   "meta_description": "meta_description",
-  "rulesPageTitle": "RULES",
-  "mapPageTitle": "MAP",
-  "cardsPageTitle": "CARDS",
-  "chatPageTitle": "CHAT",
-  "rulesPageUrl": "/rules",
-  "mapPageUrl": "/map",
-  "cardsPageUrl": "/cards",
-  "chatPageUrl": "/chat"
+  "menuTitles": {
+    "rules": "Rules",
+    "map": "Map",
+    "cards": "Cards",
+    "chat": "Chat"
+  }
 }

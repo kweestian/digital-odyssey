@@ -5,9 +5,5 @@
     "map": "Map",
     "cards": "Cards",
     "chat": "Chat"
-  },
-  "rulesPageUrl": "/rules",
-  "mapPageUrl": "/map",
-  "cardsPageUrl": "/cards",
-  "chatPageUrl": "/chat"
+  }
 }

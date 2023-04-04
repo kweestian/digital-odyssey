@@ -1,5 +1,9 @@
 {
   "meta_description": "meta_description",
+  "menuTitles": {
+    "map": "Map",
+    "cards": ""
+  },
   "rulesPageTitle": "RULES",
   "mapPageTitle": "MAP",
   "cardsPageTitle": "CARDS",

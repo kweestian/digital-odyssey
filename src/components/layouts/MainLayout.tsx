@@ -1,6 +1,5 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import _ from 'lodash';
 import { useRouter } from 'next/router';
 
 import Header from '../Header';
@@ -9,17 +8,31 @@ import MainScreen from './MainScreenLayout';
 
 import styles from './MainLayout.module.scss';
 
+import * as RulesIcon from '../../../public/static/image/navbar/rules-icon.svg';
+import * as MapIcon from '../../../public/static/image/navbar/map-icon.svg';
+import * as CardIcon from '../../../public/static/image/navbar/card-icon.svg';
+import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const router = useRouter();
+  const { asPath } = useRouter();
   const { t } = useTranslation();
-  const localeType = _.trim(router.pathname, '/');
-  const title = t(`${localeType}:pageTitle`);
+
+  // const {map, cards, } = t('common:menu', { returnObjects: true });
+
+  const menuItems = [
+    { title: t('common:menu.rulesPageTitle', { returnObject: true }), href: '/rules', icon: RulesIcon },
+    { title: t('common:mapPageTitle'), href: '/map', icon: MapIcon },
+    { title: t('common:cardsPageTitle'), href: '/cards', icon: CardIcon },
+    { title: t('common:chatPageTitle'), href: '/chat', icon: ChatIcon },
+  ];
+
+  const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Home';
 
   return (
     <>
       <Header />
       <main className={styles.container}>
-        <Navbar />
+        <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>
       </main>
     </>

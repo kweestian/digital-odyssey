@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.subLayout {
+.subLayoutContainer {
   background-color: $BackgroundColor;
   width: 100vw;
   height: 100vh;
@@ -14,19 +14,27 @@
   color: $TextMainColor;
 }
 
-.subLayoutContainer {
-  width: 80vw;
-  height: 80vh;
-  border: solid 0.2rem $TextMainColor;
+.mainScreenContainer {
+  width: 79vw;
+  height: 81vh;
+  border: solid 0.15rem $TextMainColor;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.mainScreenFirstBorder {
+  position: absolute;
+  width: 80vw;
+  height: 79vh;
+  border: solid 0.15rem $TextMainColor;
+  border-radius: 30px;
+}
+
 .buttonContainer {
   position: absolute;
-  right: 20vw;
+  right: 7vw;
   top: 7vh;
   z-index: 2;
   padding: 5px 100px;

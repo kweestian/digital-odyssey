@@ -17,8 +17,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
 
-  // const {map, cards, } = t('common:menu', { returnObjects: true });
-
   const menuItems = [
     { title: t('menuTitles.rules'), href: '/rules', icon: RulesIcon },
     { title: t('menuTitles.map'), href: '/map', icon: MapIcon },

@@ -1,1 +1,9 @@
-{ "meta_description": "meta_description" }
+{
+  "meta_description": "meta_description",
+  "menuTitles": {
+    "rules": "Rules",
+    "map": "Map",
+    "cards": "Cards",
+    "chat": "Chat"
+  }
+}

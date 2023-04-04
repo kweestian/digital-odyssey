@@ -18,10 +18,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "^18.2.0",
-    "react-websitecarbon-badge": "^1.0.5"
+    "react-websitecarbon-badge": "^1.0.5",
+    "sass": "^1.60.0"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",
+    "@types/lodash.debounce": "^4.0.7",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",

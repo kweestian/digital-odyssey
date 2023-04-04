@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 import { MainLayout } from '../components';
 import { NextPageWithLayout } from '../types/common';

@@ -28,11 +28,11 @@
   height: 50px;
   .button {
     position: absolute;
-    right: 200px;
+    right: 11vw;
     top: 25px;
-    padding: 5px 50px;
+    padding: 5px 100px;
     background-color: $BackgroundColor;
-    border: solid $TextMainColor;
+    border: solid $BorderColor;
     border-radius: 50px;
     z-index: 2;
     > h1 {

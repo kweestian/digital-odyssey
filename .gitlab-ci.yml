@@ -65,7 +65,7 @@ deploy_staging:
     - touch .env
     - cat .env
   only:
-    - dev
+    - main
   script:
     - make build-staging
     - make push-staging

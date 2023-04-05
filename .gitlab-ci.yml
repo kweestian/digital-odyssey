@@ -15,15 +15,16 @@ before_script:
 
 test_feature_branches:
   stage: test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
   script:
     - pnpm lint
+    - pnpm test
   when: always
-  #   - pnpm test-ci
-  # artifacts:
-  #   when: always
-  #   reports:
-  #     junit:
-  #       - ./coverage/junit.xml
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - ./coverage/junit.xml
 
 deploy_staging:
   stage: deploy_staging

@@ -23,6 +23,7 @@ build:
     when: on_success
     paths:
       - node_modules/
+      - /usr/local/share/.cache/pnpm/
 
 test_feature_branches:
   stage: test

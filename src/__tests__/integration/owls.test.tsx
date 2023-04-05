@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Rules from './index';
+import Owls from '../../pages/owls/index';
 
-describe('rules page', () => {
+describe('owls page', () => {
   it('renders without crashing', () => {
-    render(<Rules />);
+    render(<Owls />);
 
-    const title = screen.getByText('menuTitles.rules');
+    // TODO change to OWLS
+    const title = screen.getByText('menuTitles.chat');
 
     expect(title).toBeInTheDocument();
   });

@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Map from './index';
+import Rules from '../../pages/rules/index';
 
-describe('map page', () => {
+describe('rules page', () => {
   it('renders without crashing', () => {
-    render(<Map />);
+    render(<Rules />);
 
-    const title = screen.getByText('menuTitles.map');
+    const title = screen.getByText('menuTitles.rules');
 
     expect(title).toBeInTheDocument();
   });

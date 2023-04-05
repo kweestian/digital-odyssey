@@ -4,4 +4,35 @@
   display: flex;
   flex-direction: column;
   width: 10vw;
+  background-color: $BackgroundColor;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.progressBarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10vh;
+  > h2 {
+    color: $TextMainColor;
+    margin-right: 10px;
+    align-self: center;
+  }
+}
+
+.progressBar {
+  display: flex;
+  width: 6vw;
+  height: 70vh;
+  border: solid 0.2rem $BorderColor;
+  margin-right: 10px;
+  border-radius: 200px;
+}
+
+.progress {
+  background-color: $GradientColor;
+  width: inherit;
+  align-self: flex-end;
+  border-radius: 200px;
 }

@@ -27,6 +27,8 @@ build:
 test_feature_branches:
   stage: test
   coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  dependencies:
+    - build
   script:
     - pnpm lint
     - pnpm test-ci

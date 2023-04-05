@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
@@ -14,8 +14,11 @@ import * as RulesIcon from '../../../public/static/image/navbar/rules-icon.svg';
 import * as MapIcon from '../../../public/static/image/navbar/map-icon.svg';
 import * as CardIcon from '../../../public/static/image/navbar/card-icon.svg';
 import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
+import * as CloseIcon from '../../../public/static/image/CloseIcon.svg';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [isOpen, setIsOpen] = useState(true);
+  const [hasLoggedIn, setHasLoggedIn] = useState(false);
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
 
@@ -30,10 +33,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
 
+  useEffect(() => {
+    setHasLoggedIn(window.localStorage.getItem('HAS_LOGGED_IN') === 'true');
+  }, []);
+
+  const handleClick = () => {
+    setIsOpen(false);
+    window.localStorage.setItem('HAS_LOGGED_IN', JSON.stringify(true));
+  };
+
   return (
     <>
       <Header />
-      <PopupVideo videoUrl={videoUrl} />
+      { isOpen && !hasLoggedIn && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>

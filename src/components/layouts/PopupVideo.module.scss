@@ -6,6 +6,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  background-color: $BackgroundColorOpacity;
   z-index: 3;
 }
 
@@ -13,4 +14,12 @@
   width: 75vw;
   height: 75vh;
   align-self: center;
+}
+
+.closeButton {
+  position: absolute;
+  right: 2vw;
+  top: 3vh;
+  width: 30px;
+  height: 30px;
 }

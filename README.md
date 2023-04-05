@@ -40,28 +40,34 @@ $ pnpm start
 
 The test files are structured are such: 
 
-├── pages/
-│   ├── index.js
-│   ├── about.js
-│   └── ...
-│   ├── index.test.js
-│   ├── about.test.js
-│   └── ...
-├── components/
-│   ├── Header/
-│   │   ├── Header.js
-│   │   ├── Header.test.js
-│   │   └── ...
-│   ├── Footer/
-│   │   ├── Footer.js
-│   │   ├── Footer.test.js
-│   │   └── ...
-│   └── ...
-├── jest.config.js
-└── package.json
+├── pages\
+│   ├── index.js\
+│   ├── about.js\
+│   └── ...\
+│   ├── index.test.js\
+│   ├── about.test.js\
+│   └── ...\
+├── components\
+│   ├── Header\
+│   │   ├── Header.js\
+│   │   ├── Header.test.js\
+│   │   └── ...\
+│   ├── Footer\
+│   │   ├── Footer.js\
+│   │   ├── Footer.test.js\
+│   │   └── ...\
+│   └── ...\
+├── jest.config.js\
+└── package.json\
 
 
 Run:
 ```bash
 $ pnpm test
+```
+
+to update snapshots:
+
+```bash
+$ pnpm test -- -u
 ```

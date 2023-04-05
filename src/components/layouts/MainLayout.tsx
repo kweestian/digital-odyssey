@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Header from '../Header';
 import Navbar from './Navbar';
 import MainScreen from './MainScreenLayout';
+import ProgressBar from './ProgressBar';
 
 import styles from './MainLayout.module.scss';
 
@@ -32,6 +33,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>
+        <ProgressBar percentage={0.2} />
       </main>
     </>
   );

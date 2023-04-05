@@ -5,5 +5,8 @@
     "map": "Map",
     "cards": "Cards",
     "chat": "Chat"
+  },
+  "not-found": {
+    "title": "You seem a little lost there"
   }
 }

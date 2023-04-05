@@ -8,12 +8,14 @@ image: docker:latest
 services:
   - docker:dind
 
+before_script:
+  ## Add pnpm, nodejs and npm for linting test, etc
+  - apk --update add nodejs npm
+  - npm i -g pnpm
+
 build:
   stage: build
   script:
-    ## Add pnpm, nodejs and npm for linting test, etc
-    - apk --update add nodejs npm
-    - npm i -g pnpm
     - pnpm install --frozen-lockfile
   cache:
     paths:

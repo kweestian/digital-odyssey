@@ -12,8 +12,6 @@ Built with Enverse Labs'[Create Green App](https://github.com/enverse/create-gee
 
 
 
-
-
 ## Getting startin
 > recomended package manager: [pnpm](https://github.com/pnpm/pnpm)
 
@@ -44,22 +42,25 @@ The test files are structured are such:
 │   ├── index.js\
 │   ├── about.js\
 │   └── ...\
-│   ├── index.test.js\
-│   ├── about.test.js\
-│   └── ...\
 ├── components\
-│   ├── Header\
-│   │   ├── Header.js\
+│   ├── Header.js\
+│   ├── Footer.js\
+│   └── ...\
+├── tests\
+│   ├── unit\
 │   │   ├── Header.test.js\
-│   │   └── ...\
-│   ├── Footer\
-│   │   ├── Footer.js\
 │   │   ├── Footer.test.js\
 │   │   └── ...\
-│   └── ...\
+│   ├── integration\
+│   │   ├── HomePage.test.js\
+│   │   ├── AboutPage.test.js\
+│   │   └── ...\
+│   └── setupTests.js\
 ├── jest.config.js\
 └── package.json\
 
+
+where `integration` tests entire pages and their components and `unit` tests test single components
 
 Run:
 ```bash

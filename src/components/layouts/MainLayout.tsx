@@ -6,6 +6,7 @@ import Header from '../Header';
 import Navbar from './Navbar';
 import MainScreen from './MainScreenLayout';
 import ProgressBar from './ProgressBar';
+import PopupVideo from './PopupVideo';
 
 import styles from './MainLayout.module.scss';
 
@@ -27,9 +28,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Home';
 
+  const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
+
   return (
     <>
       <Header />
+      <PopupVideo videoUrl={videoUrl} />
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>

@@ -1,9 +1,12 @@
 {
-  "meta_description": "meta_description",
+  "meta_description": "toto",
   "menuTitles": {
     "rules": "Rules",
     "map": "Map",
     "cards": "Cards",
     "chat": "Chat"
+  },
+  "not-found": {
+    "title": "You seem a little lost there"
   }
 }

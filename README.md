@@ -1,16 +1,21 @@
-## Enverse minimalist front-end template **NEXTJS VERSION** :seedling: :seedling:
+#  Digital Odyssey
 
-For all else, use [Astro.build](https://github.com/withastro/astro) :smiley:
+An interactive odyssey to discover the digital landscape
 
-Recomended package manager: [pnpm](https://github.com/pnpm/pnpm)
+Built with Enverse Labs'[Create Green App](https://github.com/enverse/create-geen-app-deno)
 
-NextJs + GreenIT
-How to use:
 
-1. Fork this repo :fork_and_knife:
-2. Install and play !
 
-```
+
+
+---
+
+
+
+## Getting startin
+> recomended package manager: [pnpm](https://github.com/pnpm/pnpm)
+
+```bash
 $ pnpm install
 $ pnpm dev
 ```
@@ -19,12 +24,51 @@ default to http://localhost:3000
 
 3.  Building for production
 
-```
+```bash
 $ pnpm build
 ```
 
 To view prodcution build in browser:
 
-```
+```bash
 $ pnpm start
+```
+
+### Tests
+
+The test files are structured are such: 
+
+├── pages\
+│   ├── index.js\
+│   ├── about.js\
+│   └── ...\
+├── components\
+│   ├── Header.js\
+│   ├── Footer.js\
+│   └── ...\
+├── tests\
+│   ├── unit\
+│   │   ├── Header.test.js\
+│   │   ├── Footer.test.js\
+│   │   └── ...\
+│   ├── integration\
+│   │   ├── HomePage.test.js\
+│   │   ├── AboutPage.test.js\
+│   │   └── ...\
+│   └── setupTests.js\
+├── jest.config.js\
+└── package.json\
+
+
+where `integration` tests entire pages and their components and `unit` tests test single components
+
+Run:
+```bash
+$ pnpm test
+```
+
+to update snapshots:
+
+```bash
+$ pnpm test -- -u
 ```

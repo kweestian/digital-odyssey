@@ -2,6 +2,15 @@
 import nextTranslate from 'next-translate';
 
 const nextConfig = nextTranslate({
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/rules',
+        permanent: false,
+      },
+    ];
+  },
   reactStrictMode: true,
   swcMinify: true,
   output: 'standalone',

@@ -32,7 +32,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { title: t('menuTitles.chat'), href: '/chat', icon: ChatIcon },
   ];
 
-  const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Home';
+  const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';
 
   const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
 

@@ -1,4 +1,5 @@
 stages:
+  - build
   - test
   - deploy_staging
 
@@ -11,19 +12,35 @@ before_script:
   ## Add pnpm, nodejs and npm for linting test, etc
   - apk --update add nodejs npm
   - npm i -g pnpm
-  - pnpm install --frozen-lockfile
+
+build:
+  stage: build
+  script:
+    - pnpm install --frozen-lockfile
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 days
+    when: on_success
+    paths:
+      - node_modules/
+      - /usr/local/share/.cache/pnpm/
 
 test_feature_branches:
   stage: test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  dependencies:
+    - build
   script:
     - pnpm lint
+    - pnpm test-ci
   when: always
-  #   - pnpm test-ci
-  # artifacts:
-  #   when: always
-  #   reports:
-  #     junit:
-  #       - ./coverage/junit.xml
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - ./coverage/junit.xml
 
 deploy_staging:
   stage: deploy_staging
@@ -65,7 +82,7 @@ deploy_staging:
     - touch .env
     - cat .env
   only:
-    - dev
+    - main
   script:
     - make build-staging
     - make push-staging

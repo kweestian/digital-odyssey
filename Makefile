@@ -17,7 +17,7 @@ stop-development: ## Stop the development docker container.
 
 .PHONY: build-staging
 build-staging: create-ci-env ## Build the staging docker image.
-	docker compose -f ./docker/staging/docker-compose.yml build 
+	docker compose --env-file .env.ci -f ./docker/staging/docker-compose.yml build 
 
 .PHONY: start-staging
 start-staging: ## Start the staging docker container.

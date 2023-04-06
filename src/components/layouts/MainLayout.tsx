@@ -26,8 +26,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const { t } = useTranslation('common');
 
   const menuItems = [
-    { title: t('menuTitles.rules'), href: '/rules', icon: RulesIcon },
-    { title: t('menuTitles.map'), href: '/map', icon: MapIcon },
+    { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },
+    { title: t('menuTitles.map'), href: '/game/map', icon: MapIcon },
     { title: t('menuTitles.cards'), href: '/cards', icon: CardIcon },
     { title: t('menuTitles.chat'), href: '/chat', icon: ChatIcon },
   ];
@@ -50,7 +50,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header />
-      { isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>

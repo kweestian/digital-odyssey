@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
@@ -19,7 +19,9 @@ import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
 import * as CloseIcon from '../../../public/static/image/CloseIcon.svg';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const { isOpen, isFirstVisit, handleClick } = useLocalStorage();
+  const { getItem, setItem } = useLocalStorage();
+  const [isOpen, setIsOpen] = useState(true);
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
 
@@ -34,10 +36,21 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
 
+  useEffect(() => {
+    if (getItem('HAS_LOGGED_IN') === 'true') {
+      setIsFirstVisit(false);
+    }
+  }, [getItem]);
+
+  const handleClick = () => {
+    setIsOpen(false);
+    setItem('HAS_LOGGED_IN', 'true');
+  };
+
   return (
     <>
       <Header />
-      { isOpen && !isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      { isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>

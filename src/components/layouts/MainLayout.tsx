@@ -3,10 +3,10 @@ import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
 import Header from '../Header';
-import Navbar from './Navbar';
-import MainScreen from './MainScreenLayout';
-import ProgressBar from './ProgressBar';
-import PopupVideo from './PopupVideo';
+import Navbar from '../Navbar';
+import MainScreen from '../MainScreen';
+import ProgressBar from '../ProgressBar';
+import PopupVideo from '../PopupVideo';
 
 import useLocalStorage from '../../hooks/useLocalStorage';
 

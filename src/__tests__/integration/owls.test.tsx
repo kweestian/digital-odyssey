@@ -7,7 +7,7 @@ describe('owls page', () => {
     render(<Owls />);
 
     // TODO change to OWLS
-    const title = screen.getByText('menuTitles.chat');
+    const title = screen.getByText('menuTitles.owls');
 
     expect(title).toBeInTheDocument();
   });

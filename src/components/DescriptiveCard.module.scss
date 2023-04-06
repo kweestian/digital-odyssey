@@ -1,0 +1,49 @@
+@import '../styles/variables';
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $DescriptiveCardBackground;
+  margin: 20px 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cornerDecoration {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: black;
+}
+
+.topLeftCorner {
+  top: 0;
+  left: 0;
+}
+
+.topRightCorner {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeftCorner {
+  bottom: 0;
+  left: 0;
+}
+
+.bottomRightCorner {
+  bottom: 0;
+  right: 0;
+}
+
+
+.small {
+  height: 30vh;
+  width: 30vw;
+}

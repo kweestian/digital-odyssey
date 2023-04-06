@@ -8,6 +8,8 @@ import MainScreen from './MainScreenLayout';
 import ProgressBar from './ProgressBar';
 import PopupVideo from './PopupVideo';
 
+import useLocalStorage from '../../hooks/useLocalStorage';
+
 import styles from './MainLayout.module.scss';
 
 import * as RulesIcon from '../../../public/static/image/navbar/rules-icon.svg';
@@ -17,8 +19,7 @@ import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
 import * as CloseIcon from '../../../public/static/image/CloseIcon.svg';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [isOpen, setIsOpen] = useState(true);
-  const [hasLoggedIn, setHasLoggedIn] = useState(false);
+  const { isOpen, isFirstVisit, handleClick } = useLocalStorage();
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
 
@@ -33,19 +34,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
 
-  useEffect(() => {
-    setHasLoggedIn(window.localStorage.getItem('HAS_LOGGED_IN') === 'true');
-  }, []);
-
-  const handleClick = () => {
-    setIsOpen(false);
-    window.localStorage.setItem('HAS_LOGGED_IN', JSON.stringify(true));
-  };
-
   return (
     <>
       <Header />
-      { isOpen && !hasLoggedIn && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      { isOpen && !isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>

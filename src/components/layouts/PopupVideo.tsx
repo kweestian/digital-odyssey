@@ -8,7 +8,7 @@ const PopupVideo =
     <div className={styles.container}>
       <div className={styles.iframeContainer}>
         <button onClick={onClick} className={styles.closeButton} type="button">
-          <Image width={30} height={30} src={closeIcon} alt="" />
+          <Image width={30} height={30} src={closeIcon} alt="Close Popup Button" />
         </button>
         <iframe
           width="100%"

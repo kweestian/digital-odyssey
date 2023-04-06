@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Map from '../../pages/map/index';
+import Map from '../../pages/game/map';
 
 describe('map page', () => {
   it('renders without crashing', () => {

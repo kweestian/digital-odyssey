@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { AppProps } from 'next/app';
+import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
+import { SessionContextProvider, Session } from '@supabase/auth-helpers-react';
 
 import '../styles/globals.scss';
 
 import { MainLayout } from '../components';
 import { NextPageWithLayout } from '../types/common';
 
-type AppPropsWithLayout = AppProps & {
+type AppPropsWithLayout = AppProps<{ initialSession: Session }> & {
   Component: NextPageWithLayout;
   locale?: string;
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const [supabaseClient] = useState(() => createBrowserSupabaseClient());
+
+  const { initialSession, ...props } = pageProps;
+
   return (
-    <MainLayout>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
-    </MainLayout>
+    <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
+      <MainLayout>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...props} />
+      </MainLayout>
+    </SessionContextProvider>
   );
 }
 

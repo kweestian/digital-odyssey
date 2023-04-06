@@ -1,6 +1,10 @@
 # 1. Install dependencies only when needed
 FROM node:16-alpine AS deps
 
+ARG VIRTUAL_HOST
+ARG VIRTUAL_PORT
+ARG LETSENCRYPT_HOST
+
 RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
@@ -29,9 +33,9 @@ FROM node:16-alpine AS runner
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
-ENV VIRTUAL_HOST="digital-odyssey-staging.enverselabs.com"
-ENV VIRTUAL_PORT=4111
-ENV LETSENCRYPT_HOST="digital-odyssey-staging.enverselabs.com"
+ENV VIRTUAL_HOST=${VIRTUAL_HOST}
+ENV VIRTUAL_PORT=${VIRTUAL_PORT}
+ENV LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
 
 
 WORKDIR /app

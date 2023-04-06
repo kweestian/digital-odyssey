@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './MainScreenLayout.module.scss';
+import styles from './MainScreen.module.scss';
 
 const MainScreen = ({ children, title }: {children: React.ReactNode, title: string}) => (
   <div className={styles.subLayoutContainer}>

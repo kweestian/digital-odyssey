@@ -1,7 +1,7 @@
-.PHONY: env.list
-env.list: ## inject variables from gitlab context to docker
-	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > env.list
-	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" > env.list
+.PHONY: create-ci-env
+create-ci-env: ## inject variables from gitlab context to docker
+	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > .env.ci;
+	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" >> .env.ci;
 
 .PHONY: build-development
 build-development: ## Build the development docker image.
@@ -16,8 +16,8 @@ stop-development: ## Stop the development docker container.
 	docker compose -f ./docker/development/docker-compose.yml down
 
 .PHONY: build-staging
-build-staging: env.list ## Build the staging docker image.
-	docker compose --env-file env.list -f ./docker/staging/docker-compose.yml build 
+build-staging: create-ci-env ## Build the staging docker image.
+	docker compose -f ./docker/staging/docker-compose.yml build 
 
 .PHONY: start-staging
 start-staging: ## Start the staging docker container.

@@ -5,7 +5,7 @@ type Props = {};
 
 const Chat: NextPage<Props> = () => {
   const { t } = useTranslation('common');
-  const title = t('menuTitles.chat');
+  const title = t('menuTitles.owls');
 
   return (
     <div>

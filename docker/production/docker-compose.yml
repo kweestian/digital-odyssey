@@ -12,6 +12,8 @@ services:
       VIRTUAL_HOST: digital-odysser.enverselabs.com
       VIRTUAL_PORT: 4112
       LETSENCRYPT_HOST: digital-odysser.enverselabs.com
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
       PORT: 4112
     ports:
       - '4112:4112'

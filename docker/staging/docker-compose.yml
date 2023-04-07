@@ -4,9 +4,6 @@ services:
     build:
       context: ../../
       dockerfile: docker/staging/Dockerfile
-      args:
-        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
-        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
     image: registry.gitlab.com/enverse-labs/digital-odyssey:staging
     # volumes:
     #   - ./:/app

@@ -6,7 +6,7 @@ describe('owls page', () => {
   it('renders without crashing', () => {
     render(<Owls />);
 
-    const image = screen.getAllByAltText('Grey Owl');
+    const image = screen.getAllByAltText('Basic Owl');
     expect(image.length).toBe(6);
   });
   it('renders owls page unchanged', () => {

@@ -1,28 +1,23 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import useTranslation from 'next-translate/useTranslation';
 
 import styles from '../../styles/Owls.module.scss';
 
-import * as GreyOwl from '../../../public/static/image/owls/grey-owl.svg';
+import * as BasicOwl from '../../../public/static/image/owls/basic-owl.svg';
 
 type Props = {};
 
-const Owls: NextPage<Props> = () => {
-  const { t } = useTranslation('common');
-
-  return (
-    <div className={styles.container}>
-      <div className={styles.owlsList}>
-        <Image src={GreyOwl} alt="Grey Owl" />
-        <Image src={GreyOwl} alt="Grey Owl" />
-        <Image src={GreyOwl} alt="Grey Owl" />
-        <Image src={GreyOwl} alt="Grey Owl" />
-        <Image src={GreyOwl} alt="Grey Owl" />
-      </div>
-      <Image src={GreyOwl} alt="Grey Owl" />
+const Owls: NextPage<Props> = () => (
+  <div className={styles.container}>
+    <div className={styles.owlsList}>
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
     </div>
-  );
-};
+    <Image src={BasicOwl} alt="Basic Owl" />
+  </div>
+);
 
 export default Owls;

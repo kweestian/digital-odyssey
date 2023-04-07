@@ -9,7 +9,7 @@ exports[`owls page renders owls page unchanged 1`] = `
       class="owlsList"
     >
       <img
-        alt="Grey Owl"
+        alt="Basic Owl"
         data-nimg="1"
         decoding="async"
         height="40"
@@ -20,7 +20,7 @@ exports[`owls page renders owls page unchanged 1`] = `
         width="40"
       />
       <img
-        alt="Grey Owl"
+        alt="Basic Owl"
         data-nimg="1"
         decoding="async"
         height="40"
@@ -31,7 +31,7 @@ exports[`owls page renders owls page unchanged 1`] = `
         width="40"
       />
       <img
-        alt="Grey Owl"
+        alt="Basic Owl"
         data-nimg="1"
         decoding="async"
         height="40"
@@ -42,7 +42,7 @@ exports[`owls page renders owls page unchanged 1`] = `
         width="40"
       />
       <img
-        alt="Grey Owl"
+        alt="Basic Owl"
         data-nimg="1"
         decoding="async"
         height="40"
@@ -53,7 +53,7 @@ exports[`owls page renders owls page unchanged 1`] = `
         width="40"
       />
       <img
-        alt="Grey Owl"
+        alt="Basic Owl"
         data-nimg="1"
         decoding="async"
         height="40"
@@ -65,7 +65,7 @@ exports[`owls page renders owls page unchanged 1`] = `
       />
     </div>
     <img
-      alt="Grey Owl"
+      alt="Basic Owl"
       data-nimg="1"
       decoding="async"
       height="40"

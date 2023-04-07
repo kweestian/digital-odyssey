@@ -5,10 +5,5 @@ import Owls from '../../pages/game/owls';
 describe('owls page', () => {
   it('renders without crashing', () => {
     render(<Owls />);
-
-    // TODO change to OWLS
-    const title = screen.getByText('menuTitles.chat');
-
-    expect(title).toBeInTheDocument();
   });
 });

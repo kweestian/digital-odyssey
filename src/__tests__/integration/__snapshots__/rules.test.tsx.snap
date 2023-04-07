@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rules page renders rules page unchanged 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="container small"
+    >
+      <div
+        class="cornerDecoration topLeftCorner"
+      />
+      <div
+        class="cornerDecoration topRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomLeftCorner"
+      />
+      <div
+        class="content"
+      >
+        <h1 />
+        <p />
+        <img
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </div>
+    </div>
+    <div
+      class="container small"
+    >
+      <div
+        class="cornerDecoration topLeftCorner"
+      />
+      <div
+        class="cornerDecoration topRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomLeftCorner"
+      />
+      <div
+        class="content"
+      >
+        <h1 />
+        <p />
+        <img
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </div>
+    </div>
+    <div
+      class="container small"
+    >
+      <div
+        class="cornerDecoration topLeftCorner"
+      />
+      <div
+        class="cornerDecoration topRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomLeftCorner"
+      />
+      <div
+        class="content"
+      >
+        <h1 />
+        <p />
+        <img
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </div>
+    </div>
+    <div
+      class="container small"
+    >
+      <div
+        class="cornerDecoration topLeftCorner"
+      />
+      <div
+        class="cornerDecoration topRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomRightCorner"
+      />
+      <div
+        class="cornerDecoration bottomLeftCorner"
+      />
+      <div
+        class="content"
+      >
+        <h1 />
+        <p />
+        <img
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -6,4 +6,8 @@ describe('rules page', () => {
   it('renders without crashing', () => {
     render(<Rules />);
   });
+  it('renders rules page unchanged', () => {
+    const { container } = render(<Rules />);
+    expect(container).toMatchSnapshot();
+  });
 });

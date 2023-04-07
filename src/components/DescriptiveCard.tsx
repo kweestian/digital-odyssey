@@ -11,23 +11,19 @@ interface DescriptiveCardProps {
   icon: typeof import('*.svg'),
 }
 
-const DescriptiveCard = ({ isSmall, title, description, icon }: DescriptiveCardProps) => {
-  const ok = 'ok';
+const DescriptiveCard = ({ isSmall, title, description, icon }: DescriptiveCardProps) => (
+  <div className={classNames(styles.container, { [styles.small]: isSmall })}>
+    <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
+    <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
+    <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
+    <div className={classNames(styles.cornerDecoration, styles.bottomLeftCorner)} />
 
-  return (
-    <div className={classNames(styles.container, { [styles.small]: isSmall })}>
-      <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.bottomLeftCorner)} />
-
-      <div className={styles.content}>
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <Image src={icon} alt={title} />
-      </div>
+    <div className={styles.content}>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <Image src={icon} alt={title} />
     </div>
-  );
-};
+  </div>
+);
 
 export default DescriptiveCard;

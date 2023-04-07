@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import nextTranslate from 'next-translate';
+import nextTranslate from 'next-translate-plugin';
 
 const nextConfig = nextTranslate({
   async redirects() {

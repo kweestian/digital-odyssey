@@ -13,6 +13,16 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 5px 30px;
+  > h1 {
+    font-size: 40px;
+  }
+  > p {
+    font-size: 16px;
+    white-space: pre-line;
+    vertical-align: bottom;
+    line-height: 1.3em;
+  }
 }
 
 .cornerDecoration {

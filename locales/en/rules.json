@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {
+      "title": "Introduction",
+      "description": "Watch the intro video to learn\nthe rules of the game\nand its central challenge:\nto explore powerful future digital solutions\nin a fun, imaginative way.",
+      "icon": "video-icon.svg"
+    },
+    {
+      "title": "Exploration",
+      "description": "The Kering Digital Odyssey\nis a digital board game with a map presen-\nting the different regions to explore, each of\nwhich embodies a great value of the group\nand aspect of our Digital future.",
+      "icon": "gold-map.svg"
+    },
+    {
+      "title": "Final",
+      "description": "Finish the game by completing all expe-\nriences and capture the Golden Owl\nin the last region.\n\nThe first finisher will be heralded the Kering\nEmployee of the Future.",
+      "icon": "gold-owl.svg"
+    },
+    {
+      "title": "Experiences",
+      "description": "On each region, you are invited\nto participate in experiences.\nAfter each completed experience,\nyou win a concept card and some owls\nwhen you complete a bonus.",
+      "icon": "pink-location-pointer.svg"
+    }
+  ]
+}

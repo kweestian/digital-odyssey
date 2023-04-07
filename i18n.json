@@ -4,9 +4,9 @@
   "pages": {
     "*": ["common"],
     "/": ["home"],
-    "/rules": ["rules"],
-    "/map": ["map"],
-    "/cards": ["cards"],
-    "/chat": ["chat"]
+    "/game/rules": ["rules"],
+    "/game/map": ["map"],
+    "/game/cards": ["cards"],
+    "/game/owls": ["owls"]
   }
 }

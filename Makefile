@@ -1,3 +1,12 @@
+.PHONY: create-env
+create-env: ## inject variables from gitlab context to docker
+	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > .env;
+	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" >> .env;
+
+.PHONY: delete-env
+delete-env: ## remove file before pushing it
+	rm .env
+
 .PHONY: build-development
 build-development: ## Build the development docker image.
 	docker compose -f ./docker/developement/docker-compose.yml build

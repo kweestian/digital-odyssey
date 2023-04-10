@@ -28,8 +28,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const menuItems = [
     { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },
     { title: t('menuTitles.map'), href: '/game/map', icon: MapIcon },
-    { title: t('menuTitles.cards'), href: '/cards', icon: CardIcon },
-    { title: t('menuTitles.chat'), href: '/chat', icon: ChatIcon },
+    { title: t('menuTitles.cards'), href: '/game/cards', icon: CardIcon },
+    { title: t('menuTitles.owls'), href: '/game/owls', icon: ChatIcon },
   ];
 
   const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';

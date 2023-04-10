@@ -1,17 +1,23 @@
 import { NextPage } from 'next';
-import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image';
+
+import styles from '../../styles/Owls.module.scss';
+
+import * as BasicOwl from '../../../public/static/image/owls/basic-owl.svg';
 
 type Props = {};
 
-const Chat: NextPage<Props> = () => {
-  const { t } = useTranslation('common');
-  const title = t('menuTitles.chat');
-
-  return (
-    <div>
-      {title}
+const Owls: NextPage<Props> = () => (
+  <div className={styles.container}>
+    <div className={styles.owlsList}>
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
+      <Image src={BasicOwl} alt="Basic Owl" />
     </div>
-  );
-};
+    <Image src={BasicOwl} alt="Basic Owl" />
+  </div>
+);
 
-export default Chat;
+export default Owls;

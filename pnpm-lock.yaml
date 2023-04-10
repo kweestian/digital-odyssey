@@ -20,7 +20,7 @@ dependencies:
     specifier: 13.0.5
     version: 13.0.5(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)(sass@1.60.0)
   next-translate:
-    specifier: 1.6.0
+    specifier: ^1.6.0
     version: 1.6.0(next@13.0.5)(react@18.2.0)
   react:
     specifier: 18.2.0

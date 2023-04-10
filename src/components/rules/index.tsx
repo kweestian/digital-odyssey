@@ -2,16 +2,17 @@ import React from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 
+import Trans from 'next-translate/Trans';
 import styles from './DescriptiveCard.module.scss';
 
 interface DescriptiveCardProps {
   isSmall?: boolean;
   title: string;
-  description: string;
+  descriptionKey: string;
   icon: typeof import('*.svg');
 }
 
-const DescriptiveCard = ({ isSmall, title, description, icon }: DescriptiveCardProps) => (
+const DescriptiveCard = ({ isSmall, title, descriptionKey, icon }: DescriptiveCardProps) => (
   <div className={classNames(styles.container, { [styles.small]: isSmall })}>
     <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
     <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
@@ -20,7 +21,9 @@ const DescriptiveCard = ({ isSmall, title, description, icon }: DescriptiveCardP
 
     <div className={styles.content}>
       <h1>{title}</h1>
-      <p>{description}</p>
+      <p>
+        <Trans i18nKey={descriptionKey} components={{ newLineElement: <p /> }} />
+      </p>
       <Image src={icon} alt={title} />
     </div>
   </div>

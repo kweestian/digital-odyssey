@@ -17,13 +17,17 @@ import * as MapIcon from '../../../public/static/image/navbar/map-icon.svg';
 import * as CardIcon from '../../../public/static/image/navbar/card-icon.svg';
 import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
 import * as CloseIcon from '../../../public/static/image/CloseIcon.svg';
+import useWindowSize from '../../hooks/useWindowSize';
+import NotFoundPage from '../../pages/404';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { getItem, setItem } = useLocalStorage();
   const [isOpen, setIsOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const [isFirstVisit, setIsFirstVisit] = useState(true);
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
+  const { width, height } = useWindowSize();
 
   const menuItems = [
     { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },
@@ -42,6 +46,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
   }, [getItem]);
 
+  useEffect(() => {
+    if (width && width < 1280) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [width]);
+
   const handleClick = () => {
     setIsOpen(false);
     setItem('HAS_LOGGED_IN', 'true');
@@ -52,9 +64,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
       <main className={styles.container}>
-        <Navbar menuItems={menuItems} />
-        <MainScreen title={title}>{children}</MainScreen>
-        <ProgressBar percentage={0.2} />
+        {isMobile ? (
+          <p>Page only accessible on mobile</p>
+        ) : (
+          <>
+            <Navbar menuItems={menuItems} />
+            <MainScreen title={title}>{children}</MainScreen>
+            <ProgressBar percentage={0.2} />
+          </>
+        )}
       </main>
     </>
   );

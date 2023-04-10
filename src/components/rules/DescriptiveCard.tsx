@@ -5,10 +5,10 @@ import classNames from 'classnames';
 import styles from './DescriptiveCard.module.scss';
 
 interface DescriptiveCardProps {
-  isSmall?: boolean,
-  title: string,
-  description: string,
-  icon: typeof import('*.svg'),
+  isSmall?: boolean;
+  title: string;
+  description: string;
+  icon: typeof import('*.svg');
 }
 
 const DescriptiveCard = ({ isSmall, title, description, icon }: DescriptiveCardProps) => (

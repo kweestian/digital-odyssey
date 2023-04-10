@@ -1,2 +1,2 @@
-export { default as MainLayout } from './layouts/MainLayout';
-export { default as DescriptiveCard } from './rules/DescriptiveCard';
+export { default as MainLayout } from './layouts';
+export { default as DescriptiveCard } from './rules';

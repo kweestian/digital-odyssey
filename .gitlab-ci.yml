@@ -44,9 +44,6 @@ test_feature_branches:
 
 deploy_staging:
   stage: deploy_staging
-  variables:
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp0ZWZleXh0dm9sb2liZ29icHNzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4MDI2NzQwNSwiZXhwIjoxOTk1ODQzNDA1fQ.OXBJs1Qk4tWTwWdkL0DzFL5BYaKx7GNC6VRTVhI_fwU
-    NEXT_PUBLIC_SUPABASE_URL: https://jtefeyxtvoloibgobpss.supabase.co
   before_script:
     ##
     ## Install ssh-agent if not already installed, it is required by Docker.
@@ -84,7 +81,9 @@ deploy_staging:
   only:
     - main
   script:
+    - make create-env
     - make build-staging
+    - make delete-env
     - make push-staging
     - scp -r ./docker/staging ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey/docker
     - scp ./Makefile ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey

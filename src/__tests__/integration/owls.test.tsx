@@ -6,9 +6,11 @@ describe('owls page', () => {
   it('renders without crashing', () => {
     render(<Owls />);
 
-    // TODO change to OWLS
-    const title = screen.getByText('menuTitles.owls');
-
-    expect(title).toBeInTheDocument();
+    const image = screen.getAllByAltText('Basic Owl');
+    expect(image.length).toBe(6);
+  });
+  it('renders owls page unchanged', () => {
+    const { container } = render(<Owls />);
+    expect(container).toMatchSnapshot();
   });
 });

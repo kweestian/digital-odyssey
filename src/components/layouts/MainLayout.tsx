@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
-import Header from '../UI/Header';
+import Header from '../ui/Header';
 import Navbar from '../Navbar';
 import MainScreen from '../MainScreen';
 import ProgressBar from '../ProgressBar';

@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
-import { getNodeText } from '../utils';
+import { getNodeText } from '../../utils';
 import Loader from './Loader';
 
 // credit: https://uiverse.io/profile/satyamchaudharydev

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { assertIsNode } from '../utils';
+import { assertIsNode } from '../../utils';
 import Button from './Button';
 
 export type OptionComponent<T = {}> = React.JSXElementConstructor<{

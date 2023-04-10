@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import useTranslation from 'next-translate/useTranslation';
 
-import DescriptiveCard from '../../components/DescriptiveCard';
+import DescriptiveCard from '../../components/rules/DescriptiveCard';
 
 import * as GoldOwl from '../../../public/static/image/owls/gold-owl.svg';
 

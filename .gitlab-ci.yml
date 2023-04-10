@@ -45,8 +45,8 @@ test_feature_branches:
 deploy_staging:
   stage: deploy_staging
   variables:
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp0ZWZleXh0dm9sb2liZ29icHNzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4MDI2NzQwNSwiZXhwIjoxOTk1ODQzNDA1fQ.OXBJs1Qk4tWTwWdkL0DzFL5BYaKx7GNC6VRTVhI_fwU
-    NEXT_PUBLIC_SUPABASE_URL: https://jtefeyxtvoloibgobpss.supabase.co
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: $NEXT_PUBLIC_SUPABASE_ANON_KEY
+    NEXT_PUBLIC_SUPABASE_URL: $NEXT_PUBLIC_SUPABASE_URL
   before_script:
     ##
     ## Install ssh-agent if not already installed, it is required by Docker.

@@ -1,8 +1,3 @@
-.PHONY: create-ci-env
-create-ci-env: ## inject variables from gitlab context to docker
-	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > .env;
-	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" >> .env;
-
 .PHONY: build-development
 build-development: ## Build the development docker image.
 	docker compose -f ./docker/developement/docker-compose.yml build
@@ -16,7 +11,7 @@ stop-development: ## Stop the development docker container.
 	docker compose -f ./docker/development/docker-compose.yml down
 
 .PHONY: build-staging
-build-staging: create-ci-env  ## Build the staging docker image.
+build-staging:   ## Build the staging docker image.
 	docker compose -f ./docker/staging/docker-compose.yml build 
 
 .PHONY: start-staging

@@ -9,26 +9,35 @@ import styles from '../../styles/Rules.module.scss';
 
 type Props = {};
 
-interface Card {
-  title: string,
-  description: string,
-  icon: string,
-}
-
 const Rules: NextPage<Props> = () => {
   const { t } = useTranslation('rules');
-  const ruleCards: Card[] = [
-    t('cards.0', {}, { returnObjects: true }),
-    t('cards.1', {}, { returnObjects: true }),
-    t('cards.2', {}, { returnObjects: true }),
-    t('cards.3', {}, { returnObjects: true }),
-  ];
 
   return (
     <div className={styles.container}>
-      {ruleCards.map((card) => (
-        <DescriptiveCard isSmall title={card.title} description={card.description} icon={GoldOwl} key={card.title} />
-      ))}
+      <DescriptiveCard
+        isSmall
+        title={t('cards.card1.title')}
+        description={t('cards.card1.description')}
+        icon={GoldOwl}
+      />
+      <DescriptiveCard
+        isSmall
+        title={t('cards.card2.title')}
+        description={t('cards.card2.description')}
+        icon={GoldOwl}
+      />
+      <DescriptiveCard
+        isSmall
+        title={t('cards.card3.title')}
+        description={t('cards.card3.description')}
+        icon={GoldOwl}
+      />
+      <DescriptiveCard
+        isSmall
+        title={t('cards.card4.title')}
+        description={t('cards.card4.description')}
+        icon={GoldOwl}
+      />
     </div>
   );
 };

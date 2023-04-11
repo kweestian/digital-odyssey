@@ -2,34 +2,18 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: $TextMainColor;
+  justify-content: center;
+  align-items: center;
   background-color: $BackgroundColor;
-}
-
-.menuItem {
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  > div > h1 {
-    color: $TextMainColor;
-    font-size: 1.5em;
-    padding-top: 20px;
+  @media (max-width: 1280px) {
+    display: none;
   }
 }
 
-.activeLink {
-  margin-top: 3px;
-  position: relative;
-  width: inherit;
-  height: 5px;
-  border-radius: 2px;
-  background-color: $TextMainColor;
-  align-self: center;
-}
-
-.menuImage {
-  align-self: center;
+.subContainer {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $TextMainColor;
 }

@@ -15,7 +15,7 @@ import styles from './MainLayout.module.scss';
 import * as RulesIcon from '../../../public/static/image/navbar/rules-icon.svg';
 import * as MapIcon from '../../../public/static/image/navbar/map-icon.svg';
 import * as CardIcon from '../../../public/static/image/navbar/card-icon.svg';
-import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
+import * as OwlIcon from '../../../public/static/image/navbar/owl-icon.svg';
 import * as CloseIcon from '../../../public/static/image/CloseIcon.svg';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },
     { title: t('menuTitles.map'), href: '/game/map', icon: MapIcon },
     { title: t('menuTitles.cards'), href: '/game/cards', icon: CardIcon },
-    { title: t('menuTitles.owls'), href: '/game/owls', icon: ChatIcon },
+    { title: t('menuTitles.owls'), href: '/game/owls', icon: OwlIcon },
   ];
 
   const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';
@@ -51,10 +51,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Header />
       {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
-      <main className={styles.mobileContainer}>
-        <p>Page only accessible on desktop !</p>
-      </main>
       <main className={styles.container}>
+        <div className={styles.mobileContainer}>
+          <p>Page only accessible on desktop !</p>
+        </div>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>
         <ProgressBar percentage={0.2} />

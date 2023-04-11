@@ -14,15 +14,17 @@ const Navbar = ({ menuItems }: Props) => {
 
   return (
     <div className={styles.container}>
-      {menuItems.map((menuItem) => (
-        <Link key={menuItem.title} href={menuItem.href} className={styles.menuItem}>
-          <Image src={menuItem.icon} alt="" className={styles.menuImage} />
-          <div>
-            <h1>{menuItem.title}</h1>
-            {asPath === menuItem.href ? <div className={styles.activeLink} /> : null}
-          </div>
-        </Link>
-      ))}
+      <div className={styles.subContainer}>
+        {menuItems.map((menuItem) => (
+          <Link key={menuItem.title} href={menuItem.href} className={styles.menuItem}>
+            <Image src={menuItem.icon} alt="" className={styles.menuImage} />
+            <div className={styles.linkContainer}>
+              <h1>{menuItem.title}</h1>
+              {asPath === menuItem.href ? <div className={styles.activeLink} /> : null}
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

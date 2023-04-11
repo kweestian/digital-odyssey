@@ -2,10 +2,17 @@
 
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $BackgroundColor;
+}
+
+.subContainer {
+  display: flex;
+  height: 80vh;
   flex-direction: column;
   justify-content: space-around;
   color: $TextMainColor;
-  background-color: $BackgroundColor;
 }
 
 .menuItem {
@@ -20,6 +27,10 @@
   }
 }
 
+.linkContainer {
+  height: 70px;
+}
+
 .activeLink {
   margin-top: 3px;
   position: relative;
@@ -28,6 +39,7 @@
   border-radius: 2px;
   background-color: $TextMainColor;
   align-self: center;
+  justify-self: end;
 }
 
 .menuImage {

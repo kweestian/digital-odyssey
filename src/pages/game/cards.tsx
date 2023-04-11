@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import useTranslation from 'next-translate/useTranslation';
 
 import { GameCard } from '../../components';
 import { gameCards } from '../../data/cards';

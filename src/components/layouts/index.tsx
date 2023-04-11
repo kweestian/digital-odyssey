@@ -17,7 +17,6 @@ import * as MapIcon from '../../../public/static/image/navbar/map-icon.svg';
 import * as CardIcon from '../../../public/static/image/navbar/card-icon.svg';
 import * as ChatIcon from '../../../public/static/image/navbar/chat-icon.svg';
 import * as CloseIcon from '../../../public/static/image/CloseIcon.svg';
-import useWindowSize from '../../hooks/useWindowSize';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { getItem, setItem } = useLocalStorage();
@@ -25,7 +24,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isFirstVisit, setIsFirstVisit] = useState(true);
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
-  const { width } = useWindowSize();
 
   const menuItems = [
     { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },

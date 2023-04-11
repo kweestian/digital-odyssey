@@ -1,0 +1,8 @@
+@import 'variables';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  justify-content: center;
+}

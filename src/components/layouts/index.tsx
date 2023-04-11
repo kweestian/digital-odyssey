@@ -22,7 +22,6 @@ import useWindowSize from '../../hooks/useWindowSize';
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { getItem, setItem } = useLocalStorage();
   const [isOpen, setIsOpen] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
   const [isFirstVisit, setIsFirstVisit] = useState(true);
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
@@ -45,14 +44,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
   }, [getItem]);
 
-  useEffect(() => {
-    if (width && width < 1280) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  }, [width]);
-
   const handleClick = () => {
     setIsOpen(false);
     setItem('HAS_LOGGED_IN', 'true');
@@ -62,16 +53,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Header />
       {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      <main className={styles.mobileContainer}>
+        <p>Page only accessible on desktop !</p>
+      </main>
       <main className={styles.container}>
-        {isMobile ? (
-          <p>Page only accessible on mobile</p>
-        ) : (
-          <>
-            <Navbar menuItems={menuItems} />
-            <MainScreen title={title}>{children}</MainScreen>
-            <ProgressBar percentage={0.2} />
-          </>
-        )}
+        <Navbar menuItems={menuItems} />
+        <MainScreen title={title}>{children}</MainScreen>
+        <ProgressBar percentage={0.2} />
       </main>
     </>
   );

@@ -22,7 +22,7 @@ const DescriptiveCard = ({ isSmall, title, descriptionKey, icon }: DescriptiveCa
     <div className={styles.content}>
       <h1>{title}</h1>
       <p>
-        <Trans i18nKey={descriptionKey} components={{ newLineElement: <p /> }} />
+        <Trans i18nKey={descriptionKey} components={{ br: <br /> }} />
       </p>
       <Image src={icon} alt={title} />
     </div>

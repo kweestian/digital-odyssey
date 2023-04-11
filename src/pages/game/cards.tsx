@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import useTranslation from 'next-translate/useTranslation';
 
-import GameCard from '../../components/GameCard';
+import { GameCard } from '../../components';
 import { gameCards } from '../../data/cards';
 
 import styles from '../../styles/Cards.module.scss';

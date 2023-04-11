@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
-import Header from '../Header';
+import { Header } from '../UI';
 import Navbar from '../Navbar';
 import MainScreen from '../MainScreen';
 import ProgressBar from '../ProgressBar';
@@ -51,6 +51,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Header />
       {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      <main className={styles.mobileContainer}>
+        <p>Page only accessible on desktop !</p>
+      </main>
       <main className={styles.container}>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>

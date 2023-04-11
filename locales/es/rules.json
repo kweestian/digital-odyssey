@@ -2,19 +2,19 @@
   "cards": {
     "card1": {
       "title": "Introduction",
-      "description": "Watch the intro video to learn<newLineElement>the rules of the game<newLineElement>and its central challenge:<newLineElement>to explore powerful future digital solutions<newLineElement>in a fun, imaginative way."
+      "description": "Watch the intro video to learn<newLineElement />the rules of the game<newLineElement />and its central challenge:<newLineElement />to explore powerful future digital solutions<newLineElement />in a fun, imaginative way."
     },
     "card2": {
       "title": "Exploration",
-      "description": "The Kering Digital Odyssey<newLineElement>is a digital board game with a map presen-<newLineElement>ting the different regions to explore, each of<newLineElement>which embodies a great value of the group<newLineElement>and aspect of our Digital future."
+      "description": "The Kering Digital Odyssey<newLineElement />is a digital board game with a map presen-<newLineElement />ting the different regions to explore, each of<newLineElement />which embodies a great value of the group<newLineElement />and aspect of our Digital future."
     },
     "card3": {
       "title": "Final",
-      "description": "Finish the game by completing all expe-<newLineElement>riences and capture the Golden Owl<newLineElement>in the last region.<newLineElement><newLineElement>The first finisher will be heralded the Kering<newLineElement>Employee of the Future."
+      "description": "Finish the game by completing all expe-<newLineElement />riences and capture the Golden Owl<newLineElement />in the last region.<newLineElement /><newLineElement />The first finisher will be heralded the Kering<newLineElement />Employee of the Future."
     },
     "card4": {
       "title": "Experiences",
-      "description": "On each region, you are invited<newLineElement>to participate in experiences.<newLineElement>After each completed experience,<newLineElement>you win a concept card and some owls<newLineElement>when you complete a bonus."
+      "description": "On each region, you are invited<newLineElement />to participate in experiences.<newLineElement />After each completed experience,<newLineElement />you win a concept card and some owls<newLineElement />when you complete a bonus."
     }
   }
 }

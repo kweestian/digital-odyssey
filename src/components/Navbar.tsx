@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styles from './Navbar.module.scss';
 import MenuItem from './MenuItem';

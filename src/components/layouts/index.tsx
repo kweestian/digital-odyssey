@@ -51,10 +51,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Header />
       {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
-      <main className={styles.mobileContainer}>
-        <p>Page only accessible on desktop !</p>
-      </main>
       <main className={styles.container}>
+        <div className={styles.mobileContainer}>
+          <p>Page only accessible on desktop !</p>
+        </div>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>
         <ProgressBar percentage={0.2} />

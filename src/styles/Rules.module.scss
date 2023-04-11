@@ -1,0 +1,9 @@
+@import '../styles/variables';
+
+.container {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 35vw 35vw;
+  place-items: center;
+  justify-content: center;
+}

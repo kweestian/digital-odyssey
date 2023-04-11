@@ -34,7 +34,7 @@ const Header = () => {
         {/* <meta name="google-site-verification" content="" /> */}
 
         <meta name="description" content={metaDescription} />
-        <title>Green Tempalte</title>
+        <title>Digital Odyssey</title>
       </Head>
     </>
   );

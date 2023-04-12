@@ -90,6 +90,6 @@ deploy_staging:
     - ssh ubuntu@46.226.106.181 "
       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
       cd /home/enverse/clients/aldente/digital-odyssey &&
-      make pull-staging && make start-staging
+      make pull-staging && make start-staging &&
       docker image prune -a -f
       "

@@ -6,18 +6,3 @@
   width: 100vw;
   height: 100vh;
 }
-
-.mobileContainer {
-  display: none;
-  @media (max-width: 1280px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $BackgroundColor;
-    width: 100vw;
-    height: 100vh;
-    > p {
-      color: $TextMainColor;
-    }
-  }
-}

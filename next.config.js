@@ -12,7 +12,6 @@ const nextConfig = nextTranslate({
     ];
   },
   reactStrictMode: true,
-  swcMinify: true,
   output: 'standalone',
   images: {
     remotePatterns: [

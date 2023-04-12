@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
 import type { AppProps } from 'next/app';
 import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
 import { SessionContextProvider, Session } from '@supabase/auth-helpers-react';
@@ -21,14 +21,12 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <ErrorBoundary>
-      <Suspense>
-        <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
-          <Layout>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-            <Component {...props} />
-          </Layout>
-        </SessionContextProvider>
-      </Suspense>
+      <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
+        <Layout>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Component {...props} />
+        </Layout>
+      </SessionContextProvider>
     </ErrorBoundary>
   );
 }

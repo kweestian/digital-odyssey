@@ -21,7 +21,7 @@ stop-development: ## Stop the development docker container.
 
 .PHONY: build-staging
 build-staging:   ## Build the staging docker image.
-	docker compose -f ./docker/staging/docker-compose.yml build --build-arg NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL} NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+	docker compose -f ./docker/staging/docker-compose.yml build --build-arg NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL} --build-arg NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
 
 .PHONY: start-staging
 start-staging: ## Start the staging docker container.

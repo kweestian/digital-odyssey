@@ -8,5 +8,8 @@
   },
   "not-found": {
     "title": "You seem a little lost there"
+  },
+  "server-error": {
+    "title": "Server request failed."
   }
 }

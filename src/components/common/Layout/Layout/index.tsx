@@ -40,7 +40,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     if (getItem('HAS_LOGGED_IN') === 'true') {
       setIsFirstVisit(false);
     }
-  }, [getItem]);
+  }, []);
 
   const handleClick = () => {
     setIsOpen(false);

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 import Trans from 'next-translate/Trans';
 import styles from './DescriptiveCard.module.scss';
@@ -12,11 +13,11 @@ interface DescriptiveCardProps {
 }
 
 const DescriptiveCard = ({ isSmall, title, descriptionKey, icon }: DescriptiveCardProps) => (
-  <div className={styles.container}>
-    <div className={styles.cornerDecoration} />
-    <div className={styles.cornerDecoration} />
-    <div className={styles.cornerDecoration} />
-    <div className={styles.cornerDecoration} />
+  <div className={classNames(styles.container, { [styles.small]: isSmall })}>
+    <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
+    <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
+    <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
+    <div className={classNames(styles.cornerDecoration, styles.bottomLeftCorner)} />
 
     <div className={styles.content}>
       <h1>{title}</h1>

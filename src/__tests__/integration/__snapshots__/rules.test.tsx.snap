@@ -6,19 +6,19 @@ exports[`rules page renders rules page unchanged 1`] = `
     class="container"
   >
     <div
-      class="container"
+      class="container small"
     >
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topLeftCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomLeftCorner"
       />
       <div
         class="content"
@@ -43,19 +43,19 @@ exports[`rules page renders rules page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="container"
+      class="container small"
     >
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topLeftCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomLeftCorner"
       />
       <div
         class="content"
@@ -80,19 +80,19 @@ exports[`rules page renders rules page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="container"
+      class="container small"
     >
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topLeftCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomLeftCorner"
       />
       <div
         class="content"
@@ -117,19 +117,19 @@ exports[`rules page renders rules page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="container"
+      class="container small"
     >
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topLeftCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration topRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomRightCorner"
       />
       <div
-        class="cornerDecoration"
+        class="cornerDecoration bottomLeftCorner"
       />
       <div
         class="content"

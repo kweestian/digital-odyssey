@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 import styles from './GameCard.module.scss';
 
@@ -10,7 +11,7 @@ interface GameCardProps {
 }
 
 const GameCard = ({ title, isActive, cardUrl }: GameCardProps) => (
-  <div className={styles.container}>
+  <div className={classNames(styles.container, { [styles.isNotActive]: !isActive })}>
     <Image src={cardUrl} alt={title} />
   </div>
 );

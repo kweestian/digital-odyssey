@@ -36,7 +36,7 @@ exports[`cards page renders cards page unchange 1`] = `
       />
     </div>
     <div
-      class="container"
+      class="container isNotActive"
     >
       <img
         alt="Game Card 3"
@@ -51,7 +51,7 @@ exports[`cards page renders cards page unchange 1`] = `
       />
     </div>
     <div
-      class="container"
+      class="container isNotActive"
     >
       <img
         alt="Game Card 4"
@@ -66,7 +66,7 @@ exports[`cards page renders cards page unchange 1`] = `
       />
     </div>
     <div
-      class="container"
+      class="container isNotActive"
     >
       <img
         alt="Game Card 5"
@@ -81,7 +81,7 @@ exports[`cards page renders cards page unchange 1`] = `
       />
     </div>
     <div
-      class="container"
+      class="container isNotActive"
     >
       <img
         alt="Game Card 6"
@@ -96,7 +96,7 @@ exports[`cards page renders cards page unchange 1`] = `
       />
     </div>
     <div
-      class="container"
+      class="container isNotActive"
     >
       <img
         alt="Game Card 7"
@@ -111,7 +111,7 @@ exports[`cards page renders cards page unchange 1`] = `
       />
     </div>
     <div
-      class="container"
+      class="container isNotActive"
     >
       <img
         alt="Game Card 8"

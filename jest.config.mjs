@@ -17,6 +17,7 @@ const config = {
   collectCoverageFrom: ['src/**/*.ts*', '!**/node_modules/**'],
   coverageReporters: ['html', 'text', 'text-summary', 'cobertura'],
   testMatch: ['**/*.test.ts', '**/*.test.tsx'],
+  moduleNameMapper: { '^@/(.*)$': '<rootDir>/src/$1' },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

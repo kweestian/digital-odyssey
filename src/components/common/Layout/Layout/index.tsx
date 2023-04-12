@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
+import * as RulesIcon from '@/image/navbar/rules-icon.svg';
+import * as MapIcon from '@/image/navbar/map-icon.svg';
+import * as CardIcon from '@/image/navbar/card-icon.svg';
+import * as OwlIcon from '@/image/navbar/owl-icon.svg';
+import * as CloseIcon from '@/image/CloseIcon.svg';
+
+import useLocalStorage from '@/hooks/useLocalStorage';
+
 import Header from '../Header';
 import Navbar from '../Navbar/Navbar';
 import MainScreen from '../MainScreen/MainScreen';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import PopupVideo from '../../PopupVIdeo/PopupVideo';
 
-import useLocalStorage from '../../../../hooks/useLocalStorage';
-
 import styles from './Layout.module.scss';
-
-import * as RulesIcon from '../../../../../public/static/image/navbar/rules-icon.svg';
-import * as MapIcon from '../../../../../public/static/image/navbar/map-icon.svg';
-import * as CardIcon from '../../../../../public/static/image/navbar/card-icon.svg';
-import * as OwlIcon from '../../../../../public/static/image/navbar/owl-icon.svg';
-import * as CloseIcon from '../../../../../public/static/image/CloseIcon.svg';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { getItem, setItem } = useLocalStorage();

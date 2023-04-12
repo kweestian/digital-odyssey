@@ -6,7 +6,7 @@ const nextConfig = nextTranslate({
     return [
       {
         source: '/',
-        destination: '/rules',
+        destination: '/game/rules',
         permanent: false,
       },
     ];

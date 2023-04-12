@@ -1,4 +1,4 @@
-import * as GameCard from '../../public/static/image/cards/card.svg';
+import * as GameCard from '@/image/cards/card.svg';
 
 export const gameCards = [
   {

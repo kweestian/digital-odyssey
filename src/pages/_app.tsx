@@ -3,10 +3,11 @@ import type { AppProps } from 'next/app';
 import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
 import { SessionContextProvider, Session } from '@supabase/auth-helpers-react';
 
-import '../styles/globals.scss';
+import '@/styles/globals.scss';
 
 import { Layout } from '../components';
 import { NextPageWithLayout } from '../types/common';
+import ErrorBoundary from './ErrorBoundary';
 
 type AppPropsWithLayout = AppProps<{ initialSession: Session }> & {
   Component: NextPageWithLayout;
@@ -19,12 +20,14 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const { initialSession, ...props } = pageProps;
 
   return (
-    <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
-      <Layout>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...props} />
-      </Layout>
-    </SessionContextProvider>
+    <ErrorBoundary>
+      <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
+        <Layout>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Component {...props} />
+        </Layout>
+      </SessionContextProvider>
+    </ErrorBoundary>
   );
 }
 

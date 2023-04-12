@@ -1,8 +1,9 @@
 import { NextPage } from 'next';
-import styles from './Cards.module.scss';
 
-import { GameCard } from './components';
-import { gameCards } from '../../../data/cards';
+import { GameCard } from '@/components/games/cards';
+import { gameCards } from '@/data/cards';
+
+import styles from './Cards.module.scss';
 
 type Props = {};
 

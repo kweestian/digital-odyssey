@@ -81,7 +81,7 @@ deploy_staging:
   only:
     - main
   script:
-    # - make create-env
+    - make create-env
     - make build-staging
     # - make delete-env
     - make push-staging

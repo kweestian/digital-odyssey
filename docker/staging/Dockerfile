@@ -16,9 +16,19 @@ RUN pnpm install --frozen-lockfile
 # 2. Build image, build all soruce code
 FROM node:16-alpine AS builder
 
-ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=production
 
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+ARG VIRTUAL_HOST
+ARG VIRTUAL_PORT
+ARG LETSENCRYPT_HOST
+
+ENV VIRTUAL_HOST=${VIRTUAL_HOST}
+ENV VIRTUAL_PORT=${VIRTUAL_PORT}
+ENV LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+
+RUN echo $NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 
 WORKDIR /app
@@ -29,19 +39,6 @@ RUN yarn build
 # 3. Production image, copy all the files and run next
 FROM node:16-alpine AS runner
 
-ENV NEXT_TELEMETRY_DISABLED=1
-
-ARG VIRTUAL_HOST
-ARG VIRTUAL_PORT
-ARG LETSENCRYPT_HOST
-ARG NEXT_PUBLIC_SUPABASE_URL
-ARG NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-ENV VIRTUAL_HOST=${VIRTUAL_HOST}
-ENV VIRTUAL_PORT=${VIRTUAL_PORT}
-ENV LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
-ENV NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
-ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
 
 
 WORKDIR /app
@@ -52,6 +49,8 @@ RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/.env /app/.env
+
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing

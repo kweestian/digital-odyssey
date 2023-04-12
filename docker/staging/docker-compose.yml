@@ -4,9 +4,6 @@ services:
     build:
       context: ../../
       dockerfile: docker/staging/Dockerfile
-      args:
-        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
-        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
     image: registry.gitlab.com/enverse-labs/digital-odyssey:staging
     # volumes:
     #   - ./:/app
@@ -15,8 +12,6 @@ services:
       VIRTUAL_HOST: digital-odyssey-staging.enverselabs.com
       VIRTUAL_PORT: 4111
       LETSENCRYPT_HOST: digital-odyssey-staging.enverselabs.com
-      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
 
       PORT: 4111
     ports:

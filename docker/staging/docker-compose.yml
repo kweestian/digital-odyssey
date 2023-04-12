@@ -8,8 +8,6 @@ services:
         NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
     image: registry.gitlab.com/enverse-labs/digital-odyssey:staging
-    env_file:
-      - .env
     # volumes:
     #   - ./:/app
     #   - /app/node_modules

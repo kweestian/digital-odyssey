@@ -1,11 +1,11 @@
-.PHONY: create-env
-create-env: ## inject variables from gitlab context to docker
-	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > .env;
-	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" >> .env;
+# .PHONY: create-env
+# create-env: ## inject variables from gitlab context to docker
+# 	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > .env;
+# 	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" >> .env;
 
-.PHONY: delete-env
-delete-env: ## remove file before pushing it
-	rm .env
+# .PHONY: delete-env
+# delete-env: ## remove file before pushing it
+# 	rm .env
 
 .PHONY: build-development
 build-development: ## Build the development docker image.
@@ -21,7 +21,7 @@ stop-development: ## Stop the development docker container.
 
 .PHONY: build-staging
 build-staging:   ## Build the staging docker image.
-	docker compose -f ./docker/staging/docker-compose.yml build 
+	docker compose -f ./docker/staging/docker-compose.yml build --build-arg NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL} NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
 
 .PHONY: start-staging
 start-staging: ## Start the staging docker container.

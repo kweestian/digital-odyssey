@@ -81,9 +81,9 @@ deploy_staging:
   only:
     - main
   script:
-    - make create-env
+    # - make create-env
     - make build-staging
-    - make delete-env
+    # - make delete-env
     - make push-staging
     - scp -r ./docker/staging ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey/docker
     - scp ./Makefile ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey

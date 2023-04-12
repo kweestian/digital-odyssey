@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Rules from '../../pages/game/rules';
@@ -6,8 +5,7 @@ import Rules from '../../pages/game/rules';
 describe('rules page', () => {
   it('renders without crashing', () => {
     render(<Rules />);
-    
-    { /* const titleFirstCard = screen.getByText('rules:cards.card1.title');
+    const titleFirstCard = screen.getByText('rules:cards.card1.title');
     const titleSecondCard = screen.getByText('rules:cards.card2.title');
     const titleThirdCard = screen.getByText('rules:cards.card3.title');
     const titleFourthCard = screen.getByText('rules:cards.card4.title');
@@ -25,7 +23,7 @@ describe('rules page', () => {
     expect(descriptionFirstCard).toBeInTheDocument();
     expect(descriptionSecondCard).toBeInTheDocument();
     expect(descriptionThirdCard).toBeInTheDocument();
-  expect(descriptionFourthCard).toBeInTheDocument(); */ }
+    expect(descriptionFourthCard).toBeInTheDocument();
   });
   it('renders rules page unchanged', () => {
     const { container } = render(<Rules />);

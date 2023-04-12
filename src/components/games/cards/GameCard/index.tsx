@@ -11,7 +11,7 @@ interface GameCardProps {
 }
 
 const GameCard = ({ title, isActive, cardUrl }: GameCardProps) => (
-  <div className={classNames(styles.container, { [styles.isNotActive]: !isActive })}>
+  <div className={styles.container}>
     <Image src={cardUrl} alt={title} />
   </div>
 );

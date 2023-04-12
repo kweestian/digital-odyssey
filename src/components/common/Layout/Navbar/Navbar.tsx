@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './Navbar.module.scss';
-import MenuItem from './MenuItem';
+import MenuItem from '../MenuItem/MenuItem';
 
 type Props = {
   menuItems: Array<{ href: string; title: string; icon: typeof import('*.svg') }>;

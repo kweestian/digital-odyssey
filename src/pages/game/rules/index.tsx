@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
 import useTranslation from 'next-translate/useTranslation';
 
-import { DescriptiveCard } from '../../components';
+import { DescriptiveCard } from './components';
 
-import * as GoldOwl from '../../../public/static/image/owls/gold-owl.svg';
+import * as GoldOwl from '../../../../public/static/image/owls/gold-owl.svg';
 
-import styles from '../../styles/Rules.module.scss';
+import styles from './Rules.module.scss';
 
 type Props = {};
 

@@ -5,7 +5,7 @@ import { SessionContextProvider, Session } from '@supabase/auth-helpers-react';
 
 import '../styles/globals.scss';
 
-import { MainLayout } from '../components';
+import { Layout } from '../components';
 import { NextPageWithLayout } from '../types/common';
 
 type AppPropsWithLayout = AppProps<{ initialSession: Session }> & {
@@ -20,10 +20,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
-      <MainLayout>
+      <Layout>
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...props} />
-      </MainLayout>
+      </Layout>
     </SessionContextProvider>
   );
 }

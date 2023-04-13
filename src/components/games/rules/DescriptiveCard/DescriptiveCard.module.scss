@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   background-color: $DescriptiveCardBackground;
-  margin: 20px 50px;
+  margin: 30px 0px;
 }
 
 .content {
@@ -13,16 +13,17 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 5px 30px;
+  padding: 10px 30px;
   > h1 {
     font-size: 40px;
+    font-weight: 500;
     color: $TextSecondaryColor;
   }
   > p {
     font-size: 16px;
-    white-space: pre-line;
-    vertical-align: bottom;
+    white-space:pre;
     line-height: 1.3em;
+    font-weight: 400;
   }
 }
 
@@ -55,6 +56,42 @@
 
 
 .small {
-  height: 280px;
-  width: 450px;
+  height: 35vh;
+  width: 35vw;
+}
+
+@media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
+  .container {
+    margin: 10px 0;
+  }
+  .content {
+    > h1 {
+      font-size: 30px;
+    }
+    > p {
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 1.1em;
+    }
+    > img {
+      padding-top: 10px;
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-height: $MobileBreakpoint) {
+  .content {
+    > h1 {
+      font-size: 20px;
+    }
+    > p {
+      padding-top: 0;
+      font-size: 12px;
+    }
+    > img {
+      padding-top: 0;
+      height: 30px;
+    }
+  }
 }

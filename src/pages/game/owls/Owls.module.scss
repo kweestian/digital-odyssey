@@ -13,3 +13,18 @@
 .owlsList {
   display: flex;
 }
+
+@media screen and (max-height: $TabletBreakpoint), screen and (max-width: 1380px) {
+  .container {
+    > img {
+      width: 30vw;
+    max-height: 50vh;
+      
+    }
+  }
+  .owlsList {
+    > img {
+      width: 14vw;
+    }
+  }
+}

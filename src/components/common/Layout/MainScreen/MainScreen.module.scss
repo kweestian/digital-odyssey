@@ -2,7 +2,7 @@
 
 .subLayoutContainer {
   background-color: $BackgroundColor;
-  width: 100vw;
+  width: 84vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -12,14 +12,11 @@
   font-size: 2.25rem;
   line-height: 2.5rem;
   color: $TextMainColor;
-  @media (max-width: 1280px) {
-    display: none;
-  }
 }
 
 .mainScreenContainer {
   width: 78vw;
-  height: 80vh;
+  height: 92vh;
   border: solid 0.15rem $TextMainColor;
   border-radius: 30px;
   display: flex;
@@ -30,7 +27,7 @@
 .mainScreenFirstBorder {
   position: absolute;
   width: 79vw;
-  height: 78vh;
+  height: 90vh;
   border: solid 0.15rem $TextMainColor;
   border-radius: 30px;
 }
@@ -38,14 +35,20 @@
 .buttonContainer {
   position: absolute;
   right: 12vw;
-  top: 7vh;
+  top: 2vh;
   z-index: 2;
   padding: 5px 100px;
   background-color: $BackgroundColor;
   border: solid $BorderColor;
-  border-radius: 50px;
+  border-radius: 20px;
   justify-content: center;
   > h1 {
     font-size: 2.25rem;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .subLayoutContainer {
+    display: none;
   }
 }

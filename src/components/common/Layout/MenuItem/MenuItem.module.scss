@@ -10,6 +10,9 @@
     font-size: 1.5em;
     padding-top: 20px;
   }
+  @media screen and (orientation: portrait) {
+    padding: 0;
+  }
 }
 
 .linkContainer {
@@ -29,4 +32,20 @@
 
 .menuImage {
   align-self: center;
+}
+
+
+@media screen and (max-height: 550px) {
+  .linkContainer {
+    height: 10px;
+  }
+  .menuImage {
+    width: 40px;
+  }
+  .menuItem {
+    > div > h1 {
+      font-size: 1em;
+      padding-top: 10px;
+    }
+  }
 }

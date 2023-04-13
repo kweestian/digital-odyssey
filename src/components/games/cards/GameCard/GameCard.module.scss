@@ -1,3 +1,16 @@
+@import '@/styles/variables';
+
 .isNotActive {
   opacity: 50%;
+}
+
+@media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
+  .container {
+    height: 40vh;
+    width: 14vw;
+    > img {
+      height: 40vh;
+      width: 14vw;
+    }
+  }
 }

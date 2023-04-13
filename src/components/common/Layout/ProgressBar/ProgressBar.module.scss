@@ -7,9 +7,6 @@
   background-color: $BackgroundColor;
   justify-content: flex-end;
   align-items: center;
-  @media screen and (orientation: portrait) {
-    display: none;
-  }
 }
 
 .progressBarContainer {
@@ -42,11 +39,20 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .progressBar {
+    margin-right: 0;
+  }
   .progressBarContainer {
     > h2 {
       margin-right: 5px;
       margin-top: 10px;
       font-size: 1em;
     }
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .container {
+    display: none;
   }
 }

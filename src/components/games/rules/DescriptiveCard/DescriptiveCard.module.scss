@@ -21,8 +21,7 @@
   }
   > p {
     font-size: 16px;
-    white-space: pre-line;
-    vertical-align: bottom;
+    white-space:pre;
     line-height: 1.3em;
     font-weight: 400;
   }
@@ -57,11 +56,11 @@
 
 
 .small {
-  height: 32vh;
-  width: 32vw;
+  height: 35vh;
+  width: 35vw;
 }
 
-@media screen and (max-height: 765px), screen and (max-width: 1228px) {
+@media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
   .container {
     margin: 10px 0;
   }
@@ -79,9 +78,20 @@
       height: 50px;
     }
   }
+}
 
-  .small {
-    height: 35vh;
-    width: 35vw;
+@media screen and (max-height: $MobileBreakpoint) {
+  .content {
+    > h1 {
+      font-size: 20px;
+    }
+    > p {
+      padding-top: 0;
+      font-size: 12px;
+    }
+    > img {
+      padding-top: 0;
+      height: 30px;
+    }
   }
 }

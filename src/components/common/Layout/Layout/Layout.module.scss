@@ -9,7 +9,11 @@
 
 .mobileContainer {
   display: none;
-  @media screen and (orientation: portrait) {
+ 
+}
+
+@media screen and (orientation: portrait) {
+  .mobileContainer {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -52,3 +52,23 @@
     display: none;
   }
 }
+
+@media screen and (max-height: 550px), screen and (max-width: $TabletBreakpoint) {
+  .buttonContainer {
+    border-radius: 15px;
+    padding: 5px 75px;
+    > h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .buttonContainer {
+    border-radius: 10px;
+    padding: 5px 50px;
+    > h1 {
+      font-size: 1rem;
+    }
+  }
+}

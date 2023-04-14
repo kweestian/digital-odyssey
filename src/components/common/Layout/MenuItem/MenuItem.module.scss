@@ -10,9 +10,6 @@
     font-size: 1.5em;
     padding-top: 20px;
   }
-  @media screen and (orientation: portrait) {
-    padding: 0;
-  }
 }
 
 .linkContainer {
@@ -32,6 +29,12 @@
 
 .menuImage {
   align-self: center;
+}
+
+@media screen and (orientation: portrait) {
+  .menuItem {
+    padding: 0;
+  }
 }
 
 

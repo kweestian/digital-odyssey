@@ -1,0 +1,64 @@
+@import '@/styles/variables';
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.popinContainer {
+  display: flex;
+  position: relative;
+  height: 65vh;
+  width: 72vw;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: $BackgroundSecondaryColor;
+  padding: 40px;
+}
+
+.closeButton {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  > img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.cornerDecoration {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: black;
+}
+
+.topLeftCorner {
+  top: 0;
+  left: 0;
+}
+
+.topRightCorner {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeftCorner {
+  bottom: 0;
+  left: 0;
+}
+
+.bottomRightCorner {
+  bottom: 0;
+  right: 0;
+}

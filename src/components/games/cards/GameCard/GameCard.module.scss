@@ -2,6 +2,9 @@
 
 .isNotActive {
   opacity: 50%;
+  > button {
+    cursor: default;
+  }
 }
 
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {

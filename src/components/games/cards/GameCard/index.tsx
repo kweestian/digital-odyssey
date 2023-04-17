@@ -12,12 +12,11 @@ interface GameCardProps {
 }
 
 const GameCard = ({ title, isActive, cardUrl }: GameCardProps) => {
-  const test = 'test';
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <>
-      {isOpen && isActive && <PopinCard onClick={() => setIsOpen(false)}>Salut</PopinCard>}
+      {isOpen && isActive && <PopinCard onClick={() => setIsOpen(false)}>{title}</PopinCard>}
       <div className={classNames(styles.container, { [styles.isNotActive]: !isActive })}>
         <button onClick={() => setIsOpen(true)} type="button">
           <Image src={cardUrl} alt={title} className={styles.cardImg} />

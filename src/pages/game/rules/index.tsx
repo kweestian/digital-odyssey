@@ -1,7 +1,10 @@
 import { NextPage } from 'next';
 import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image';
 
 import { DescriptiveCard } from '@/components';
+import CardLayout from '@/components/common/PopinCard';
+import Trans from 'next-translate/Trans';
 
 import * as GoldOwl from '@/image/owls/gold-owl.svg';
 

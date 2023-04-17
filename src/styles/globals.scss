@@ -37,8 +37,8 @@
 
 html,
 body {
-  height: 100% !important;
-  width: 100%;
+  min-height: 100vh !important;
+  min-width: 100vw;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;

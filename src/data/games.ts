@@ -1,7 +1,7 @@
 import * as BasicOwl from '@/image/owls/basic-owl.svg';
 
-const RecommandationOfTheFuture: Game = {
-  title: 'Recommandation of the Future',
+const RecommandationOfTheFuture: Experience = {
+  name: 'Recommandation of the Future',
   description:
     'Welcome to the Recommandation of the Future.\n\n' +
     'Go to Chat GPT and search for an outfit for a specific occasion\n' +
@@ -15,17 +15,21 @@ const RecommandationOfTheFuture: Game = {
     lat: 0,
     lng: 0,
   },
-  type: { hasDocument: false, ctaText: 'copy here' },
-  bonus: {
-    hasDocument: true,
-    description: 'BONUS: Post a photo of the outfit',
-    ctaText: 'join attachment',
+  interaction: {
+    type: 'text',
+    label: 'copy here',
   },
+  bonus: {
+    type: 'attachment',
+    label: 'join attachment',
+    description: 'BONUS: Post a photo of the outfit',
+  },
+  keyLearning: 'OK',
 };
 
 export const CreativityCoasts: Region = {
-  title: 'creativity coasts',
+  regionKey: 'creativity_coast',
   color: 'orange',
-  games: [RecommandationOfTheFuture],
+  experiences: [RecommandationOfTheFuture],
   available: true,
 };

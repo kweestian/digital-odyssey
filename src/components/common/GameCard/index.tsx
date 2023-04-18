@@ -8,9 +8,8 @@ import Button from '../Button';
 
 import styles from './GameCard.module.scss';
 
-const GameCard = ({ title, description, icon, type, coordinates }: Game) => {
+const GameCard = ({ name, description, icon, coordinates, interaction, bonus }: Experience) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const isExperience = (x: Experience | Quiz): x is Experience => (x as Experience).hasDocument !== undefined;
 
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,15 +21,15 @@ const GameCard = ({ title, description, icon, type, coordinates }: Game) => {
       {isOpen && (
         <PopinCard onClick={() => setIsOpen(false)}>
           <div className={styles.cardContainer}>
-            <h1>{title}</h1>
-            <Image src={icon} alt={`${title} owl icon`} className={styles.owlImage} />
+            <h1>{name}</h1>
+            <Image src={icon} alt={`${name} owl icon`} className={styles.owlImage} />
             <div className={styles.descriptionContainer}>
               <p>{description}</p>
             </div>
             <form onSubmit={handleSubmit}>
-              {isExperience(type) && (
+              {interaction.type === 'text' && (
                 <div className={styles.inputContainer}>
-                  <input placeholder={type.ctaText} />
+                  <input placeholder={interaction.label} />
                   <button type="submit">
                     <Image src={Check} alt="On Submit Button" className={styles.submitButtonImage} />
                   </button>

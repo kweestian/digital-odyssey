@@ -5,17 +5,18 @@ import { GameCard } from '@/components';
 
 const Map: NextPage = () => (
   <>
-    {CreativityCoasts.games.map((game) => {
-      const { title, description, icon, type, coordinates } = game;
+    {CreativityCoasts.experiences.map((experience) => {
+      const { name, description, icon, coordinates, interaction, bonus } = experience;
 
       return (
         <GameCard
-          title={title}
-          coordinates={coordinates}
+          name={name}
           description={description}
           icon={icon}
-          type={type}
-          key={title}
+          coordinates={coordinates}
+          interaction={interaction}
+          bonus={bonus}
+          key={name}
         />
       );
     })}

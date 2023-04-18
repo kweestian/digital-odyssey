@@ -1,26 +1,30 @@
-type Experience = {
-  hasDocument: boolean;
-  ctaText: string;
+type Interaction = {
+  type: 'text' | 'quiz' | 'attachment';
+  label: string;
   description?: string;
+  choices?: Array<{ imageLink: string; value: string; label: string }>;
 };
 
-type Quiz = {
-  checkboxNb: number;
-  ctaText: string;
-};
-
-type Game = {
-  title: string;
+type Experience = {
+  name: string;
   description: string;
   icon: typeof import('*.svg');
   coordinates: { lat: number; lng: number };
-  type: Experience | Quiz;
-  bonus?: Experience | Quiz;
+  interaction: Interaction;
+  bonus?: Interaction;
+  keyLearning?: string;
+  additionalResources?: Link[];
 };
 
 type Region = {
-  title: string;
-  color: string;
-  games: Game[];
+  regionKey:
+    | 'sea_of_sustainability'
+    | 'playful_plains'
+    | 'loyalty_lagoon'
+    | 'creativity_coast'
+    | 'virtual_valleys'
+    | 'timeless_tundra';
+  color: 'blue' | 'purple' | 'pink' | 'orange' | 'yellow' | 'grey';
+  experiences: Experience[];
   available: boolean;
 };

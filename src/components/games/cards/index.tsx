@@ -1,1 +1,1 @@
-export { default as GameCard } from './GameCard';
+export { default as RewardCard } from './RewardCard';

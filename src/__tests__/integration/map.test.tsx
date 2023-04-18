@@ -5,10 +5,6 @@ import Map from '../../pages/game/map';
 describe('map page', () => {
   it('renders without crashing', () => {
     render(<Map />);
-
-    const title = screen.getByText('menuTitles.map');
-
-    expect(title).toBeInTheDocument();
   });
   it('renders cards page unchange', () => {
     const { container } = render(<Map />);

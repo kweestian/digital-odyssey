@@ -1,12 +1,12 @@
 type Experience = {
-  hasDocumentToUpload: boolean;
-  description?: string;
+  hasDocument: boolean;
   ctaText: string;
+  description?: string;
 };
 
 type Quiz = {
   checkboxNb: number;
-  CTAText: string;
+  ctaText: string;
 };
 
 type Game = {

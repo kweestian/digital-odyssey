@@ -1,17 +1,26 @@
 import { NextPage } from 'next';
-import useTranslation from 'next-translate/useTranslation';
 
-type Props = {};
+import { CreativityCoasts } from '@/data/games';
+import { GameCard } from '@/components';
 
-const Map: NextPage<Props> = () => {
-  const { t } = useTranslation('common');
-  const title = t('menuTitles.map');
+const Map: NextPage = () => (
+  <>
+    {CreativityCoasts.experiences.map((experience) => {
+      const { name, description, icon, coordinates, interaction, bonus } = experience;
 
-  return (
-    <div>
-      {title}
-    </div>
-  );
-};
+      return (
+        <GameCard
+          name={name}
+          description={description}
+          icon={icon}
+          coordinates={coordinates}
+          interaction={interaction}
+          bonus={bonus}
+          key={name}
+        />
+      );
+    })}
+  </>
+);
 
 export default Map;

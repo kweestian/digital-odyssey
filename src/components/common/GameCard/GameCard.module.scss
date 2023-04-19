@@ -1,0 +1,66 @@
+@import '@/styles/variables';
+
+.cardContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  > h1 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+}
+
+.owlImage {
+  width: 150px;
+}
+
+.descriptionContainer {
+  display: flex;
+  padding: 20px 50px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  > p {
+    white-space: pre;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1em;
+  }
+}
+
+.inputContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > input {
+    height: 40px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    background-color: $BackgroundSecondaryColor;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  > input::placeholder {
+    color: white;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  > input:focus {
+    outline: none;
+  }
+  > button {
+    margin-left: 30px;
+  }
+}
+
+.submitButtonImage {
+  height: 40px;
+  width: 40px;
+}

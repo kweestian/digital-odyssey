@@ -3,15 +3,15 @@ import Image from 'next/image';
 import classNames from 'classnames';
 
 import PopinCard from '@/components/common/PopinCard';
-import styles from './GameCard.module.scss';
+import styles from './RewardCard.module.scss';
 
-interface GameCardProps {
+interface RewardCardProps {
   title: string;
   isActive?: boolean;
   cardUrl: typeof import('*.svg');
 }
 
-const GameCard = ({ title, isActive, cardUrl }: GameCardProps) => {
+const RewardCard = ({ title, isActive, cardUrl }: RewardCardProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -26,4 +26,4 @@ const GameCard = ({ title, isActive, cardUrl }: GameCardProps) => {
   );
 };
 
-export default GameCard;
+export default RewardCard;

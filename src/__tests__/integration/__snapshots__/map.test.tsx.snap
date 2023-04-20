@@ -1,27 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`map page renders cards page unchange 1`] = `
-<div>
-  <button
-    aria-label="dummy"
-    class="jsx-3941823829 flex justify-center button undefined"
-    href="/"
-    locale=""
-    role="button"
-    type="button"
-  >
-    <div
-      class="jsx-3941823829"
-    >
-      dummy
-    </div>
-    <div
-      class="jsx-3941823829 arrow-wrapper"
-    >
-      <div
-        class="jsx-3941823829 arrow"
-      />
-    </div>
-  </button>
-</div>
-`;
+exports[`map page renders cards page unchange 1`] = `<div />`;

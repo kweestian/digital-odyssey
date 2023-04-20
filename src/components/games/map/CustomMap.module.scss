@@ -1,5 +1,15 @@
 @import '@/styles/variables';
 
-.imageContainer {
-  
+.creativityCoastContainer {
+  cursor: default;
+}
+
+.creativityCoast {
+  cursor: pointer;
+}
+
+.container {
+  .leaflet-marker-icon {
+    width: 400px !important;
+  }
 }

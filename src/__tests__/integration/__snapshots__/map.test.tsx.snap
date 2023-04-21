@@ -1,3 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`map page renders cards page unchange 1`] = `<div />`;
+exports[`map page renders cards page unchange 1`] = `
+<div>
+  <div
+    class="mapContainer"
+  >
+    <div
+      class="react-transform-wrapper transform-component-module_wrapper__SPB86 "
+    >
+      <div
+        class="react-transform-component transform-component-module_content__FBWxo "
+        style="transform: translate(0px, 0px) scale(1);"
+      >
+        <img
+          alt=""
+          class="mapImageContainer"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+        <div
+          class="svgRegions"
+        >
+          <button
+            class="creativityCoastContainer"
+            type="button"
+          >
+            <img
+              alt=""
+              class="creativityCoast"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              id="creativityCoast"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

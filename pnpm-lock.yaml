@@ -40,6 +40,9 @@ dependencies:
   react-websitecarbon-badge:
     specifier: ^1.0.5
     version: 1.0.5(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
+  react-zoom-pan-pinch:
+    specifier: ^3.0.7
+    version: 3.0.7(react-dom@18.2.0)(react@18.2.0)
   sass:
     specifier: ^1.60.0
     version: 1.60.0
@@ -4641,6 +4644,17 @@ packages:
       - react
       - react-dom
       - react-is
+    dev: false
+
+  /react-zoom-pan-pinch@3.0.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-UJkk1Z7BMPIgfY+Qu4jGTlj+UyZQhrpJeCuK1gg31x57i3p8h4ZXfYWu3dFIiR+uRgfoe/koziwgCjA//T1rKA==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:

@@ -1,0 +1,32 @@
+@import 'variables.scss';
+
+.mapContainer {
+  height: 100%;
+  width: 100%;
+  > div {
+    width: 100%;
+    height: 100%;
+    > div {
+      width: 100%;
+      height: 100%;
+      > img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.svgRegions {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  .creativityCoastContainer {
+    position: inherit;
+    bottom: 70px;
+    right: 160px;
+    .creativityCoast {
+      scale: 1.1;
+    }
+  }
+  
+}

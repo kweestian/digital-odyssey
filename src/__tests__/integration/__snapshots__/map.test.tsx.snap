@@ -12,24 +12,11 @@ exports[`map page renders cards page unchange 1`] = `
         class="react-transform-component transform-component-module_content__FBWxo "
         style="transform: translate(0px, 0px) scale(1);"
       >
-        <img
-          alt=""
-          class="mapImageContainer"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
         <div
-          class="svgRegions"
+          class="regionsContainer"
         >
-          <button
+          <div
             class="creativityCoastContainer"
-            type="button"
           >
             <img
               alt=""
@@ -44,7 +31,75 @@ exports[`map page renders cards page unchange 1`] = `
               style="color: transparent;"
               width="40"
             />
-          </button>
+          </div>
+          <div
+            class="loyaltyLagoonContainer"
+          >
+            <img
+              alt=""
+              class="loyaltyLagoon"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              id="loyaltyLagoon"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
+          <div
+            class="playfulPlainsContainer"
+          >
+            <img
+              alt=""
+              class="playfulPlains"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              id="playfulPlains"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
+          <div
+            class="timelessTundraContainer"
+          >
+            <img
+              alt=""
+              class="timelessTundra"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              id="timelessTundra"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
+          <div
+            class="virtualValleysContainer"
+          >
+            <img
+              alt=""
+              class="virtualValleys"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              id="virtualValleys"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 .mapContainer {
+  position: relative;
   height: 100%;
   width: 100%;
   > div {
@@ -16,17 +17,85 @@
   }
 }
 
-.svgRegions {
-  position: absolute;
+.mapImageContainer {
+  position: relative;
+  background-color: white;
   width: 100%;
   height: 100%;
-  .creativityCoastContainer {
-    position: inherit;
-    bottom: 70px;
-    right: 160px;
-    .creativityCoast {
-      scale: 1.1;
-    }
-  }
-  
 }
+
+.regionsContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.creativityCoastContainer {
+  position: fixed;
+  height: 0;
+  width: 0;
+  .creativityCoast {
+    position: relative;
+    pointer-events: all;
+    cursor: pointer;
+    transform: translate(calc(7.3vw), calc(-7.3vh));
+    scale: 1.1;
+    top: 0;
+  }
+}
+.loyaltyLagoonContainer {
+  position: fixed;
+  height: 0;
+  width: 0;
+  overflow: visible;
+  .loyaltyLagoon {
+    position: relative;
+    pointer-events: all;
+    cursor: pointer;
+    transform: translate(calc(-16.5vw), calc(-8vh));
+    scale: 1.1;
+  }
+}
+.playfulPlainsContainer {
+  position: fixed;
+  height: 0;
+  width: 0;
+  overflow: visible;
+  .playfulPlains {
+    position: relative;
+    pointer-events: all;
+    cursor: pointer;
+    transform: translate(calc(-30vw), calc(-20vh));
+    scale: 1.1;
+  }
+}
+.timelessTundraContainer {
+  position: fixed;
+  height: 0;
+  width: 0;
+  overflow: visible;
+  .timelessTundra {
+    position: relative;
+    pointer-events: all;
+    cursor: pointer;
+    transform: translate(calc(-1.7vw), calc(-25.1vh));
+    scale: 1.1;
+  }
+}
+.virtualValleysContainer {
+  position: fixed;
+  height: 0;
+  width: 0;
+  overflow: visible;
+  .virtualValleys {
+    position: relative;
+    pointer-events: all;
+    cursor: pointer;
+    transform: translate(calc(-7.9vw), calc(-37.5vh));
+    scale: 1.1;
+  }
+}
+
+

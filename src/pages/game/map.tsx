@@ -1,16 +1,14 @@
 import { NextPage } from 'next';
-import Image from 'next/image';
+import { useRef } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
+import CreativityCoast from '@/components/games/map/CreativityCoast';
+import LoyaltyLagoon from '@/components/games/map/LoyaltyLagoon';
+import PlayfulPlains from '@/components/games/map/PlayfulPlains';
+import VirtualValleys from '@/components/games/map/VirtualValleys';
+import TimelessTundra from '@/components/games/map/TimelessTundra';
+
 import styles from '@/styles/map.module.scss';
-
-import * as CreativityCoast from '@/image/map/creativity-coast.svg';
-import * as LoyaltyLagoon from '@/image/map/loyalty-lagoon.svg';
-import * as PlayfulPlains from '@/image/map/playful-plains.svg';
-import * as TimelessTundra from '@/image/map/timeless-tundra.svg';
-import * as VirtualValleys from '@/image/map/virtual-valleys.svg';
-
-import { useRef } from 'react';
 
 const Map: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
@@ -26,52 +24,21 @@ const Map: NextPage = () => {
     <div className={styles.mapContainer}>
       <TransformWrapper ref={transformComponentRef}>
         <TransformComponent>
-          {/* <Image src={MapImage} alt="" className={styles.mapImageContainer} /> */}
           <div className={styles.regionsContainer}>
-            <div className={styles.creativityCoastContainer}>
-              <Image
-                onClick={() => zoomToImage('creativityCoast')}
-                src={CreativityCoast}
-                alt=""
-                id="creativityCoast"
-                className={styles.creativityCoast}
-              />
+            <div className={styles.creativityCoast}>
+              <CreativityCoast zoomImageTrigger={() => zoomToImage('creativityCoast')} id="creativityCoast" />
             </div>
-            <div className={styles.loyaltyLagoonContainer}>
-              <Image
-                onClick={() => zoomToImage('loyaltyLagoon')}
-                src={LoyaltyLagoon}
-                alt=""
-                id="loyaltyLagoon"
-                className={styles.loyaltyLagoon}
-              />
+            <div className={styles.loyaltyLagoon}>
+              <LoyaltyLagoon zoomImageTrigger={() => zoomToImage('loyaltyLagoon')} id="loyaltyLagoon" />
             </div>
-            <div className={styles.playfulPlainsContainer}>
-              <Image
-                onClick={() => zoomToImage('playfulPlains')}
-                src={PlayfulPlains}
-                alt=""
-                id="playfulPlains"
-                className={styles.playfulPlains}
-              />
+            <div className={styles.playfulPlains}>
+              <PlayfulPlains zoomImageTrigger={() => zoomToImage('playfulPlains')} id="playfulPlains" />
             </div>
-            <div className={styles.timelessTundraContainer}>
-              <Image
-                onClick={() => zoomToImage('timelessTundra')}
-                src={TimelessTundra}
-                alt=""
-                id="timelessTundra"
-                className={styles.timelessTundra}
-              />
+            <div className={styles.virtualValleys}>
+              <VirtualValleys zoomImageTrigger={() => zoomToImage('virtualValleys')} id="virtualValleys" />
             </div>
-            <div className={styles.virtualValleysContainer}>
-              <Image
-                onClick={() => zoomToImage('virtualValleys')}
-                src={VirtualValleys}
-                alt=""
-                id="virtualValleys"
-                className={styles.virtualValleys}
-              />
+            <div className={styles.timelessTundra}>
+              <TimelessTundra zoomImageTrigger={() => zoomToImage('timelessTundra')} id="timelessTundra" />
             </div>
           </div>
         </TransformComponent>

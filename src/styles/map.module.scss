@@ -10,92 +10,39 @@
     > div {
       width: 100%;
       height: 100%;
-      > img {
-        object-fit: cover;
-      }
     }
   }
 }
 
-.mapImageContainer {
-  position: relative;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-}
-
 .regionsContainer {
   position: fixed;
+  width: 0;
+  height: 0;
   top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
 }
 
-.creativityCoastContainer {
-  position: fixed;
-  height: 0;
-  width: 0;
-  .creativityCoast {
-    position: relative;
-    pointer-events: all;
-    cursor: pointer;
-    transform: translate(calc(7.3vw), calc(-7.3vh));
-    scale: 1.1;
-    top: 0;
-  }
-}
-.loyaltyLagoonContainer {
-  position: fixed;
-  height: 0;
-  width: 0;
-  overflow: visible;
-  .loyaltyLagoon {
-    position: relative;
-    pointer-events: all;
-    cursor: pointer;
-    transform: translate(calc(-16.5vw), calc(-8vh));
-    scale: 1.1;
-  }
-}
-.playfulPlainsContainer {
-  position: fixed;
-  height: 0;
-  width: 0;
-  overflow: visible;
-  .playfulPlains {
-    position: relative;
-    pointer-events: all;
-    cursor: pointer;
-    transform: translate(calc(-30vw), calc(-20vh));
-    scale: 1.1;
-  }
-}
-.timelessTundraContainer {
-  position: fixed;
-  height: 0;
-  width: 0;
-  overflow: visible;
-  .timelessTundra {
-    position: relative;
-    pointer-events: all;
-    cursor: pointer;
-    transform: translate(calc(-1.7vw), calc(-25.1vh));
-    scale: 1.1;
-  }
-}
-.virtualValleysContainer {
-  position: fixed;
-  height: 0;
-  width: 0;
-  overflow: visible;
-  .virtualValleys {
-    position: relative;
-    pointer-events: all;
-    cursor: pointer;
-    transform: translate(calc(-7.9vw), calc(-37.5vh));
-    scale: 1.1;
-  }
+.creativityCoast {
+  position: absolute;
+  transform: translate(calc(5vw), calc(-2vh));
 }
 
+.loyaltyLagoon {
+  position: absolute;
+  transform: translate(calc(-19.3vw), calc(-2.3vh));
+}
 
+.playfulPlains {
+  position: absolute;
+  transform: translate(calc(-33vw), calc(-14.3vh));
+}
+
+.virtualValleys {
+  position: absolute;
+  transform: translate(calc(-10.4aavw), calc(-31.9vh));
+}
+
+.timelessTundra {
+  position: absolute;
+  transform: translate(calc(-4.8vw), calc(-19.3vh));
+}

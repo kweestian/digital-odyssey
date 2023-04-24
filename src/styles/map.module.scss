@@ -15,34 +15,30 @@
 }
 
 .regionsContainer {
-  position: fixed;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
+  width: 100%;
 }
 
 .creativityCoast {
   position: absolute;
-  transform: translate(calc(5vw), calc(-2vh));
+  transform: translate(calc(650px), calc(328px));
 }
 
 .loyaltyLagoon {
   position: absolute;
-  transform: translate(calc(-19.3vw), calc(-2.3vh));
+  transform: translate(calc(300px), calc(324px));
 }
 
 .playfulPlains {
   position: absolute;
-  transform: translate(calc(-33vw), calc(-14.3vh));
+  transform: translate(calc(102px), calc(213px));
 }
 
 .virtualValleys {
   position: absolute;
-  transform: translate(calc(-10.4aavw), calc(-31.9vh));
+  transform: translate(calc(428px), calc(54px));
 }
 
 .timelessTundra {
   position: absolute;
-  transform: translate(calc(-4.8vw), calc(-19.3vh));
+  transform: translate(calc(508px), calc(170px));
 }

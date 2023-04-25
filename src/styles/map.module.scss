@@ -211,6 +211,59 @@
   }
 }
 
+@media screen and (max-height: 500px) and (max-width: 1300px) {
+  .regionsContainer {
+    margin-top: -200px;
+  }
+
+  .creativityCoast {
+    transform: translate(calc(325px), calc(302px));
+    > svg {
+      scale: 0.5;
+    }
+  }
+  
+  .loyaltyLagoon {
+    transform: translate(calc(130px), calc(320px));
+    > svg {
+      scale: 0.5;
+    }
+  }
+  
+  .playfulPlains {
+    transform: translate(calc(24px), calc(261px));
+    > svg {
+      scale: 0.5;
+    }
+  }
+  
+  .virtualValleys {
+    transform: translate(calc(212px), calc(220px));
+    > svg {
+      scale: 0.5;
+    }
+  }
+  
+  .timelessTundra {
+    transform: translate(calc(192px), calc(270px));
+    > svg {
+      scale: 0.5;
+    }
+  }
+}
+
+@media screen and (max-height: 470px) and (max-width: 1300px) {
+  .regionsContainer {
+    margin-top: -240px;
+  }
+}
+
+@media screen and (max-height: 430px) and (max-width: 1300px) {
+  .regionsContainer {
+    margin-top: -260px;
+  }
+}
+
 /* MARGIN LEFT MEDIA QUERIES */
 
 @media screen and (max-width: 1430px) {

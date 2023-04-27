@@ -9,7 +9,6 @@ type Experience = {
   name: string;
   description: string;
   icon: typeof import('*.svg');
-  coordinates: { lat: number; lng: number };
   interaction: Interaction;
   bonus?: Interaction;
   keyLearning?: string;
@@ -18,13 +17,22 @@ type Experience = {
 
 type Region = {
   regionKey:
-    | 'sea_of_sustainability'
-    | 'playful_plains'
-    | 'loyalty_lagoon'
-    | 'creativity_coast'
-    | 'virtual_valleys'
-    | 'timeless_tundra';
-  color: 'blue' | 'purple' | 'pink' | 'orange' | 'yellow' | 'grey';
+    | 'seaOfSustainability'
+    | 'playfulPlains'
+    | 'loyaltyLagoon'
+    | 'creativityCoast'
+    | 'virtualValleys'
+    | 'timelessTundra';
+  // blue | purple | pink | orange | green | grey
+  color: '#00ACFF' | '#936EF1' | '#FF3FA0' | '#FF704E' | '#00B16E' | '#B3B3B3' | 'transparent';
+  drawing: string;
+  regionOwl: {
+    regionOwlGif: string;
+    x: string;
+    y: string;
+  };
   experiences: Experience[];
   available: boolean;
 };
+
+type CustomMap = Region[];

@@ -26,6 +26,7 @@ type Region = {
     | 'timelessTundra';
   // blue | purple | pink | orange | green | grey
   color: '#00ACFF' | '#936EF1' | '#FF3FA0' | '#FF704E' | '#00B16E' | '#B3B3B3' | 'transparent';
+  filColour: 'black' | 'transparent';
   drawing: string;
   regionOwl: {
     regionOwlGif: string;

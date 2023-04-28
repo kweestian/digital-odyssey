@@ -21,15 +21,17 @@ const Map: NextPage = () => {
   };
 
   return (
-    <div className={styles.mapContainer}>
-      <TransformWrapper ref={transformComponentRef}>
-        <TransformComponent>
-          <div className={styles.regionsContainer}>
-            <CreativityCoast customMap={CustomMap} zoomImageTrigger={zoomToImage} id="creativityCoast" />
-          </div>
-        </TransformComponent>
-      </TransformWrapper>
-    </div>
+    <GameLayout>
+      <div className={styles.mapContainer}>
+        <TransformWrapper ref={transformComponentRef}>
+          <TransformComponent>
+            <div className={styles.regionsContainer}>
+              <CreativityCoast customMap={CustomMap} zoomImageTrigger={zoomToImage} id="creativityCoast" />
+            </div>
+          </TransformComponent>
+        </TransformWrapper>
+      </div>
+    </GameLayout>
   );
 };
 

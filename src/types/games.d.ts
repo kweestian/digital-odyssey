@@ -6,6 +6,7 @@ type Interaction = {
 };
 
 type Experience = {
+  key: string;
   name: string;
   description: string;
   icon: typeof import('*.svg');

@@ -1,7 +1,11 @@
+import { CSSProperties } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
-import { getNodeText } from '@/utils';
+import classNames from 'classnames';
+import { getNodeText } from '@/lib';
 import Loader from '../Loader';
+
+import styles from './Button.module.scss';
 
 // credit: https://uiverse.io/profile/satyamchaudharydev
 
@@ -14,6 +18,7 @@ type BaseProps = {
   className?: string;
   loading?: boolean;
   disabled?: boolean;
+  customStyles?: CSSProperties;
   /**
    * For buttons that dont need styling, eg event listenser on big divs
    */
@@ -44,11 +49,11 @@ const Button = ({
   href,
   onClick,
   type,
-  className,
+  customStyles,
   loading,
   bare,
   children,
-  disabled,
+  // disabled,
   ariaLabel: overrideAriaLabel,
 }: Props) => {
   const Component = as === 'a' ? Link : 'button';
@@ -68,92 +73,19 @@ const Button = ({
   }
 
   return (
-    <>
-      <Component
-        aria-label={ariaLabel}
-        type={type}
-        className={`flex justify-center ${bare ? '' : 'button'} ${className}`}
-        onClick={onClick}
-        href={href || '/'}
-        locale={lang}
-        role={as === 'a' ? 'navigation' : 'button'}
-      >
-        <div>{loading ? <Loader /> : display}</div>
-        <div className="arrow-wrapper">
-          <div className="arrow" />
-        </div>
-      </Component>
-      <style jsx>
-        {`
-          .button {
-            cursor: ${disabled ? 'not-allowed' : 'pointer'};
-            --primary-color: var(--color-light);
-            --secondary-color: var(--color-black);
-            --hover-color: #111;
-            --arrow-width: 10px;
-            --arrow-stroke: 2px;
-            box-sizing: border-box;
-            border: 0;
-            border-radius: 30px;
-            color: var(--secondary-color);
-            padding: 0.8rem 1rem;
-            background: var(--primary-color);
-            display: flex;
-            transition: 0.2s background;
-            align-items: center;
-            gap: 0.6em;
-            min-width: max-content;
-          }
-
-          .button:hover,
-          .button:active,
-          .button:focus {
-            background-color: var(--color-green-army);
-            color: var(--color-light);
-            font-weight: bold;
-          }
-
-          .button .arrow-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .button .arrow {
-            margin-top: 1px;
-            width: var(--arrow-width);
-            background: var(--primary-color);
-            height: var(--arrow-stroke);
-            position: relative;
-            transition: 0.2s;
-          }
-
-          .button .arrow::before {
-            content: '';
-            box-sizing: border-box;
-            position: absolute;
-            border: solid var(--secondary-color);
-            border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-            display: inline-block;
-            top: -3px;
-            right: 3px;
-            transition: 0.2s;
-            padding: 3px;
-            transform: rotate(-45deg);
-          }
-
-          .button:hover .arrow {
-            background: var(--primary-color);
-          }
-
-          .button:hover .arrow:before,
-          .button:active .arrow:before {
-            right: 0;
-            border-color: var(--primary-color);
-          }
-        `}
-      </style>
-    </>
+    <Component
+      disabled={loading}
+      aria-label={ariaLabel}
+      type={type}
+      className={classNames({ [styles.button]: !bare })}
+      onClick={onClick}
+      href={href || '/'}
+      locale={lang}
+      role={as === 'a' ? 'navigation' : 'button'}
+      style={customStyles}
+    >
+      <div className={styles.loader__container}>{loading ? <Loader /> : display}</div>
+    </Component>
   );
 };
 

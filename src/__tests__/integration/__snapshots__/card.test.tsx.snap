@@ -6,165 +6,350 @@ exports[`cards page renders cards page unchange 1`] = `
     class="container"
   >
     <div
-      class="container"
+      class="iframeContainer"
     >
       <button
+        class="closeButton"
         type="button"
       >
         <img
-          alt="Game Card 1"
-          class="cardImg"
+          alt="Close Popup Button"
           data-nimg="1"
           decoding="async"
-          height="40"
+          height="30"
           loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
           style="color: transparent;"
-          width="40"
+          width="30"
         />
       </button>
-    </div>
-    <div
-      class="container"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 2"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
-    </div>
-    <div
-      class="container isNotActive"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 3"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
-    </div>
-    <div
-      class="container isNotActive"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 4"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
-    </div>
-    <div
-      class="container isNotActive"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 5"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
-    </div>
-    <div
-      class="container isNotActive"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 6"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
-    </div>
-    <div
-      class="container isNotActive"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 7"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
-    </div>
-    <div
-      class="container isNotActive"
-    >
-      <button
-        type="button"
-      >
-        <img
-          alt="Game Card 8"
-          class="cardImg"
-          data-nimg="1"
-          decoding="async"
-          height="40"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-          style="color: transparent;"
-          width="40"
-        />
-      </button>
+      <iframe
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen=""
+        height="100%"
+        src="https://www.youtube.com/embed/Y82uQpMUCCc"
+        title="Sustainability Progress Report 2020-2023 - KERING"
+        width="100%"
+      />
     </div>
   </div>
+  <main
+    class="container"
+  >
+    <div
+      class="mobileContainer"
+    >
+      <p>
+        Please turn your screen on landscape to access the game.
+      </p>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="subContainer"
+      >
+        <a
+          class="menuItem"
+          href="/game/rules"
+        >
+          <img
+            alt=""
+            class="menuImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="linkContainer"
+          >
+            <h1>
+              menuTitles.rules
+            </h1>
+          </div>
+        </a>
+        <a
+          class="menuItem"
+          href="/game/map"
+        >
+          <img
+            alt=""
+            class="menuImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="linkContainer"
+          >
+            <h1>
+              menuTitles.map
+            </h1>
+          </div>
+        </a>
+        <a
+          class="menuItem"
+          href="/game/cards"
+        >
+          <img
+            alt=""
+            class="menuImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="linkContainer"
+          >
+            <h1>
+              menuTitles.cards
+            </h1>
+          </div>
+        </a>
+        <a
+          class="menuItem"
+          href="/game/owls"
+        >
+          <img
+            alt=""
+            class="menuImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="linkContainer"
+          >
+            <h1>
+              menuTitles.owls
+            </h1>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      class="subLayoutContainer"
+    >
+      <div
+        class="buttonContainer"
+      >
+        <h1>
+          Lost
+        </h1>
+      </div>
+      <div
+        class="mainScreenFirstBorder"
+      />
+      <div
+        class="mainScreenContainer"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="container"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 1"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 2"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container isNotActive"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 3"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container isNotActive"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 4"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container isNotActive"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 5"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container isNotActive"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 6"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container isNotActive"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 7"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+          <div
+            class="container isNotActive"
+          >
+            <button
+              type="button"
+            >
+              <img
+                alt="Game Card 8"
+                class="cardImg"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="progressBarContainer"
+      >
+        <div
+          class="progressBar"
+        >
+          <div
+            class="progress"
+            style="height: 20%;"
+          />
+        </div>
+        <h2>
+          20
+          %
+        </h2>
+      </div>
+    </div>
+  </main>
 </div>
 `;

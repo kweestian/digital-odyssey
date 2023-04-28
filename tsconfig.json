@@ -20,6 +20,6 @@
       "@/image/*": ["./public/static/image/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/login2.toto"],
   "exclude": ["node_modules"]
 }

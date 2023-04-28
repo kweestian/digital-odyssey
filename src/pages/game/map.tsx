@@ -7,6 +7,7 @@ import CreativityCoast from '@/components/games/map/CreativityCoast';
 import { CustomMap } from '@/data/games';
 
 import styles from '@/styles/map.module.scss';
+import { GameLayout } from '@/components';
 
 const Map: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);

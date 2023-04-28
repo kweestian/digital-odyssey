@@ -11,6 +11,12 @@
   }
 }
 
+@font-face {
+  font-family: 'monarch';
+  src: url('/static/font/WTMonarchNova-Roman.ttf');
+  font-weight: normal;
+}
+
 :root {
   --color-light: #f3f4f6;
   --color-green-lightest: #fafffb;

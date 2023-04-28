@@ -14,9 +14,20 @@ type Experience = {
   bonus?: Interaction;
   keyLearning?: string;
   additionalResources?: Link[];
+  coordinates: {
+    x: number;
+    y: number;
+  };
 };
 
+declare module '*.module.scss' {
+  const classes: { [key: string]: string };
+  export const titleColor: string;
+  export default classes;
+}
+
 type Region = {
+  title: { textParts: string[]; coordinates: { x: number; y: number } };
   regionKey:
     | 'seaOfSustainability'
     | 'playfulPlains'
@@ -26,8 +37,9 @@ type Region = {
     | 'timelessTundra';
   // blue | purple | pink | orange | green | grey
   color: '#00ACFF' | '#936EF1' | '#FF3FA0' | '#FF704E' | '#00B16E' | '#B3B3B3' | 'transparent';
+  customElement?: React.FC;
   filColour: 'black' | 'transparent';
-  drawing: string;
+  drawing?: string;
   regionOwl: {
     regionOwlGif: string;
     x: string;

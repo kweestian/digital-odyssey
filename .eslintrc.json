@@ -16,7 +16,7 @@
     "import/prefer-default-export": "off",
     "react/function-component-definition": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-
+    "react/jsx-curly-newline": "off",
     "react/jsx-filename-extension": "off",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",

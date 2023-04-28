@@ -21,8 +21,7 @@ const Header = () => {
       <style jsx global>
         {`
           html,
-          body,
-          button {
+          body {
             font-family: ${poppins.style.fontFamily};
           }
         `}

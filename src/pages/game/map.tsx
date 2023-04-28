@@ -2,14 +2,15 @@ import { NextPage } from 'next';
 import { useEffect, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
-import CreativityCoast from '@/components/games/map/CreativityCoast';
+import Continent from '@/components/games/map';
 
 import { CustomMap } from '@/data/games';
 
 import styles from '@/styles/map.module.scss';
 import { GameLayout } from '@/components';
-import Image from 'next/image';
 import useWindowSize from '@/hooks/useWindowSize';
+
+const DEFAULT_REGION_ZOOM = 3.5;
 
 const Map: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
@@ -18,17 +19,20 @@ const Map: NextPage = () => {
 
   const { width } = useWindowSize();
 
+  const initialScale = width && width < 1200 ? 0.4 : 1.2;
+  const [zoom, setZoom] = useState(initialScale);
+
   const zoomToImage = (regionName: string) => {
-    if (transformComponentRef.current) {
+    if (transformComponentRef.current && !isPanning) {
       const { zoomToElement } = transformComponentRef.current;
-      // zoomToElement(regionName);
+      setZoom(DEFAULT_REGION_ZOOM);
+      zoomToElement(regionName, DEFAULT_REGION_ZOOM);
     }
-    // open popin
   };
 
   useEffect(() => {
-    transformComponentRef.current?.zoomToElement('backgroundAnchor', width && width < 1200 ? 0.4 : 1.2);
-  }, [transformComponentRef, width]);
+    transformComponentRef.current?.zoomToElement('backgroundAnchor', initialScale);
+  }, [transformComponentRef, width, initialScale]);
 
   return (
     <GameLayout>
@@ -39,17 +43,17 @@ const Map: NextPage = () => {
           // {...initialValues}
           limitToBounds={false}
           ref={transformComponentRef}
-          onPanningStart={(ref) => console.log(ref.state.positionX)}
-          onPanningStop={(ref) => console.log(ref.state.positionX, ref.state.positionY, ref.state.scale)}
+          onZoom={(evt) => setZoom(evt.state.scale)}
+          onPanning={() => setIsPanning(true)}
+          onPanningStop={() =>
+            setTimeout(() => {
+              setIsPanning(false);
+            }, 500)
+          }
         >
           <TransformComponent>
             <div className={styles.regionsContainer}>
-              <CreativityCoast
-                isPanning={isPanning}
-                customMap={CustomMap}
-                zoomImageTrigger={zoomToImage}
-                id="creativityCoast"
-              />
+              <Continent zoom={zoom} customMap={CustomMap} zoomImageTrigger={zoomToImage} />
             </div>
           </TransformComponent>
         </TransformWrapper>

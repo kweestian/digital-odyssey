@@ -21,3 +21,9 @@ jest.mock('next/router', () => ({
     query: {},
   }),
 }));
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));

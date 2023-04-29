@@ -4,7 +4,8 @@
 /* eslint-disable max-len */
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import styles from './Map.module.scss';
-import BG from './background';
+import MapBackground from './components/MapBackground';
+import { ExperiencePicto } from './components';
 
 interface Props {
   zoomImageTrigger: (regionName: string) => void;
@@ -13,18 +14,18 @@ interface Props {
 }
 
 const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
-  const showIcon = zoom >= 3.5;
-
   const landContinentRef = useRef(null);
 
   const [activeRegion, setActiveRegion] = useState<Region['regionKey'] | ''>();
   const [forceActiveRegion, setForceActiveRegion] = useState<Region['regionKey'] | ''>();
+  const showIcon = zoom >= 3;
+
   useEffect(() => {
     if (!showIcon) {
       setActiveRegion('');
       setForceActiveRegion('');
     }
-  }, [zoom, setActiveRegion, setForceActiveRegion]);
+  }, [zoom, setActiveRegion, setForceActiveRegion, showIcon]);
 
   const onClickActions = useCallback(
     (regionKey: Region['regionKey']) => {
@@ -43,7 +44,7 @@ const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
 
   return (
     <div className="w-full h-full">
-      <BG>
+      <MapBackground>
         {/* first, draw all regions */}
         <g ref={landContinentRef}>
           {customMap.map((region) => {
@@ -88,7 +89,7 @@ const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
           })}
           {/* then draw elements on top */}
           {customMap.map((region) => {
-            const { regionKey, regionOwl, available } = region;
+            const { regionKey, regionOwl, available, experiences } = region;
 
             if (!available) {
               return (
@@ -124,67 +125,54 @@ const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                 </a>
               );
             }
+
+            // const showRegionIcons = forceActiveRegion === regionKey || showIcon;
+
+            if (showIcon) {
+              return (
+                <g className="z-20" key={`pictos-${regionKey}`}>
+                  <ExperiencePicto experiences={experiences} />
+                </g>
+              );
+            }
+
             return (
-              <Fragment key={regionKey}>
-                {!showIcon && (
-                  <a onClick={() => onClickActions(regionKey)} style={{ cursor: 'pointer' }} className="z-10">
-                    <g>
-                      <text
-                        className={styles.region__title}
-                        x={region.title.coordinates.x}
-                        y={region.title.coordinates.y}
-                        style={{ fill: region.color, fontWeight: '400', fontSize: '1.8rem' }}
-                        textAnchor="middle"
-                      >
-                        {region.title.textParts.map((text) => (
-                          <tspan x={region.title.coordinates.x} dy="1.2em" key={text}>
-                            {text}
-                          </tspan>
-                        ))}
-                      </text>
-                      {available && (
-                        <image
-                          x={regionOwl.x}
-                          y={regionOwl.y}
-                          width="150"
-                          height="84.3"
-                          style={{ overflow: 'visible' }}
-                          xlinkHref={regionOwl.regionOwlGif}
-                        />
-                      )}
-                    </g>
-                  </a>
-                )}
-                {showIcon && (
-                  <g className="z-20" key={`pictos-${regionKey}`}>
+              <a
+                key={`pictos-${regionKey}`}
+                onClick={() => onClickActions(regionKey)}
+                style={{ cursor: 'pointer' }}
+                className="z-10"
+              >
+                <g>
+                  <text
+                    className={styles.region__title}
+                    x={region.title.coordinates.x}
+                    y={region.title.coordinates.y}
+                    style={{ fill: region.color, fontWeight: '400', fontSize: '1.8rem' }}
+                    textAnchor="middle"
+                  >
+                    {region.title.textParts.map((text) => (
+                      <tspan x={region.title.coordinates.x} dy="1.2em" key={text}>
+                        {text}
+                      </tspan>
+                    ))}
+                  </text>
+                  {available && (
                     <image
-                      x="290"
-                      y="370"
-                      width="50"
-                      height="50"
-                      xlinkHref="/static/image/map/picto/PICTO_POSITION.svg"
+                      x={regionOwl.x}
+                      y={regionOwl.y}
+                      width="150"
+                      height="84.3"
+                      style={{ overflow: 'visible' }}
+                      xlinkHref={regionOwl.regionOwlGif}
                     />
-                    <image
-                      x="310"
-                      y="180"
-                      width="50"
-                      height="50"
-                      xlinkHref="/static/image/map/picto/PICTO_POSITION.svg"
-                    />
-                    <image
-                      x="250"
-                      y="260"
-                      width="50"
-                      height="50"
-                      xlinkHref="/static/image/map/picto/PICTO_POSITION.svg"
-                    />
-                  </g>
-                )}
-              </Fragment>
+                  )}
+                </g>
+              </a>
             );
           })}
         </g>
-      </BG>
+      </MapBackground>
     </div>
   );
 };

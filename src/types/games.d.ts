@@ -12,7 +12,7 @@ type Experience = {
   icon: typeof import('*.svg');
   interaction: Interaction;
   bonus?: Interaction;
-  keyLearning?: string;
+  keyLearning?: { text: string; additionalRessources?: { text: string; link: string }[] };
   additionalResources?: Link[];
   coordinates: {
     x: number;

@@ -4,13 +4,14 @@ import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'reac
 
 import Continent from '@/components/games/map';
 
-import { CustomMap } from '@/data/games';
+import { CustomMap } from '@/data/regions';
 
 import styles from '@/styles/map.module.scss';
-import { GameLayout } from '@/components';
+import { GameCard, GameLayout } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
+import { useExperience } from '@/contexts/experiences';
 
-const DEFAULT_REGION_ZOOM = 3.5;
+const DEFAULT_REGION_ZOOM = 3;
 
 const Map: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
@@ -34,9 +35,17 @@ const Map: NextPage = () => {
     transformComponentRef.current?.zoomToElement('backgroundAnchor', initialScale);
   }, [transformComponentRef, width, initialScale]);
 
+  const {
+    state: { experience },
+    dispatch,
+  } = useExperience();
+
   return (
     <GameLayout>
       <div className={styles.mapContainer}>
+        {experience && (
+          <GameCard experience={experience} isOpen onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })} />
+        )}
         <TransformWrapper
           centerOnInit
           // eslint-disable-next-line react/jsx-props-no-spreading

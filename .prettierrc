@@ -21,6 +21,12 @@
       "options": {
         "parser": "yaml"
       }
+    },
+    {
+      "files": ["*.scss", "*.sass"],
+      "options": {
+        "parser": "scss"
+      }
     }
   ]
 }

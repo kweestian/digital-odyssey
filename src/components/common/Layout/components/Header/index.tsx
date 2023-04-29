@@ -1,10 +1,12 @@
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
-import { Inter } from '@next/font/google';
+import { Poppins } from '@next/font/google';
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['italic', 'normal'],
 });
 
 /**
@@ -18,8 +20,9 @@ const Header = () => {
     <>
       <style jsx global>
         {`
-          html {
-            font-family: ${inter.style.fontFamily};
+          html,
+          body {
+            font-family: ${poppins.style.fontFamily};
           }
         `}
       </style>

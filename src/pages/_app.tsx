@@ -5,7 +5,8 @@ import { SessionContextProvider, Session } from '@supabase/auth-helpers-react';
 
 import '@/styles/globals.scss';
 
-import { Layout } from '../components';
+import { ExperienceProvider } from '@/contexts/experiences';
+import { DefaultLayout } from '@/components';
 import { NextPageWithLayout } from '../types/common';
 import ErrorBoundary from './ErrorBoundary';
 
@@ -13,22 +14,23 @@ type AppPropsWithLayout = AppProps<{ initialSession: Session }> & {
   Component: NextPageWithLayout;
   locale?: string;
 };
-
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+function DigitalOdyssey({ Component, pageProps }: AppPropsWithLayout) {
   const [supabaseClient] = useState(() => createBrowserSupabaseClient());
 
   const { initialSession, ...props } = pageProps;
 
   return (
-    <ErrorBoundary>
-      <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
-        <Layout>
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Component {...props} />
-        </Layout>
-      </SessionContextProvider>
-    </ErrorBoundary>
+    <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>
+      <ExperienceProvider>
+        <ErrorBoundary>
+          <DefaultLayout>
+            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+            <Component {...props} />
+          </DefaultLayout>
+        </ErrorBoundary>
+      </ExperienceProvider>
+    </SessionContextProvider>
   );
 }
 
-export default MyApp;
+export default DigitalOdyssey;

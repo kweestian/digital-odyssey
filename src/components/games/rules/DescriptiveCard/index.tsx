@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { useUser } from '@supabase/auth-helpers-react';
 import classNames from 'classnames';
 
 import Trans from 'next-translate/Trans';
 import styles from './DescriptiveCard.module.scss';
+// import { createServerSupabaseClient } from '@supabase/auth-helpers-nextjs';
+// import { GetServerSideProps } from 'next';
 
 interface DescriptiveCardProps {
   isSmall?: boolean;
@@ -28,5 +31,28 @@ const DescriptiveCard = ({ isSmall, title, descriptionKey, icon }: DescriptiveCa
     </div>
   </div>
 );
+
+// export const getServerSideProps: GetServerSideProps = async (ctx) => {
+//   // Create authenticated Supabase Client
+//   const supabase = createServerSupabaseClient(ctx);
+//   // Check if we have a session
+//   const {
+//     data: { session },
+//   } = await supabase.auth.getSession();
+
+//   if (!session) {
+//     return {
+//       redirect: {
+//         destination: '/',
+//         permanent: false,
+//       },
+//     };
+//   }
+
+//   // Retrieve provider_token & logged in user's third-party id from metadata
+//   const { user } = session;
+
+//   return { props: { user } };
+// };
 
 export default DescriptiveCard;

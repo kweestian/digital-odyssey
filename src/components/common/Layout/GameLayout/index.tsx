@@ -10,18 +10,18 @@ import * as CloseIcon from '@/image/CloseIcon.svg';
 
 import useLocalStorage from '@/hooks/useLocalStorage';
 
-import Header from '../Header';
-import Navbar from '../Navbar/Navbar';
-import MainScreen from '../MainScreen/MainScreen';
-import ProgressBar from '../ProgressBar/ProgressBar';
+import Navbar from '../components/Navbar/Navbar';
+import MainScreen from '../components/MainScreen/MainScreen';
+import ProgressBar from '../components/ProgressBar/ProgressBar';
 import PopupVideo from '../../PopupVIdeo/PopupVideo';
 
-import styles from './Layout.module.scss';
+import styles from './GameLayout.module.scss';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { getItem, setItem } = useLocalStorage();
   const [isOpen, setIsOpen] = useState(true);
   const [isFirstVisit, setIsFirstVisit] = useState(true);
+
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
 
@@ -49,7 +49,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <Header />
       {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
       <main className={styles.container}>
         <div className={styles.mobileContainer}>

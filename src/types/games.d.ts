@@ -6,25 +6,47 @@ type Interaction = {
 };
 
 type Experience = {
+  key: string;
   name: string;
   description: string;
   icon: typeof import('*.svg');
-  coordinates: { lat: number; lng: number };
   interaction: Interaction;
   bonus?: Interaction;
-  keyLearning?: string;
+  keyLearning?: { text: string; additionalRessources?: { text: string; link: string }[] };
   additionalResources?: Link[];
+  coordinates: {
+    x: number;
+    y: number;
+  };
 };
 
+declare module '*.module.scss' {
+  const classes: { [key: string]: string };
+  export const titleColor: string;
+  export default classes;
+}
+
 type Region = {
+  title: { textParts: string[]; coordinates: { x: number; y: number } };
   regionKey:
-    | 'sea_of_sustainability'
-    | 'playful_plains'
-    | 'loyalty_lagoon'
-    | 'creativity_coast'
-    | 'virtual_valleys'
-    | 'timeless_tundra';
-  color: 'blue' | 'purple' | 'pink' | 'orange' | 'yellow' | 'grey';
+    | 'seaOfSustainability'
+    | 'playfulPlains'
+    | 'loyaltyLagoon'
+    | 'creativityCoast'
+    | 'virtualValleys'
+    | 'timelessTundra';
+  // blue | purple | pink | orange | green | grey
+  color: '#00ACFF' | '#936EF1' | '#FF3FA0' | '#FF704E' | '#00B16E' | '#B3B3B3' | 'transparent';
+  customElement?: React.FC;
+  filColour: 'black' | 'transparent';
+  drawing?: string;
+  regionOwl: {
+    regionOwlGif: string;
+    x: string;
+    y: string;
+  };
   experiences: Experience[];
   available: boolean;
 };
+
+type CustomMap = Region[];

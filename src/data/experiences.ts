@@ -13,10 +13,10 @@ export const creativityCoastGames: Experience[] = [
       "Once you've received your outfit recommandation,\n" +
       'share it here to unlock your next experience on Creativity Coast!',
     icon: BasicOwl,
-
+    card: '/static/image/cards/card.svg',
     interaction: {
       type: 'text',
-      label: 'copy here',
+      label: 'Copy text here',
     },
     bonus: {
       type: 'attachment',
@@ -41,19 +41,17 @@ export const creativityCoastGames: Experience[] = [
       "Once you've received your outfit recommandation,\n" +
       'share it here to unlock your next experience on Creativity Coast!',
     icon: BasicOwl,
+    card: '/static/image/cards/card.svg',
 
     interaction: {
-      type: 'text',
-      label: 'copy here',
-    },
-    bonus: {
       type: 'attachment',
-      label: 'join attachment',
-      description: 'BONUS: Post a photo of the outfit',
+      label: 'JOIN ATTACHMENT',
+      choices: [{ key: 'choice_1', label: 'Prems' }],
     },
+    bonus: undefined,
     keyLearning: {
       text: 'AI is accelerating our growth',
-      additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
+      additionalRessources: [{ text: 'Another resource: check it out', link: 'https://vogue.com' }],
     },
     coordinates: { x: 310, y: 180 },
   },
@@ -69,19 +67,16 @@ export const creativityCoastGames: Experience[] = [
       "Once you've received your outfit recommandation,\n" +
       'share it here to unlock your next experience on Creativity Coast!',
     icon: BasicOwl,
+    card: '/static/image/cards/card.svg',
 
     interaction: {
       type: 'text',
-      label: 'copy here',
+      label: 'Copy text here',
     },
-    bonus: {
-      type: 'attachment',
-      label: 'join attachment',
-      description: 'BONUS: Post a photo of the outfit',
-    },
+    bonus: undefined,
     keyLearning: {
       text: 'AI is accelerating our growth',
-      additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
+      additionalRessources: [],
     },
     coordinates: { x: 250, y: 260 },
   },

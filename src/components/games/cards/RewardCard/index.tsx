@@ -8,7 +8,7 @@ import styles from './RewardCard.module.scss';
 interface RewardCardProps {
   title: string;
   isActive?: boolean;
-  cardUrl: typeof import('*.svg');
+  cardUrl: string;
 }
 
 const RewardCard = ({ title, isActive, cardUrl }: RewardCardProps) => {
@@ -16,10 +16,15 @@ const RewardCard = ({ title, isActive, cardUrl }: RewardCardProps) => {
 
   return (
     <>
-      {isOpen && isActive && <PopinCard onClick={() => setIsOpen(false)}>{title}</PopinCard>}
+      {isOpen && isActive && (
+        <PopinCard onClick={() => setIsOpen(false)}>
+          <Image src={cardUrl} alt={title} className={styles.cardImg} width={300} height={800} />
+          {title}
+        </PopinCard>
+      )}
       <div className={classNames(styles.container, { [styles.isNotActive]: !isActive })}>
         <button onClick={() => setIsOpen(true)} type="button">
-          <Image src={cardUrl} alt={title} className={styles.cardImg} />
+          <Image src={cardUrl} alt={title} className={styles.cardImg} width={200} height={600} />
         </button>
       </div>
     </>

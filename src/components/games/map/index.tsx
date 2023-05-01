@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
+import { useGlobalState } from '@/contexts/global';
 import styles from './Map.module.scss';
 import MapBackground from './components/MapBackground';
 import { ExperiencePicto } from './components';
@@ -37,6 +38,8 @@ const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
     },
     [zoomImageTrigger],
   );
+
+  const { dispatch } = useGlobalState();
 
   // useClickOutSide(landContinentRef, () => {
   //   zoomImageTrigger('seaOfSustainability');
@@ -89,7 +92,7 @@ const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
           })}
           {/* then draw elements on top */}
           {customMap.map((region) => {
-            const { regionKey, regionOwl, available, experiences } = region;
+            const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
 
             if (!available) {
               return (
@@ -160,11 +163,26 @@ const CreativityCoast = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                   {available && (
                     <image
                       x={regionOwl.x}
+                      onClick={() => {
+                        if (region.isComplete) {
+                          dispatch({
+                            type: 'SET_ADDITIONAL_RESOURCES_POPIN',
+                            payload: {
+                              title: region.title.textParts.join(' '),
+                              description: 'Ceci est une description',
+                              additionalResources: region.experiences
+                                .filter(({ keyLearning }) => keyLearning?.additionalRessources !== undefined)
+                                .map(({ keyLearning }) => [...keyLearning.additionalRessources])
+                                .flat(),
+                            },
+                          });
+                        }
+                      }}
                       y={regionOwl.y}
                       width="150"
                       height="84.3"
                       style={{ overflow: 'visible' }}
-                      xlinkHref={regionOwl.regionOwlGif}
+                      xlinkHref={isRegionComplete ? regionOwl.regionOwlGif : '/static/image/owls/basic-owl.svg'}
                     />
                   )}
                 </g>

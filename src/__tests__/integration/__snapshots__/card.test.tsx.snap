@@ -168,42 +168,22 @@ exports[`cards page renders cards page unchange 1`] = `
           class="container"
         >
           <div
-            class="container"
+            class="container isNotActive"
           >
             <button
               type="button"
             >
               <img
-                alt="Game Card 1"
+                alt="AI is accelerating our growth"
                 class="cardImg"
                 data-nimg="1"
                 decoding="async"
-                height="40"
+                height="600"
                 loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                src="/static/image/cards/card.svg"
+                srcset="/static/image/cards/card.svg 1x, /static/image/cards/card.svg 2x"
                 style="color: transparent;"
-                width="40"
-              />
-            </button>
-          </div>
-          <div
-            class="container"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Game Card 2"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
+                width="200"
               />
             </button>
           </div>
@@ -214,16 +194,16 @@ exports[`cards page renders cards page unchange 1`] = `
               type="button"
             >
               <img
-                alt="Game Card 3"
+                alt="AI is accelerating our growth"
                 class="cardImg"
                 data-nimg="1"
                 decoding="async"
-                height="40"
+                height="600"
                 loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                src="/static/image/cards/card.svg"
+                srcset="/static/image/cards/card.svg 1x, /static/image/cards/card.svg 2x"
                 style="color: transparent;"
-                width="40"
+                width="200"
               />
             </button>
           </div>
@@ -234,96 +214,16 @@ exports[`cards page renders cards page unchange 1`] = `
               type="button"
             >
               <img
-                alt="Game Card 4"
+                alt="AI is accelerating our growth"
                 class="cardImg"
                 data-nimg="1"
                 decoding="async"
-                height="40"
+                height="600"
                 loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                src="/static/image/cards/card.svg"
+                srcset="/static/image/cards/card.svg 1x, /static/image/cards/card.svg 2x"
                 style="color: transparent;"
-                width="40"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Game Card 5"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Game Card 6"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Game Card 7"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Game Card 8"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
+                width="200"
               />
             </button>
           </div>
@@ -341,11 +241,11 @@ exports[`cards page renders cards page unchange 1`] = `
         >
           <div
             class="progress"
-            style="height: 20%;"
+            style="height: 0%;"
           />
         </div>
         <h2>
-          20
+          0
           %
         </h2>
       </div>

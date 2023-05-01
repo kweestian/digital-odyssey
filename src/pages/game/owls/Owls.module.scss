@@ -12,19 +12,24 @@
 
 .owlsList {
   display: flex;
+  > svg {
+    margin: 0 5px;
+    width: 14vw;
+    max-height: 30vh;
+  }
 }
 
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: 1380px) {
   .container {
     > img {
       width: 30vw;
-    max-height: 50vh;
-      
+      max-height: 50vh;
     }
   }
   .owlsList {
-    > img {
-      width: 14vw;
+    > svg {
+      width: 10vw;
+      max-height: 30vh;
     }
   }
 }

@@ -56,7 +56,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </div>
         <Navbar menuItems={menuItems} />
         <MainScreen title={title}>{children}</MainScreen>
-        <ProgressBar percentage={0.2} />
+        <ProgressBar />
       </main>
     </>
   );

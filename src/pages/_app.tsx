@@ -5,7 +5,7 @@ import { SessionContextProvider, Session } from '@supabase/auth-helpers-react';
 
 import '@/styles/globals.scss';
 
-import { ExperienceProvider } from '@/contexts/experiences';
+import { ExperienceProvider } from '@/contexts/global';
 import { DefaultLayout } from '@/components';
 import { NextPageWithLayout } from '../types/common';
 import ErrorBoundary from './ErrorBoundary';

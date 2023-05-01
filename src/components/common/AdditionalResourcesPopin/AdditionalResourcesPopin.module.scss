@@ -1,0 +1,19 @@
+.parentContainer {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.descriptionContainer {
+  font-size: 22px;
+}
+
+.linksContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 18px;
+  color: #ab5ca0;
+  text-align: left;
+}

@@ -329,11 +329,11 @@ exports[`rules page renders rules page unchanged 1`] = `
         >
           <div
             class="progress"
-            style="height: 20%;"
+            style="height: 0%;"
           />
         </div>
         <h2>
-          20
+          0
           %
         </h2>
       </div>

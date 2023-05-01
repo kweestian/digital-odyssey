@@ -17,8 +17,8 @@ const nextConfig = nextTranslate({
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cms.toto.com',
-        pathname: '/api/**',
+        hostname: 'jtefeyxtvoloibgobpss.supabase.co',
+        pathname: '/storage/**',
       },
       {
         protocol: 'http',

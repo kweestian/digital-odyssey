@@ -5,6 +5,9 @@
     }
   ],
   "settings": {
+    "files.exclude": {
+      "supabase/functions/": true
+    },
     "editor.formatOnType": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[html]": {

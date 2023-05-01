@@ -1,15 +1,15 @@
 import { NextPage } from 'next';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
 import Continent from '@/components/games/map';
 
-import { CustomMap } from '@/data/regions';
-
 import styles from '@/styles/map.module.scss';
-import { GameCard, GameLayout } from '@/components';
+import { AdditionalResourcesPopin, GameCard, GameLayout, Loader } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
-import { useExperience } from '@/contexts/experiences';
+import { useGlobalState } from '@/contexts/global';
+import { useMapData } from '@/hooks';
+import { useRouter } from 'next/router';
 
 const DEFAULT_REGION_ZOOM = 3;
 
@@ -23,41 +23,67 @@ const Map: NextPage = () => {
   const initialScale = width && width < 1200 ? 0.4 : 1.2;
   const [zoom, setZoom] = useState(initialScale);
 
-  const zoomToImage = (regionName: string) => {
-    if (transformComponentRef.current && !isPanning) {
-      const { zoomToElement } = transformComponentRef.current;
-      setZoom(DEFAULT_REGION_ZOOM);
-      zoomToElement(regionName, DEFAULT_REGION_ZOOM);
-    }
-  };
+  const zoomToImage = useCallback(
+    (regionName: string) => {
+      if (transformComponentRef.current && !isPanning) {
+        const { zoomToElement } = transformComponentRef.current;
+        setZoom(DEFAULT_REGION_ZOOM);
+        zoomToElement(regionName, DEFAULT_REGION_ZOOM);
+      }
+    },
+    [isPanning],
+  );
+
+  const { data: CustomMap, isLoading } = useMapData();
+
+  const router = useRouter();
+  const {
+    state: { experience: currentOpenedExperience, additionalResourcesPopinState },
+    dispatch,
+  } = useGlobalState();
 
   useEffect(() => {
     transformComponentRef.current?.zoomToElement('backgroundAnchor', initialScale);
   }, [transformComponentRef, width, initialScale]);
 
-  const {
-    state: { experience },
-    dispatch,
-  } = useExperience();
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => {
+      dispatch({ type: 'CLOSE_EXPERIENCE' });
+      dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' });
+    });
+  }, [router, dispatch]);
 
   return (
     <GameLayout>
       <div className={styles.mapContainer}>
-        {experience && (
-          <GameCard experience={experience} isOpen onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })} />
+        {currentOpenedExperience && (
+          <GameCard
+            experience={currentOpenedExperience}
+            isOpen
+            onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })}
+          />
+        )}
+        {additionalResourcesPopinState && (
+          <AdditionalResourcesPopin
+            title={additionalResourcesPopinState.title}
+            description={additionalResourcesPopinState.description}
+            additionalResources={additionalResourcesPopinState.additionalResources}
+            onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })}
+          />
         )}
         <TransformWrapper
           centerOnInit
           // eslint-disable-next-line react/jsx-props-no-spreading
           // {...initialValues}
           limitToBounds={false}
+          // initialPositionX={5000}
           ref={transformComponentRef}
           onZoom={(evt) => setZoom(evt.state.scale)}
           onPanning={() => setIsPanning(true)}
           onPanningStop={() =>
             setTimeout(() => {
               setIsPanning(false);
-            }, 500)
+            }, 1000)
           }
         >
           <TransformComponent>

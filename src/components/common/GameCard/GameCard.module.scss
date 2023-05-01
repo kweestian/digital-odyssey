@@ -64,3 +64,16 @@
   height: 40px;
   width: 40px;
 }
+
+.errorText {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: red;
+  margin-top: 15px;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+}

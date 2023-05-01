@@ -19,6 +19,9 @@ jest.mock('next/router', () => ({
     replace: jest.fn(),
     prefetch: jest.fn(),
     query: {},
+    events: {
+      on: jest.fn(),
+    },
   }),
 }));
 

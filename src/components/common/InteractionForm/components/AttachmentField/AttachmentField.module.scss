@@ -1,0 +1,49 @@
+@import '@/styles/variables';
+
+.attachmentContainer {
+  margin-top: 15px;
+  cursor: pointer;
+  height: fit-content;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  background-color: $BackgroundSecondaryColor;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+  // min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 36px;
+  p {
+    // height: fit-content;
+    padding: 0 20px;
+  }
+}
+
+.imageContainer {
+  margin-top: 15px;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+}
+
+.imageContainerZoomed {
+  position: fixed;
+  transition: all;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+
+  img {
+    width: 60%;
+    height: 60%;
+  }
+}

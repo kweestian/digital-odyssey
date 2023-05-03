@@ -3,10 +3,8 @@ import Image from 'next/image';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 
 import { useUpdateUserExperience } from '@/hooks';
-
-import InteractionForm from '../InteractionForm';
-
-import PopinCard from '../PopinCard';
+import { RenderHtml, PopinCard } from '@/components/common';
+import { InteractionForm } from './components';
 
 import styles from './GameCard.module.scss';
 
@@ -103,7 +101,7 @@ const GameCard = ({ experience: { name, description, icon, interaction, bonus, k
           <h1>{name}</h1>
           <Image src={icon} alt={`${name} owl icon`} className={styles.owlImage} />
           <div className={styles.descriptionContainer}>
-            <p>{description}</p>
+            <RenderHtml htmlContent={description} />
           </div>
           <div className={styles.answerContainer}>
             {interaction.type === 'text' && (

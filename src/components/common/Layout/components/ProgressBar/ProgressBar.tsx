@@ -10,8 +10,6 @@ const ProgressBar = () => {
 
   const percentage = completedRegions ? completedRegions / 5 : 0;
 
-  console.log(percentage);
-
   return (
     <div className={styles.container}>
       <div className={styles.progressBarContainer}>

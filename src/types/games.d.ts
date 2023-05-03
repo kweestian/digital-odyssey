@@ -5,15 +5,24 @@ type AdditionalResources = {
   link: string;
 };
 
+type Question = {
+  imageLink?: string;
+  title?: string;
+  text: string;
+  key: string;
+  correctAnswer?: string;
+  choices: Array<{ key: string; text: string }>;
+};
+
+type QuestionType = { type: 'quiz' | 'boolean'; questions: Array<Question> } | { type: 'text' | 'attachment' };
+
 type Interaction = {
-  type: 'text' | 'attachment' | 'quiz';
   label: string;
   description?: string;
-  choices?: Array<{ imageLink?: string; value?: string; label: string; key: string; correctAnswer?: string }>;
   answer?: Answer[] | null;
   attachment?: string | null;
   bonus?: string | null;
-};
+} & QuestionType;
 
 type Experience = {
   isCompleted?: boolean;

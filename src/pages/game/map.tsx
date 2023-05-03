@@ -2,10 +2,8 @@ import { NextPage } from 'next';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
-import Continent from '@/components/games/map';
-
 import styles from '@/styles/map.module.scss';
-import { AdditionalResourcesPopin, GameCard, GameLayout, Loader } from '@/components';
+import { AdditionalResourcesPopin, GameCard, GameLayout, Loader, Map } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
 import { useGlobalState } from '@/contexts/global';
 import { useMapData } from '@/hooks';
@@ -13,7 +11,7 @@ import { useRouter } from 'next/router';
 
 const DEFAULT_REGION_ZOOM = 3;
 
-const Map: NextPage = () => {
+const MapPage: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
 
   const [isPanning, setIsPanning] = useState(false);
@@ -88,7 +86,7 @@ const Map: NextPage = () => {
         >
           <TransformComponent>
             <div className={styles.regionsContainer}>
-              <Continent zoom={zoom} customMap={CustomMap} zoomImageTrigger={zoomToImage} />
+              <Map zoom={zoom} customMap={CustomMap} zoomImageTrigger={zoomToImage} />
             </div>
           </TransformComponent>
         </TransformWrapper>
@@ -97,4 +95,4 @@ const Map: NextPage = () => {
   );
 };
 
-export default Map;
+export default MapPage;

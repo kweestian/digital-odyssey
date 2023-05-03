@@ -30,14 +30,12 @@
   z-index: -1;
 }
 
-.button:hover,
-.button:focus {
+.button:hover:not(:disabled),
+.button:focus:not(:disabled) {
   color: white;
 }
 
-.button:hover:before,
-.button:focus:before,
-.button:disabled:before {
+.button:hover:not(:disabled):before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
@@ -50,6 +48,7 @@
 
 .button:disabled {
   cursor: not-allowed;
+  background: gray;
 }
 
 .loader__container {

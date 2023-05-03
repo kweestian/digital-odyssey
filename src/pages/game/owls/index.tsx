@@ -19,8 +19,8 @@ const Owls: NextPage<Props> = () => {
         <div className={styles.owlsList}>
           {data
             .filter(({ regionKey }) => regionKey !== 'timelessTundra')
-            .map(({ color, isComplete }) => (
-              <OwlIcon key={color} color={isComplete ? color : 'grey'} />
+            .map(({ color, hasCompletedBonus }) => (
+              <OwlIcon key={color} color={hasCompletedBonus ? color : 'grey'} />
             ))}
         </div>
         {timelessTundra?.available ? <Image src={GoldOwl} alt="Gold Owl" /> : <Image src={BasicOwl} alt="Golden Owl" />}

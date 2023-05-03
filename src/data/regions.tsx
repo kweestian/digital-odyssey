@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { creativityCoastGames } from './experiences';
+import { creativityCoastGames, loyaltyLagoonExperiences } from './experiences';
 
 /* REGIONS */
 
@@ -49,7 +49,7 @@ export const LoyaltyLagoon: Region = {
     x: '15',
     y: '200',
   },
-  experiences: [],
+  experiences: loyaltyLagoonExperiences,
   available: true,
 };
 

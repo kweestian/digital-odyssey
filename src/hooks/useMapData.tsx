@@ -3,20 +3,23 @@ import { CustomMap } from '@/data/regions';
 import useGetUserExperience from './api/user/experience/useGetUserExperiences';
 
 const useMapData = () => {
-  const { data, isLoading } = useGetUserExperience();
+  const { data: userExperienceData, isLoading } = useGetUserExperience();
 
-  const mapDataWithApiData: typeof CustomMap = CustomMap.map((region) => {
-    const completedRegionExperiences = region.experiences.map(({ key }) => key);
-    const isRegionCompleted =
-      data?.data?.filter(
-        ({ experience_key: experienceKey }) => experienceKey && completedRegionExperiences.includes(experienceKey),
-      ).length === 3;
+  const mapDataWithApiData: CustomMap = CustomMap.map((region) => {
+    const allExperiences = region.experiences.map(({ key }) => key);
+    const completedExperiences =
+      userExperienceData?.data?.filter(
+        ({ experience_key: experienceKey }) => experienceKey && allExperiences.includes(experienceKey),
+      ) || [];
+    const isRegionCompleted = completedExperiences.length === 3;
 
+    const hasCompletedBonus = completedExperiences.some(({ bonus }) => bonus);
     return {
       ...region,
       isComplete: isRegionCompleted,
+      hasCompletedBonus,
       experiences: region.experiences.map(({ interaction, ...experience }) => {
-        const userExperience = data?.data?.find(
+        const userExperience = userExperienceData?.data?.find(
           ({ experience_key: experienceKey }) => experience.key === experienceKey,
         );
 

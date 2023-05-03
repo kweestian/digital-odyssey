@@ -1,4 +1,4 @@
-import useSWR, { Fetcher } from 'swr';
+import useSWR from 'swr';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useGlobalState } from '@/contexts/global';
 

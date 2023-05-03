@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useGetPublicUrl } from '@/hooks';
 import Loader from '@/components/common/Loader';
 import styles from './AttachmentField.module.scss';
-import Button from '../../../Button';
+import Button from '../../../../../../../common/Button';
 
 type Props = {
   onDrop: DropzoneOptions['onDrop'];

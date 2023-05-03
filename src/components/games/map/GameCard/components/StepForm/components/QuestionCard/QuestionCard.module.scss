@@ -1,0 +1,33 @@
+.questionCardContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.imagePlaceholder {
+  height: 500px;
+  width: 300px;
+  background-color: white;
+}
+
+.choicesContainer {
+  margin-top: 50px;
+}
+
+.choiceContainer {
+  display: flex;
+  margin-top: 20px;
+  // fle
+}
+
+.input {
+  margin-right: 10px;
+  appearance: checkbox;
+}

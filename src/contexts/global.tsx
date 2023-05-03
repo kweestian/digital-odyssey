@@ -54,8 +54,8 @@ const ExperienceContext = createContext<{ state: GlobalState; dispatch: Dispatch
   dispatch: () => null,
 });
 
-// Custom ExperienceProvider
-const ExperienceProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+// Custom GlobalProvider
+const GlobalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, initialState);
 
   // useEffect(() => {
@@ -83,4 +83,4 @@ const ExperienceProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 // Custom hook to use the theme
 const useGlobalState = () => useContext(ExperienceContext);
 
-export { ExperienceProvider, useGlobalState };
+export { GlobalProvider, useGlobalState };

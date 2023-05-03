@@ -1,12 +1,14 @@
 import { useCallback, useState } from 'react';
 import Image from 'next/image';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
+import { useAtom } from 'jotai';
 
 import { useUpdateUserExperience } from '@/hooks';
-import { RenderHtml, PopinCard } from '@/components/common';
-import { InteractionForm } from './components';
+import { RenderHtml, PopinCard, Button } from '@/components/common';
+import { InteractionForm, StepForm } from './components';
 
 import styles from './GameCard.module.scss';
+import { stepFormAtom } from './components/StepForm/components/QuestionCard/atom';
 
 type Props = {
   experience: Experience;
@@ -17,6 +19,7 @@ type Props = {
 const GameCard = ({ experience: { name, description, icon, interaction, bonus, key }, isOpen, onClose }: Props) => {
   const [error, setError] = useState('');
   const [isUploadingImage, setIsUploadingImage] = useState(false);
+  const [quiz, setQuiz] = useState(false);
 
   const fieldId = `${key}_text`;
   const user = useUser();
@@ -94,48 +97,66 @@ const GameCard = ({ experience: { name, description, icon, interaction, bonus, k
     [supabase, key, user?.id, trigger, interaction.bonus],
   );
 
+  const [, setStepFormState] = useAtom(stepFormAtom);
+
   if (isOpen) {
     return (
       <PopinCard onClick={() => onClose()}>
         <div className={styles.cardContainer}>
           <h1>{name}</h1>
           <Image src={icon} alt={`${name} owl icon`} className={styles.owlImage} />
-          <div className={styles.descriptionContainer}>
-            <RenderHtml htmlContent={description} />
-          </div>
-          <div className={styles.answerContainer}>
-            {interaction.type === 'text' && (
-              <InteractionForm
-                value={interaction.answer && interaction.answer[0].value}
-                fieldType={interaction.type}
-                onChange={handleSubmit}
-                id={fieldId}
-                label="Copy text here"
-                isLoading={isUpdatingUser}
-              />
-            )}
-            {interaction.type === 'attachment' && (
-              <InteractionForm
-                fieldType="attachment"
-                onChange={(files) => onDrop(files, false)}
-                isLoading={isUploadingImage}
-                value={interaction.attachment}
-                label="Uplaod Image here"
-              />
-            )}
-            {bonus && (
-              <div>
-                <InteractionForm
-                  fieldType="attachment"
-                  onChange={(files) => onDrop(files, true)}
-                  isLoading={isUploadingImage}
-                  value={interaction.bonus}
-                  label="Bonus Experience"
-                />
-                {error && <p className={styles.errorText}>{error}</p>}
+          {quiz && (interaction.type === 'quiz' || interaction.type === 'boolean') ? (
+            <StepForm questions={interaction.questions} experienceKey={key} />
+          ) : (
+            <>
+              <div className={styles.descriptionContainer}>
+                <RenderHtml htmlContent={description} />
               </div>
-            )}
-          </div>
+              <div className={styles.answerContainer}>
+                {interaction.type === 'text' && (
+                  <InteractionForm
+                    value={interaction.answer && interaction.answer[0].value}
+                    fieldType={interaction.type}
+                    onChange={handleSubmit}
+                    id={fieldId}
+                    label="Copy text here"
+                    isLoading={isUpdatingUser}
+                  />
+                )}
+                {interaction.type === 'attachment' && (
+                  <InteractionForm
+                    fieldType="attachment"
+                    onChange={(files) => onDrop(files, false)}
+                    isLoading={isUploadingImage}
+                    value={interaction.attachment}
+                    label="Uplaod Image here"
+                  />
+                )}
+                {bonus && (
+                  <div>
+                    <InteractionForm
+                      fieldType="attachment"
+                      onChange={(files) => onDrop(files, true)}
+                      isLoading={isUploadingImage}
+                      value={interaction.bonus}
+                      label="Bonus Experience"
+                    />
+                    {error && <p className={styles.errorText}>{error}</p>}
+                  </div>
+                )}
+              </div>
+            </>
+          )}
+          {!quiz && (interaction.type === 'boolean' || interaction.type === 'quiz') && (
+            <Button
+              customStyles={{ marginTop: 20 }}
+              text={interaction.answer ? 'Do Quiz Again' : 'Start Quiz'}
+              onClick={() => {
+                setStepFormState({});
+                setQuiz(true);
+              }}
+            />
+          )}
         </div>
       </PopinCard>
     );

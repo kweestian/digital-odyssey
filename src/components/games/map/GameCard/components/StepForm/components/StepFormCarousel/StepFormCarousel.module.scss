@@ -1,0 +1,90 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+/* The container for carousel and arrow */
+.carouselMainContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* The viewport of the carousel */
+.carouselSlider {
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+/* the container for the slides to go in (has the scroll effect) */
+.carouselSlides {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselSlides::-webkit-scrollbar {
+  display: none;
+}
+
+/* the slide itself */
+.carouselSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 450px;
+  padding: 20px;
+  scroll-snap-align: center;
+}
+
+.carouselNavigationContainer {
+  display: flex;
+  // width: 20%;
+}
+
+.carousel-navigation-button {
+  background: rgb(255, 255, 255, 50%);
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-navigation-button.active {
+  background: rgb(255, 255, 255);
+}
+
+@media (max-width: 900px) {
+  .carousel-slider {
+    max-width: 450px;
+  }
+
+  .carousel-slide {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .carousel-slide {
+    width: 100%;
+  }
+
+  .carousel-left-arrow {
+    left: -10px;
+  }
+
+  .carousel-right-arrow {
+    right: -10px;
+  }
+}
+
+.buttonContainer {
+  width: 25%;
+  min-width: 250px;
+}

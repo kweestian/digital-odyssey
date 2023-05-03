@@ -4,7 +4,7 @@ import { useGlobalState } from '@/contexts/global';
 
 type UserExperienceColumns = {
   experience_key?: string;
-  answer?: [{ value: string; key: string }];
+  answer?: Answer[];
   attachment?: string;
   bonus?: string;
   user_id?: string;

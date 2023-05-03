@@ -53,7 +53,7 @@ const Button = ({
   loading,
   bare,
   children,
-  // disabled,
+  disabled,
   ariaLabel: overrideAriaLabel,
 }: Props) => {
   const Component = as === 'a' ? Link : 'button';
@@ -74,7 +74,7 @@ const Button = ({
 
   return (
     <Component
-      disabled={loading}
+      disabled={loading || disabled}
       aria-label={ariaLabel}
       type={type}
       className={classNames({ [styles.button]: !bare })}

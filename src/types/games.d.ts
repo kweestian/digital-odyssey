@@ -11,7 +11,7 @@ type Question = {
   text: string;
   key: string;
   correctAnswer?: string;
-  choices: Array<{ key: string; text: string }>;
+  choices: Array<{ value: string; text: string }>;
 };
 
 type QuestionType = { type: 'quiz' | 'boolean'; questions: Array<Question> } | { type: 'text' | 'attachment' };
@@ -48,6 +48,7 @@ declare module '*.module.scss' {
 
 type Region = {
   isComplete?: boolean;
+  hasCompletedBonus?: boolean;
   title: { textParts: string[]; coordinates: { x: number; y: number } };
   regionKey:
     | 'seaOfSustainability'

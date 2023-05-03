@@ -109,15 +109,15 @@ export const loyaltyLagoonExperiences: Experience[] = [
           correctAnswer: 'two',
           choices: [
             {
-              key: 'one',
+              value: 'one',
               text: 'This NFT drop gets you an invite to the next Prada show',
             },
             {
-              key: 'two',
+              value: 'two',
               text: 'This NFT drop is linked to a limited edition physiical ...',
             },
             {
-              key: 'three',
+              value: 'three',
               text: 'This NFT drop gets you lifetime free coffee',
             },
           ],
@@ -125,20 +125,83 @@ export const loyaltyLagoonExperiences: Experience[] = [
         {
           key: 'question_two',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 1',
+          title: 'Question 12',
           imageLink: '/static/image/cards/card.svg',
           correctAnswer: 'three',
           choices: [
             {
-              key: 'one',
+              value: 'one',
               text: 'This NFT drop gets you an invite to the next Prada show',
             },
             {
-              key: 'two',
+              value: 'two',
               text: 'This NFT drop is linked to a limited edition physiical ...',
             },
             {
-              key: 'three',
+              value: 'three',
+              text: 'This NFT drop gets you lifetime free coffee',
+            },
+          ],
+        },
+        {
+          key: 'question_three',
+          text: 'Launched for the first time on december 5 ...',
+          title: 'Question 12',
+          imageLink: '/static/image/cards/card.svg',
+          correctAnswer: 'three',
+          choices: [
+            {
+              value: 'one',
+              text: 'This NFT drop gets you an invite to the next Prada show',
+            },
+            {
+              value: 'two',
+              text: 'This NFT drop is linked to a limited edition physiical ...',
+            },
+            {
+              value: 'three',
+              text: 'This NFT drop gets you lifetime free coffee',
+            },
+          ],
+        },
+        {
+          key: 'question_four',
+          text: 'Launched for the first time on december 5 ...',
+          title: 'Question 123',
+          imageLink: '/static/image/cards/card.svg',
+          correctAnswer: 'three',
+          choices: [
+            {
+              value: 'one',
+              text: 'This NFT drop gets you an invite to the next Prada show',
+            },
+            {
+              value: 'two',
+              text: 'This NFT drop is linked to a limited edition physiical ...',
+            },
+            {
+              value: 'three',
+              text: 'This NFT drop gets you lifetime free coffee',
+            },
+          ],
+        },
+        {
+          key: 'question_five',
+          text: 'Launched for the first time on december 5 ...',
+          title: 'Question 12',
+          imageLink: '/static/image/cards/card.svg',
+          correctAnswer: 'three',
+          choices: [
+            {
+              value: 'one',
+              text: 'This NFT drop gets you an invite to the next Prada show',
+            },
+            {
+              value: 'two',
+              text: 'This NFT drop is linked to a limited edition physiical ...',
+            },
+            {
+              value: 'three',
               text: 'This NFT drop gets you lifetime free coffee',
             },
           ],
@@ -178,15 +241,15 @@ export const loyaltyLagoonExperiences: Experience[] = [
           correctAnswer: 'two',
           choices: [
             {
-              key: 'one',
+              value: 'one',
               text: 'This NFT drop gets you an invite to the next Prada show',
             },
             {
-              key: 'two',
+              value: 'two',
               text: 'This NFT drop is linked to a limited edition physiical ...',
             },
             {
-              key: 'three',
+              value: 'three',
               text: 'This NFT drop gets you lifetime free coffee',
             },
           ],
@@ -194,27 +257,69 @@ export const loyaltyLagoonExperiences: Experience[] = [
         {
           key: 'question_two',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 1',
+          title: 'Question 2',
           imageLink: '/static/image/cards/card.svg',
           correctAnswer: 'three',
           choices: [
             {
-              key: 'one',
+              value: 'one',
               text: 'This NFT drop gets you an invite to the next Prada show',
             },
             {
-              key: 'two',
+              value: 'two',
               text: 'This NFT drop is linked to a limited edition physiical ...',
             },
             {
-              key: 'three',
+              value: 'three',
+              text: 'This NFT drop gets you lifetime free coffee',
+            },
+          ],
+        },
+        {
+          key: 'question_three',
+          text: 'Launched for the first time on december 5 ...',
+          title: 'Question 2',
+          imageLink: '/static/image/cards/card.svg',
+          correctAnswer: 'three',
+          choices: [
+            {
+              value: 'one',
+              text: 'This NFT drop gets you an invite to the next Prada show',
+            },
+            {
+              value: 'two',
+              text: 'This NFT drop is linked to a limited edition physiical ...',
+            },
+            {
+              value: 'three',
+              text: 'This NFT drop gets you lifetime free coffee',
+            },
+          ],
+        },
+        {
+          key: 'question_tfour',
+          text: 'Launched for the first time on december 5 ...',
+          title: 'Question 4',
+          imageLink: '/static/image/cards/card.svg',
+          correctAnswer: 'three',
+          choices: [
+            {
+              value: 'one',
+              text: 'This NFT drop gets you an invite to the next Prada show',
+            },
+            {
+              value: 'two',
+              text: 'This NFT drop is linked to a limited edition physiical ...',
+            },
+            {
+              value: 'three',
               text: 'This NFT drop gets you lifetime free coffee',
             },
           ],
         },
       ],
     },
-    bonus: undefined,
+    bonus: { label: 'Attach picture here', type: 'attachment' },
     keyLearning: {
       text: 'AI is accelerating our growth',
       additionalRessources: [],
@@ -236,7 +341,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
     card: '/static/image/cards/card.svg',
 
     interaction: {
-      type: 'quiz',
+      type: 'boolean',
       label: 'Copy text here',
       questions: [
         {
@@ -244,40 +349,32 @@ export const loyaltyLagoonExperiences: Experience[] = [
           text: 'Launched for the first time on december 5 ...',
           title: 'Question 1',
           imageLink: '/static/image/cards/card.svg',
-          correctAnswer: 'two',
+          correctAnswer: 'false',
           choices: [
             {
-              key: 'one',
-              text: 'This NFT drop gets you an invite to the next Prada show',
+              value: 'true',
+              text: 'True',
             },
             {
-              key: 'two',
-              text: 'This NFT drop is linked to a limited edition physiical ...',
-            },
-            {
-              key: 'three',
-              text: 'This NFT drop gets you lifetime free coffee',
+              value: 'false',
+              text: 'false.',
             },
           ],
         },
         {
           key: 'question_two',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 1',
+          title: 'Question 2',
           imageLink: '/static/image/cards/card.svg',
-          correctAnswer: 'three',
+          correctAnswer: 'false',
           choices: [
             {
-              key: 'one',
-              text: 'This NFT drop gets you an invite to the next Prada show',
+              value: 'true',
+              text: 'true',
             },
             {
-              key: 'two',
-              text: 'This NFT drop is linked to a limited edition physiical ...',
-            },
-            {
-              key: 'three',
-              text: 'This NFT drop gets you lifetime free coffee',
+              value: 'false',
+              text: 'false',
             },
           ],
         },

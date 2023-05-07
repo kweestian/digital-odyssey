@@ -66,7 +66,7 @@ const MapPage: NextPage = () => {
             title={additionalResourcesPopinState.title}
             description={additionalResourcesPopinState.description}
             additionalResources={additionalResourcesPopinState.additionalResources}
-            onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })}
+            onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
           />
         )}
         <TransformWrapper

@@ -63,6 +63,7 @@ type Region = {
   filColour: 'black' | 'transparent';
   drawing?: string;
   regionOwl: {
+    regionOwl: string;
     regionOwlGif: string;
     x: string;
     y: string;

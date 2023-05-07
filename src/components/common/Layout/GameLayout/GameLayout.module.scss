@@ -9,7 +9,6 @@
 
 .mobileContainer {
   display: none;
- 
 }
 
 @media screen and (orientation: portrait) {
@@ -22,6 +21,7 @@
     height: 100vh;
     > p {
       color: $TextMainColor;
+      padding: 30px;
     }
   }
 }

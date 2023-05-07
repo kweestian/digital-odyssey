@@ -4,6 +4,9 @@ import useTranslation from 'next-translate/useTranslation';
 import { DescriptiveCard, GameLayout } from '@/components';
 
 import * as GoldOwl from '@/image/owls/gold-owl.svg';
+import * as MapContour from '@/image/rules/PICTO_CONTOUR_MAP.svg';
+import * as PositionIcon from '@/image/rules/PICTO_POSITION.svg';
+import * as VideoIcon from '@/image/rules/PICTO_VIDEO.svg';
 
 import styles from './Rules.module.scss';
 
@@ -19,13 +22,13 @@ const Rules: NextPage<Props> = () => {
           isSmall
           title={t('rules:cards.card1.title')}
           descriptionKey="rules:cards.card1.description"
-          icon={GoldOwl}
+          icon={VideoIcon}
         />
         <DescriptiveCard
           isSmall
           title={t('rules:cards.card2.title')}
           descriptionKey="rules:cards.card2.description"
-          icon={GoldOwl}
+          icon={MapContour}
         />
         <DescriptiveCard
           isSmall
@@ -37,7 +40,7 @@ const Rules: NextPage<Props> = () => {
           isSmall
           title={t('rules:cards.card4.title')}
           descriptionKey="rules:cards.card4.description"
-          icon={GoldOwl}
+          icon={PositionIcon}
         />
       </div>
     </GameLayout>

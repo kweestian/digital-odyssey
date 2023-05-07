@@ -19,11 +19,17 @@ const Owls: NextPage<Props> = () => {
         <div className={styles.owlsList}>
           {data
             .filter(({ regionKey }) => regionKey !== 'timelessTundra')
-            .map(({ color, hasCompletedBonus }) => (
-              <OwlIcon key={color} color={hasCompletedBonus ? color : 'grey'} />
+            .map(({ color, hasCompletedBonus, regionKey, regionOwl: { regionOwl } }) => (
+              <Image
+                key={color}
+                src={hasCompletedBonus ? regionOwl : BasicOwl}
+                width={219}
+                height={130}
+                alt={regionKey}
+              />
             ))}
         </div>
-        {timelessTundra?.available ? <Image src={GoldOwl} alt="Gold Owl" /> : <Image src={BasicOwl} alt="Golden Owl" />}
+        {timelessTundra?.available ? <Image src={GoldOwl} alt="Gold Owl" /> : <Image src={BasicOwl} alt="Basic Owl" />}
       </div>
     </GameLayout>
   );

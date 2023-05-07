@@ -28,7 +28,7 @@ export const creativityCoastGames: Experience[] = [
       text: 'AI is accelerating our growth',
       additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
     },
-    coordinates: { x: 290, y: 370 },
+    coordinates: { x: 1140, y: 620 },
   },
   {
     name: 'The Future Of Virtual Assistants',
@@ -53,7 +53,7 @@ export const creativityCoastGames: Experience[] = [
       text: 'AI is accelerating our growth',
       additionalRessources: [{ text: 'Another resource: check it out', link: 'https://vogue.com' }],
     },
-    coordinates: { x: 310, y: 180 },
+    coordinates: { x: 1140, y: 800 },
   },
   {
     name: 'Recommandation of the Future 2',
@@ -78,7 +78,7 @@ export const creativityCoastGames: Experience[] = [
       text: 'AI is accelerating our growth',
       additionalRessources: [],
     },
-    coordinates: { x: 250, y: 260 },
+    coordinates: { x: 1050, y: 700 },
   },
 ];
 

@@ -108,7 +108,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                       className={styles.region__title}
                       x={region.title.coordinates.x}
                       y={region.title.coordinates.y}
-                      style={{ fill: region.color, fontWeight: '400', fontSize: '1.8rem' }}
+                      style={{ fill: 'lightgray', opacity: 0.45, fontWeight: '400', fontSize: '1.6rem' }}
                       textAnchor="middle"
                     >
                       {region.title.textParts.map((text) => (
@@ -120,9 +120,9 @@ const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                     <image
                       x={regionOwl.x}
                       y={regionOwl.y}
-                      width="150"
-                      height="84.3"
-                      style={{ overflow: 'visible' }}
+                      width="100"
+                      height="50"
+                      style={{ opacity: '0.6' }}
                       xlinkHref="/static/image/map/picto/lock-svgrepo-com.svg"
                     />
                   </g>
@@ -150,7 +150,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                     className={styles.region__title}
                     x={region.title.coordinates.x}
                     y={region.title.coordinates.y}
-                    style={{ fill: region.color, fontWeight: '400', fontSize: '1.8rem' }}
+                    style={{ fill: region.color, fontWeight: '400', fontSize: '1.6rem', textTransform: 'uppercase' }}
                     textAnchor="middle"
                   >
                     {region.title.textParts.map((text) => (
@@ -178,10 +178,14 @@ const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                         }
                       }}
                       y={regionOwl.y}
-                      width="150"
-                      height="84.3"
+                      width="110"
+                      height="60"
                       style={{ overflow: 'visible' }}
-                      xlinkHref={isRegionComplete ? regionOwl.regionOwlGif : '/static/image/owls/basic-owl.svg'}
+                      xlinkHref={
+                        isRegionComplete
+                          ? `/static/image/owls/gif/${regionKey}.gif`
+                          : `/static/image/owls/icons/${regionKey}.svg`
+                      }
                     />
                   )}
                 </g>

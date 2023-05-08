@@ -171,7 +171,7 @@ exports[`owls page renders owls page unchanged 1`] = `
             class="owlsList"
           >
             <img
-              alt="seaOfSustainability"
+              alt="creativity-coast"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -182,7 +182,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="playfulPlains"
+              alt="loyalty-lagoon"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -193,7 +193,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="loyaltyLagoon"
+              alt="sea-of-sustainability"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -204,7 +204,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="creativityCoast"
+              alt="virtual-valleys"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -215,7 +215,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="virtualValleys"
+              alt="playful-plains"
               data-nimg="1"
               decoding="async"
               height="130"

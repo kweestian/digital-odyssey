@@ -1,14 +1,13 @@
 import { useCallback, useState } from 'react';
 import Image from 'next/image';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
-import { useAtom } from 'jotai';
+import useTranslation from 'next-translate/useTranslation';
 
 import { useUpdateUserExperience } from '@/hooks';
-import { RenderHtml, PopinCard, Button } from '@/components/common';
-import { InteractionForm, StepForm } from './components';
+import { PopinCard, Button } from '@/components/common';
 
 import styles from './GameCard.module.scss';
-import { stepFormAtom } from './components/StepForm/components/QuestionCard/atom';
+import GamePoppinContent from './components/GamePoppinContent';
 
 type Props = {
   experience: Experience;
@@ -16,10 +15,14 @@ type Props = {
   onClose: () => void;
 };
 
-const GameCard = ({ experience: { name, description, icon, interaction, bonus, key }, isOpen, onClose }: Props) => {
+const GameCard = ({
+  experience: { name, description, interaction, bonus, key, regionKey },
+  isOpen,
+  onClose,
+}: Props) => {
+  const { t } = useTranslation();
   const [error, setError] = useState('');
   const [isUploadingImage, setIsUploadingImage] = useState(false);
-  const [quiz, setQuiz] = useState(false);
 
   const fieldId = `${key}_text`;
   const user = useUser();
@@ -97,66 +100,27 @@ const GameCard = ({ experience: { name, description, icon, interaction, bonus, k
     [supabase, key, user?.id, trigger, interaction.bonus],
   );
 
-  const [, setStepFormState] = useAtom(stepFormAtom);
-
   if (isOpen) {
     return (
       <PopinCard onClick={() => onClose()}>
         <div className={styles.cardContainer}>
           <h1>{name}</h1>
-          <Image src={icon} alt={`${name} owl icon`} className={styles.owlImage} />
-          {quiz && (interaction.type === 'quiz' || interaction.type === 'boolean') ? (
-            <StepForm questions={interaction.questions} experienceKey={key} />
-          ) : (
-            <>
-              <div className={styles.descriptionContainer}>
-                <RenderHtml htmlContent={description} />
-              </div>
-              <div className={styles.answerContainer}>
-                {interaction.type === 'text' && (
-                  <InteractionForm
-                    value={interaction.answer && interaction.answer[0].value}
-                    fieldType={interaction.type}
-                    onChange={handleSubmit}
-                    id={fieldId}
-                    label="Copy text here"
-                    isLoading={isUpdatingUser}
-                  />
-                )}
-                {interaction.type === 'attachment' && (
-                  <InteractionForm
-                    fieldType="attachment"
-                    onChange={(files) => onDrop(files, false)}
-                    isLoading={isUploadingImage}
-                    value={interaction.attachment}
-                    label="Uplaod Image here"
-                  />
-                )}
-                {bonus && (
-                  <div>
-                    <InteractionForm
-                      fieldType="attachment"
-                      onChange={(files) => onDrop(files, true)}
-                      isLoading={isUploadingImage}
-                      value={interaction.bonus}
-                      label="Bonus Experience"
-                    />
-                    {error && <p className={styles.errorText}>{error}</p>}
-                  </div>
-                )}
-              </div>
-            </>
-          )}
-          {!quiz && (interaction.type === 'boolean' || interaction.type === 'quiz') && (
-            <Button
-              customStyles={{ marginTop: 20 }}
-              text={interaction.answer ? 'Do Quiz Again' : 'Start Quiz'}
-              onClick={() => {
-                setStepFormState({});
-                setQuiz(true);
-              }}
-            />
-          )}
+          <Image
+            src={`/static/image/owls/flat/${regionKey}.svg`}
+            alt={`${name} owl icon`}
+            width={210}
+            height={130}
+            className={styles.owlImage}
+          />
+          <GamePoppinContent
+            onDrop={onDrop}
+            error={error}
+            onSubmit={handleSubmit}
+            fieldId={fieldId}
+            isUpdatingUser={isUpdatingUser}
+            isUploadingImage={isUploadingImage}
+            experience={{ name, description, interaction, bonus, key }}
+          />
         </div>
       </PopinCard>
     );

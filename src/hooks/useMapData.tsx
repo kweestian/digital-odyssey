@@ -26,6 +26,7 @@ const useMapData = () => {
         const validAnswer = userExperience?.answer as Answer[];
         return {
           ...experience,
+          regionKey: region.regionKey,
           isCompleted: !!userExperience?.answer,
           interaction: {
             ...interaction,

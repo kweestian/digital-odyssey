@@ -1,5 +1,13 @@
 type Answer = { key: string; value: string; error?: boolean };
 
+type RegionKey =
+  | 'sea-of-sustainability'
+  | 'playful-plains'
+  | 'loyalty-lagoon'
+  | 'creativity-coast'
+  | 'virtual-valleys'
+  | 'timeless-tundra';
+
 type AdditionalResources = {
   text: string;
   link: string;
@@ -25,15 +33,15 @@ type Interaction = {
 } & QuestionType;
 
 type Experience = {
+  // injected when getting data
+  regionKey?: RegionKey;
   isCompleted?: boolean;
   key: string;
   name: string;
   description: string;
-  icon: typeof import('*.svg');
   interaction: Interaction;
-  bonus?: Interaction;
+  bonus?: { description: string } & Interaction;
   keyLearning: { text: string; additionalRessources: AdditionalResources[] };
-  card: string;
   coordinates: {
     x: number;
     y: number;
@@ -50,21 +58,13 @@ type Region = {
   isComplete?: boolean;
   hasCompletedBonus?: boolean;
   title: { textParts: string[]; coordinates: { x: number; y: number } };
-  regionKey:
-    | 'seaOfSustainability'
-    | 'playfulPlains'
-    | 'loyaltyLagoon'
-    | 'creativityCoast'
-    | 'virtualValleys'
-    | 'timelessTundra';
+  regionKey: RegionKey;
   // blue | purple | pink | orange | green | grey
   color: '#00ACFF' | '#936EF1' | '#FF3FA0' | '#FF704E' | '#00B16E' | '#B3B3B3' | 'transparent' | '#c09b45f0';
   customElement?: React.FC;
   filColour: 'black' | 'transparent';
   drawing?: string;
   regionOwl: {
-    regionOwl: string;
-    regionOwlGif: string;
     x: string;
     y: string;
   };

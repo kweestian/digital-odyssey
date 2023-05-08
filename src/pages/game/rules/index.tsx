@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation';
 
 import { DescriptiveCard, GameLayout } from '@/components';
 
-import * as GoldOwl from '@/image/owls/gold-owl.svg';
+import * as GoldOwl from '@/image/owls/3d/gold-owl.svg';
 import * as MapContour from '@/image/rules/PICTO_CONTOUR_MAP.svg';
 import * as PositionIcon from '@/image/rules/PICTO_POSITION.svg';
 import * as VideoIcon from '@/image/rules/PICTO_VIDEO.svg';

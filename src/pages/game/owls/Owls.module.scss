@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 50px;
   > img {
     height: 330px;
     width: 500px;
@@ -12,7 +13,7 @@
 
 .owlsList {
   display: flex;
-  > svg {
+  > img {
     margin: 0 5px;
     width: 14vw;
     max-height: 30vh;
@@ -27,7 +28,7 @@
     }
   }
   .owlsList {
-    > svg {
+    > img {
       width: 10vw;
       max-height: 30vh;
     }

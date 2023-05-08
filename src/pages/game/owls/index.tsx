@@ -1,10 +1,11 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 
-import * as BasicOwl from '@/image/owls/basic-owl.svg';
-import * as GoldOwl from '@/image/owls/gold-owl.svg';
-import { GameLayout, OwlIcon } from '@/components';
+import { GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
+
+import * as BasicOwl from '@/image/owls/3d/basic-owl.svg';
+import * as GoldOwl from '@/image/owls/3d/gold-owl.svg';
 
 import styles from './Owls.module.scss';
 
@@ -12,17 +13,17 @@ type Props = {};
 
 const Owls: NextPage<Props> = () => {
   const { data } = useMapData();
-  const timelessTundra = data.find(({ regionKey }) => regionKey === 'timelessTundra');
+  const timelessTundra = data.find(({ regionKey }) => regionKey === 'timeless-tundra');
   return (
     <GameLayout>
       <div className={styles.container}>
         <div className={styles.owlsList}>
           {data
-            .filter(({ regionKey }) => regionKey !== 'timelessTundra')
-            .map(({ color, hasCompletedBonus, regionKey, regionOwl: { regionOwl } }) => (
+            .filter(({ regionKey }) => regionKey !== 'timeless-tundra')
+            .map(({ color, hasCompletedBonus, regionKey }) => (
               <Image
                 key={color}
-                src={hasCompletedBonus ? regionOwl : BasicOwl}
+                src={hasCompletedBonus ? `/static/image/owls/3d/${regionKey}.svg` : BasicOwl}
                 width={219}
                 height={130}
                 alt={regionKey}

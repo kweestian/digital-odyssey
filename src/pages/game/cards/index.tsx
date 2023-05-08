@@ -14,8 +14,14 @@ const Cards: NextPage<Props> = () => {
   return (
     <GameLayout>
       <div className={styles.container}>
-        {allExperiences.map(({ isCompleted, card, key, keyLearning }) => (
-          <RewardCard title={keyLearning.text} isActive={isCompleted} cardUrl={card} key={key} />
+        {allExperiences.map(({ isCompleted, key, keyLearning }) => (
+          <RewardCard
+            addtitionalResrouces={keyLearning.additionalRessources}
+            content={keyLearning.text}
+            isActive={isCompleted}
+            cardUrl={`/static/image/cards/${key}.webp`}
+            key={key}
+          />
         ))}
       </div>
     </GameLayout>

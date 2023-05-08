@@ -7,13 +7,17 @@
   }
 }
 
+.contentContainer {
+  width: 60%;
+}
+
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
-  .container {
-    height: 40vh;
-    width: 14vw;
-  }
-  .cardImg {
-    height: 40vh;
-    width: 14vw;
-  }
+  // .container {
+  //   height: 40vh;
+  //   width: 14vw;
+  // }
+  // .cardImg {
+  //   height: 40vh;
+  //   width: 14vw;
+  // }
 }

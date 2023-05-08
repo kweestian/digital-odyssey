@@ -32,7 +32,7 @@ const MapPage: NextPage = () => {
     [isPanning],
   );
 
-  const { data: CustomMap, isLoading } = useMapData();
+  const { data: CustomMap } = useMapData();
 
   const router = useRouter();
   const {

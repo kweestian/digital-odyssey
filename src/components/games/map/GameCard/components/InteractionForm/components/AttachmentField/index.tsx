@@ -3,18 +3,21 @@ import { useDropzone, DropzoneOptions, DropEvent, FileRejection } from 'react-dr
 import Image from 'next/image';
 
 import { useGetPublicUrl } from '@/hooks';
-import Loader from '@/components/common/Loader';
+import * as Check from '@/image/submit-check.svg';
+import * as Eye from '@/image/eye-icon.svg';
+
+import { Loader, Button } from '@/components/common';
 import styles from './AttachmentField.module.scss';
-import Button from '../../../../../../../common/Button';
 
 type Props = {
   onDrop: DropzoneOptions['onDrop'];
   label: string;
   value?: string | null;
   isMutating?: boolean;
+  isBonus?: boolean;
 };
 
-const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
+const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) => {
   const [paths, setPaths] = useState<Array<string>>([]);
   const [zoomImage, setZoomImage] = useState(false);
   const { data, isLoading: loadingImageUrl } = useGetPublicUrl(value);
@@ -40,13 +43,37 @@ const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
 
   const text = isDragActive ? <p>+</p> : <p>{label}</p>;
 
+  const hasAnImage = currentImage && currentImage.length > 0;
+
+  const completedText = isBonus ? 'Completed Bonus' : 'Completed Experience';
+
   return (
     <>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <div {...getRootProps()} className={styles.attachmentContainer}>
+      <div {...(!hasAnImage && getRootProps())} className={styles.attachmentContainer}>
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <input {...getInputProps()} />
-        {text}
+        <div {...(hasAnImage && getRootProps())} className={styles.attachmentInputContainer}>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <input {...getInputProps()} />
+          {hasAnImage ? completedText : text}
+        </div>
+        <Button
+          loading={isLoading || isMutating}
+          bare
+          onClick={() => {
+            if (currentImage && currentImage.length > 0) {
+              setZoomImage(true);
+            }
+          }}
+        >
+          <Image
+            src={currentImage && currentImage.length > 0 ? Eye : Check}
+            alt="On Submit Button"
+            className={styles.submitButtonImage}
+            width={40}
+            height={40}
+          />
+        </Button>
       </div>
       <div className={zoomImage ? styles.imageContainerZoomed : styles.imageContainer}>
         {isLoading ? (

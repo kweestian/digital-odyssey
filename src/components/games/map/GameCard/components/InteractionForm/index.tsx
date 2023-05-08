@@ -16,11 +16,11 @@ type FieldProps =
       value?: string | null;
     };
 
-type Props = { isLoading: boolean; label: string } & FieldProps;
+type Props = { isLoading: boolean; label: string; isBonus?: boolean } & FieldProps;
 
-const FormField = ({ fieldType, onChange, id, label, value, isLoading }: Props) => {
+const FormField = ({ fieldType, onChange, id, label, value, isLoading, isBonus }: Props) => {
   if (fieldType === 'attachment' && onChange) {
-    return <AttachmentField onDrop={onChange} value={value} label={label} isMutating={isLoading} />;
+    return <AttachmentField onDrop={onChange} value={value} label={label} isMutating={isLoading} isBonus={isBonus} />;
   }
 
   if (fieldType === 'text') {

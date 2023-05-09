@@ -23,7 +23,6 @@ const BackGroud = ({ children }: { children: React.ReactNode }) => (
     <Rayures />
     <Halo />
     <Background />
-
     {children}
   </svg>
 );

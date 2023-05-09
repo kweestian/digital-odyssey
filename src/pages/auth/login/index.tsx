@@ -1,8 +1,9 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/router';
 
+import useLocalStorage from '@/hooks/useLocalStorage';
 import { DefaultLayout, Input, Button, Loader } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 import { MagicLinkRequestBody, ServerResponse } from '@/types/server';
@@ -14,16 +15,23 @@ const Login: NextPageWithLayout = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [email, setEmail] = useState('');
+  const { getItem } = useLocalStorage();
 
   const supabase = useSupabaseClient();
   const session = useSession();
   const { push } = useRouter();
 
-  supabase.auth.onAuthStateChange((evt) => {
-    if (evt === 'SIGNED_IN') {
+  supabase.auth.onAuthStateChange(async (evt) => {
+    if (evt === 'SIGNED_IN' && !getItem('HAS_LOGGED_IN')) {
       push('/auth/update-password');
     }
   });
+
+  useEffect(() => {
+    if (session) {
+      push('/game/rules');
+    }
+  }, [session, push]);
 
   const sendMagicLink = useCallback(async () => {
     if (email) {

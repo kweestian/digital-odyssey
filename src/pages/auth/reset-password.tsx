@@ -17,7 +17,7 @@ const Login: NextPageWithLayout = () => {
 
       try {
         const { error: updateError, data } = await supabase.auth.resetPasswordForEmail(email, {
-          redirectTo: '/auth/update-password',
+          redirectTo: 'http://localhost:3000/auth/update-password',
         });
 
         if (updateError) {

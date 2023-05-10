@@ -2,7 +2,7 @@
 
 export const creativityCoastExperiences: Experience[] = [
   {
-    name: 'The Future of Personalization',
+    name: 'The Future of Product Personalization',
     key: 'the-future-of-personalization',
     description: `
       In this experience, follow the link to <a href="https://froggypix.com/" target='_blank'>Froggy Pix</a>, a collaborative platform to design
@@ -31,7 +31,12 @@ export const creativityCoastExperiences: Experience[] = [
       reduce the likelihood of environmentally-disadvantageous
       
       product returns.`,
-      additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'Atmos: ‘Can Made-To-Order Brands Slow Down the Fashion System?’',
+          link: 'https://atmos.earth/bespoke-brand-made-to-order-sustainable-zero-waste-fashion/',
+        },
+      ],
     },
     coordinates: { x: 1140, y: 620 },
   },
@@ -70,7 +75,12 @@ export const creativityCoastExperiences: Experience[] = [
       ecommerce process can be eliminated in favor of a more
       
       sustainable, intimate consumer journey.`,
-      additionalRessources: [{ text: 'Another resource: check it out', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'Hypemoon: ‘Leading Luxury Goods Group Kering Launches First AI Personal Shopper’',
+          link: 'https://hypemoon.com/2023/4/leading-luxury-goods-group-kering-launches-first-ai-personal-shopper',
+        },
+      ],
     },
     coordinates: { x: 1140, y: 800 },
   },
@@ -105,7 +115,12 @@ export const creativityCoastExperiences: Experience[] = [
       or virtual assistants could increase consumers
       engagement and create a luxurious ecommerce
       experience aligned with the values of Kering.`,
-      additionalRessources: [],
+      additionalRessources: [
+        {
+          text: 'Vogue Business: ‘Can AI make secondhand luxury shopping easier?’',
+          link: 'https://www.voguebusiness.com/companies/can-ai-make-secondhand-luxury-shopping-easier',
+        },
+      ],
     },
     coordinates: { x: 1050, y: 700 },
   },
@@ -258,7 +273,12 @@ export const loyaltyLagoonExperiences: Experience[] = [
       and its products — and by doing so, organically and
       
       sustainably drive brand growth.`,
-      additionalRessources: [{ text: 'Business of Fashion: ‘Why Fashion Loves Roblox’', link: 'https://google.com' }],
+      additionalRessources: [
+        {
+          text: 'Business of Fashion: ‘Why Fashion Loves Roblox’',
+          link: 'https://www.businessoffashion.com/articles/technology/why-fashion-loves-roblox/',
+        },
+      ],
     },
     coordinates: { x: 850, y: 600 },
   },
@@ -289,7 +309,12 @@ export const loyaltyLagoonExperiences: Experience[] = [
       ecosystems, from social media to banking to gaming to
       
       brand experiences.`,
-      additionalRessources: [],
+      additionalRessources: [
+        {
+          text: 'Art Labs: ‘The Future of Retail: Direct-to-Avatar Economy’',
+          link: 'https://artlabs.ai/blog/the-future-of-retail-direct-to-avatar-economy',
+        },
+      ],
     },
     coordinates: { x: 760, y: 620 },
   },
@@ -407,7 +432,12 @@ export const loyaltyLagoonExperiences: Experience[] = [
       the customer, and incentivize them to stay loyal to the
       
       brand long-term.`,
-      additionalRessources: [],
+      additionalRessources: [
+        {
+          text: 'Jing Daily: ‘How NFTs are Uncovering New Value in Art &amp; Luxury’',
+          link: 'https://jingdaily.com/how-nfts-are-uncovering-new-value-in-art-and-luxury/',
+        },
+      ],
     },
     coordinates: { x: 680, y: 680 },
   },
@@ -420,7 +450,7 @@ export const playfulPlainExperiences: Experience[] = [
     description: `
     DRESS X believes that the amount of clothing produced today far exceeds
     the needs of humanity. The company's motto is: "Don't shop less, shop
-    digital." As part of this experience, download the DRESS X app and search
+    digital." As part of this experience, download the <a href="https://app.dressx.com" target="_blank">DRESS X app</a> and search
     for new looks you could soon be wearing in the virtual world. Try on a
     garment using the DRESS X fitting feature and upload the photo of your
     digital look here! Then discover the key learnings on how we can continue
@@ -442,7 +472,12 @@ export const playfulPlainExperiences: Experience[] = [
       By transitioning to digital clothing and immersing in
       digital brand experiences, brands have the opportunity to
       reduce their carbon footprint by as much as 30%.`,
-      additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'ELLE: ‘Unpacking the Vast and Infinite World of Digital Fashion’',
+          link: 'https://www.elle.com/fashion/trend-reports/a42664929/digital-fashion/',
+        },
+      ],
     },
     coordinates: { x: 600, y: 580 },
   },
@@ -463,8 +498,8 @@ export const playfulPlainExperiences: Experience[] = [
     },
     bonus: {
       description: `Just as AR can power the future of virtual try-on, it can also create
-      dynamic games – like Balenciaga’s Regenerative Agriculture
-      Experience, launched for Earth Day to raise awareness of new
+      dynamic games – like <a href="https://regenerative.balenciaga.com/" target="_blank"> Balenciaga’s Regenerative Agriculture
+      Experience</a>, launched for Earth Day to raise awareness of new
       investments to measure biodiversity. Take a screenshot of you
       
       navigating the Balenciaga AR farm, and upload it here!`,
@@ -481,7 +516,12 @@ export const playfulPlainExperiences: Experience[] = [
       imagine a world of seamless AR try-ons that could ensure
 
       customer satisfaction pre-purchase.`,
-      additionalRessources: [{ text: 'Another resource: check it out', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'Forbes: ‘Virtual Try-On Is More Than A Pandemic Trend And These Brands Are Reaping The Rewards’',
+          link: 'https://www.forbes.com/sites/lelalondon/2021/05/20/virtual-try-on-is-more-than-a-pandemic-trendand-these-brands-are-reaping-the-rewards/?sh=44edf9a76c82',
+        },
+      ],
     },
     coordinates: { x: 750, y: 520 },
   },
@@ -523,7 +563,12 @@ export const playfulPlainExperiences: Experience[] = [
       unique preferences. Holograms lastly can also enhance the
       experience from a brand storytelling perspective – via virtual
       try-ons, product displays, and immersive retail experiences.`,
-      additionalRessources: [],
+      additionalRessources: [
+        {
+          text: 'Looking Glass: ‘The Future of Retail: 3D Immersion’',
+          link: 'https://lookingglassfactory.com/blog/the-future-of-retail-3d-immersion',
+        },
+      ],
     },
     coordinates: { x: 740, y: 430 },
   },
@@ -545,7 +590,7 @@ footprints of a website.`,
       label: 'Copy text here',
     },
     bonus: {
-      description: `Go to Digital Carbon Footprint and calculate your own estimated digital
+      description: `Go to <a href="https://digitalbeacon.co/" target="_blank">Digital Carbon Footprint</a> and calculate your own estimated digital
     footprint. Then take a screenshot of the results and attach it here.`,
       type: 'attachment',
       label: 'Upload Screenshot',
@@ -564,7 +609,12 @@ footprints of a website.`,
       store might.<br /> <br />
       At Kering, we need to continue to imagine how we can
       steer digital forward in creative, conscious ways!`,
-      additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'The intro guide to digital eco-design’',
+          link: 'https://eco-conception.designersethiques.org/guide/en/content/0-introduction.html',
+        },
+      ],
     },
     coordinates: { x: 655, y: 250 },
   },
@@ -614,7 +664,12 @@ footprints of a website.`,
       as 40%; ecodesign to allow us to make clothing more in
 
       harmony with nature – and much more!`,
-      additionalRessources: [{ text: 'Another resource: check it out', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'The intro guide to digital eco-design’',
+          link: 'https://eco-conception.designersethiques.org/guide/en/content/0-introduction.html',
+        },
+      ],
     },
     coordinates: { x: 560, y: 260 },
   },
@@ -655,7 +710,12 @@ footprints of a website.`,
       ensure via any physical product’s ‘digital twin’ that it was
 
       made responsibly and ethically.`,
-      additionalRessources: [],
+      additionalRessources: [
+        {
+          text: 'Circularise: ‘Blockchain: The key to the traceability and trust in sustainable manufacturing’',
+          link: 'https://www.circularise.com/blogs/blockchain-the-key-to-the-traceability-and-trust-in-sustainable-manufacturing',
+        },
+      ],
     },
     coordinates: { x: 620, y: 300 },
   },
@@ -689,7 +749,7 @@ export const virtualValleysExperiences: Experience[] = [
       ],
     },
     bonus: {
-      description: `Discover The New Space – an immersive gaming and social experience
+      description: `Discover <a href="https://ferragamo.obsessvr.com/holiday/#/" target="_blank">The New Space</a> – an immersive gaming and social experience
       powered by Unreal Engine 5, where brands can craft photorealistic
       campaigns and marketing activations. In this mini-quest, you will have
       two minutes to find a Golden Owl hidden in the virtual space – once
@@ -712,7 +772,12 @@ export const virtualValleysExperiences: Experience[] = [
       advanced virtual reality experiences could disrupt the
       in-person fashion show model without sacrificing the
       emotional, immersive storytelling of the best fashion events!`,
-      additionalRessources: [{ text: 'Vogue Business', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'The Economist: ‘How will businesses use the metaverse?’',
+          link: 'https://www.youtube.com/watch?v=LEgHRAQ1HmE',
+        },
+      ],
     },
     coordinates: { x: 860, y: 330 },
   },
@@ -745,7 +810,12 @@ export const virtualValleysExperiences: Experience[] = [
       them to work together to design and create innovative
       
       products and experiences.`,
-      additionalRessources: [{ text: 'Another resource: check it out', link: 'https://vogue.com' }],
+      additionalRessources: [
+        {
+          text: 'RetailDive: ‘How can brands find meaning in the metaverse? Co creation ’',
+          link: 'https://www.retaildive.com/spons/how-can-brands-find-meaning-in-the-metaverse-co-creation-and-community/621399/',
+        },
+      ],
     },
     coordinates: { x: 890, y: 250 },
   },
@@ -780,7 +850,12 @@ export const virtualValleysExperiences: Experience[] = [
       create an enriching experience in exotic hyper-real virtual
       places that can equally drive authentic product discovery
       and build brand awareness, engagement and loyalty.`,
-      additionalRessources: [],
+      additionalRessources: [
+        {
+          text: 'The Drum: ‘What is Nikeland, &amp; why was it considered a success?’',
+          link: 'https://www.thedrum.com/news/2022/03/22/nearly-7-million-people-have-visited-nike-s-metaverse-store',
+        },
+      ],
     },
     coordinates: { x: 950, y: 240 },
   },

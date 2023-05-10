@@ -4,4 +4,5 @@ export const ALLOWED_DOMAINS = [
   '@enverselabs.com',
   '@heretique.fr',
   'pm.marteau@gmail.com',
+  'chrislhamelin@gmail.com',
 ];

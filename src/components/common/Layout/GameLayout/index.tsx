@@ -10,6 +10,7 @@ import * as CloseIcon from '@/image/CloseIcon.svg';
 
 import useLocalStorage from '@/hooks/useLocalStorage';
 
+import { useGlobalState } from '@/contexts';
 import Navbar from '../components/Navbar/Navbar';
 import MainScreen from '../components/MainScreen/MainScreen';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
@@ -21,6 +22,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const { getItem, setItem } = useLocalStorage();
   const [isOpen, setIsOpen] = useState(true);
   const [isFirstVisit, setIsFirstVisit] = useState(true);
+  const global = useGlobalState();
+
+  console.log(global);
 
   const { asPath } = useRouter();
   const { t } = useTranslation('common');

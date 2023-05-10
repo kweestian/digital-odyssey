@@ -15,7 +15,7 @@ const useGetUserExperience = () => {
   const { dispatch } = useGlobalState();
 
   const updateUserExperience = async (_url: string, { arg }: { arg: UserExperienceColumns }) =>
-    supabase.from('user_experiences').upsert([{ ...arg }], { onConflict: 'experience_key' });
+    supabase.from('user_experiences').upsert([{ ...arg }], { onConflict: 'experience_key, user_id' });
 
   const mutation = useSWRMutation('/user/experiences', updateUserExperience);
 

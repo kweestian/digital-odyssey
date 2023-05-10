@@ -17,8 +17,6 @@ export async function middleware(req: NextRequest) {
       data: { session },
     } = await supabase.auth.getSession();
 
-    // console.log(session, req.nextUrl.pathname);
-
     // Check auth condition
     if (ALLOWED_DOMAINS.some((emailPattern) => session?.user.email?.endsWith(emailPattern))) {
       // Authentication successful, forward request to protected route.
@@ -40,7 +38,7 @@ export async function middleware(req: NextRequest) {
 // Auth condition not met, redirect to home page.
 
 export const config = {
-  matcher: ['/game/:path*', '/auth/update-password'],
+  matcher: ['/game/:path*'],
 };
 
 // export const config = {

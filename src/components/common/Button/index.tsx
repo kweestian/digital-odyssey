@@ -19,6 +19,7 @@ type BaseProps = {
   loading?: boolean;
   disabled?: boolean;
   customStyles?: CSSProperties;
+  skin?: 'normal' | 'other';
   /**
    * For buttons that dont need styling, eg event listenser on big divs
    */
@@ -53,9 +54,9 @@ const Button = ({
   customStyles,
   loading,
   bare,
-  variant,
   children,
   disabled,
+  skin = 'normal',
   ariaLabel: overrideAriaLabel,
 }: Props) => {
   const Component = as === 'a' ? Link : 'button';
@@ -73,13 +74,17 @@ const Button = ({
       children,
     );
   }
+  const skins = {
+    normal: styles.button,
+    other: styles.other,
+  };
 
   return (
     <Component
       disabled={loading || disabled}
       aria-label={ariaLabel}
       type={type}
-      className={classNames({ [styles.button]: !bare, [styles.ghost]: variant === 'ghost' })}
+      className={classNames({ [skins[skin]]: !bare })}
       onClick={onClick}
       href={href || '/'}
       locale={lang}

@@ -19,12 +19,6 @@ const Login: NextPageWithLayout = () => {
   const supabase = useSupabaseClient();
   const { push } = useRouter();
 
-  supabase.auth.onAuthStateChange((evt) => {
-    if (evt === 'SIGNED_IN') {
-      push('/auth/update-password');
-    }
-  });
-
   const signInWithEmail = useCallback(async () => {
     if (email && password) {
       setLoading(true);

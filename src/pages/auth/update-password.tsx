@@ -10,9 +10,9 @@ const Login: NextPageWithLayout = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const [password, setPassword] = useState('');
-
   const { push } = useRouter();
+
+  const [password, setPassword] = useState('');
 
   const resetPassword = useCallback(async () => {
     if (password && password.length > 5) {

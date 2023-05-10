@@ -1,5 +1,5 @@
 {
-  "locales": ["fr", "es", "en"],
+  "locales": ["en"],
   "defaultLocale": "en",
   "pages": {
     "*": ["common"],

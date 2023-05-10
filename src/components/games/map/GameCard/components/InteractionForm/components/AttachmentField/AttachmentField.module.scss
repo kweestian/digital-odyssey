@@ -59,3 +59,35 @@
     height: 60%;
   }
 }
+
+@media screen and (max-height: 800px) {
+  .attachmentInputContainer {
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .submitButtonImage {
+    width: 30px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .attachmentInputContainer {
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .attachmentInputContainer {
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .submitButtonImage {
+    width: 20px;
+  }
+}

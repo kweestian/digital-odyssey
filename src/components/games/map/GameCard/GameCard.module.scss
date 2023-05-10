@@ -16,41 +16,38 @@
   width: 150px;
 }
 
-.descriptionContainer {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 5px;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  border-radius: 20px;
-  width: 60%;
-  > p {
-    // white-space: pre;
-    font-size: 20px;
-    font-weight: 300;
-    // line-height: 1.5;
-    font-weight: 500;
+@media screen and (max-height: 800px) {
+  .cardContainer {
+    > h1 {
+      font-size: 30px;
+    }
+  }
+
+  .owlImage {
+    width: 100px;
   }
 }
 
-.descriptionTitle {
-  margin: 1.5rem;
+@media screen and (max-height: 650px) {
+  .cardContainer {
+    > h1 {
+      font-size: 20px;
+    }
+  }
+
+  .owlImage {
+    width: 60px;
+  }
 }
 
-.errorText {
-  font-size: 12px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: red;
-  margin-top: 15px;
-  max-width: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all;
-}
+@media screen and (max-height: 550px) {
+  .cardContainer {
+    > h1 {
+      font-size: 18px;
+    }
+  }
 
-.answerContainer {
-  margin-top: 50px;
+  .owlImage {
+    width: 40px;
+  }
 }

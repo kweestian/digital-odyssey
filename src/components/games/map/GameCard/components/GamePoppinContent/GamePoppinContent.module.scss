@@ -1,21 +1,5 @@
 @import '@/styles/variables';
 
-.cardContainer {
-  display: flex;
-  position: relative;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  > h1 {
-    font-weight: 500;
-    font-size: 40px;
-  }
-}
-
-.owlImage {
-  width: 150px;
-}
-
 .descriptionContainer {
   display: flex;
   flex-direction: column;
@@ -27,16 +11,13 @@
   border-radius: 20px;
   width: 90%;
   > p {
-    // white-space: pre;
     font-size: 20px;
     font-weight: 300;
-    // line-height: 1.5;
-    font-weight: 500;
   }
 }
 
 .descriptionTitle {
-  margin: 1.5rem;
+  padding: 5px 0;
 }
 
 .errorText {
@@ -54,4 +35,40 @@
 
 .answerContainer {
   margin-top: 50px;
+}
+
+@media screen and (max-height: 800px) {
+  .descriptionContainer {
+    > p {
+      font-size: 15px;
+    }
+  }
+
+  .answerContainer {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .descriptionContainer {
+    > p {
+      font-size: 13px;
+    }
+  }
+
+  .answerContainer {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .descriptionContainer {
+    > p {
+      font-size: 10px;
+    }
+  }
+
+  .answerContainer {
+    margin-top: 0px;
+  }
 }

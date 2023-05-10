@@ -23,6 +23,7 @@ type BaseProps = {
    * For buttons that dont need styling, eg event listenser on big divs
    */
   bare?: boolean;
+  variant?: 'ghost';
   children?: React.ReactNode;
 };
 
@@ -52,6 +53,7 @@ const Button = ({
   customStyles,
   loading,
   bare,
+  variant,
   children,
   disabled,
   ariaLabel: overrideAriaLabel,
@@ -77,7 +79,7 @@ const Button = ({
       disabled={loading || disabled}
       aria-label={ariaLabel}
       type={type}
-      className={classNames({ [styles.button]: !bare })}
+      className={classNames({ [styles.button]: !bare, [styles.ghost]: variant === 'ghost' })}
       onClick={onClick}
       href={href || '/'}
       locale={lang}

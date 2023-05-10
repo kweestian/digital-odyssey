@@ -20,11 +20,12 @@
   display: flex;
   flex-direction: column;
   padding: 20px 5px;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
   border: 2px solid white;
   border-radius: 20px;
-  width: 60%;
+  width: 90%;
   > p {
     // white-space: pre;
     font-size: 20px;

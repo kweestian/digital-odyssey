@@ -1520,11 +1520,13 @@ exports[`map page renders cards page unchange 1`] = `
             style="height: 0%;"
           />
         </div>
-        <h2>
-          0
-          %
-        </h2>
       </div>
+      <h2
+        class="percentage"
+      >
+        0
+        %
+      </h2>
     </div>
   </main>
 </div>

@@ -53,22 +53,18 @@ const MapPage: NextPage = () => {
 
   return (
     <GameLayout>
+      {currentOpenedExperience && (
+        <GameCard experience={currentOpenedExperience} isOpen onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })} />
+      )}
+      {additionalResourcesPopinState && (
+        <AdditionalResourcesPopin
+          title={additionalResourcesPopinState.title}
+          description={additionalResourcesPopinState.description}
+          additionalResources={additionalResourcesPopinState.additionalResources}
+          onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
+        />
+      )}
       <div className={styles.mapContainer}>
-        {currentOpenedExperience && (
-          <GameCard
-            experience={currentOpenedExperience}
-            isOpen
-            onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })}
-          />
-        )}
-        {additionalResourcesPopinState && (
-          <AdditionalResourcesPopin
-            title={additionalResourcesPopinState.title}
-            description={additionalResourcesPopinState.description}
-            additionalResources={additionalResourcesPopinState.additionalResources}
-            onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
-          />
-        )}
         <TransformWrapper
           centerOnInit
           // eslint-disable-next-line react/jsx-props-no-spreading

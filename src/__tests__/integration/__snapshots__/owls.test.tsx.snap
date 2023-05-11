@@ -254,11 +254,13 @@ exports[`owls page renders owls page unchanged 1`] = `
             style="height: 0%;"
           />
         </div>
-        <h2>
-          0
-          %
-        </h2>
       </div>
+      <h2
+        class="percentage"
+      >
+        0
+        %
+      </h2>
     </div>
   </main>
 </div>

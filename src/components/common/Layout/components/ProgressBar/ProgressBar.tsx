@@ -16,8 +16,8 @@ const ProgressBar = () => {
         <div className={styles.progressBar}>
           <div className={styles.progress} style={{ height: `${percentage * 100}%` }} />
         </div>
-        <h2>{percentage * 100}%</h2>
       </div>
+      <h2 className={styles.percentage}>{percentage * 100}%</h2>
     </div>
   );
 };

@@ -7,8 +7,11 @@
   text-align: center;
   > div > h1 {
     color: $TextMainColor;
-    font-size: 1.5em;
+    font-size: 20px;
+    font-family: 'Monuments';
+    font-weight: 400;
     padding-top: 20px;
+    margin-bottom: 5px;
   }
 }
 
@@ -17,11 +20,10 @@
 }
 
 .activeLink {
-  margin-top: 3px;
   position: relative;
   width: inherit;
-  height: 5px;
-  border-radius: 2px;
+  height: 3px;
+  margin: 0 10px;
   background-color: $TextMainColor;
   align-self: center;
   justify-self: end;
@@ -36,7 +38,6 @@
     padding: 0;
   }
 }
-
 
 @media screen and (max-height: 550px) {
   .linkContainer {

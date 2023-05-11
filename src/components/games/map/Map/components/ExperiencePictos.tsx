@@ -21,7 +21,7 @@ const ExperiencePictos = ({ experiences, regionKey }: Props) => {
           height="50"
           xlinkHref={
             experience.isCompleted
-              ? `/static/image/owls/icons/${regionKey}.svg`
+              ? `/static/image/owls/3d/${regionKey}.svg`
               : `/static/image/map/picto/picto_position_${regionKey}.svg`
           }
         />

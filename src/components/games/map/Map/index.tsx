@@ -2,18 +2,20 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
+import useClickOutSide from '@/hooks/useClickOutSide';
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { useGlobalState } from '@/contexts/global';
 import styles from './Map.module.scss';
 import { ExperiencePictos, MapBackground } from './components';
 
 interface Props {
-  zoomImageTrigger: (regionName: string) => void;
+  zoomImageTrigger: (regionName: string, newZoom?: number) => void;
   customMap: CustomMap;
   zoom: number;
+  initialScale: number;
 }
 
-const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
+const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
 
   const [activeRegion, setActiveRegion] = useState<Region['regionKey'] | ''>();
@@ -40,9 +42,9 @@ const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
 
   const { dispatch } = useGlobalState();
 
-  // useClickOutSide(landContinentRef, () => {
-  //   zoomImageTrigger('seaOfSustainability');
-  // });
+  useClickOutSide(landContinentRef, () => {
+    zoomImageTrigger('backgroundAnchor', initialScale);
+  });
 
   return (
     <div className="w-full h-full">
@@ -184,7 +186,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom }: Props) => {
                       xlinkHref={
                         isRegionComplete
                           ? `/static/image/owls/gif/${regionKey}.gif`
-                          : `/static/image/owls/icons/${regionKey}.svg`
+                          : `/static/image/owls/3d/${regionKey}.svg`
                       }
                     />
                   )}

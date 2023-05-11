@@ -1317,7 +1317,7 @@ exports[`map page renders cards page unchange 1`] = `
                             style="overflow: visible;"
                             width="110"
                             x="1020"
-                            xlink:href="/static/image/owls/icons/creativity-coast.svg"
+                            xlink:href="/static/image/owls/3d/creativity-coast.svg"
                             y="720"
                           />
                         </g>
@@ -1352,7 +1352,7 @@ exports[`map page renders cards page unchange 1`] = `
                             style="overflow: visible;"
                             width="110"
                             x="850"
-                            xlink:href="/static/image/owls/icons/loyalty-lagoon.svg"
+                            xlink:href="/static/image/owls/3d/loyalty-lagoon.svg"
                             y="600"
                           />
                         </g>
@@ -1387,7 +1387,7 @@ exports[`map page renders cards page unchange 1`] = `
                             style="overflow: visible;"
                             width="110"
                             x="520"
-                            xlink:href="/static/image/owls/icons/sea-of-sustainability.svg"
+                            xlink:href="/static/image/owls/3d/sea-of-sustainability.svg"
                             y="330"
                           />
                         </g>
@@ -1422,7 +1422,7 @@ exports[`map page renders cards page unchange 1`] = `
                             style="overflow: visible;"
                             width="110"
                             x="890"
-                            xlink:href="/static/image/owls/icons/virtual-valleys.svg"
+                            xlink:href="/static/image/owls/3d/virtual-valleys.svg"
                             y="240"
                           />
                         </g>
@@ -1457,7 +1457,7 @@ exports[`map page renders cards page unchange 1`] = `
                             style="overflow: visible;"
                             width="110"
                             x="660"
-                            xlink:href="/static/image/owls/icons/playful-plains.svg"
+                            xlink:href="/static/image/owls/3d/playful-plains.svg"
                             y="500"
                           />
                         </g>

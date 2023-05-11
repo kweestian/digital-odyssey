@@ -14,9 +14,9 @@ const useClickOutSide = <T extends Node>(ref: React.RefObject<T>, cb: () => void
   );
 
   useEffect(() => {
-    window.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('click', handleClickOutside);
     return () => {
-      window.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('click', handleClickOutside);
     };
   }, [handleClickOutside]);
 };

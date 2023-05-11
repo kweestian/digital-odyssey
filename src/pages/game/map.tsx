@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
 import styles from '@/styles/map.module.scss';
-import { AdditionalResourcesPopin, GameCard, GameLayout, Loader, Map } from '@/components';
+import { AdditionalResourcesPopin, Button, GameCard, GameLayout, Loader, Map } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
 import { useGlobalState } from '@/contexts/global';
 import { useMapData } from '@/hooks';
@@ -18,15 +18,15 @@ const MapPage: NextPage = () => {
 
   const { width } = useWindowSize();
 
-  const initialScale = width && width < 1200 ? 0.4 : 1.2;
+  const initialScale = width && width < 1200 ? 0.4 : 1.4;
   const [zoom, setZoom] = useState(initialScale);
 
   const zoomToImage = useCallback(
-    (regionName: string) => {
+    (regionName: string, overrideZoom?: number) => {
       if (transformComponentRef.current && !isPanning) {
         const { zoomToElement } = transformComponentRef.current;
         setZoom(DEFAULT_REGION_ZOOM);
-        zoomToElement(regionName, DEFAULT_REGION_ZOOM);
+        zoomToElement(regionName, overrideZoom || DEFAULT_REGION_ZOOM);
       }
     },
     [isPanning],
@@ -39,6 +39,10 @@ const MapPage: NextPage = () => {
     state: { experience: currentOpenedExperience, additionalResourcesPopinState },
     dispatch,
   } = useGlobalState();
+
+  // const resetZoom = useCallback(() => {
+  //   transformComponentRef.current?.resetTransform();
+  // }, []);
 
   useEffect(() => {
     transformComponentRef.current?.zoomToElement('backgroundAnchor', initialScale);
@@ -54,7 +58,14 @@ const MapPage: NextPage = () => {
   return (
     <GameLayout>
       {currentOpenedExperience && (
-        <GameCard experience={currentOpenedExperience} isOpen onClose={() => dispatch({ type: 'CLOSE_EXPERIENCE' })} />
+        <GameCard
+          experience={currentOpenedExperience}
+          isOpen
+          onClose={() => {
+            dispatch({ type: 'CLOSE_EXPERIENCE' });
+            // resetZoom();
+          }}
+        />
       )}
       {additionalResourcesPopinState && (
         <AdditionalResourcesPopin
@@ -82,7 +93,7 @@ const MapPage: NextPage = () => {
         >
           <TransformComponent>
             <div className={styles.regionsContainer}>
-              <Map zoom={zoom} customMap={CustomMap} zoomImageTrigger={zoomToImage} />
+              <Map zoom={zoom} customMap={CustomMap} zoomImageTrigger={zoomToImage} initialScale={initialScale} />
             </div>
           </TransformComponent>
         </TransformWrapper>

@@ -23,6 +23,7 @@ const Rules: NextPage<Props> = () => {
           title={t('rules:cards.card1.title')}
           descriptionKey="rules:cards.card1.description"
           icon={VideoIcon}
+          hasIconAction
         />
         <DescriptiveCard
           title={t('rules:cards.card2.title')}

@@ -15,6 +15,21 @@
   font-family: 'monarch';
   src: url('/static/font/WTMonarchNova-Roman.ttf');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monument';
+  src: url('/static/font/MonumentExtended-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monument';
+  src: url('/static/font/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {

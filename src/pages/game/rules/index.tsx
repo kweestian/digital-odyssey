@@ -19,25 +19,23 @@ const Rules: NextPage<Props> = () => {
     <GameLayout>
       <div className={styles.container}>
         <DescriptiveCard
-          isSmall
+          isCentered
           title={t('rules:cards.card1.title')}
           descriptionKey="rules:cards.card1.description"
           icon={VideoIcon}
         />
         <DescriptiveCard
-          isSmall
           title={t('rules:cards.card2.title')}
           descriptionKey="rules:cards.card2.description"
           icon={MapContour}
         />
         <DescriptiveCard
-          isSmall
+          isCentered
           title={t('rules:cards.card3.title')}
           descriptionKey="rules:cards.card3.description"
           icon={GoldOwl}
         />
         <DescriptiveCard
-          isSmall
           title={t('rules:cards.card4.title')}
           descriptionKey="rules:cards.card4.description"
           icon={PositionIcon}

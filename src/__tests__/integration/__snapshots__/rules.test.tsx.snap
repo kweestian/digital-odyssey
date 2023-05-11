@@ -168,7 +168,7 @@ exports[`rules page renders rules page unchanged 1`] = `
           class="container"
         >
           <div
-            class="container small"
+            class="container centered"
           >
             <div
               class="cornerDecoration topLeftCorner"
@@ -186,7 +186,7 @@ exports[`rules page renders rules page unchanged 1`] = `
               class="content"
             >
               <h1>
-                rules:cards.card1.title
+                RULES:CARDS.CARD1.TITLE
               </h1>
               <p>
                 rules:cards.card1.description
@@ -205,7 +205,7 @@ exports[`rules page renders rules page unchanged 1`] = `
             </div>
           </div>
           <div
-            class="container small"
+            class="container notCentered"
           >
             <div
               class="cornerDecoration topLeftCorner"
@@ -223,7 +223,7 @@ exports[`rules page renders rules page unchanged 1`] = `
               class="content"
             >
               <h1>
-                rules:cards.card2.title
+                RULES:CARDS.CARD2.TITLE
               </h1>
               <p>
                 rules:cards.card2.description
@@ -242,7 +242,7 @@ exports[`rules page renders rules page unchanged 1`] = `
             </div>
           </div>
           <div
-            class="container small"
+            class="container centered"
           >
             <div
               class="cornerDecoration topLeftCorner"
@@ -260,7 +260,7 @@ exports[`rules page renders rules page unchanged 1`] = `
               class="content"
             >
               <h1>
-                rules:cards.card3.title
+                RULES:CARDS.CARD3.TITLE
               </h1>
               <p>
                 rules:cards.card3.description
@@ -279,7 +279,7 @@ exports[`rules page renders rules page unchanged 1`] = `
             </div>
           </div>
           <div
-            class="container small"
+            class="container notCentered"
           >
             <div
               class="cornerDecoration topLeftCorner"
@@ -297,7 +297,7 @@ exports[`rules page renders rules page unchanged 1`] = `
               class="content"
             >
               <h1>
-                rules:cards.card4.title
+                RULES:CARDS.CARD4.TITLE
               </h1>
               <p>
                 rules:cards.card4.description
@@ -332,11 +332,13 @@ exports[`rules page renders rules page unchanged 1`] = `
             style="height: 0%;"
           />
         </div>
-        <h2>
-          0
-          %
-        </h2>
       </div>
+      <h2
+        class="percentage"
+      >
+        0
+        %
+      </h2>
     </div>
   </main>
 </div>

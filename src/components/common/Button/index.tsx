@@ -24,6 +24,7 @@ type BaseProps = {
    * For buttons that dont need styling, eg event listenser on big divs
    */
   bare?: boolean;
+  variant?: 'ghost';
   children?: React.ReactNode;
 };
 

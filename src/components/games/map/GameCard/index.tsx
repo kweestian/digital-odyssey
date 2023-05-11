@@ -104,7 +104,7 @@ const GameCard = ({
     return (
       <PopinCard onClick={() => onClose()}>
         <div className={styles.cardContainer}>
-          <h1>{name}</h1>
+          <h1>{name.toUpperCase()}</h1>
           <Image
             src={`/static/image/owls/flat/${regionKey}.svg`}
             alt={`${name} owl icon`}

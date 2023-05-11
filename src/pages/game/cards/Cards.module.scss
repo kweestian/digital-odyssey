@@ -1,9 +1,29 @@
 @import '@/styles/variables';
 
 .container {
-  display: grid;
-  grid-template-columns: 15vw 15vw 15vw 15vw;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 50%;
   z-index: 1;
+}
+
+.firstRegionsContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.lastRegionsContainer {
+  display: flex;
+}
+
+.firstRegions {
+  display: flex;
+  margin-right: 20px;
+}
+
+.lastRegions {
+  display: flex;
+  margin-right: 20px;
 }

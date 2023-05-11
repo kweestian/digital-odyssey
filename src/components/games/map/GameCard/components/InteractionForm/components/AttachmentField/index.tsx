@@ -41,7 +41,7 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
 
   const isLoading = loadingImageUrl || isMutating;
 
-  const text = isDragActive ? <p>+</p> : <p>{label}</p>;
+  const text = isDragActive ? <p>+</p> : <p>{label.toUpperCase()}</p>;
 
   const hasAnImage = currentImage && currentImage.length > 0;
 

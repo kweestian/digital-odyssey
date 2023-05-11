@@ -8,6 +8,7 @@ type Props = {
 
 const QuestionCard = ({ question: { imageLink, text, title, choices, key } }: Props) => {
   const [stepFormState, setStepFormState] = useAtom(stepFormAtom);
+
   return (
     <div className={styles.questionCardContainer}>
       <div className={styles.imagePlaceholder}>{imageLink}</div>

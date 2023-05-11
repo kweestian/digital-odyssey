@@ -10,19 +10,42 @@ type Props = {};
 
 const Cards: NextPage<Props> = () => {
   const { data } = useMapData();
-  const allExperiences = data.map(({ experiences }) => experiences).flat();
+  const firstTwoRegions = data.slice(0, 2);
+  const lastRegions = data.slice(2, 5);
+
   return (
     <GameLayout>
       <div className={styles.container}>
-        {allExperiences.map(({ isCompleted, key, keyLearning }) => (
-          <RewardCard
-            addtitionalResrouces={keyLearning.additionalRessources}
-            content={keyLearning.text}
-            isActive={isCompleted}
-            cardUrl={`/static/image/cards/${key}.webp`}
-            key={key}
-          />
-        ))}
+        <div className={styles.firstRegionsContainer}>
+          {firstTwoRegions.map(({ regionKey, experiences }) => (
+            <div key={regionKey} className={styles.firstRegions}>
+              {experiences.map(({ isCompleted, key, keyLearning }) => (
+                <RewardCard
+                  addtitionalResrouces={keyLearning.additionalRessources}
+                  content={keyLearning.text}
+                  isActive={isCompleted}
+                  cardUrl={`/static/image/cards/${key}.webp`}
+                  key={key}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className={styles.lastRegionsContainer}>
+          {lastRegions.map(({ regionKey, experiences }) => (
+            <div key={regionKey} className={styles.lastRegions}>
+              {experiences.map(({ isCompleted, key, keyLearning }) => (
+                <RewardCard
+                  addtitionalResrouces={keyLearning.additionalRessources}
+                  content={keyLearning.text}
+                  isActive={isCompleted}
+                  cardUrl={`/static/image/cards/${key}.webp`}
+                  key={key}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </GameLayout>
   );

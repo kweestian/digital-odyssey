@@ -168,13 +168,19 @@ exports[`cards page renders cards page unchange 1`] = `
           class="container"
         >
           <div
-            class="container isNotActive"
+            class="firstRegionsContainer"
           >
-            <button
-              type="button"
+            <div
+              class="firstRegions"
             >
-              <img
-                alt="Soon fashion brands could work with collaborative
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="Soon fashion brands could work with collaborative
       platforms like Froggy Pix (as well as virtual assistants and
       other emerging technologies!) to create made-for-order
       garments and items – no longer would fashion brands
@@ -187,26 +193,26 @@ exports[`cards page renders cards page unchange 1`] = `
       reduce the likelihood of environmentally-disadvantageous
       
       product returns."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="AI is accelerating faster than ever, leaving us at Kering to
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="AI is accelerating faster than ever, leaving us at Kering to
       reimagine how we can implement AI in exciting ways.
       Chat GPT is now technically the fastest growing product of
       all time by user acquisition, even in its early version.<br /> <br />
@@ -217,26 +223,26 @@ exports[`cards page renders cards page unchange 1`] = `
       ecommerce process can be eliminated in favor of a more
       
       sustainable, intimate consumer journey."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="In the future, virtual assistants could be a key component
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="In the future, virtual assistants could be a key component
       of a more conscious luxury industry. Virtual assistants
       could become more aware of your unique emotions,
       taste, and desires, and guide you in the quests for your
@@ -250,26 +256,30 @@ exports[`cards page renders cards page unchange 1`] = `
       or virtual assistants could increase consumers
       engagement and create a luxurious ecommerce
       experience aligned with the values of Kering."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="firstRegions"
             >
-              <img
-                alt="By providing a unique, fun and engaging way for
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="By providing a unique, fun and engaging way for
       consumers to interact with the Gucci brand, experiences
       like Gucci Town could empower a more conscious future
       vision of luxury. Such experiences are also of course more
@@ -280,26 +290,26 @@ exports[`cards page renders cards page unchange 1`] = `
       and its products — and by doing so, organically and
       
       sustainably drive brand growth."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="If the consumers of the future can create avatars that
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="If the consumers of the future can create avatars that
       represent their unique identities and features, this could
       foster a sense of inclusivity and belonging within future
       brand communities and online spaces (like Gucci Town
@@ -311,26 +321,26 @@ exports[`cards page renders cards page unchange 1`] = `
       ecosystems, from social media to banking to gaming to
       
       brand experiences."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="NFTs have the potential to strengthen luxury brand loyalty
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="NFTs have the potential to strengthen luxury brand loyalty
       in many ways – by creating the potential for unique
       ownership experiences, greater personalization for
       customers, increased collectibility of items, and more
@@ -343,26 +353,34 @@ exports[`cards page renders cards page unchange 1`] = `
       the customer, and incentivize them to stay loyal to the
       
       brand long-term."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
           <div
-            class="container isNotActive"
+            class="lastRegionsContainer"
           >
-            <button
-              type="button"
+            <div
+              class="lastRegions"
             >
-              <img
-                alt="Today the Internet accounts for roughly 3% of global CO2
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="Today the Internet accounts for roughly 3% of global CO2
       emissions – greater than the entire aviation industry.
       This is why it’s crucial to imagine micro and macro digital
       solutions with sustainability at the front of mind – whether
@@ -374,26 +392,26 @@ exports[`cards page renders cards page unchange 1`] = `
       store might.<br /> <br />
       At Kering, we need to continue to imagine how we can
       steer digital forward in creative, conscious ways!"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="While keeping an awareness of digital’s environmental
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="While keeping an awareness of digital’s environmental
       impact in mind, we can endeavor to harness the power of
       digital for good – like how emerging blockchain
       technology can create a more ethical, responsible supply
@@ -405,26 +423,26 @@ exports[`cards page renders cards page unchange 1`] = `
       as 40%; ecodesign to allow us to make clothing more in
 
       harmony with nature – and much more!"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="The future power of blockchain tech is immense —
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="The future power of blockchain tech is immense —
       beyond holding the power to eliminate counterfeits, it can
       enhance transparency and circularity, allowing tracking
       of raw materials, and guaranteeing greater efficiency and
@@ -437,26 +455,30 @@ exports[`cards page renders cards page unchange 1`] = `
       ensure via any physical product’s ‘digital twin’ that it was
 
       made responsibly and ethically."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="lastRegions"
             >
-              <img
-                alt="Fashion shows have a large environmental footprint –
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="Fashion shows have a large environmental footprint –
       recently a report analyzed the physical activities of 5000
       brands to find that combined these events result in
       approximately 241,000 tons of CO2 each year, more than
@@ -468,26 +490,26 @@ exports[`cards page renders cards page unchange 1`] = `
       advanced virtual reality experiences could disrupt the
       in-person fashion show model without sacrificing the
       emotional, immersive storytelling of the best fashion events!"
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Co-created brand experiences on 3D virtual world
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="Co-created brand experiences on 3D virtual world
       platforms like Spatial can help create a more conscious
       and experiential future of luxury in several ways by
       increasing accessibility to customers from across the
@@ -499,26 +521,26 @@ exports[`cards page renders cards page unchange 1`] = `
       them to work together to design and create innovative
       
       products and experiences."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="McKinsey values the market potential of e-commerce in
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="McKinsey values the market potential of e-commerce in
       the emerging ‘metaverse’ to be about 2.5 trillion USD by
       2030. By creating unique virtual stores for special
       occasions – like the holiday season, or to extend the
@@ -534,26 +556,30 @@ exports[`cards page renders cards page unchange 1`] = `
       create an enriching experience in exotic hyper-real virtual
       places that can equally drive authentic product discovery
       and build brand awareness, engagement and loyalty."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="lastRegions"
             >
-              <img
-                alt="Compared to traditional physical clothing, producing
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="Compared to traditional physical clothing, producing
       digital wearables and fashion pieces results in 97% less
       greenhouse gas emissions and significantly less waste,
       
@@ -563,26 +589,26 @@ exports[`cards page renders cards page unchange 1`] = `
       By transitioning to digital clothing and immersing in
       digital brand experiences, brands have the opportunity to
       reduce their carbon footprint by as much as 30%."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="Using augmented reality allows customers to virtually try
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="Using augmented reality allows customers to virtually try
       on outfits, eyewear, jewelry and makeup products – and
       in turn reduces the carbon footprint of all these
       transactions due to severely limiting returns.<br /> <br />
@@ -591,26 +617,26 @@ exports[`cards page renders cards page unchange 1`] = `
       imagine a world of seamless AR try-ons that could ensure
 
       customer satisfaction pre-purchase."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
-          </div>
-          <div
-            class="container isNotActive"
-          >
-            <button
-              type="button"
-            >
-              <img
-                alt="In the future, holograms can be utilized for a variety of
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+              <div
+                class="container isNotActive"
+              >
+                <button
+                  type="button"
+                >
+                  <img
+                    alt="In the future, holograms can be utilized for a variety of
       purposes to fuel a more conscious and experiential luxury
       shopping experience – like with virtual inventory that
       allows customers to see and interact with products that
@@ -624,17 +650,19 @@ exports[`cards page renders cards page unchange 1`] = `
       unique preferences. Holograms lastly can also enhance the
       experience from a brand storytelling perspective – via virtual
       try-ons, product displays, and immersive retail experiences."
-                class="cardImg"
-                data-nimg="1"
-                decoding="async"
-                height="170.28"
-                loading="lazy"
-                src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=256&q=75"
-                srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=256&q=75 2x"
-                style="color: transparent;"
-                width="96.03"
-              />
-            </button>
+                    class="cardImg"
+                    data-nimg="1"
+                    decoding="async"
+                    height="170.28"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=256&q=75"
+                    srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="96.03"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -653,11 +681,13 @@ exports[`cards page renders cards page unchange 1`] = `
             style="height: 0%;"
           />
         </div>
-        <h2>
-          0
-          %
-        </h2>
       </div>
+      <h2
+        class="percentage"
+      >
+        0
+        %
+      </h2>
     </div>
   </main>
 </div>

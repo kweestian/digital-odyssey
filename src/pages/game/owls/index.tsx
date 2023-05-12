@@ -14,21 +14,33 @@ type Props = {};
 const Owls: NextPage<Props> = () => {
   const { data } = useMapData();
   const timelessTundra = data.find(({ regionKey }) => regionKey === 'timeless-tundra');
+
   return (
     <GameLayout>
       <div className={styles.container}>
         <div className={styles.owlsList}>
           {data
             .filter(({ regionKey }) => regionKey !== 'timeless-tundra')
-            .map(({ color, hasCompletedBonus, regionKey }) => (
-              <Image
-                key={color}
-                src={hasCompletedBonus ? `/static/image/owls/3d/${regionKey}.svg` : BasicOwl}
-                width={219}
-                height={130}
-                alt={regionKey}
-              />
-            ))}
+            .map(({ color, hasCompletedBonus, regionKey, isComplete }) => {
+              const test = 'test';
+              return isComplete ? (
+                <Image
+                  key={color}
+                  src={`/static/image/owls/gif/${regionKey}.gif`}
+                  width={219}
+                  height={130}
+                  alt={regionKey}
+                />
+              ) : (
+                <Image
+                  key={color}
+                  src={hasCompletedBonus ? `/static/image/owls/3d/${regionKey}.svg` : BasicOwl}
+                  width={219}
+                  height={130}
+                  alt={regionKey}
+                />
+              );
+            })}
         </div>
         {timelessTundra?.available ? <Image src={GoldOwl} alt="Gold Owl" /> : <Image src={BasicOwl} alt="Basic Owl" />}
       </div>

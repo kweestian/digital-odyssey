@@ -27,25 +27,30 @@ const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconActio
   const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
 
   return (
-    <div className={classNames(styles.container, { [styles.centered]: isCentered, [styles.notCentered]: !isCentered })}>
-      <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.bottomLeftCorner)} />
+    <>
+      {isPopupOpen && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
 
-      <div className={styles.content}>
-        <h1>{title.toUpperCase()}</h1>
-        <p>
-          <Trans i18nKey={descriptionKey} components={{ br: <br /> }} />
-        </p>
-        {isPopupOpen && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
-        {hasIconAction ? (
-          <Image src={icon} alt={title} onClick={() => setIsPopupOpen(true)} />
-        ) : (
-          <Image src={icon} alt={title} />
-        )}
+      <div
+        className={classNames(styles.container, { [styles.centered]: isCentered, [styles.notCentered]: !isCentered })}
+      >
+        <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
+        <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
+        <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
+        <div className={classNames(styles.cornerDecoration, styles.bottomLeftCorner)} />
+
+        <div className={styles.content}>
+          <h1>{title.toUpperCase()}</h1>
+          <p>
+            <Trans i18nKey={descriptionKey} components={{ br: <br /> }} />
+          </p>
+          {hasIconAction ? (
+            <Image style={{ cursor: 'pointer' }} src={icon} alt={title} onClick={() => setIsPopupOpen(true)} />
+          ) : (
+            <Image src={icon} alt={title} />
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

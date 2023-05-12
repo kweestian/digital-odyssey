@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ReactPlayer from 'react-player';
 
@@ -12,15 +12,25 @@ const PopupVideo = ({
   videoUrl: string;
   onClick: () => void;
   closeIcon: typeof import('*.svg');
-}) => (
-  <div className={styles.container}>
-    <div className={styles.iframeContainer}>
-      <button onClick={onClick} className={styles.closeButton} type="button">
-        <Image width={30} height={30} src={closeIcon} alt="Close Popup Button" />
-      </button>
-      <ReactPlayer url={videoUrl} width="100%" height="100%" controls />
+}) => {
+  const [hasWindow, setHasWindow] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setHasWindow(true);
+    }
+  }, []);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.iframeContainer}>
+        <button onClick={onClick} className={styles.closeButton} type="button">
+          <Image width={30} height={30} src={closeIcon} alt="Close Popup Button" />
+        </button>
+        {hasWindow && <ReactPlayer url={videoUrl} width="100%" height="100%" controls />}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default PopupVideo;

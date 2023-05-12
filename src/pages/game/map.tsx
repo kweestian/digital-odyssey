@@ -1,24 +1,27 @@
 import { NextPage } from 'next';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
 import styles from '@/styles/map.module.scss';
-import { AdditionalResourcesPopin, Button, GameCard, GameLayout, Loader, Map } from '@/components';
+import { AdditionalResourcesPopin, GameCard, GameLayout, Map } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
 import { useGlobalState } from '@/contexts/global';
 import { useMapData } from '@/hooks';
 import { useRouter } from 'next/router';
+import useURLParams from '@/hooks/useUrlParams';
 
 const DEFAULT_REGION_ZOOM = 3;
 
 const MapPage: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
 
+  const { getItem, setItems, removeItem, clear } = useURLParams();
+
   const [isPanning, setIsPanning] = useState(false);
 
   const { width } = useWindowSize();
 
-  const initialScale = width && width < 1200 ? 0.4 : 1.7;
+  const initialScale = width && width < 1200 ? 1.2 : 1.5;
   const [zoom, setZoom] = useState(initialScale);
 
   const zoomToImage = useCallback(
@@ -28,26 +31,49 @@ const MapPage: NextPage = () => {
         const newZoom = overrideZoom || DEFAULT_REGION_ZOOM;
         setZoom(newZoom);
         zoomToElement(regionName, newZoom);
+
+        // if (regionName === 'backgroundAnchor') {
+        //   clear();
+        // } else {
+        //   setItems([{ key: 'regionKey', value: regionName }]);
+        // }
       }
     },
-    [isPanning],
+    [isPanning, setItems, clear],
   );
 
   const { data: CustomMap } = useMapData();
 
   const router = useRouter();
   const {
-    state: { experience: currentOpenedExperience, additionalResourcesPopinState },
+    state: { additionalResourcesPopinState },
     dispatch,
   } = useGlobalState();
 
   // const resetZoom = useCallback(() => {
   //   transformComponentRef.current?.resetTransform();
   // }, []);
+  const currentRegionKey = getItem('regionKey');
+
+  const currentExperienceKey = getItem('experienceKey');
 
   useEffect(() => {
+    const getCurrentRegionKey = getItem('regionKey');
+    if (transformComponentRef.current && getCurrentRegionKey && !Array.isArray(getCurrentRegionKey)) {
+      const { zoomToElement } = transformComponentRef.current;
+      zoomToElement(getCurrentRegionKey, DEFAULT_REGION_ZOOM);
+    }
+
+    // zoomToImage(currentRegionKey);
+  }, [getItem]);
+
+  useEffect(() => {
+    // if (currentRegionKey && !Array.isArray(currentRegionKey)) {
+    //   transformComponentRef.current?.zoomToElement(currentRegionKey, zoom);
+    // } else {
     transformComponentRef.current?.zoomToElement('backgroundAnchor', initialScale);
-  }, [transformComponentRef, width, initialScale]);
+    // }
+  }, [transformComponentRef, initialScale]);
 
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
@@ -56,6 +82,14 @@ const MapPage: NextPage = () => {
     });
   }, [router, dispatch]);
 
+  const currentOpenedExperience = useMemo(
+    () =>
+      CustomMap.find(({ regionKey }) => regionKey === currentRegionKey)?.experiences.find(
+        ({ key }) => key === currentExperienceKey,
+      ),
+    [CustomMap, currentExperienceKey, currentRegionKey],
+  );
+
   return (
     <GameLayout>
       {currentOpenedExperience && (
@@ -63,7 +97,7 @@ const MapPage: NextPage = () => {
           experience={currentOpenedExperience}
           isOpen
           onClose={() => {
-            dispatch({ type: 'CLOSE_EXPERIENCE' });
+            removeItem('experienceKey');
             // resetZoom();
           }}
         />
@@ -84,6 +118,8 @@ const MapPage: NextPage = () => {
           limitToBounds={false}
           // initialPositionX={5000}
           ref={transformComponentRef}
+          initialPositionY={2000}
+          minScale={1.2}
           onZoom={(evt) => setZoom(evt.state.scale)}
           onPanning={() => setIsPanning(true)}
           onPanningStop={() =>

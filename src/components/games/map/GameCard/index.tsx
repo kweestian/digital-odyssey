@@ -1,13 +1,14 @@
 import { useCallback, useState } from 'react';
 import Image from 'next/image';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
-import useTranslation from 'next-translate/useTranslation';
+import { useAtom } from 'jotai';
 
 import { useUpdateUserExperience } from '@/hooks';
-import { PopinCard, Button } from '@/components/common';
+import { PopinCard, KeyLearningsContent } from '@/components/common';
 
 import styles from './GameCard.module.scss';
 import GamePoppinContent from './components/GamePoppinContent';
+import { interactionAtom } from './components/GamePoppinContent/atom';
 
 type Props = {
   experience: Experience;
@@ -16,13 +17,15 @@ type Props = {
 };
 
 const GameCard = ({
-  experience: { name, description, interaction, bonus, key, regionKey },
+  experience: { name, description, interaction, bonus, key, regionKey, keyLearning },
   isOpen,
   onClose,
 }: Props) => {
-  const { t } = useTranslation();
+  const [interactionType, setInteractionType] = useAtom(interactionAtom);
+
   const [error, setError] = useState('');
   const [isUploadingImage, setIsUploadingImage] = useState(false);
+  const [newValue, setNewValue] = useState<Database['public']['Tables']['user_experiences'] | null>(null);
 
   const fieldId = `${key}_text`;
   const user = useUser();
@@ -37,6 +40,7 @@ const GameCard = ({
       answer: [{ key: fieldId, value: target[fieldId].value }],
       user_id: user?.id,
     });
+    setInteractionType('keyLearning');
   };
 
   const supabase = useSupabaseClient();
@@ -91,37 +95,54 @@ const GameCard = ({
               });
 
               setIsUploadingImage(false);
+              setInteractionType('keyLearning');
             }
           }
         };
         reader.readAsArrayBuffer(file);
       });
     },
-    [supabase, key, user?.id, trigger, interaction.bonus],
+    [supabase, key, user?.id, trigger, interaction.bonus, setInteractionType],
   );
 
   if (isOpen) {
     return (
-      <PopinCard onClick={() => onClose()}>
-        <div className={styles.cardContainer}>
-          <h1>{name.toUpperCase()}</h1>
-          <Image
-            src={`/static/image/owls/flat/${regionKey}.svg`}
-            alt={`${name} owl icon`}
-            width={210}
-            height={130}
-            className={styles.owlImage}
+      <PopinCard
+        onClick={() => {
+          if (interactionType) {
+            setInteractionType(null);
+          } else {
+            onClose();
+          }
+        }}
+      >
+        {interactionType === 'keyLearning' ? (
+          <KeyLearningsContent
+            cardUrl={`/static/image/cards/${key}.webp`}
+            additionalRessources={keyLearning.additionalRessources}
+            content={keyLearning.text}
           />
-          <GamePoppinContent
-            onDrop={onDrop}
-            error={error}
-            onSubmit={handleSubmit}
-            fieldId={fieldId}
-            isUpdatingUser={isUpdatingUser}
-            isUploadingImage={isUploadingImage}
-            experience={{ name, description, interaction, bonus, key }}
-          />
-        </div>
+        ) : (
+          <div className={styles.cardContainer}>
+            <h1>{name.toUpperCase()}</h1>
+            <Image
+              src={`/static/image/owls/flat/${regionKey}.svg`}
+              alt={`${name} owl icon`}
+              width={210}
+              height={130}
+              className={styles.owlImage}
+            />
+            <GamePoppinContent
+              onDrop={onDrop}
+              error={error}
+              onSubmit={handleSubmit}
+              fieldId={fieldId}
+              isUpdatingUser={isUpdatingUser}
+              isUploadingImage={isUploadingImage}
+              experience={{ name, description, interaction, bonus, key }}
+            />
+          </div>
+        )}
       </PopinCard>
     );
   }

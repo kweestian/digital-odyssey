@@ -2,9 +2,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
-import useClickOutSide from '@/hooks/useClickOutSide';
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { useGlobalState } from '@/contexts/global';
+import { useUrlParams } from '@/hooks';
 import styles from './Map.module.scss';
 import { ExperiencePictos, MapBackground } from './components';
 
@@ -186,6 +186,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                                 .flat(),
                             },
                           });
+                        } else {
+                          onClickActions(regionKey);
                         }
                       }}
                       y={regionOwl.y}

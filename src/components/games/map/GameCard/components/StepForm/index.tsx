@@ -13,20 +13,20 @@ type Props = {
 const StepForm = ({ questions, experienceKey }: Props) => {
   const [score, setScore] = useAtom(scoreAtom);
   const [, setStepFormState] = useAtom(stepFormAtom);
-  if (score) {
-    return (
-      <>
-        Your score was {score} / {questions.length}
-        <Button
-          text="Play Again ?"
-          onClick={() => {
-            setStepFormState({});
-            setScore(undefined);
-          }}
-        />
-      </>
-    );
-  }
+  // if (score) {
+  //   return (
+  //     <>
+  //       Your score was {score} / {questions.length}
+  //       <Button
+  //         text="Play Again ?"
+  //         onClick={() => {
+  //           setStepFormState({});
+  //           setScore(undefined);
+  //         }}
+  //       />
+  //     </>
+  //   );
+  // }
   return <StepFormCarousel questions={questions} experienceKey={experienceKey} />;
 };
 

@@ -10,10 +10,10 @@ interface RewardCardProps {
   content: string;
   isActive?: boolean;
   cardUrl: string;
-  addtitionalResrouces: AdditionalResources[];
+  additionalRessources?: AdditionalResources[];
 }
 
-const RewardCard = ({ content, isActive, cardUrl, addtitionalResrouces }: RewardCardProps) => {
+const RewardCard = ({ content, isActive, cardUrl, additionalRessources }: RewardCardProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -25,7 +25,7 @@ const RewardCard = ({ content, isActive, cardUrl, addtitionalResrouces }: Reward
             <h3>KEY LEARNINGS : </h3>
             <RenderHtml htmlContent={content} />
             <h4>Additional Resources :</h4>
-            {addtitionalResrouces.map(({ text, link }) => (
+            {additionalRessources?.map(({ text, link }) => (
               <p key={link}>
                 <a href={link} target="_blank" rel="noreferrer">
                   {text}

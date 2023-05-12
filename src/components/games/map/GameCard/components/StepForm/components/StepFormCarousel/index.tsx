@@ -1,4 +1,4 @@
-import { KeyboardEventHandler, UIEvent, useCallback, useEffect, useRef, useState } from 'react';
+import { UIEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { useAtom } from 'jotai';
 import { useUser } from '@supabase/auth-helpers-react';
 
@@ -9,7 +9,8 @@ import useWindowSize from '@/hooks/useWindowSize';
 import QuestionCard from '../QuestionCard';
 
 import styles from './StepFormCarousel.module.scss';
-import { scoreAtom, stepFormAtom } from '../QuestionCard/atom';
+import { stepFormAtom } from '../QuestionCard/atom';
+import { interactionAtom } from '../../../GamePoppinContent/atom';
 
 type Props = {
   questions: Question[];
@@ -73,18 +74,16 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
     [setCurrentPageNumber, numberOfPages],
   );
   const [stepFormState] = useAtom(stepFormAtom);
-  const [, setScore] = useAtom(scoreAtom);
+  const [, setInteractionType] = useAtom(interactionAtom);
 
   const { trigger, isMutating } = useUpdateUserExperience();
   const user = useUser();
 
   const submit = useCallback(async () => {
-    const rightAnswers = questions.filter(({ correctAnswer, key }) => stepFormState[key] === correctAnswer);
     const answers: Answer[] = questions.map(({ key }) => ({ key, value: stepFormState[key] || '' }));
-    const newScore = rightAnswers.length || 1;
     await trigger({ experience_key: experienceKey, answer: answers, user_id: user?.id });
-    setScore(newScore);
-  }, [stepFormState, questions, setScore, trigger, experienceKey, user?.id]);
+    setInteractionType('keyLearning');
+  }, [stepFormState, questions, trigger, experienceKey, user?.id, setInteractionType]);
 
   const currentQuestionKey = questions[currentPageNumber].key;
 

@@ -19,7 +19,7 @@ type BaseProps = {
   loading?: boolean;
   disabled?: boolean;
   customStyles?: CSSProperties;
-  skin?: 'normal' | 'other';
+  skin?: 'normal' | 'ghost';
   /**
    * For buttons that dont need styling, eg event listenser on big divs
    */
@@ -76,7 +76,7 @@ const Button = ({
   }
   const skins = {
     normal: styles.button,
-    other: styles.ghost,
+    ghost: styles.ghost,
   };
 
   return (

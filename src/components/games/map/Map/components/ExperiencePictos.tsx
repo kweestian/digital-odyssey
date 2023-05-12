@@ -1,4 +1,5 @@
 import { useGlobalState } from '@/contexts/global';
+import { useUrlParams } from '@/hooks';
 
 type Props = {
   experiences: Experience[];
@@ -6,13 +7,18 @@ type Props = {
 };
 
 const ExperiencePictos = ({ experiences, regionKey }: Props) => {
-  const { dispatch } = useGlobalState();
+  const { setItems } = useUrlParams();
 
   return (
     <>
       {experiences.map((experience) => (
         <image
-          onClick={() => dispatch({ type: 'SET_EXPERIENCE', payload: experience })}
+          onClick={() =>
+            setItems([
+              { key: 'regionKey', value: regionKey },
+              { key: 'experienceKey', value: experience.key },
+            ])
+          }
           key={experience.name}
           x={experience.coordinates.x}
           y={experience.coordinates.y}

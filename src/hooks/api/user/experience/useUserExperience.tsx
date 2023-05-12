@@ -2,7 +2,7 @@ import useSWR, { Fetcher } from 'swr';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useGlobalState } from '@/contexts/global';
 
-const useGetUserExperience = () => {
+const useUserExperience = () => {
   const supabase = useSupabaseClient();
   const { dispatch } = useGlobalState();
 
@@ -10,7 +10,7 @@ const useGetUserExperience = () => {
     { data: Database['public']['Tables']['user_experiences']['Row'][] | null },
     string
   > = async () => supabase.from('user_experiences').select('*');
-  const swrResult = useSWR('/user/experiences', handler);
+  const swrResult = useSWR('/user/experiences', handler, { refreshInterval: 3000 });
 
   if (swrResult.error) {
     dispatch({ type: 'SET_ERROR', payload: swrResult.error });
@@ -19,4 +19,4 @@ const useGetUserExperience = () => {
   return swrResult;
 };
 
-export default useGetUserExperience;
+export default useUserExperience;

@@ -8,6 +8,7 @@ import InteractionForm from '../InteractionForm';
 
 import styles from './GamePoppinContent.module.scss';
 import { stepFormAtom, scoreAtom } from '../StepForm/components/QuestionCard/atom';
+import { interactionAtom } from './atom';
 
 type Props = {
   onSubmit: (e: React.SyntheticEvent<HTMLFormElement>) => Promise<void>;
@@ -29,17 +30,17 @@ const GamePoppinContent = ({
   error,
 }: Props) => {
   const { t } = useTranslation();
-  const [quizMode, enterQuizMode] = useState(false);
-  const [bonusMode, enterBonusMode] = useState(false);
+
+  const [currentInteration, setCurrentInteraction] = useAtom(interactionAtom);
 
   const [, setStepFormState] = useAtom(stepFormAtom);
   const [, setScore] = useAtom(scoreAtom);
 
-  if (quizMode && (interaction.type === 'quiz' || interaction.type === 'boolean')) {
+  if (currentInteration === 'quiz' && (interaction.type === 'quiz' || interaction.type === 'boolean')) {
     return <StepForm questions={interaction.questions} experienceKey={key} />;
   }
 
-  if (bonus && bonusMode) {
+  if (bonus && currentInteration === 'bonus') {
     return (
       <>
         <div className={styles.descriptionContainer}>
@@ -56,7 +57,6 @@ const GamePoppinContent = ({
             label="Bonus Experience"
           />
           {error && <p className={styles.errorText}>{error}</p>}
-          <Button bare text="go back" onClick={() => enterBonusMode(false)} />
         </div>
       </>
     );
@@ -99,7 +99,7 @@ const GamePoppinContent = ({
               onClick={() => {
                 setStepFormState({});
                 setScore(undefined);
-                enterQuizMode(true);
+                setCurrentInteraction('quiz');
               }}
             />
           ))}
@@ -107,8 +107,9 @@ const GamePoppinContent = ({
         {bonus && (
           <div>
             <Button
+              skin="ghost"
               text={interaction.bonus ? 'Completed Bonus' : 'Bonus Experience'}
-              onClick={() => enterBonusMode(true)}
+              onClick={() => setCurrentInteraction('bonus')}
             />
           </div>
         )}

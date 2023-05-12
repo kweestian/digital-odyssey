@@ -21,7 +21,7 @@ const Cards: NextPage<Props> = () => {
             <div key={regionKey} className={styles.firstRegions}>
               {experiences.map(({ isCompleted, key, keyLearning }) => (
                 <RewardCard
-                  addtitionalResrouces={keyLearning.additionalRessources}
+                  additionalRessources={keyLearning.additionalRessources}
                   content={keyLearning.text}
                   isActive={isCompleted}
                   cardUrl={`/static/image/cards/${key}.webp`}
@@ -36,7 +36,7 @@ const Cards: NextPage<Props> = () => {
             <div key={regionKey} className={styles.lastRegions}>
               {experiences.map(({ isCompleted, key, keyLearning }) => (
                 <RewardCard
-                  addtitionalResrouces={keyLearning.additionalRessources}
+                  additionalRessources={keyLearning.additionalRessources}
                   content={keyLearning.text}
                   isActive={isCompleted}
                   cardUrl={`/static/image/cards/${key}.webp`}

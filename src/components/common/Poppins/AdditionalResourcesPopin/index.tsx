@@ -1,4 +1,4 @@
-import PopinCard from '../PopinCard';
+import PopinCard from '../../PopinCard';
 
 import styles from './AdditionalResourcesPopin.module.scss';
 

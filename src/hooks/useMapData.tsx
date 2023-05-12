@@ -1,6 +1,6 @@
 import { CustomMap } from '@/data/regions';
 
-import useGetUserExperience from './api/user/experience/useGetUserExperiences';
+import useGetUserExperience from './api/user/experience/useUserExperience';
 
 const useMapData = () => {
   const { data: userExperienceData, isLoading } = useGetUserExperience();

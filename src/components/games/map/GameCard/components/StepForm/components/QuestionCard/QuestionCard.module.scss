@@ -1,13 +1,20 @@
 .questionCardContainer {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 80%;
   justify-content: space-between;
+  h3 {
+    font-family: monarch;
+    font-weight: 100;
+    font-size: 38px;
+    text-transform: uppercase;
+  }
 }
 
 .questionContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 50%;
 }
 
@@ -30,4 +37,11 @@
 .input {
   margin-right: 10px;
   appearance: checkbox;
+}
+
+@media screen and (max-height: 810px) {
+  .questionImage {
+    height: 40vh;
+    width: auto;
+  }
 }

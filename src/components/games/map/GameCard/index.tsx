@@ -124,14 +124,18 @@ const GameCard = ({
           />
         ) : (
           <div className={styles.cardContainer}>
-            <h1>{name.toUpperCase()}</h1>
-            <Image
-              src={`/static/image/owls/flat/${regionKey}.svg`}
-              alt={`${name} owl icon`}
-              width={210}
-              height={130}
-              className={styles.owlImage}
-            />
+            {interactionType !== 'quiz' && (
+              <>
+                <h1>{name.toUpperCase()}</h1>
+                <Image
+                  src={`/static/image/owls/flat/${regionKey}.svg`}
+                  alt={`${name} owl icon`}
+                  width={210}
+                  height={130}
+                  className={styles.owlImage}
+                />
+              </>
+            )}
             <GamePoppinContent
               onDrop={onDrop}
               error={error}

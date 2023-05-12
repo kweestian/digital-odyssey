@@ -47,21 +47,6 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
 
   const pagesArray = Array.from(Array(numberOfPages).keys());
 
-  // const handleKeyDown: KeyboardEventHandler = useCallback(
-  //   (e) => {
-  //     switch (e.code) {
-  //       case 'ArrowRight':
-  //         slideTo(currentPageNumber + 1);
-  //         break;
-  //       case 'ArrowLeft':
-  //         slideTo(currentPageNumber - 1);
-  //         break;
-  //       default:
-  //     }
-  //   },
-  //   [slideTo, currentPageNumber],
-  // );
-
   const handleCarouselScroll = useCallback(
     (e: UIEvent<HTMLDivElement, globalThis.UIEvent>) => {
       if (e.target instanceof HTMLDivElement) {
@@ -99,26 +84,31 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
           <div onScroll={handleCarouselScroll} ref={carouselSlidesContainter} className={styles.carouselSlides}>
             {questions.map((item, key) => (
               <div ref={carouselSlide} className={styles.carouselSlide} key={item.key} id={`slide_${key}`}>
-                <QuestionCard question={item} />
+                <QuestionCard
+                  question={item}
+                  onNext={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
+                  isDisabled={!currentAnswer || isMutating}
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
       <div className={styles.carouselNavigationContainer}>
-        <div className={styles.buttonContainer} style={{ marginRight: 5 }}>
+        {/* <div className={styles.buttonContainer} style={{ marginRight: 5 }}>
           <Button
             disabled={isFirstQuestion}
             customStyles={{ width: '100%' }}
             text="Previous"
             onClick={() => slideTo(currentPageNumber - 1)}
           />
-        </div>
+        </div> */}
         <div className={styles.buttonContainer} style={{ marginLeft: 5 }}>
           <Button
+            skin="ghost"
             disabled={!currentAnswer || isMutating}
             customStyles={{ width: '100%' }}
-            text={isLastQuestion ? 'Submit' : 'Next'}
+            text="Check Answer"
             onClick={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
           />
         </div>

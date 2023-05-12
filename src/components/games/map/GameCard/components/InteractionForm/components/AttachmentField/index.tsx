@@ -45,7 +45,7 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
 
   const hasAnImage = currentImage && currentImage.length > 0;
 
-  const completedText = isBonus ? 'Completed Bonus' : 'Completed Experience';
+  const completedText = 'Completed Experience';
 
   return (
     <>

@@ -32,14 +32,15 @@ const MapPage: NextPage = () => {
         setZoom(newZoom);
         zoomToElement(regionName, newZoom);
 
-        // if (regionName === 'backgroundAnchor') {
-        //   clear();
+        if (regionName === 'backgroundAnchor') {
+          clear();
+        }
         // } else {
         //   setItems([{ key: 'regionKey', value: regionName }]);
         // }
       }
     },
-    [isPanning, setItems, clear],
+    [isPanning, clear],
   );
 
   const { data: CustomMap } = useMapData();

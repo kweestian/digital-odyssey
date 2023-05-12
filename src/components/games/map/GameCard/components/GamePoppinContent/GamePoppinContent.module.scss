@@ -37,38 +37,63 @@
   margin-top: 50px;
 }
 
-@media screen and (max-height: 800px) {
-  .descriptionContainer {
-    > p {
-      font-size: 15px;
-    }
-  }
-
-  .answerContainer {
-    margin-top: 35px;
+.bonusContainer {
+  width: 400px;
+  font-size: 20px;
+  > button {
+    width: 85%;
   }
 }
 
-@media screen and (max-height: 650px) {
-  .descriptionContainer {
-    > p {
-      font-size: 13px;
-    }
+@media screen and (max-height: 820px) {
+  .answerContainer {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  .descriptionContainer p {
+    font-size: 14px;
   }
 
-  .answerContainer {
-    margin-top: 20px;
+  .bonusContainer button {
+    font-size: 12px;
+  }
+
+  .bonusContainer {
+    width: calc(50% + 40px);
+    // margin: auto;
   }
 }
 
-@media screen and (max-height: 550px) {
-  .descriptionContainer {
-    > p {
-      font-size: 10px;
-    }
-  }
+// @media screen and (max-height: 650px) {
+//   .descriptionContainer {
+//     > p {
+//       font-size: 13px;
+//     }
+//   }
 
-  .answerContainer {
-    margin-top: 0px;
-  }
-}
+//   .answerContainer {
+//     margin-top: 20px;
+//   }
+
+//   .bonusContainer {
+//     font-size: 15px;
+//     width: 178.94px;
+//   }
+// }
+
+// @media screen and (max-height: 550px) {
+//   .descriptionContainer {
+//     > p {
+//       font-size: 10px;
+//     }
+//   }
+
+//   .answerContainer {
+//     margin-top: 0px;
+//   }
+
+//   .bonusContainer {
+//     font-size: 15px;
+//     width: 178.94px;
+//   }
+// }

@@ -94,6 +94,7 @@ const GamePoppinContent = ({
         {interaction.type === 'boolean' ||
           (interaction.type === 'quiz' && (
             <Button
+              skin="ghost"
               customStyles={{ marginTop: 20 }}
               text={interaction.answer ? 'ReDo Quiz' : 'Start Quiz'}
               onClick={() => {
@@ -105,7 +106,7 @@ const GamePoppinContent = ({
           ))}
 
         {bonus && (
-          <div>
+          <div className={styles.bonusContainer}>
             <Button
               skin="ghost"
               text={interaction.bonus ? 'Completed Bonus' : 'Bonus Experience'}

@@ -4,6 +4,7 @@
   display: flex;
   position: relative;
   width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   > h1 {
@@ -16,15 +17,16 @@
   width: 150px;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 820px) {
   .cardContainer {
     > h1 {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 
   .owlImage {
-    width: 100px;
+    width: 50px;
+    height: auto;
   }
 }
 

@@ -540,10 +540,65 @@ export const playfulPlainExperiences: Experience[] = [
       label: 'Enter Quiz',
       questions: [
         {
-          text: 'If this real life ?',
-          key: 'sure',
-          correctAnswer: 'true',
-          choices: [{ text: 'I think so', value: 'true' }],
+          title: 'Question 1',
+          text: 'What does this Jacquemus hologram depict?',
+          key: 'jacquemus',
+          imageLink: 'virtual_merch_question1.jpg',
+          correctAnswer: 'virtual',
+          choices: [
+            { text: 'A rising ‘virtual influencer’ named Zlu', value: 'virtual' },
+            { text: 'A man who spilled blue paint all over himself', value: 'man' },
+          ],
+        },
+        {
+          title: 'Question 2',
+          text: 'What is the purpose of this Boucheron hologram?',
+          key: 'holo',
+          imageLink: 'virtual_merch_question2.jpg',
+          correctAnswer: 'all',
+          choices: [
+            {
+              text: 'To show customers limited edition and rare pieces that can’t be physically available in all retail stores',
+              value: 'retail',
+            },
+            { text: 'To give the consumer an immersive, engaging experience', value: 'engaging' },
+            { text: 'To reduce the costs of shipping products unnecessarily', value: 'products' },
+            { text: 'All of the above', value: 'all' },
+          ],
+        },
+        {
+          title: 'Question 3',
+          text: 'What is the purpose of this viral cat hologram on a Tokyo street?',
+          key: 'holo',
+          imageLink: 'virtual_merch_question3.jpg',
+
+          correctAnswer: 'joy',
+          choices: [
+            {
+              text: 'To give a moment of joy and wonder to passerby',
+              value: 'joy',
+            },
+            { text: 'To trick people into thinking a real-life monster cat is terrorizing the city', value: 'terror' },
+          ],
+        },
+        {
+          title: 'Question 4',
+          text: 'What is the purpose of this Qeelin hologram?',
+          key: 'holo',
+          imageLink: 'virtual_merch_question4.jpg',
+
+          correctAnswer: 'both',
+          choices: [
+            {
+              text: 'To give an indication to real customers of the real size of products before they try them on or order them',
+              value: 'size',
+            },
+            {
+              text: 'To do a cool trick to impress customers with the brand’s forward-thinking digital solutions',
+              value: 'forward',
+            },
+            { text: 'Both!', value: 'both' },
+          ],
         },
       ],
     },

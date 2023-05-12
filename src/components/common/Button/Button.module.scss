@@ -1,3 +1,5 @@
+@import '@/styles/variables';
+
 .button {
   font-size: 18px;
   // font-family: var(--font-poppins);
@@ -55,4 +57,26 @@
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.ghost {
+  margin-top: 15px;
+  cursor: pointer;
+  height: fit-content;
+  text-transform: uppercase;
+  border: 2px solid;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: $BackgroundSecondaryColor;
+  // min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 36px;
+  // height: fit-content;
+  font-weight: 400;
 }

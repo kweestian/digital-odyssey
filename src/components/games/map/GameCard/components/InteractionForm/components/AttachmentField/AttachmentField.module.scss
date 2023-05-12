@@ -3,6 +3,7 @@
 .attachmentContainer {
   display: flex;
   align-items: center;
+  width: 400px;
 
   button {
     margin-top: 15px;
@@ -17,7 +18,7 @@
   text-transform: uppercase;
   border: 2px solid;
   border-radius: 50px;
-  width: 100%;
+  width: 85%;
   max-width: 300px;
   padding: 0 20px;
   text-align: center;
@@ -56,38 +57,40 @@
 
   img {
     width: 60%;
-    height: 60%;
+    height: auto;
   }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 820px) {
   .attachmentInputContainer {
-    p {
-      font-size: 15px;
-    }
+    margin-top: 5px;
+    width: 50%;
+    font-size: 12px;
   }
 
-  .submitButtonImage {
-    width: 30px;
-  }
-}
-
-@media screen and (max-height: 650px) {
-  .attachmentInputContainer {
-    p {
-      font-size: 13px;
+  .attachmentContainer {
+    button {
+      margin-top: 5px;
     }
   }
 }
 
-@media screen and (max-height: 650px) {
-  .attachmentInputContainer {
-    p {
-      font-size: 13px;
-    }
-  }
+// @media screen and (max-height: 650px) {
+//   .attachmentInputContainer {
+//     p {
+//       font-size: 13px;
+//     }
+//   }
+// }
 
-  .submitButtonImage {
-    width: 20px;
-  }
-}
+// @media screen and (max-height: 650px) {
+//   .attachmentInputContainer {
+//     p {
+//       font-size: 13px;
+//     }
+//   }
+
+//   .submitButtonImage {
+//     width: 20px;
+//   }
+// }

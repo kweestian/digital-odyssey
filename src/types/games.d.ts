@@ -14,6 +14,7 @@ type AdditionalResources = {
 };
 
 type Question = {
+  title: string;
   imageLink?: string;
   title?: string;
   text: string;

@@ -107,7 +107,7 @@ const GamePoppinContent = ({
         {bonus && (
           <div>
             <Button
-              text={interaction.bonus ? 'Bonus Completed' : 'Bonus Experience'}
+              text={interaction.bonus ? 'Completed Bonus' : 'Bonus Experience'}
               onClick={() => enterBonusMode(true)}
             />
           </div>

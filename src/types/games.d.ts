@@ -41,7 +41,7 @@ type Experience = {
   description: string;
   interaction: Interaction;
   bonus?: { description: string } & Interaction;
-  keyLearning: { text: string; additionalRessources: AdditionalResources[] };
+  keyLearning: { text: string; additionalRessources?: AdditionalResources[] };
   coordinates: {
     x: number;
     y: number;

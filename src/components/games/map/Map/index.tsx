@@ -42,13 +42,17 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
 
   const { dispatch } = useGlobalState();
 
-  useClickOutSide(landContinentRef, () => {
-    zoomImageTrigger('backgroundAnchor', initialScale);
-  });
+  // useClickOutSide(
+  //   landContinentRef,
+  //   () => {
+  //     zoomImageTrigger('backgroundAnchor', initialScale);
+  //   },
+  //   '.ignore-click',
+  // );
 
   return (
     <div className="w-full h-full">
-      <MapBackground>
+      <MapBackground onClickOutSideContinent={() => zoomImageTrigger('backgroundAnchor', initialScale)}>
         {/* first, draw all regions */}
         <g ref={landContinentRef}>
           {customMap.map((region) => {
@@ -164,8 +168,10 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   {available && (
                     <image
                       x={regionOwl.x}
-                      onClick={() => {
+                      onClick={(evt) => {
+                        // so it doesnt trigger zoom
                         if (region.isComplete) {
+                          evt.stopPropagation();
                           dispatch({
                             type: 'SET_ADDITIONAL_RESOURCES_POPIN',
                             payload: {
@@ -173,7 +179,10 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                               description: 'Ceci est une description',
                               additionalResources: region.experiences
                                 .filter(({ keyLearning }) => keyLearning?.additionalRessources !== undefined)
-                                .map(({ keyLearning }) => [...keyLearning.additionalRessources])
+                                .map(({ keyLearning }) => [
+                                  // ok since we filter
+                                  ...(keyLearning.additionalRessources as AdditionalResources[]),
+                                ])
                                 .flat(),
                             },
                           });

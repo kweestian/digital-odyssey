@@ -14,8 +14,8 @@ interface PopinCardProps {
 const PopinCard = ({ children, onClick }: PopinCardProps) => (
   <div className={styles.container}>
     <div className={styles.popinContainer}>
-      <button onClick={onClick} className={styles.closeButton} type="button">
-        <Image width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
+      <button onClick={onClick} className={classNames(styles.closeButton, 'ignore-click')} type="button">
+        <Image width={30} height={30} src={CloseIcon} alt="Close Popup Button" className="ignore-click" />
       </button>
       {children}
     </div>

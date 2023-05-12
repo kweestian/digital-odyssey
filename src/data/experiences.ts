@@ -609,12 +609,6 @@ footprints of a website.`,
       store might.<br /> <br />
       At Kering, we need to continue to imagine how we can
       steer digital forward in creative, conscious ways!`,
-      additionalRessources: [
-        {
-          text: 'The intro guide to digital eco-design’',
-          link: 'https://eco-conception.designersethiques.org/guide/en/content/0-introduction.html',
-        },
-      ],
     },
     coordinates: { x: 655, y: 250 },
   },

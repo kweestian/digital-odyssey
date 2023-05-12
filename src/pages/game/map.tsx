@@ -25,8 +25,9 @@ const MapPage: NextPage = () => {
     (regionName: string, overrideZoom?: number) => {
       if (transformComponentRef.current && !isPanning) {
         const { zoomToElement } = transformComponentRef.current;
-        setZoom(DEFAULT_REGION_ZOOM);
-        zoomToElement(regionName, overrideZoom || DEFAULT_REGION_ZOOM);
+        const newZoom = overrideZoom || DEFAULT_REGION_ZOOM;
+        setZoom(newZoom);
+        zoomToElement(regionName, newZoom);
       }
     },
     [isPanning],

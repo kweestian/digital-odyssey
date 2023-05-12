@@ -54,10 +54,11 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <div {...(hasAnImage && getRootProps())} className={styles.attachmentInputContainer}>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <input {...getInputProps()} />
+          <input id="ignore-click" {...getInputProps()} />
           {hasAnImage ? completedText : text}
         </div>
         <Button
+          ariaLabel="on submit attachment"
           loading={isLoading || isMutating}
           bare
           onClick={() => {

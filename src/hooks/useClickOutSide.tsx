@@ -1,24 +1,30 @@
 import { assertIsNode } from '@/lib';
 import { useCallback, useEffect } from 'react';
 
-// eslint-disable-next-line comma-spacing
-const useClickOutSide = <T extends Node>(ref: React.RefObject<T>, cb: () => void) => {
+const useClickOutside = (containerRef: React.RefObject<HTMLElement>, cb: () => void, ignoreSelector?: string) => {
   const handleClickOutside: EventListener = useCallback(
     (e) => {
       assertIsNode(e.target);
-      if (!ref.current?.contains(e.target)) {
+      const target = e.target as HTMLElement;
+
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(target) &&
+        ignoreSelector &&
+        !target.matches(ignoreSelector)
+      ) {
         cb();
       }
     },
-    [cb, ref],
+    [cb, containerRef, ignoreSelector],
   );
 
   useEffect(() => {
-    window.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     return () => {
-      window.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [handleClickOutside]);
 };
 
-export default useClickOutSide;
+export default useClickOutside;

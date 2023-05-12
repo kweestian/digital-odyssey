@@ -76,7 +76,7 @@ const Button = ({
   }
   const skins = {
     normal: styles.button,
-    other: styles.other,
+    other: styles.ghost,
   };
 
   return (
@@ -84,7 +84,7 @@ const Button = ({
       disabled={loading || disabled}
       aria-label={ariaLabel}
       type={type}
-      className={classNames({ [skins[skin]]: !bare })}
+      className={classNames({ [skins[skin]]: !bare, 'ignore-click': true })}
       onClick={onClick}
       href={href || '/'}
       locale={lang}

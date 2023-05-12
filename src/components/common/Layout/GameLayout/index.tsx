@@ -34,7 +34,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';
 
-  const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
+  const videoUrl = 'https://vimeo.com/825783833/638a4386d7?share=copy';
 
   useEffect(() => {
     if (getItem('HAS_LOGGED_IN') === 'true') {

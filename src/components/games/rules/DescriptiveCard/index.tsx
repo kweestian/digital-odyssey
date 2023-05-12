@@ -24,7 +24,7 @@ const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconActio
   const handleClick = () => {
     setIsPopupOpen(false);
   };
-  const videoUrl = 'https://www.youtube.com/embed/Y82uQpMUCCc';
+  const videoUrl = 'https://vimeo.com/825783833/638a4386d7?share=copy';
 
   return (
     <>

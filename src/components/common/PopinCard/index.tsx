@@ -17,10 +17,6 @@ const PopinCard = ({ children, onClick }: PopinCardProps) => (
       <button onClick={onClick} className={styles.closeButton} type="button">
         <Image width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
       </button>
-      <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
-      <div className={classNames(styles.cornerDecoration, styles.bottomLeftCorner)} />
       {children}
     </div>
   </div>

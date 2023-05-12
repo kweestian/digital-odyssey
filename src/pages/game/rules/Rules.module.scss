@@ -15,7 +15,7 @@
 .firstCard {
   grid-area: a;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: right;
   z-index: 2;
   .container {
@@ -26,7 +26,7 @@
 .secondCard {
   grid-area: b;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   z-index: 2;
   justify-content: left;
   .container {
@@ -37,7 +37,7 @@
 .thirdCard {
   grid-area: d;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   z-index: 2;
   justify-content: left;
   .container {
@@ -48,7 +48,7 @@
 .fourthCard {
   grid-area: c;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   z-index: 2;
   justify-content: right;
   .container {
@@ -69,7 +69,8 @@
   justify-self: center;
   margin-right: 70px;
   align-self: center;
-  scale: 1.7;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
 }
 

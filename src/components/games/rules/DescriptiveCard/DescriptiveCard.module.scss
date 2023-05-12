@@ -5,18 +5,8 @@
   display: flex;
   justify-content: center;
   background-color: $BackgroundSecondaryColor;
-  margin: 20px 0px;
   height: 30vh;
   width: 30vw;
-}
-
-.centered {
-  justify-self: end;
-  margin-right: 40px !important;
-}
-
-.notCentered {
-  margin-left: 40px !important;
 }
 
 .content {
@@ -66,9 +56,6 @@
 }
 
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
-  .container {
-    margin: 10px 0;
-  }
   .content {
     > h1 {
       font-size: 30px;

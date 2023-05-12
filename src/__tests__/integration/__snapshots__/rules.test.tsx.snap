@@ -167,151 +167,203 @@ exports[`rules page renders rules page unchanged 1`] = `
           class="container"
         >
           <div
-            class="container centered"
+            class="firstCard"
           >
             <div
-              class="cornerDecoration topLeftCorner"
-            />
-            <div
-              class="cornerDecoration topRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomLeftCorner"
-            />
-            <div
-              class="content"
+              class="container centered"
             >
-              <h1>
-                RULES:CARDS.CARD1.TITLE
-              </h1>
-              <p>
-                rules:cards.card1.description
-              </p>
-              <img
-                alt="rules:cards.card1.title"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent; cursor: pointer;"
-                width="40"
+              <div
+                class="cornerDecoration topLeftCorner"
               />
+              <div
+                class="cornerDecoration topRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomLeftCorner"
+              />
+              <div
+                class="content"
+              >
+                <h1>
+                  RULES:CARDS.CARD1.TITLE
+                </h1>
+                <p>
+                  rules:cards.card1.description
+                </p>
+                <img
+                  alt="rules:cards.card1.title"
+                  data-nimg="1"
+                  decoding="async"
+                  height="40"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  style="color: transparent; cursor: pointer;"
+                  width="40"
+                />
+              </div>
             </div>
           </div>
+          <img
+            alt="Bottom Direction Line"
+            class="firstArrow"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
           <div
-            class="container notCentered"
+            class="secondCard"
           >
             <div
-              class="cornerDecoration topLeftCorner"
-            />
-            <div
-              class="cornerDecoration topRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomLeftCorner"
-            />
-            <div
-              class="content"
+              class="container notCentered"
             >
-              <h1>
-                RULES:CARDS.CARD2.TITLE
-              </h1>
-              <p>
-                rules:cards.card2.description
-              </p>
-              <img
-                alt="rules:cards.card2.title"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
+              <div
+                class="cornerDecoration topLeftCorner"
               />
+              <div
+                class="cornerDecoration topRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomLeftCorner"
+              />
+              <div
+                class="content"
+              >
+                <h1>
+                  RULES:CARDS.CARD2.TITLE
+                </h1>
+                <p>
+                  rules:cards.card2.description
+                </p>
+                <img
+                  alt="rules:cards.card2.title"
+                  data-nimg="1"
+                  decoding="async"
+                  height="40"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  style="color: transparent;"
+                  width="40"
+                />
+              </div>
             </div>
           </div>
+          <img
+            alt="Bottom Direction Line"
+            class="secondArrow"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
           <div
-            class="container centered"
+            class="thirdCard"
           >
             <div
-              class="cornerDecoration topLeftCorner"
-            />
-            <div
-              class="cornerDecoration topRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomLeftCorner"
-            />
-            <div
-              class="content"
+              class="container notCentered"
             >
-              <h1>
-                RULES:CARDS.CARD3.TITLE
-              </h1>
-              <p>
-                rules:cards.card3.description
-              </p>
-              <img
-                alt="rules:cards.card3.title"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
+              <div
+                class="cornerDecoration topLeftCorner"
               />
+              <div
+                class="cornerDecoration topRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomLeftCorner"
+              />
+              <div
+                class="content"
+              >
+                <h1>
+                  RULES:CARDS.CARD4.TITLE
+                </h1>
+                <p>
+                  rules:cards.card4.description
+                </p>
+                <img
+                  alt="rules:cards.card4.title"
+                  data-nimg="1"
+                  decoding="async"
+                  height="40"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  style="color: transparent;"
+                  width="40"
+                />
+              </div>
             </div>
           </div>
+          <img
+            alt="Bottom Direction Line"
+            class="thirdArrow"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
           <div
-            class="container notCentered"
+            class="fourthCard"
           >
             <div
-              class="cornerDecoration topLeftCorner"
-            />
-            <div
-              class="cornerDecoration topRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomRightCorner"
-            />
-            <div
-              class="cornerDecoration bottomLeftCorner"
-            />
-            <div
-              class="content"
+              class="container centered"
             >
-              <h1>
-                RULES:CARDS.CARD4.TITLE
-              </h1>
-              <p>
-                rules:cards.card4.description
-              </p>
-              <img
-                alt="rules:cards.card4.title"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-                style="color: transparent;"
-                width="40"
+              <div
+                class="cornerDecoration topLeftCorner"
               />
+              <div
+                class="cornerDecoration topRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomRightCorner"
+              />
+              <div
+                class="cornerDecoration bottomLeftCorner"
+              />
+              <div
+                class="content"
+              >
+                <h1>
+                  RULES:CARDS.CARD3.TITLE
+                </h1>
+                <p>
+                  rules:cards.card3.description
+                </p>
+                <img
+                  alt="rules:cards.card3.title"
+                  data-nimg="1"
+                  decoding="async"
+                  height="40"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  style="color: transparent;"
+                  width="40"
+                />
+              </div>
             </div>
           </div>
         </div>

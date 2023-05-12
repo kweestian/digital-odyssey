@@ -1,26 +1,83 @@
 @import '@/styles/variables';
 
 .container {
-  width: 80vw;
+  width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-columns: 39vw 39vw;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: 45% 10% 45%;
+  grid-template-areas:
+    'a m b'
+    'z z n'
+    'c o d';
 }
 
-.content {
+.firstCard {
+  grid-area: a;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 30px;
-  > h1 {
-    font-size: 40px;
-    font-weight: 500;
-    color: $TextSecondaryColor;
+  align-items: end;
+  justify-content: right;
+  z-index: 2;
+  .container {
+    justify-self: right;
   }
-  > p {
-    font-size: 16px;
-    white-space: pre;
-    line-height: 1.3em;
-    font-weight: 400;
+}
+
+.secondCard {
+  grid-area: b;
+  display: flex;
+  align-items: end;
+  z-index: 2;
+  justify-content: left;
+  .container {
+    justify-self: left;
   }
+}
+
+.thirdCard {
+  grid-area: d;
+  display: flex;
+  align-items: start;
+  z-index: 2;
+  justify-content: left;
+  .container {
+    justify-self: left;
+  }
+}
+
+.fourthCard {
+  grid-area: c;
+  display: flex;
+  align-items: start;
+  z-index: 2;
+  justify-content: right;
+  .container {
+    justify-self: right;
+  }
+}
+
+.firstArrow {
+  grid-area: m;
+  justify-self: center;
+  align-self: center;
+  margin-top: 70px;
+  width: 100%;
+}
+
+.secondArrow {
+  grid-area: n;
+  justify-self: center;
+  margin-right: 70px;
+  align-self: center;
+  scale: 1.7;
+  z-index: 0;
+}
+
+.thirdArrow {
+  grid-area: o;
+  justify-self: center;
+  margin-bottom: 70px;
+  align-self: center;
+  width: 100%;
+  z-index: 0;
 }

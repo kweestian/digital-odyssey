@@ -49,8 +49,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';
   }, [regionKey, menuItems, asPath, regionTitle]);
 
-  const videoUrl = 'https://vimeo.com/825783833/638a4386d7?share=copy';
-
   useEffect(() => {
     if (getItem('HAS_LOGGED_IN') === 'true') {
       setIsFirstVisit(false);

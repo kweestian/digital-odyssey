@@ -24,11 +24,10 @@ const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconActio
   const handleClick = () => {
     setIsPopupOpen(false);
   };
-  const videoUrl = 'https://vimeo.com/825783833/638a4386d7?share=copy';
 
   return (
     <>
-      {isPopupOpen && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      {isPopupOpen && <PopupVideo onClick={handleClick} closeIcon={CloseIcon} />}
 
       <div
         className={classNames(styles.container, { [styles.centered]: isCentered, [styles.notCentered]: !isCentered })}

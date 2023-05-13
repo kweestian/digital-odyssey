@@ -15,7 +15,7 @@ const DEFAULT_REGION_ZOOM = 3;
 const MapPage: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
 
-  const { getItem, setItems, removeItem, clear } = useURLParams();
+  const { getItem, removeItem, clear, setItem } = useURLParams();
 
   const [isPanning, setIsPanning] = useState(false);
 
@@ -29,18 +29,20 @@ const MapPage: NextPage = () => {
       if (transformComponentRef.current && !isPanning) {
         const { zoomToElement } = transformComponentRef.current;
         const newZoom = overrideZoom || DEFAULT_REGION_ZOOM;
+        if (regionName === 'backgroundAnchor') {
+          clear();
+        } else {
+          setItem('regionKey', regionName);
+        }
         setZoom(newZoom);
         zoomToElement(regionName, newZoom);
 
-        if (regionName === 'backgroundAnchor') {
-          clear();
-        }
         // } else {
         //   setItems([{ key: 'regionKey', value: regionName }]);
         // }
       }
     },
-    [isPanning, clear],
+    [isPanning, clear, setItem],
   );
 
   const { data: CustomMap } = useMapData();

@@ -22,14 +22,14 @@ const MenuItem = ({ title, href, icon }: MenuItemProps) => {
     setIsHovering(false);
   };
 
-  const { asPath } = useRouter();
+  const { pathname } = useRouter();
 
   return (
     <Link key={title} href={href} className={styles.menuItem} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <Image src={icon} alt="" className={styles.menuImage} />
       <div className={styles.linkContainer}>
         <h1>{title}</h1>
-        {asPath === href || isHovering ? <div className={styles.activeLink} /> : null}
+        {pathname === href || isHovering ? <div className={styles.activeLink} /> : null}
       </div>
     </Link>
   );

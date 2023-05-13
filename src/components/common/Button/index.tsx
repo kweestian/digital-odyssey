@@ -16,6 +16,7 @@ type BaseProps = {
   ariaLabel?: string;
   text?: string;
   className?: string;
+  external?: boolean;
   loading?: boolean;
   disabled?: boolean;
   customStyles?: CSSProperties;
@@ -55,6 +56,7 @@ const Button = ({
   loading,
   bare,
   children,
+  external,
   disabled,
   skin = 'normal',
   ariaLabel: overrideAriaLabel,
@@ -81,6 +83,7 @@ const Button = ({
 
   return (
     <Component
+      target={external ? '_blank' : ''}
       disabled={loading || disabled}
       aria-label={ariaLabel}
       type={type}

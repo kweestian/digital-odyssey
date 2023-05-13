@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
@@ -9,6 +9,7 @@ import * as OwlIcon from '@/image/navbar/owl-icon.svg';
 import * as CloseIcon from '@/image/CloseIcon.svg';
 
 import useLocalStorage from '@/hooks/useLocalStorage';
+import { useRegionData, useUrlParams } from '@/hooks';
 
 import Navbar from '../components/Navbar/Navbar';
 import MainScreen from '../components/MainScreen/MainScreen';
@@ -25,14 +26,28 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const { asPath } = useRouter();
   const { t } = useTranslation('common');
 
-  const menuItems = [
-    { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },
-    { title: t('menuTitles.map'), href: '/game/map', icon: MapIcon },
-    { title: t('menuTitles.cards'), href: '/game/cards', icon: CardIcon },
-    { title: t('menuTitles.owls'), href: '/game/owls', icon: OwlIcon },
-  ];
+  const menuItems = useMemo(
+    () => [
+      { title: t('menuTitles.rules'), href: '/game/rules', icon: RulesIcon },
+      { title: t('menuTitles.map'), href: '/game/map', icon: MapIcon },
+      { title: t('menuTitles.cards'), href: '/game/cards', icon: CardIcon },
+      { title: t('menuTitles.owls'), href: '/game/owls', icon: OwlIcon },
+    ],
+    [t],
+  );
 
-  const title = menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';
+  const { getItem: getRegionKey } = useUrlParams();
+
+  const regionKey = getRegionKey('regionKey') as RegionKey;
+  const { title: regionTitle, color } = useRegionData(regionKey);
+
+  const title = useMemo(() => {
+    if (regionKey) {
+      return regionTitle;
+    }
+
+    return menuItems.find((menuItem) => menuItem.href === asPath)?.title || 'Lost';
+  }, [regionKey, menuItems, asPath, regionTitle]);
 
   const videoUrl = 'https://vimeo.com/825783833/638a4386d7?share=copy';
 
@@ -49,13 +64,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />}
+      {/* {isOpen && isFirstVisit && <PopupVideo videoUrl={videoUrl} onClick={handleClick} closeIcon={CloseIcon} />} */}
       <main className={styles.container}>
         <div className={styles.mobileContainer}>
           <p>Please turn your screen on landscape to access the game.</p>
         </div>
         <Navbar menuItems={menuItems} />
-        <MainScreen title={title}>{children}</MainScreen>
+        <MainScreen titleColor={color} title={title}>
+          {children}
+        </MainScreen>
         <ProgressBar />
       </main>
     </>

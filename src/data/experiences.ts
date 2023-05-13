@@ -569,7 +569,7 @@ export const playfulPlainExperiences: Experience[] = [
         {
           title: 'Question 3',
           text: 'What is the purpose of this viral cat hologram on a Tokyo street?',
-          key: 'holo',
+          key: 'cat',
           imageLink: 'virtual_merch_question3.jpg',
 
           correctAnswer: 'joy',
@@ -584,7 +584,7 @@ export const playfulPlainExperiences: Experience[] = [
         {
           title: 'Question 4',
           text: 'What is the purpose of this Qeelin hologram?',
-          key: 'holo',
+          key: 'queel',
           imageLink: 'virtual_merch_question4.jpg',
 
           correctAnswer: 'both',

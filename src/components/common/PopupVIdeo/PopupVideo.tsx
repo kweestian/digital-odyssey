@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 
 import styles from './PopupVideo.module.scss';
 
@@ -27,7 +27,7 @@ const PopupVideo = ({
         <button onClick={onClick} className={styles.closeButton} type="button">
           <Image width={30} height={30} src={closeIcon} alt="Close Popup Button" />
         </button>
-        {hasWindow && <ReactPlayer url={videoUrl} width="100%" height="100%" controls />}
+        {/* {hasWindow && <ReactPlayer url={videoUrl} width="100%" height="100%" controls />} */}
       </div>
     </div>
   );

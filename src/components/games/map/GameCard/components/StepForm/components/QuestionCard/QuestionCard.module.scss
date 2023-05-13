@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 50%;
 }
 
@@ -24,8 +25,18 @@
   background-color: white;
 }
 
-.choicesContainer {
+.questionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
   margin-top: 50px;
+  font-weight: 400;
+  font-size: 16px;
+
+  svg {
+    height: 15px;
+  }
 }
 
 .choiceContainer {
@@ -34,9 +45,21 @@
   // fle
 }
 
+.inputContainer {
+  width: 100%;
+  text-align: left;
+
+  label {
+    margin-left: 20px;
+    display: block;
+  }
+}
+
 .input {
   margin-right: 10px;
   appearance: checkbox;
+  opacity: 0;
+  display: none;
 }
 
 @media screen and (max-height: 810px) {

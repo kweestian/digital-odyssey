@@ -39,6 +39,7 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
     (newIndex: number) => {
       if (newIndex >= 0 && newIndex < questions.length && carouselSlidesContainter.current && carouselSlide.current) {
         const displacement = carouselSlidesContainter.current.clientWidth * newIndex;
+        console.log(displacement);
         carouselSlidesContainter.current.scrollTo({ left: displacement, behavior: 'smooth' });
       }
     },
@@ -75,7 +76,6 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
   const currentAnswer = stepFormState[currentQuestionKey];
 
   const isLastQuestion = currentPageNumber === pagesArray.length - 1;
-  const isFirstQuestion = currentPageNumber === 0;
 
   return (
     <div className={styles.carousel}>
@@ -84,11 +84,7 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
           <div onScroll={handleCarouselScroll} ref={carouselSlidesContainter} className={styles.carouselSlides}>
             {questions.map((item, key) => (
               <div ref={carouselSlide} className={styles.carouselSlide} key={item.key} id={`slide_${key}`}>
-                <QuestionCard
-                  question={item}
-                  onNext={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
-                  isDisabled={!currentAnswer || isMutating}
-                />
+                <QuestionCard question={item} />
               </div>
             ))}
           </div>

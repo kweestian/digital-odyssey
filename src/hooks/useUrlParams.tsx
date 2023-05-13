@@ -9,7 +9,7 @@ const useURLParams = () => {
     setParams(router.query);
   }, [router.query]);
 
-  const getItem = (key: string): string | string[] | undefined => params[key];
+  const getItem = (key: string): string | undefined => params[key] as string;
 
   const setItem = (key: string, value: string | string[]) => {
     const updatedParams = {

@@ -25,7 +25,6 @@ const GameCard = ({
 
   const [error, setError] = useState('');
   const [isUploadingImage, setIsUploadingImage] = useState(false);
-  const [newValue, setNewValue] = useState<Database['public']['Tables']['user_experiences'] | null>(null);
 
   const fieldId = `${key}_text`;
   const user = useUser();

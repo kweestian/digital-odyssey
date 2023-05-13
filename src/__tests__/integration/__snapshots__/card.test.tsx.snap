@@ -24,6 +24,14 @@ exports[`cards page renders cards page unchange 1`] = `
           width="30"
         />
       </button>
+      <iframe
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen=""
+        height="100%"
+        src="https://vimeo.com/825783833/638a4386d7?share=copy"
+        title="Sustainability Progress Report 2020-2023 - KERING"
+        width="100%"
+      />
     </div>
   </div>
   <main

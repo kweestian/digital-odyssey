@@ -7,18 +7,20 @@ type Props = {
 };
 
 const ExperiencePictos = ({ experiences, regionKey }: Props) => {
-  const { setItems } = useUrlParams();
+  const { setUrlParams } = useUrlParams();
 
   return (
     <>
       {experiences.map((experience) => (
         <image
-          onClick={() =>
-            setItems([
-              { key: 'regionKey', value: regionKey },
-              { key: 'experienceKey', value: experience.key },
-            ])
-          }
+          onClick={() => {
+            // setItems([
+            //   { key: 'regionKey', value: regionKey },
+            //   { key: 'experienceKey', value: experience.key },
+            // ])
+            setUrlParams({ experienceKey: experience.key, regionKey });
+            // setRegionKey(regionKey);
+          }}
           key={experience.name}
           x={experience.coordinates.x}
           y={experience.coordinates.y}

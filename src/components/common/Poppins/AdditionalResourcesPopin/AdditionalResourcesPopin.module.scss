@@ -2,10 +2,26 @@
   height: 100%;
   width: 80%;
   margin: auto;
+
+  h1 {
+    font-weight: 300;
+  }
 }
 
 .descriptionContainer {
   font-size: 22px;
+}
+
+.resourceContainer {
+  display: flex;
+  margin: 15px 0;
+  a {
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 300;
+    margin-left: 10px;
+  }
 }
 
 .linksContainer {

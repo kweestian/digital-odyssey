@@ -61,6 +61,14 @@
   }
 }
 
+.errorContainer {
+  color: red;
+  font-weight: 400;
+  width: 400px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
 @media screen and (max-height: 820px) {
   .attachmentInputContainer {
     margin-top: 5px;

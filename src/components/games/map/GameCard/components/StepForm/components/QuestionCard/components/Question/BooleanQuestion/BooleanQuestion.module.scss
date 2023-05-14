@@ -1,0 +1,16 @@
+.inputContainer {
+  width: 100%;
+  text-align: left;
+
+  label {
+    margin-left: 20px;
+    display: block;
+  }
+}
+
+.input {
+  margin-right: 10px;
+  appearance: checkbox;
+  opacity: 0;
+  display: none;
+}

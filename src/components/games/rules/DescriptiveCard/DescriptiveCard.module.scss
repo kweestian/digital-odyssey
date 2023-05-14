@@ -26,6 +26,10 @@
     line-height: 1.3em;
     font-weight: 400;
   }
+
+  img {
+    height: 75px;
+  }
 }
 
 .cornerDecoration {
@@ -58,16 +62,16 @@
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
   .content {
     > h1 {
-      font-size: 30px;
+      font-size: 14px;
     }
     > p {
-      padding-top: 10px;
-      font-size: 14px;
+      padding-top: 5px;
+      font-size: 12px;
       line-height: 1.1em;
     }
     > img {
       padding-top: 10px;
-      height: 50px;
+      height: 45px;
     }
   }
 }
@@ -75,11 +79,11 @@
 @media screen and (max-height: $MobileBreakpoint) {
   .content {
     > h1 {
-      font-size: 20px;
+      font-size: 16px;
     }
     > p {
       padding-top: 0;
-      font-size: 12px;
+      font-size: 10px;
     }
     > img {
       padding-top: 0;

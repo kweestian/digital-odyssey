@@ -1,60 +1,31 @@
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-const useURLParams = () => {
+const useUrlParams = () => {
   const router = useRouter();
-  const [params, setParams] = useState<Record<string, string | string[] | undefined>>({});
 
-  useEffect(() => {
-    setParams(router.query);
-  }, [router.query]);
+  const getUrlParam = (key: string): string | undefined =>
+    // Retrieve the value of the specified URL parameter from the query object
+    router.query[key] as string;
 
-  const getItem = (key: string): string | undefined => params[key] as string;
-
-  const setItem = (key: string, value: string | string[]) => {
-    const updatedParams = {
-      ...params,
-      [key]: value,
-    };
-
-    router.push({
-      pathname: router.pathname,
-      query: updatedParams,
-    });
+  const setUrlParam = (key: string, value: string) => {
+    // Update the specified URL parameter with the given value
+    const query = { ...router.query, [key]: value };
+    router.push({ pathname: router.pathname, query }, undefined, { shallow: true });
   };
 
-  const setItems = (items: { key: string; value: string | string[] }[]) => {
-    const updatedParams = {
-      ...params,
-    };
-
-    items.forEach(({ key, value }) => {
-      updatedParams[key] = value;
-    });
-
-    router.push({
-      pathname: router.pathname,
-      query: updatedParams,
-    });
+  const setUrlParams = (params: { [key: string]: string }) => {
+    const query = { ...router.query, ...params };
+    router.push({ pathname: router.pathname, query }, undefined, { shallow: true });
   };
 
-  const removeItem = (key: string) => {
-    const { [key]: _omit, ...updatedParams } = params;
-
-    router.push({
-      pathname: router.pathname,
-      query: updatedParams,
-    });
+  const removeUrlParam = (key: string) => {
+    // Remove the specified URL parameter from the query object
+    const query = { ...router.query };
+    delete query[key];
+    router.push({ pathname: router.pathname, query }, undefined, { shallow: true });
   };
 
-  const clear = () => {
-    router.push({
-      pathname: router.pathname,
-      query: {},
-    });
-  };
-
-  return { params, setItem, removeItem, clear, getItem, setItems };
+  return { getUrlParam, setUrlParam, removeUrlParam, setUrlParams };
 };
 
-export default useURLParams;
+export default useUrlParams;

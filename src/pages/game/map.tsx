@@ -6,16 +6,19 @@ import styles from '@/styles/map.module.scss';
 import { AdditionalResourcesPopin, GameCard, GameLayout, Map } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
 import { useGlobalState } from '@/contexts/global';
-import { useMapData } from '@/hooks';
+import { useMapData, useUrlParams } from '@/hooks';
 import { useRouter } from 'next/router';
-import useURLParams from '@/hooks/useUrlParams';
 
 const DEFAULT_REGION_ZOOM = 3;
 
 const MapPage: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
 
-  const { getItem, removeItem, clear, setItem } = useURLParams();
+  const { getUrlParam, setUrlParam, removeUrlParam } = useUrlParams();
+
+  const currentExperienceKey = getUrlParam('experienceKey');
+
+  const currentRegionKey = getUrlParam('regionKey');
 
   const [isPanning, setIsPanning] = useState(false);
 
@@ -30,10 +33,14 @@ const MapPage: NextPage = () => {
         const { zoomToElement } = transformComponentRef.current;
         const newZoom = overrideZoom || DEFAULT_REGION_ZOOM;
         if (regionName === 'backgroundAnchor') {
-          clear();
+          removeUrlParam('regionKey');
         } else {
-          setItem('regionKey', regionName);
+          setUrlParam('regionKey', regionName);
         }
+        //   clear();
+        // } else {
+        //   setItem('regionKey', regionName);
+        // }
         setZoom(newZoom);
         zoomToElement(regionName, newZoom);
 
@@ -42,7 +49,7 @@ const MapPage: NextPage = () => {
         // }
       }
     },
-    [isPanning, clear, setItem],
+    [isPanning, setUrlParam, removeUrlParam],
   );
 
   const { data: CustomMap } = useMapData();
@@ -56,19 +63,16 @@ const MapPage: NextPage = () => {
   // const resetZoom = useCallback(() => {
   //   transformComponentRef.current?.resetTransform();
   // }, []);
-  const currentRegionKey = getItem('regionKey');
-
-  const currentExperienceKey = getItem('experienceKey');
+  // const currentRegionKey = getItem('regionKey');
 
   useEffect(() => {
-    const getCurrentRegionKey = getItem('regionKey');
-    if (transformComponentRef.current && getCurrentRegionKey && !Array.isArray(getCurrentRegionKey)) {
+    if (transformComponentRef.current && currentRegionKey && !Array.isArray(currentRegionKey)) {
       const { zoomToElement } = transformComponentRef.current;
-      zoomToElement(getCurrentRegionKey, DEFAULT_REGION_ZOOM);
+      zoomToElement(currentRegionKey, DEFAULT_REGION_ZOOM);
     }
 
     // zoomToImage(currentRegionKey);
-  }, [getItem]);
+  }, [currentRegionKey]);
 
   useEffect(() => {
     // if (currentRegionKey && !Array.isArray(currentRegionKey)) {
@@ -80,7 +84,7 @@ const MapPage: NextPage = () => {
 
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
-      dispatch({ type: 'CLOSE_EXPERIENCE' });
+      // dispatch({ type: 'CLOSE_EXPERIENCE' });
       dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' });
     });
   }, [router, dispatch]);
@@ -100,15 +104,15 @@ const MapPage: NextPage = () => {
           experience={currentOpenedExperience}
           isOpen
           onClose={() => {
-            removeItem('experienceKey');
+            removeUrlParam('experienceKey');
             // resetZoom();
           }}
         />
       )}
       {additionalResourcesPopinState && (
         <AdditionalResourcesPopin
+          regionKey={additionalResourcesPopinState.regionKey}
           title={additionalResourcesPopinState.title}
-          description={additionalResourcesPopinState.description}
           additionalResources={additionalResourcesPopinState.additionalResources}
           onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
         />

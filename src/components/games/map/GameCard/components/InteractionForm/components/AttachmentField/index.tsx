@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useDropzone, DropzoneOptions, DropEvent, FileRejection } from 'react-dropzone';
 import Image from 'next/image';
+import { useAtom } from 'jotai';
 
 import { useGetPublicUrl } from '@/hooks';
 import * as Check from '@/image/submit-check.svg';
@@ -8,6 +9,7 @@ import * as Eye from '@/image/eye-icon.svg';
 
 import { Loader, Button } from '@/components/common';
 import styles from './AttachmentField.module.scss';
+import { errorAtom, isUploadingImageAtom } from '../../../../context/atom';
 
 type Props = {
   onDrop: DropzoneOptions['onDrop'];
@@ -17,23 +19,33 @@ type Props = {
   isBonus?: boolean;
 };
 
-const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) => {
+const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
   const [paths, setPaths] = useState<Array<string>>([]);
   const [zoomImage, setZoomImage] = useState(false);
   const { data, isLoading: loadingImageUrl } = useGetPublicUrl(value);
+  const [error, setError] = useAtom(errorAtom);
+  const [, setIsUploadingImage] = useAtom(isUploadingImageAtom);
 
   const onDropWithFileShow: DropzoneOptions['onDrop'] = useCallback(
     (acceptedFiles: File[], rejectedFiles: FileRejection[], event: DropEvent) => {
-      setPaths(acceptedFiles.map((file) => URL.createObjectURL(file)));
-      if (onDrop) {
-        onDrop(acceptedFiles, rejectedFiles, event);
+      if (rejectedFiles.length > 0) {
+        const fileError = rejectedFiles.map(
+          ({ errors, file }) => `The file ${file.name} is not supported : ${errors[0].message}`,
+        );
+        setError(fileError.join(','));
+        setIsUploadingImage(false);
+      } else {
+        setPaths(acceptedFiles.map((file) => URL.createObjectURL(file)));
+        if (onDrop) {
+          onDrop(acceptedFiles, rejectedFiles, event);
+        }
       }
     },
-    [setPaths, onDrop],
+    [setPaths, onDrop, setError, setIsUploadingImage],
   );
   const { isDragActive, getRootProps, getInputProps } = useDropzone({
     onDrop: onDropWithFileShow,
-    accept: { 'image/*': [] },
+    accept: { 'image/png': [], 'image/jpg': [], 'image/jpeg': [], 'image/webp': [] },
     multiple: false,
   });
 
@@ -54,7 +66,7 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <div {...(hasAnImage && getRootProps())} className={styles.attachmentInputContainer}>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <input id="ignore-click" {...getInputProps()} />
+          <input id="ignore-click" {...getInputProps()} accept="image/png" />
           {hasAnImage ? completedText : text}
         </div>
         <Button
@@ -76,6 +88,7 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
           />
         </Button>
       </div>
+      {error && <div className={styles.errorContainer}>{error}</div>}
       <div className={zoomImage ? styles.imageContainerZoomed : styles.imageContainer}>
         {isLoading ? (
           <Loader />

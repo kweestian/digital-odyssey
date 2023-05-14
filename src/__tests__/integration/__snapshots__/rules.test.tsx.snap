@@ -2,38 +2,6 @@
 
 exports[`rules page renders rules page unchanged 1`] = `
 <div>
-  <div
-    class="container"
-  >
-    <div
-      class="iframeContainer"
-    >
-      <button
-        class="closeButton"
-        type="button"
-      >
-        <img
-          alt="Close Popup Button"
-          data-nimg="1"
-          decoding="async"
-          height="30"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
-          style="color: transparent;"
-          width="30"
-        />
-      </button>
-      <iframe
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen=""
-        height="100%"
-        src="https://vimeo.com/825783833/638a4386d7?share=copy"
-        title="Sustainability Progress Report 2020-2023 - KERING"
-        width="100%"
-      />
-    </div>
-  </div>
   <main
     class="container"
   >
@@ -164,6 +132,41 @@ exports[`rules page renders rules page unchanged 1`] = `
       <div
         class="mainScreenContainer"
       >
+        <div
+          class="container"
+        >
+          <div
+            class="popinContainer"
+          >
+            <button
+              class="closeButton"
+              type="button"
+            >
+              <img
+                alt="Close Popup Button"
+                class="ignore-click"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </button>
+            <video
+              controls=""
+              height="100%"
+              width="100%"
+            >
+              <source
+                src="/static/teaser_kering_serious_game_2023 (720p).mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
         <div
           class="container"
         >

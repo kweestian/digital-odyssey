@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
@@ -21,24 +22,30 @@ const Owls: NextPage<Props> = () => {
         <div className={styles.owlsList}>
           {data
             .filter(({ regionKey }) => regionKey !== 'timeless-tundra')
-            .map(({ color, hasCompletedBonus, regionKey, isComplete }) => {
-              const test = 'test';
-              return isComplete ? (
+            .map(({ color, hasCompletedBonus, regionKey, isComplete, experiences }) => {
+              const bonusExperienceKey = experiences.find(({ bonus }) => bonus)?.key;
+              if (isComplete) {
                 <Image
                   key={color}
                   src={`/static/image/owls/gif/${regionKey}.gif`}
                   width={219}
                   height={130}
                   alt={regionKey}
-                />
-              ) : (
-                <Image
+                />;
+              }
+
+              return (
+                <Link
                   key={color}
-                  src={hasCompletedBonus ? `/static/image/owls/3d/${regionKey}.svg` : BasicOwl}
-                  width={219}
-                  height={130}
-                  alt={regionKey}
-                />
+                  href={{ pathname: '/game/map', query: { regionKey, experienceKey: bonusExperienceKey } }}
+                >
+                  <Image
+                    src={hasCompletedBonus ? `/static/image/owls/3d/${regionKey}.svg` : BasicOwl}
+                    width={219}
+                    height={130}
+                    alt={regionKey}
+                  />
+                </Link>
               );
             })}
         </div>

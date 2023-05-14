@@ -15,9 +15,10 @@ import { interactionAtom } from '../../../GamePoppinContent/atom';
 type Props = {
   questions: Question[];
   experienceKey: string;
+  interactionType: 'quiz' | 'boolean';
 };
 
-const StepFormCarousel = ({ questions, experienceKey }: Props) => {
+const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) => {
   const [currentPageNumber, setCurrentPageNumber] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState(1);
   // const [currentDirection, setCurrentDirection] = useState('left');
@@ -39,7 +40,6 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
     (newIndex: number) => {
       if (newIndex >= 0 && newIndex < questions.length && carouselSlidesContainter.current && carouselSlide.current) {
         const displacement = carouselSlidesContainter.current.clientWidth * newIndex;
-        console.log(displacement);
         carouselSlidesContainter.current.scrollTo({ left: displacement, behavior: 'smooth' });
       }
     },
@@ -84,31 +84,35 @@ const StepFormCarousel = ({ questions, experienceKey }: Props) => {
           <div onScroll={handleCarouselScroll} ref={carouselSlidesContainter} className={styles.carouselSlides}>
             {questions.map((item, key) => (
               <div ref={carouselSlide} className={styles.carouselSlide} key={item.key} id={`slide_${key}`}>
-                <QuestionCard question={item} />
+                <QuestionCard
+                  question={item}
+                  interactionType={interactionType}
+                  slide={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className={styles.carouselNavigationContainer}>
-        {/* <div className={styles.buttonContainer} style={{ marginRight: 5 }}>
-          <Button
-            disabled={isFirstQuestion}
-            customStyles={{ width: '100%' }}
-            text="Previous"
-            onClick={() => slideTo(currentPageNumber - 1)}
-          />
-        </div> */}
-        <div className={styles.buttonContainer} style={{ marginLeft: 5 }}>
-          <Button
-            skin="ghost"
-            disabled={!currentAnswer || isMutating}
-            customStyles={{ width: '100%' }}
-            text="Check Answer"
-            onClick={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
-          />
+      {interactionType === 'quiz' && (
+        <div
+          className={styles.carouselNavigationContainer}
+          style={{ justifyContent: !questions[currentPageNumber].imageLink ? 'center' : 'flex-end' }}
+        >
+          <div
+            className={styles.buttonContainer}
+            style={{ marginLeft: 5, marginRight: !questions[currentPageNumber].imageLink ? 0 : 200 }}
+          >
+            <Button
+              skin="ghost"
+              disabled={!currentAnswer || isMutating}
+              customStyles={{ width: '100%' }}
+              text="Check Answer"
+              onClick={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

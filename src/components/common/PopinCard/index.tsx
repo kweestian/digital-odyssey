@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 
-import * as CloseIcon from '@/image/CloseIcon.svg';
+import * as CloseIcon from '@/image/map/picto/PICTO_CROIX.svg';
 
 import styles from './PopinCard.module.scss';
 

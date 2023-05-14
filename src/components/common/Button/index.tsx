@@ -19,6 +19,7 @@ type BaseProps = {
   external?: boolean;
   loading?: boolean;
   disabled?: boolean;
+  color?: string;
   customStyles?: CSSProperties;
   skin?: 'normal' | 'ghost';
   /**
@@ -87,7 +88,7 @@ const Button = ({
       disabled={loading || disabled}
       aria-label={ariaLabel}
       type={type}
-      className={classNames({ [skins[skin]]: !bare, 'ignore-click': true })}
+      className={classNames({ [skins[skin]]: !bare })}
       onClick={onClick}
       href={href || '/'}
       locale={lang}

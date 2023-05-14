@@ -17,21 +17,24 @@ interface Props {
 
 const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
+  const { removeUrlParam, getUrlParam } = useUrlParams();
+
+  const currentRegion = getUrlParam('regionKey');
 
   const [activeRegion, setActiveRegion] = useState<Region['regionKey'] | ''>();
-  const [forceActiveRegion, setForceActiveRegion] = useState<Region['regionKey'] | ''>();
+  // const [forceActiveRegion, setForceActiveRegion] = useState<Region['regionKey'] | ''>();
+
   const showIcon = zoom >= 3;
 
-  useEffect(() => {
-    if (!showIcon) {
-      setActiveRegion('');
-      setForceActiveRegion('');
-    }
-  }, [zoom, setActiveRegion, setForceActiveRegion, showIcon]);
+  // useEffect(() => {
+  //   if (!showIcon) {
+  //     // setActiveRegion('');
+  //     // removeUrlParam('regionKey');
+  //   }
+  // }, [showIcon, removeUrlParam]);
 
   const onClickActions = useCallback(
     (regionKey: Region['regionKey']) => {
-      setForceActiveRegion(regionKey);
       zoomImageTrigger(regionKey);
       // if (!isPanning) {
       //   setshowIcon(true);
@@ -58,7 +61,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
           {customMap.map((region) => {
             const { regionKey, color, drawing, available, filColour, customElement: CustomElement } = region;
 
-            const isRegionActive = available && (forceActiveRegion === regionKey || activeRegion === regionKey);
+            const isRegionActive = available && (currentRegion === regionKey || activeRegion === regionKey);
 
             return (
               <Fragment key={`region=${regionKey}`}>
@@ -175,6 +178,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                           dispatch({
                             type: 'SET_ADDITIONAL_RESOURCES_POPIN',
                             payload: {
+                              regionKey,
                               title: region.title.textParts.join(' '),
                               description: 'Ceci est une description',
                               additionalResources: region.experiences

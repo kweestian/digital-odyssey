@@ -1,7 +1,40 @@
 @import '@/styles/variables';
 
+.isNotActive {
+  opacity: 50%;
+  > button {
+    cursor: default;
+  }
+}
+
 .contentContainer {
   width: 60%;
+}
+
+.keyLearningTitle {
+  font-family: monarch;
+  font-weight: 300;
+  font-size: 2.25rem;
+}
+
+.additionalResourcesTitle {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.additionalResourcesContainer {
+  p {
+    // color: gray;
+    font-weight: 200;
+    margin-bottom: 15px;
+  }
+
+  a {
+    width: 100px;
+    min-width: none;
+    margin: auto;
+  }
 }
 
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {

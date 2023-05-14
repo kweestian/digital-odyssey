@@ -2,26 +2,45 @@
 
 .container {
   display: flex;
-  justify-content: center;
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $BackgroundColorOpacity;
-  z-index: 10;
+  justify-content: center;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 3;
+  backdrop-filter: blur(10px);
 }
 
-.iframeContainer {
-  width: 75vw;
-  height: 75vh;
+.popinContainer {
+  display: flex;
+  position: relative;
+  height: 80% !important;
+  width: 70% !important;
+  margin: auto;
   align-self: center;
+  justify-content: space-evenly;
+  // background-color: blue;
+  align-items: center;
+  padding: 40px;
 }
 
 .closeButton {
   position: absolute;
-  right: 17vw;
-  top: 20vh;
+  right: 70px;
+  top: 80px;
   width: 30px;
   height: 30px;
+  color: white;
+  z-index: 3;
+  > img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.smallCard {
+  height: 35vh;
+  width: 35vw;
 }

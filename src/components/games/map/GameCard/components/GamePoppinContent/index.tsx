@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useAtom } from 'jotai';
+import { FileRejection } from 'react-dropzone';
 
 import { Button, RenderHtml } from '@/components/common';
 import StepForm from '../StepForm';
@@ -17,7 +18,6 @@ type Props = {
   isUpdatingUser: boolean;
   isUploadingImage: boolean;
   onDrop: (acceptedFiles: File[], isBonus?: boolean) => Promise<void>;
-  error?: string;
 };
 
 const GamePoppinContent = ({
@@ -27,7 +27,6 @@ const GamePoppinContent = ({
   isUpdatingUser,
   isUploadingImage,
   onDrop,
-  error,
 }: Props) => {
   const { t } = useTranslation();
 
@@ -37,7 +36,7 @@ const GamePoppinContent = ({
   const [, setScore] = useAtom(scoreAtom);
 
   if (currentInteration === 'quiz' && (interaction.type === 'quiz' || interaction.type === 'boolean')) {
-    return <StepForm questions={interaction.questions} experienceKey={key} />;
+    return <StepForm questions={interaction.questions} experienceKey={key} interactionType={interaction.type} />;
   }
 
   if (bonus && currentInteration === 'bonus') {
@@ -56,11 +55,12 @@ const GamePoppinContent = ({
             value={interaction.bonus}
             label="Bonus Experience"
           />
-          {error && <p className={styles.errorText}>{error}</p>}
         </div>
       </>
     );
   }
+
+  const showQuizButton = ['boolean', 'quiz'].includes(interaction.type);
 
   return (
     <>
@@ -91,19 +91,18 @@ const GamePoppinContent = ({
           />
         )}
 
-        {interaction.type === 'boolean' ||
-          (interaction.type === 'quiz' && (
-            <Button
-              skin="ghost"
-              customStyles={{ marginTop: 20 }}
-              text={interaction.answer ? 'ReDo Quiz' : 'Start Quiz'}
-              onClick={() => {
-                setStepFormState({});
-                setScore(undefined);
-                setCurrentInteraction('quiz');
-              }}
-            />
-          ))}
+        {showQuizButton && (
+          <Button
+            skin="ghost"
+            customStyles={{ marginTop: 20 }}
+            text={interaction.answer ? 'ReDo Quiz' : 'Start Quiz'}
+            onClick={() => {
+              setStepFormState({});
+              setScore(undefined);
+              setCurrentInteraction('quiz');
+            }}
+          />
+        )}
 
         {bonus && (
           <div className={styles.bonusContainer}>

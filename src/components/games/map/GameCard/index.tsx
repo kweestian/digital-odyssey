@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import Image from 'next/image';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import { useAtom } from 'jotai';
@@ -9,6 +9,7 @@ import { PopinCard, KeyLearningsContent } from '@/components/common';
 import styles from './GameCard.module.scss';
 import GamePoppinContent from './components/GamePoppinContent';
 import { interactionAtom } from './components/GamePoppinContent/atom';
+import { errorAtom, isUploadingImageAtom } from './context/atom';
 
 type Props = {
   experience: Experience;
@@ -22,9 +23,9 @@ const GameCard = ({
   onClose,
 }: Props) => {
   const [interactionType, setInteractionType] = useAtom(interactionAtom);
+  const [, setError] = useAtom(errorAtom);
 
-  const [error, setError] = useState('');
-  const [isUploadingImage, setIsUploadingImage] = useState(false);
+  const [isUploadingImage, setIsUploadingImage] = useAtom(isUploadingImageAtom);
 
   const fieldId = `${key}_text`;
   const user = useUser();
@@ -48,6 +49,7 @@ const GameCard = ({
     async (acceptedFiles: File[], isBonus?: boolean) => {
       setIsUploadingImage(true);
       setError('');
+
       acceptedFiles.forEach(async (file) => {
         const reader = new FileReader();
 
@@ -69,6 +71,8 @@ const GameCard = ({
                   throw new Error(deleteError?.message);
                 }
               } catch (e) {
+                setIsUploadingImage(false);
+
                 // eslint-disable-next-line no-console
                 console.error(e);
               }
@@ -94,14 +98,26 @@ const GameCard = ({
               });
 
               setIsUploadingImage(false);
-              setInteractionType('keyLearning');
+              if (interactionType !== 'bonus') {
+                setInteractionType('keyLearning');
+              }
             }
           }
         };
         reader.readAsArrayBuffer(file);
       });
     },
-    [supabase, key, user?.id, trigger, interaction.bonus, setInteractionType],
+    [
+      supabase,
+      key,
+      user?.id,
+      trigger,
+      interaction.bonus,
+      setInteractionType,
+      setError,
+      setIsUploadingImage,
+      interactionType,
+    ],
   );
 
   if (isOpen) {
@@ -137,7 +153,6 @@ const GameCard = ({
             )}
             <GamePoppinContent
               onDrop={onDrop}
-              error={error}
               onSubmit={handleSubmit}
               fieldId={fieldId}
               isUpdatingUser={isUpdatingUser}

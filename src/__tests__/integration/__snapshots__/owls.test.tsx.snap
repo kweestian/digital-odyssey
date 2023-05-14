@@ -2,38 +2,6 @@
 
 exports[`owls page renders owls page unchanged 1`] = `
 <div>
-  <div
-    class="container"
-  >
-    <div
-      class="iframeContainer"
-    >
-      <button
-        class="closeButton"
-        type="button"
-      >
-        <img
-          alt="Close Popup Button"
-          data-nimg="1"
-          decoding="async"
-          height="30"
-          loading="lazy"
-          src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
-          style="color: transparent;"
-          width="30"
-        />
-      </button>
-      <iframe
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen=""
-        height="100%"
-        src="https://vimeo.com/825783833/638a4386d7?share=copy"
-        title="Sustainability Progress Report 2020-2023 - KERING"
-        width="100%"
-      />
-    </div>
-  </div>
   <main
     class="container"
   >
@@ -168,63 +136,118 @@ exports[`owls page renders owls page unchanged 1`] = `
           class="container"
         >
           <div
+            class="popinContainer"
+          >
+            <button
+              class="closeButton"
+              type="button"
+            >
+              <img
+                alt="Close Popup Button"
+                class="ignore-click"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </button>
+            <video
+              controls=""
+              height="100%"
+              width="100%"
+            >
+              <source
+                src="/static/teaser_kering_serious_game_2023 (720p).mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <div
+          class="container"
+        >
+          <div
             class="owlsList"
           >
-            <img
-              alt="creativity-coast"
-              data-nimg="1"
-              decoding="async"
-              height="130"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="219"
-            />
-            <img
-              alt="loyalty-lagoon"
-              data-nimg="1"
-              decoding="async"
-              height="130"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="219"
-            />
-            <img
-              alt="sea-of-sustainability"
-              data-nimg="1"
-              decoding="async"
-              height="130"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="219"
-            />
-            <img
-              alt="virtual-valleys"
-              data-nimg="1"
-              decoding="async"
-              height="130"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="219"
-            />
-            <img
-              alt="playful-plains"
-              data-nimg="1"
-              decoding="async"
-              height="130"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="219"
-            />
+            <a
+              href="/game/map?regionKey=creativity-coast&experienceKey=the-future-of-recommendation"
+            >
+              <img
+                alt="creativity-coast"
+                data-nimg="1"
+                decoding="async"
+                height="130"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="219"
+              />
+            </a>
+            <a
+              href="/game/map?regionKey=loyalty-lagoon&experienceKey=the-future-of-brand-communities"
+            >
+              <img
+                alt="loyalty-lagoon"
+                data-nimg="1"
+                decoding="async"
+                height="130"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="219"
+              />
+            </a>
+            <a
+              href="/game/map?regionKey=sea-of-sustainability&experienceKey=the-future-of-digital-carbon-footprint"
+            >
+              <img
+                alt="sea-of-sustainability"
+                data-nimg="1"
+                decoding="async"
+                height="130"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="219"
+              />
+            </a>
+            <a
+              href="/game/map?regionKey=virtual-valleys&experienceKey=the-future-of-brand-experience"
+            >
+              <img
+                alt="virtual-valleys"
+                data-nimg="1"
+                decoding="async"
+                height="130"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="219"
+              />
+            </a>
+            <a
+              href="/game/map?regionKey=playful-plains&experienceKey=the-future-of-virtual-try-on"
+            >
+              <img
+                alt="playful-plains"
+                data-nimg="1"
+                decoding="async"
+                height="130"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="219"
+              />
+            </a>
           </div>
           <img
             alt="Basic Owl"

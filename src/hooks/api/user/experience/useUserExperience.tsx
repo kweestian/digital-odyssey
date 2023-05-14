@@ -10,7 +10,7 @@ const useUserExperience = () => {
     { data: Database['public']['Tables']['user_experiences']['Row'][] | null },
     string
   > = async () => supabase.from('user_experiences').select('*');
-  const swrResult = useSWR('/user/experiences', handler, { refreshInterval: 3000 });
+  const swrResult = useSWR('/user/experiences', handler);
 
   if (swrResult.error) {
     dispatch({ type: 'SET_ERROR', payload: swrResult.error });

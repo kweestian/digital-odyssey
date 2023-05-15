@@ -184,7 +184,7 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
+                style="color: transparent; height: 130px; width: 219px;"
                 width="219"
               />
             </a>
@@ -199,7 +199,7 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
+                style="color: transparent; height: 130px; width: 219px;"
                 width="219"
               />
             </a>
@@ -214,7 +214,7 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
+                style="color: transparent; height: 130px; width: 219px;"
                 width="219"
               />
             </a>
@@ -229,7 +229,7 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
+                style="color: transparent; height: 130px; width: 219px;"
                 width="219"
               />
             </a>
@@ -244,7 +244,7 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
+                style="color: transparent; height: 130px; width: 219px;"
                 width="219"
               />
             </a>

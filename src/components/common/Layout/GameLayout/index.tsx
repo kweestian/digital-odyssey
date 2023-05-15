@@ -3,10 +3,10 @@ import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import { useAtom } from 'jotai';
 
-import * as RulesIcon from '@/image/navbar/rules-icon.svg';
-import * as MapIcon from '@/image/navbar/map-icon.svg';
-import * as CardIcon from '@/image/navbar/card-icon.svg';
-import * as OwlIcon from '@/image/navbar/owl-icon.svg';
+import RulesIcon from '@/image/navbar/rules-icon.svg';
+import MapIcon from '@/image/navbar/map-icon.svg';
+import CardIcon from '@/image/navbar/card-icon.svg';
+import OwlIcon from '@/image/navbar/owl-icon.svg';
 
 import { popinAtom } from '@/contexts/atom';
 import useLocalStorage from '@/hooks/useLocalStorage';

@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
 
-import * as BasicOwl from '@/image/owls/3d/basic-owl.svg';
-import * as GoldOwl from '@/image/owls/3d/gold-owl.svg';
+import BasicOwl from '@/image/owls/3d/basic-owl.svg';
+import GoldOwl from '@/image/owls/3d/gold-owl.svg';
 
 import styles from './Owls.module.scss';
 

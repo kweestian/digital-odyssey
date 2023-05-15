@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 import { DescriptiveCard, GameLayout } from '@/components';
 
-import * as GoldOwl from '@/image/owls/3d/gold-owl.svg';
-import * as MapContour from '@/image/rules/PICTO_CONTOUR_MAP.svg';
-import * as PositionIcon from '@/image/rules/PICTO_POSITION.svg';
-import * as VideoIcon from '@/image/rules/PICTO_VIDEO.svg';
-import * as BottomDirection from '@/image/rules/direction_bottom.svg';
-import * as RightDirection from '@/image/rules/direction_right.svg';
-import * as LeftArrow from '@/image/rules/left_arrow.svg';
+import GoldOwl from '@/image/owls/3d/gold-owl.svg';
+import MapContour from '@/image/rules/PICTO_CONTOUR_MAP.svg';
+import PositionIcon from '@/image/rules/PICTO_POSITION.svg';
+import VideoIcon from '@/image/rules/PICTO_VIDEO.svg';
+import BottomDirection from '@/image/rules/direction_bottom.svg';
+import RightDirection from '@/image/rules/direction_right.svg';
+import LeftArrow from '@/image/rules/left_arrow.svg';
 
 import styles from './Rules.module.scss';
 

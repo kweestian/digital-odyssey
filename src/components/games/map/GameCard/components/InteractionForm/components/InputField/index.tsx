@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import * as Check from '@/image/submit-check.svg';
+import Check from '@/image/submit-check.svg';
 import Loader from '@/components/common/Loader';
 
 import styles from './InputField.module.scss';

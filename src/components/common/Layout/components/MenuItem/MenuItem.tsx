@@ -8,7 +8,7 @@ import styles from './MenuItem.module.scss';
 interface MenuItemProps {
   title: string;
   href: string;
-  icon: typeof import('*.svg');
+  icon: string;
 }
 
 const MenuItem = ({ title, href, icon }: MenuItemProps) => {

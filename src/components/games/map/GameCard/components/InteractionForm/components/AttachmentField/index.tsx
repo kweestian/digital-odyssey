@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useAtom } from 'jotai';
 
 import { useGetPublicUrl } from '@/hooks';
-import * as Check from '@/image/submit-check.svg';
-import * as Eye from '@/image/eye-icon.svg';
+import Check from '@/image/submit-check.svg';
+import Eye from '@/image/eye-icon.svg';
 
 import { Loader, Button } from '@/components/common';
 import styles from './AttachmentField.module.scss';

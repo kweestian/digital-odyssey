@@ -40,10 +40,11 @@ const Owls: NextPage<Props> = () => {
                   href={{ pathname: '/game/map', query: { regionKey, experienceKey: bonusExperienceKey } }}
                 >
                   <Image
-                    src={hasCompletedBonus ? `/static/image/owls/3d/${regionKey}.svg` : BasicOwl}
+                    src={hasCompletedBonus ? `/static/image/owls/gif/${regionKey}.gif` : BasicOwl}
                     width={219}
                     height={130}
                     alt={regionKey}
+                    style={{ height: '130px', width: '219px' }}
                   />
                 </Link>
               );

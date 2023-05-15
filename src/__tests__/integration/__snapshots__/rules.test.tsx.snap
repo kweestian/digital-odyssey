@@ -254,12 +254,12 @@ exports[`rules page renders rules page unchanged 1`] = `
                   alt="rules:cards.card2.title"
                   data-nimg="1"
                   decoding="async"
-                  height="40"
+                  height="150"
                   loading="lazy"
-                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
                   style="color: transparent;"
-                  width="40"
+                  width="150"
                 />
               </div>
             </div>
@@ -307,12 +307,12 @@ exports[`rules page renders rules page unchanged 1`] = `
                   alt="rules:cards.card4.title"
                   data-nimg="1"
                   decoding="async"
-                  height="40"
+                  height="150"
                   loading="lazy"
-                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
                   style="color: transparent;"
-                  width="40"
+                  width="150"
                 />
               </div>
             </div>
@@ -360,12 +360,12 @@ exports[`rules page renders rules page unchanged 1`] = `
                   alt="rules:cards.card3.title"
                   data-nimg="1"
                   decoding="async"
-                  height="40"
+                  height="150"
                   loading="lazy"
-                  src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-                  srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                  src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
                   style="color: transparent;"
-                  width="40"
+                  width="150"
                 />
               </div>
             </div>

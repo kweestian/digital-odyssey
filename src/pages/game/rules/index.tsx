@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { DescriptiveCard, GameLayout } from '@/components';
 
-import GoldOwl from '@/image/owls/3d/gold-owl.svg';
+import GoldOwl from '@/image/owls/flat/gold-owl.png';
 import MapContour from '@/image/rules/PICTO_CONTOUR_MAP.svg';
 import PositionIcon from '@/image/rules/PICTO_POSITION.svg';
 import VideoIcon from '@/image/rules/PICTO_VIDEO.svg';

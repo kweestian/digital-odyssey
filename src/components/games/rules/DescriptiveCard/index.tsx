@@ -34,7 +34,7 @@ const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconActio
         {hasIconAction ? (
           <Image style={{ cursor: 'pointer' }} src={icon} alt={title} onClick={() => setIsPopupOpen(true)} />
         ) : (
-          <Image src={icon} alt={title} />
+          <Image src={icon} alt={title} width={150} />
         )}
       </div>
     </div>

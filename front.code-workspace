@@ -26,5 +26,7 @@
     "css.lint.validProperties": ["speak"],    
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Cascadia Code', 'Fira Code'",
+    "typescript.tsdk": "./node_modules/typescript/lib"
+
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import classNames from 'classnames';
 import { useAtom } from 'jotai';
 import { popinAtom } from '@/contexts/atom';
@@ -14,7 +14,7 @@ interface DescriptiveCardProps {
   title: string;
   descriptionKey: string;
   hasIconAction?: boolean;
-  icon: string;
+  icon: StaticImageData;
 }
 
 const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconAction }: DescriptiveCardProps) => {

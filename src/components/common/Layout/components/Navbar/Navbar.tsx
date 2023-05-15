@@ -4,7 +4,7 @@ import styles from './Navbar.module.scss';
 import MenuItem from '../MenuItem/MenuItem';
 
 type Props = {
-  menuItems: Array<{ href: string; title: string; icon: typeof import('*.svg') }>;
+  menuItems: Array<{ href: string; title: string; icon: string }>;
 };
 
 const Navbar = ({ menuItems }: Props) => (

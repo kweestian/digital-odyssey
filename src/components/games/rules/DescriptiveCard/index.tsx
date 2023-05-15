@@ -14,7 +14,7 @@ interface DescriptiveCardProps {
   title: string;
   descriptionKey: string;
   hasIconAction?: boolean;
-  icon: typeof import('*.svg') | typeof import('*.gif');
+  icon: string;
 }
 
 const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconAction }: DescriptiveCardProps) => {

@@ -4,10 +4,6 @@ import Image from 'next/image';
 
 import { DescriptiveCard, GameLayout } from '@/components';
 
-import GoldOwl from '@/image/owls/flat/gold-owl.png';
-import MapContour from '@/image/rules/PICTO_CONTOUR_MAP.svg';
-import PositionIcon from '@/image/rules/PICTO_POSITION.svg';
-import VideoIcon from '@/image/rules/PICTO_VIDEO.svg';
 import BottomDirection from '@/image/rules/direction_bottom.svg';
 import RightDirection from '@/image/rules/direction_right.svg';
 import LeftArrow from '@/image/rules/left_arrow.svg';
@@ -27,7 +23,7 @@ const Rules: NextPage<Props> = () => {
             isCentered
             title={t('rules:cards.card1.title')}
             descriptionKey="rules:cards.card1.description"
-            icon={VideoIcon}
+            icon="/static/image/rules/PICTO_VIDEO.svg"
             hasIconAction
           />
         </div>
@@ -36,7 +32,7 @@ const Rules: NextPage<Props> = () => {
           <DescriptiveCard
             title={t('rules:cards.card2.title')}
             descriptionKey="rules:cards.card2.description"
-            icon={MapContour}
+            icon="/static/image/rules/PICTO_CONTOUR_MAP.svg"
           />
         </div>
         <Image className={styles.secondArrow} src={BottomDirection} alt="Bottom Direction Line" />
@@ -44,7 +40,7 @@ const Rules: NextPage<Props> = () => {
           <DescriptiveCard
             title={t('rules:cards.card4.title')}
             descriptionKey="rules:cards.card4.description"
-            icon={PositionIcon}
+            icon="/static/image/rules/PICTO_POSITION.svg"
           />
         </div>
         <Image className={styles.thirdArrow} src={LeftArrow} alt="Bottom Direction Line" />
@@ -53,7 +49,7 @@ const Rules: NextPage<Props> = () => {
             isCentered
             title={t('rules:cards.card3.title')}
             descriptionKey="rules:cards.card3.description"
-            icon={GoldOwl}
+            icon="/static/image/owls/flat/gold-owl.png"
           />
         </div>
       </div>

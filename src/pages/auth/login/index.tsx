@@ -15,14 +15,14 @@ const Login: NextPageWithLayout = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [email, setEmail] = useState('');
-  const { getItem } = useLocalStorage();
+  const [hasLoggedIn] = useLocalStorage('HAS_LOGGED_IN');
 
   const supabase = useSupabaseClient();
   const session = useSession();
   const { push } = useRouter();
 
   supabase.auth.onAuthStateChange(async (evt) => {
-    if (evt === 'SIGNED_IN' && !getItem('HAS_LOGGED_IN')) {
+    if (evt === 'SIGNED_IN' && !hasLoggedIn) {
       push('/auth/update-password');
     }
   });

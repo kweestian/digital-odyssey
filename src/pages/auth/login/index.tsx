@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/router';
 
-import useLocalStorage from '@/hooks/useLocalStorage';
 import { DefaultLayout, Input, Button, Loader } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 import { MagicLinkRequestBody, ServerResponse } from '@/types/server';
@@ -15,14 +14,13 @@ const Login: NextPageWithLayout = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [email, setEmail] = useState('');
-  const [hasLoggedIn] = useLocalStorage('HAS_LOGGED_IN');
 
   const supabase = useSupabaseClient();
   const session = useSession();
   const { push } = useRouter();
 
   supabase.auth.onAuthStateChange(async (evt) => {
-    if (evt === 'SIGNED_IN' && !hasLoggedIn) {
+    if (evt === 'SIGNED_IN') {
       push('/auth/update-password');
     }
   });

@@ -25,3 +25,11 @@ export const getNodeText = (node: React.ReactNode): string => {
 
   return '';
 };
+
+export function replaceAWSErrorCharacters(filename: string) {
+  const illegalCharacters = /[/\\?%*:|"<>]/g; // AWS illegal characters regex
+  const replacementCharacter = '_'; // Character to replace the illegal characters
+
+  const sanitizedFilename = filename.replace(illegalCharacters, replacementCharacter);
+  return sanitizedFilename;
+}

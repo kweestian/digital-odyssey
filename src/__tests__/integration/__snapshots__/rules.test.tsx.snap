@@ -144,7 +144,22 @@ exports[`rules page renders rules page unchanged 1`] = `
             >
               <img
                 alt="Close Popup Button"
-                class="ignore-click"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </button>
+            <button
+              class="playButton"
+              type="button"
+            >
+              <img
+                alt="Play Video"
                 data-nimg="1"
                 decoding="async"
                 height="30"
@@ -157,11 +172,9 @@ exports[`rules page renders rules page unchanged 1`] = `
             </button>
             <video
               controls=""
-              height="100%"
-              width="100%"
             >
               <source
-                src="/static/teaser_kering_serious_game_2023 (720p).mp4"
+                src="/static/video/teaser_kering_serious_game_2023.mp4"
                 type="video/mp4"
               />
             </video>

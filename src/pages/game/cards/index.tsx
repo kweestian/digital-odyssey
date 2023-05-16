@@ -1,9 +1,10 @@
+/* eslint-disable max-len */
 import { NextPage } from 'next';
 
-import { RewardCard } from '@/components/games/cards';
+import { RewardCard, GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
+import { blurUrls } from '@/data/cards';
 
-import { GameLayout } from '@/components';
 import styles from './Cards.module.scss';
 
 type Props = {};
@@ -25,6 +26,7 @@ const Cards: NextPage<Props> = () => {
                   content={keyLearning.text}
                   isActive={isCompleted}
                   cardUrl={`/static/image/cards/${key}.webp`}
+                  blurUrl={blurUrls[regionKey]}
                   key={key}
                 />
               ))}
@@ -40,6 +42,7 @@ const Cards: NextPage<Props> = () => {
                   content={keyLearning.text}
                   isActive={isCompleted}
                   cardUrl={`/static/image/cards/${key}.webp`}
+                  blurUrl={blurUrls[regionKey]}
                   key={key}
                 />
               ))}

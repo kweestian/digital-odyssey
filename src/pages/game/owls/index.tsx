@@ -22,30 +22,28 @@ const Owls: NextPage<Props> = () => {
         <div className={styles.owlsList}>
           {data
             .filter(({ regionKey }) => regionKey !== 'timeless-tundra')
-            .map(({ color, hasCompletedBonus, regionKey, isComplete, experiences }) => {
+            .map(({ color, hasCompletedBonus, regionKey, experiences }) => {
               const bonusExperienceKey = experiences.find(({ bonus }) => bonus)?.key;
-              if (isComplete) {
-                <Image
-                  key={color}
-                  src={`/static/image/owls/gif/${regionKey}.gif`}
-                  width={219}
-                  height={130}
-                  alt={regionKey}
-                />;
+              if (hasCompletedBonus) {
+                return (
+                  <Image
+                    key={color}
+                    src={`/static/image/owls/gif/${regionKey}.gif`}
+                    width={219}
+                    height={130}
+                    alt={regionKey}
+                    style={{ height: '130px', width: '219px' }}
+                  />
+                );
               }
 
               return (
                 <Link
                   key={color}
                   href={{ pathname: '/game/map', query: { regionKey, experienceKey: bonusExperienceKey } }}
+                  className={styles.normalOwlContainer}
                 >
-                  <Image
-                    src={hasCompletedBonus ? `/static/image/owls/gif/${regionKey}.gif` : BasicOwl}
-                    width={219}
-                    height={130}
-                    alt={regionKey}
-                    style={{ height: '130px', width: '219px' }}
-                  />
+                  <Image src={BasicOwl} width={219} height={130} alt={regionKey} />
                 </Link>
               );
             })}

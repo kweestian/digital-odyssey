@@ -33,7 +33,7 @@ export const creativityCoastExperiences: Experience[] = [
       product returns.`,
       additionalRessources: [
         {
-          text: 'Atmos: ‘Can Made-To-Order Brands Slow Down the Fashion System?’',
+          text: 'Atmos: ‘Can<i> Made-To-Order Brands Slow Down the Fashion System?</i>’',
           link: 'https://atmos.earth/bespoke-brand-made-to-order-sustainable-zero-waste-fashion/',
         },
       ],
@@ -77,7 +77,7 @@ export const creativityCoastExperiences: Experience[] = [
       sustainable, intimate consumer journey.`,
       additionalRessources: [
         {
-          text: 'Hypemoon: ‘Leading Luxury Goods Group Kering Launches First AI Personal Shopper’',
+          text: 'Hypemoon: ‘<i>Leading Luxury Goods Group Kering Launches First AI Personal Shopper</i>’',
           link: 'https://hypemoon.com/2023/4/leading-luxury-goods-group-kering-launches-first-ai-personal-shopper',
         },
       ],
@@ -117,7 +117,7 @@ export const creativityCoastExperiences: Experience[] = [
       experience aligned with the values of Kering.`,
       additionalRessources: [
         {
-          text: 'Vogue Business: ‘Can AI make secondhand luxury shopping easier?’',
+          text: 'Vogue Business: ‘<i>Can AI make secondhand luxury shopping easier?</i>’',
           link: 'https://www.voguebusiness.com/companies/can-ai-make-secondhand-luxury-shopping-easier',
         },
       ],
@@ -275,7 +275,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
       sustainably drive brand growth.`,
       additionalRessources: [
         {
-          text: 'Business of Fashion: ‘Why Fashion Loves Roblox’',
+          text: 'Business ofFashion: ‘<i>Why Fashion Loves Roblox</i>’',
           link: 'https://www.businessoffashion.com/articles/technology/why-fashion-loves-roblox/',
         },
       ],
@@ -311,7 +311,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
       brand experiences.`,
       additionalRessources: [
         {
-          text: 'Art Labs: ‘The Future of Retail: Direct-to-Avatar Economy’',
+          text: 'Art Labs: ‘<i>The Future of Retail: Direct-to-Avatar Economy</i>’',
           link: 'https://artlabs.ai/blog/the-future-of-retail-direct-to-avatar-economy',
         },
       ],
@@ -334,7 +334,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
         {
           key: 'question_one',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 1',
+          title: 'Question One',
           imageLink: '/static/image/cards/card.svg',
           correctAnswer: 'two',
           choices: [
@@ -355,7 +355,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
         {
           key: 'question_two',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 2',
+          title: 'Question Two',
           imageLink: '/static/image/cards/card.svg',
           correctAnswer: 'three',
           choices: [
@@ -376,7 +376,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
         {
           key: 'question_three',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 2',
+          title: 'Question Three',
           imageLink: '/static/image/cards/card.svg',
           correctAnswer: 'three',
           choices: [
@@ -397,7 +397,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
         {
           key: 'question_tfour',
           text: 'Launched for the first time on december 5 ...',
-          title: 'Question 4',
+          title: 'Question Four',
           imageLink: '/static/image/cards/card.svg',
           correctAnswer: 'three',
           choices: [
@@ -434,7 +434,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
       brand long-term.`,
       additionalRessources: [
         {
-          text: 'Jing Daily: ‘How NFTs are Uncovering New Value in Art &amp; Luxury’',
+          text: 'Jing Daily: ‘<i> How NFTs are Uncovering New Value in Art &amp; Luxury</i>’',
           link: 'https://jingdaily.com/how-nfts-are-uncovering-new-value-in-art-and-luxury/',
         },
       ],
@@ -474,7 +474,7 @@ export const playfulPlainExperiences: Experience[] = [
       reduce their carbon footprint by as much as 30%.`,
       additionalRessources: [
         {
-          text: 'ELLE: ‘Unpacking the Vast and Infinite World of Digital Fashion’',
+          text: 'ELLE: ‘<i>Unpacking the Vast and Infinite World of Digital Fashion</i>’',
           link: 'https://www.elle.com/fashion/trend-reports/a42664929/digital-fashion/',
         },
       ],
@@ -518,7 +518,7 @@ export const playfulPlainExperiences: Experience[] = [
       customer satisfaction pre-purchase.`,
       additionalRessources: [
         {
-          text: 'Forbes: ‘Virtual Try-On Is More Than A Pandemic Trend And These Brands Are Reaping The Rewards’',
+          text: 'Forbes: ‘<i>Virtual Try-On Is More Than A Pandemic Trend And These Brands Are Reaping The Rewards</i>’',
           link: 'https://www.forbes.com/sites/lelalondon/2021/05/20/virtual-try-on-is-more-than-a-pandemic-trendand-these-brands-are-reaping-the-rewards/?sh=44edf9a76c82',
         },
       ],
@@ -540,7 +540,7 @@ export const playfulPlainExperiences: Experience[] = [
       label: 'Enter Quiz',
       questions: [
         {
-          title: 'Question 1',
+          title: 'Question One',
           text: 'What does this Jacquemus hologram depict?',
           key: 'jacquemus',
           imageLink: 'virtual_merch_question1.jpg',
@@ -551,7 +551,7 @@ export const playfulPlainExperiences: Experience[] = [
           ],
         },
         {
-          title: 'Question 2',
+          title: 'Question Two',
           text: 'What is the purpose of this Boucheron hologram?',
           key: 'holo',
           imageLink: 'virtual_merch_question2.jpg',
@@ -567,7 +567,7 @@ export const playfulPlainExperiences: Experience[] = [
           ],
         },
         {
-          title: 'Question 3',
+          title: 'Question Three',
           text: 'What is the purpose of this viral cat hologram on a Tokyo street?',
           key: 'cat',
           imageLink: 'virtual_merch_question3.jpg',
@@ -582,7 +582,7 @@ export const playfulPlainExperiences: Experience[] = [
           ],
         },
         {
-          title: 'Question 4',
+          title: 'Question Four',
           text: 'What is the purpose of this Qeelin hologram?',
           key: 'queel',
           imageLink: 'virtual_merch_question4.jpg',
@@ -620,7 +620,7 @@ export const playfulPlainExperiences: Experience[] = [
       try-ons, product displays, and immersive retail experiences.`,
       additionalRessources: [
         {
-          text: 'Looking Glass: ‘The Future of Retail: 3D Immersion’',
+          text: 'Looking Glass: ‘<i>The Future of Retail: 3D Immersion</i>’',
           link: 'https://lookingglassfactory.com/blog/the-future-of-retail-3d-immersion',
         },
       ],
@@ -769,7 +769,7 @@ footprints of a website.`,
       harmony with nature – and much more!`,
       additionalRessources: [
         {
-          text: 'The intro guide to digital eco-design’',
+          text: '<i>The intro guide to digital eco-design</i>’',
           link: 'https://eco-conception.designersethiques.org/guide/en/content/0-introduction.html',
         },
       ],
@@ -815,7 +815,7 @@ footprints of a website.`,
       made responsibly and ethically.`,
       additionalRessources: [
         {
-          text: 'Circularise: ‘Blockchain: The key to the traceability and trust in sustainable manufacturing’',
+          text: 'Circularise: ‘<i>Blockchain: The key to the traceability and trust in sustainable manufacturing</i>’',
           link: 'https://www.circularise.com/blogs/blockchain-the-key-to-the-traceability-and-trust-in-sustainable-manufacturing',
         },
       ],
@@ -854,7 +854,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'two',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question2.png',
+          imageLink: 'brand_experience_question2.jpg',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -958,7 +958,7 @@ export const virtualValleysExperiences: Experience[] = [
       emotional, immersive storytelling of the best fashion events!`,
       additionalRessources: [
         {
-          text: 'The Economist: ‘How will businesses use the metaverse?’',
+          text: 'The Economist: ‘<i>How will businesses use the metaverse?</i>’',
           link: 'https://www.youtube.com/watch?v=LEgHRAQ1HmE',
         },
       ],
@@ -996,7 +996,7 @@ export const virtualValleysExperiences: Experience[] = [
       products and experiences.`,
       additionalRessources: [
         {
-          text: 'RetailDive: ‘How can brands find meaning in the metaverse? Co creation ’',
+          text: 'RetailDive: ‘<i> How can brands find meaning in the metaverse? Co creation </i>’',
           link: 'https://www.retaildive.com/spons/how-can-brands-find-meaning-in-the-metaverse-co-creation-and-community/621399/',
         },
       ],
@@ -1036,7 +1036,7 @@ export const virtualValleysExperiences: Experience[] = [
       and build brand awareness, engagement and loyalty.`,
       additionalRessources: [
         {
-          text: 'The Drum: ‘What is Nikeland, &amp; why was it considered a success?’',
+          text: 'The Drum: ‘<i>What is Nikeland, & why was it considered a success?</i>’',
           link: 'https://www.thedrum.com/news/2022/03/22/nearly-7-million-people-have-visited-nike-s-metaverse-store',
         },
       ],

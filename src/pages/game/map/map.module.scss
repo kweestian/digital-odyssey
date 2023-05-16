@@ -1,0 +1,25 @@
+@import '@/styles/variables';
+
+.mapContainer {
+  position: relative;
+  background-image: url('/static/image/map/MAP_BACKGROUNG.png');
+  height: 100%;
+  width: 100%;
+  > div {
+    width: 100%;
+    height: 100%;
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.regionsContainer {
+  width: 100%;
+  height: 100%;
+  // > svg {
+  //   width: 100%;
+  //   height: 100%;
+  // }
+}

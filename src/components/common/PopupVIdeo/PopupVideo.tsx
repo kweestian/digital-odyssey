@@ -1,22 +1,41 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 
 import CloseIcon from '@/image/CloseIcon.svg';
+import PlayIcond from '@/image/rules/video-play.svg';
 
 import styles from './PopupVideo.module.scss';
 
-const PopupVideo = ({ onClick }: { onClick: () => void }) => (
-  <div className={styles.container}>
-    <div className={styles.popinContainer}>
-      <button onClick={onClick} className={styles.closeButton} type="button">
-        <Image width={30} height={30} src={CloseIcon} alt="Close Popup Button" className="ignore-click" />
-      </button>
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <video width="100%" height="100%" controls>
-        <source src="/static/teaser_kering_serious_game_2023 (720p).mp4" type="video/mp4" />
-      </video>
+const PopupVideo = ({ onClick }: { onClick: () => void }) => {
+  const vidRef = useRef<HTMLVideoElement>(null);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.popinContainer}>
+        <button onClick={onClick} className={styles.closeButton} type="button">
+          <Image width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
+        </button>
+        {!videoPlaying && (
+          <button onClick={() => vidRef.current?.play()} className={styles.playButton} type="button">
+            <Image width={30} height={30} src={PlayIcond} alt="Play Video" />
+          </button>
+        )}
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+        <video
+          onPlay={() => setVideoPlaying(true)}
+          ref={vidRef}
+          onEnded={() => {
+            setVideoPlaying(false);
+            onClick();
+          }}
+          controls
+        >
+          <source src="/static/video/teaser_kering_serious_game_2023.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default PopupVideo;

@@ -144,7 +144,22 @@ exports[`owls page renders owls page unchanged 1`] = `
             >
               <img
                 alt="Close Popup Button"
-                class="ignore-click"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </button>
+            <button
+              class="playButton"
+              type="button"
+            >
+              <img
+                alt="Play Video"
                 data-nimg="1"
                 decoding="async"
                 height="30"
@@ -157,11 +172,9 @@ exports[`owls page renders owls page unchanged 1`] = `
             </button>
             <video
               controls=""
-              height="100%"
-              width="100%"
             >
               <source
-                src="/static/teaser_kering_serious_game_2023 (720p).mp4"
+                src="/static/video/teaser_kering_serious_game_2023.mp4"
                 type="video/mp4"
               />
             </video>
@@ -174,6 +187,7 @@ exports[`owls page renders owls page unchanged 1`] = `
             class="owlsList"
           >
             <a
+              class="normalOwlContainer"
               href="/game/map?regionKey=creativity-coast&experienceKey=the-future-of-recommendation"
             >
               <img
@@ -184,11 +198,12 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent; height: 130px; width: 219px;"
+                style="color: transparent;"
                 width="219"
               />
             </a>
             <a
+              class="normalOwlContainer"
               href="/game/map?regionKey=loyalty-lagoon&experienceKey=the-future-of-brand-communities"
             >
               <img
@@ -199,11 +214,12 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent; height: 130px; width: 219px;"
+                style="color: transparent;"
                 width="219"
               />
             </a>
             <a
+              class="normalOwlContainer"
               href="/game/map?regionKey=sea-of-sustainability&experienceKey=the-future-of-digital-carbon-footprint"
             >
               <img
@@ -214,11 +230,12 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent; height: 130px; width: 219px;"
+                style="color: transparent;"
                 width="219"
               />
             </a>
             <a
+              class="normalOwlContainer"
               href="/game/map?regionKey=virtual-valleys&experienceKey=the-future-of-brand-experience"
             >
               <img
@@ -229,11 +246,12 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent; height: 130px; width: 219px;"
+                style="color: transparent;"
                 width="219"
               />
             </a>
             <a
+              class="normalOwlContainer"
               href="/game/map?regionKey=playful-plains&experienceKey=the-future-of-virtual-try-on"
             >
               <img
@@ -244,7 +262,7 @@ exports[`owls page renders owls page unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent; height: 130px; width: 219px;"
+                style="color: transparent;"
                 width="219"
               />
             </a>

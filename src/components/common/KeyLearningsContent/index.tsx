@@ -8,25 +8,34 @@ interface Props {
   content: string;
   cardUrl: string;
   additionalRessources?: AdditionalResources[];
+  blurUrl: string;
 }
 
-const KeyLearningsContent = ({ cardUrl, additionalRessources, content }: Props) => (
-  <>
-    <Image src={cardUrl} alt={content} className={styles.cardImg} width={238.59} height={421.74} />
+const KeyLearningsContent = ({ cardUrl, additionalRessources, content, blurUrl }: Props) => (
+  <div className={styles.keyLearningsContainer}>
+    <Image
+      placeholder="blur"
+      blurDataURL={blurUrl}
+      src={cardUrl}
+      alt={content}
+      className={styles.cardImg}
+      width={238.59}
+      height={421.74}
+    />
     <div className={styles.contentContainer}>
       <h3 className={styles.keyLearningTitle}>KEY LEARNINGS : </h3>
-      <RenderHtml htmlContent={content} />
+      <RenderHtml customStyles={{}} htmlContent={content} />
       <h4 className={styles.additionalResourcesTitle}>Additional Resources :</h4>
       <div className={styles.additionalResourcesContainer}>
         {additionalRessources?.map(({ text, link }) => (
           <>
-            <p key={link}>{text}</p>
+            <RenderHtml customStyles={{}} htmlContent={text} />
             <Button external as="a" href={link} skin="ghost" text="Read" />
           </>
         ))}
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default KeyLearningsContent;

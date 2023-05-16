@@ -7,49 +7,52 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   > h1 {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 2.25rem;
   }
 }
 
 .owlImage {
-  width: 150px;
+  width: 97px;
+  height: auto;
+  margin-top: -6px;
 }
 
-@media screen and (max-height: 820px) {
-  .cardContainer {
-    > h1 {
-      font-size: 20px;
-    }
-  }
+// @media screen and (max-height: $TabletBreakP) {
+//   .cardContainer {
+//     > h1 {
+//       font-size: 20px;
+//     }
+//   }
 
-  .owlImage {
-    width: 50px;
-    height: auto;
-  }
-}
+//   .owlImage {
+//     width: 50px;
+//     height: auto;
+//   }
+// }
 
-@media screen and (max-height: 650px) {
-  .cardContainer {
-    > h1 {
-      font-size: 20px;
-    }
-  }
+// @media screen and (max-height: 650px) {
+//   .cardContainer {
+//     > h1 {
+//       font-size: 20px;
+//     }
+//   }
 
-  .owlImage {
-    width: 60px;
-  }
-}
+//   .owlImage {
+//     width: 60px;
+//   }
+// }
 
 @media screen and (max-height: 550px) {
   .cardContainer {
     > h1 {
-      font-size: 18px;
+      font-size: 1.2rem;
     }
   }
 
-  .owlImage {
-    width: 40px;
-  }
+  // .owlImage {
+  //   width: 40px;
+  // }
 }

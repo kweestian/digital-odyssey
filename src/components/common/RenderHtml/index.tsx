@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
-import { ReactElement, useEffect, useState } from 'react';
+import { CSSProperties, ReactElement, useEffect, useState } from 'react';
 
-const RenderHtml = ({ htmlContent }: { htmlContent: string }) => {
+const RenderHtml = ({ htmlContent, customStyles }: { htmlContent: string; customStyles?: CSSProperties }) => {
   const [parsedContent, setParsedContent] = useState<string | ReactElement | ReactElement[] | null>(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const RenderHtml = ({ htmlContent }: { htmlContent: string }) => {
     return null; // Render nothing or a loading indicator while waiting for parsing
   }
 
-  return <p style={{ fontWeight: 300, textAlign: 'justify', padding: '20px 20px' }}>{parsedContent}</p>;
+  return <p style={customStyles || { fontWeight: 300, textAlign: 'justify', padding: '20px 20px' }}>{parsedContent}</p>;
 };
 
 export default RenderHtml;

@@ -16,22 +16,24 @@
 }
 
 .mainScreenContainer {
-  width: 78vw;
-  height: 92vh;
+  width: 79vw;
+  height: 90vh;
   border: solid 0.15rem $TextMainColor;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: 3;
+  z-index: 2;
+  position: relative;
 }
 
 .mainScreenFirstBorder {
   position: absolute;
-  width: 79vw;
-  height: 90vh;
-  z-index: 2;
+
+  width: 78vw;
+  height: 92vh;
+  z-index: 1;
   border: solid 0.15rem $TextMainColor;
   border-radius: 30px;
   overflow: hidden;
@@ -41,7 +43,8 @@
   position: absolute;
   right: 12vw;
   top: 2vh;
-  z-index: 4;
+  z-index: 5;
+  min-width: 357.67px;
   padding: 8px 20px 0 20px;
   background-color: $BackgroundColor;
   border: solid $BorderColor;

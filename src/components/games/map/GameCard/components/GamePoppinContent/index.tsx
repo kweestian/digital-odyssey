@@ -44,7 +44,9 @@ const GamePoppinContent = ({
       <>
         <div className={styles.descriptionContainer}>
           <p className={styles.descriptionTitle}>BONUS !</p>
-          <RenderHtml htmlContent={bonus.description} />
+          <div className={styles.descriptionParagraph}>
+            <RenderHtml htmlContent={bonus.description} customStyles={{}} />
+          </div>
         </div>
         <div className={styles.answerContainer}>
           <InteractionForm
@@ -68,7 +70,9 @@ const GamePoppinContent = ({
         <p className={styles.descriptionTitle}>
           {t('common:game-card-subtitle')} {name}!
         </p>
-        <RenderHtml htmlContent={description} />
+        <div className={styles.descriptionParagraph}>
+          <RenderHtml htmlContent={description} />
+        </div>
       </div>
       <div className={styles.answerContainer}>
         {interaction.type === 'text' && (
@@ -94,8 +98,8 @@ const GamePoppinContent = ({
         {showQuizButton && (
           <Button
             skin="ghost"
-            customStyles={{ marginTop: 20 }}
-            text={interaction.answer ? 'ReDo Quiz' : 'Start Quiz'}
+            customStyles={{ marginTop: 5 }}
+            text={interaction.answer ? 'ReDo Quiz' : 'Enter Quiz'}
             onClick={() => {
               setStepFormState({});
               setScore(undefined);

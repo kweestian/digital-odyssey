@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PopinCard from '../../PopinCard';
+import RenderHtml from '../../RenderHtml';
 
 import styles from './AdditionalResourcesPopin.module.scss';
 
@@ -16,7 +17,7 @@ const AdditionalInfoPopin = ({ additionalResources, onClose, title, regionKey }:
       <h1>{title}</h1>
       <div className={styles.linksContainer}>
         {additionalResources.map(({ text, link }) => (
-          <div key={`regional_resource_${regionKey}`} className={styles.resourceContainer}>
+          <div key={`regional_resource_${text}`} className={styles.resourceContainer}>
             <Image
               alt={`regionalresources_${regionKey}`}
               src={`/static/image/owls/3d/${regionKey}.svg`}
@@ -24,7 +25,7 @@ const AdditionalInfoPopin = ({ additionalResources, onClose, title, regionKey }:
               height={30}
             />
             <a target="_blank" rel="noreferrer" key={text} href={link}>
-              {text}
+              <RenderHtml customStyles={{}} htmlContent={text} />
             </a>
           </div>
         ))}

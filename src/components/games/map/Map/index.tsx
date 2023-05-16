@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
+import { Fragment, useCallback, useRef, useState } from 'react';
 import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
 import styles from './Map.module.scss';
@@ -17,7 +17,7 @@ interface Props {
 
 const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
-  const { removeUrlParam, getUrlParam } = useUrlParams();
+  const { getUrlParam } = useUrlParams();
 
   const currentRegion = getUrlParam('regionKey');
 
@@ -54,7 +54,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   // );
 
   return (
-    <div className="w-full h-full">
+    <div>
       <MapBackground onClickOutSideContinent={() => zoomImageTrigger('backgroundAnchor', initialScale)}>
         {/* first, draw all regions */}
         <g ref={landContinentRef}>
@@ -195,9 +195,9 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                         }
                       }}
                       y={regionOwl.y}
-                      width="110"
-                      height="60"
-                      style={{ overflow: 'visible' }}
+                      // width="110"
+                      // height="60"
+                      style={{ width: isRegionComplete ? 150 : 110, height: 'auto' }}
                       xlinkHref={
                         isRegionComplete
                           ? `/static/image/owls/gif/${regionKey}.gif`

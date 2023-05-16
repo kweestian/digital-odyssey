@@ -23,6 +23,15 @@
   }
 }
 
+.normalOwlContainer {
+  height: 141px;
+  display: flex;
+  img {
+    width: 183px;
+    height: auto;
+  }
+}
+
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: 1380px) {
   .container {
     > img {

@@ -144,7 +144,22 @@ exports[`map page renders cards page unchange 1`] = `
             >
               <img
                 alt="Close Popup Button"
-                class="ignore-click"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </button>
+            <button
+              class="playButton"
+              type="button"
+            >
+              <img
+                alt="Play Video"
                 data-nimg="1"
                 decoding="async"
                 height="30"
@@ -157,11 +172,9 @@ exports[`map page renders cards page unchange 1`] = `
             </button>
             <video
               controls=""
-              height="100%"
-              width="100%"
             >
               <source
-                src="/static/teaser_kering_serious_game_2023 (720p).mp4"
+                src="/static/video/teaser_kering_serious_game_2023.mp4"
                 type="video/mp4"
               />
             </video>
@@ -180,9 +193,7 @@ exports[`map page renders cards page unchange 1`] = `
               <div
                 class="regionsContainer"
               >
-                <div
-                  class="w-full h-full"
-                >
+                <div>
                   <svg
                     id="backgroundAnchor"
                     viewBox="0 0 1931.11 1143.41"
@@ -1321,9 +1332,7 @@ exports[`map page renders cards page unchange 1`] = `
                             </tspan>
                           </text>
                           <image
-                            height="60"
-                            style="overflow: visible;"
-                            width="110"
+                            style="width: 110px; height: auto;"
                             x="1020"
                             xlink:href="/static/image/owls/3d/creativity-coast.svg"
                             y="720"
@@ -1356,9 +1365,7 @@ exports[`map page renders cards page unchange 1`] = `
                             </tspan>
                           </text>
                           <image
-                            height="60"
-                            style="overflow: visible;"
-                            width="110"
+                            style="width: 110px; height: auto;"
                             x="850"
                             xlink:href="/static/image/owls/3d/loyalty-lagoon.svg"
                             y="600"
@@ -1391,9 +1398,7 @@ exports[`map page renders cards page unchange 1`] = `
                             </tspan>
                           </text>
                           <image
-                            height="60"
-                            style="overflow: visible;"
-                            width="110"
+                            style="width: 110px; height: auto;"
                             x="520"
                             xlink:href="/static/image/owls/3d/sea-of-sustainability.svg"
                             y="330"
@@ -1426,9 +1431,7 @@ exports[`map page renders cards page unchange 1`] = `
                             </tspan>
                           </text>
                           <image
-                            height="60"
-                            style="overflow: visible;"
-                            width="110"
+                            style="width: 110px; height: auto;"
                             x="890"
                             xlink:href="/static/image/owls/3d/virtual-valleys.svg"
                             y="240"
@@ -1461,9 +1464,7 @@ exports[`map page renders cards page unchange 1`] = `
                             </tspan>
                           </text>
                           <image
-                            height="60"
-                            style="overflow: visible;"
-                            width="110"
+                            style="width: 110px; height: auto;"
                             x="660"
                             xlink:href="/static/image/owls/3d/playful-plains.svg"
                             y="500"

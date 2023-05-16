@@ -106,7 +106,7 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
             <Button
               skin="ghost"
               disabled={!currentAnswer || isMutating}
-              customStyles={{ width: '100%' }}
+              customStyles={{ width: '100%', minWidth: 150 }}
               text="Check Answer"
               onClick={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
             />

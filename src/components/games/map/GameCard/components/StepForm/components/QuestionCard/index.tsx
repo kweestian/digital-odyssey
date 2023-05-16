@@ -1,7 +1,10 @@
 /* eslint-disable max-len */
 import { useAtom } from 'jotai';
 import Image from 'next/image';
+
+import { blurUrls } from '@/data/cards';
 import { useUrlParams, useRegionData } from '@/hooks';
+
 import styles from './QuestionCard.module.scss';
 import { stepFormAtom } from './atom';
 import { Question } from './components';
@@ -22,9 +25,8 @@ const QuestionCard = ({
   const { getUrlParam } = useUrlParams();
   const currentRegionKey = getUrlParam('regionKey') as RegionKey;
 
-  const safeRegionKey = (!Array.isArray(currentRegionKey) && currentRegionKey) || 'creativity-coast';
-
-  const { color } = useRegionData(safeRegionKey);
+  const { color } = useRegionData(currentRegionKey);
+  const blurUrl = blurUrls[currentRegionKey];
 
   const checkedValued = stepFormState[key];
 
@@ -34,6 +36,8 @@ const QuestionCard = ({
     <div className={styles.questionCardContainer} style={{ justifyContent: imageLink ? 'space-between' : 'center' }}>
       {imageLink && (
         <Image
+          placeholder="blur"
+          blurDataURL={blurUrl}
           className={styles.questionImage}
           alt="imageLink"
           width={200}

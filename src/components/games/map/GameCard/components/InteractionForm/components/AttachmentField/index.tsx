@@ -5,7 +5,7 @@ import { useAtom } from 'jotai';
 
 import { useGetPublicUrl } from '@/hooks';
 import Check from '@/image/submit-check.svg';
-import Eye from '@/image/eye-icon.svg';
+import Eye from '@/image/map/picto/PICTO_EYE.svg';
 
 import { Loader, Button } from '@/components/common';
 import styles from './AttachmentField.module.scss';

@@ -14,8 +14,7 @@ export default async function handler(req: SupabaseMagicLinkRequest, res: NextAp
     return res.status(400).json({ error: 'Email is required' });
   }
 
-  const isAllowed =
-    email === 'pm.marteau@gmail.com ' || ALLOWED_DOMAINS.some((allowedDomain) => email.endsWith(allowedDomain));
+  const isAllowed = ALLOWED_DOMAINS.some((allowedDomain) => email.endsWith(allowedDomain));
 
   if (!isAllowed) {
     return res.status(403).json({ error: 'Email not allowed' });
@@ -23,9 +22,9 @@ export default async function handler(req: SupabaseMagicLinkRequest, res: NextAp
 
   const { error } = await supabase.auth.signInWithOtp({
     email,
-    // options: {
-    //   emailRedirectTo: `${req.url}/login-check`,
-    // },
+    options: {
+      emailRedirectTo: `${req.headers.origin}/auth/update-password`,
+    },
   });
 
   if (error) {

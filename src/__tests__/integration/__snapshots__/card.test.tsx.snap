@@ -144,7 +144,22 @@ exports[`cards page renders cards page unchange 1`] = `
             >
               <img
                 alt="Close Popup Button"
-                class="ignore-click"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </button>
+            <button
+              class="playButton"
+              type="button"
+            >
+              <img
+                alt="Play Video"
                 data-nimg="1"
                 decoding="async"
                 height="30"
@@ -157,11 +172,9 @@ exports[`cards page renders cards page unchange 1`] = `
             </button>
             <video
               controls=""
-              height="100%"
-              width="100%"
             >
               <source
-                src="/static/teaser_kering_serious_game_2023 (720p).mp4"
+                src="/static/video/teaser_kering_serious_game_2023.mp4"
                 type="video/mp4"
               />
             </video>
@@ -203,7 +216,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-personalization.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -233,7 +246,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-recommendation.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -266,7 +279,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-assistants.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -300,7 +313,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-communities.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -331,7 +344,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-consumer-expression.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -363,7 +376,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-loyalty-initiatives.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -402,7 +415,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-carbon-footprint.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -433,7 +446,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-digital-sustainability.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -465,7 +478,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-product-traceability.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -500,7 +513,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-brand-experience.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -531,7 +544,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-co-created-experiences.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -566,7 +579,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-shopping-experiences.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -599,7 +612,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-fashion-design.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -627,7 +640,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-try-on.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>
@@ -660,7 +673,7 @@ exports[`cards page renders cards page unchange 1`] = `
                     loading="lazy"
                     src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=256&q=75"
                     srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=128&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fthe-future-of-virtual-merchandising.webp&w=256&q=75 2x"
-                    style="color: transparent;"
+                    style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                     width="96.03"
                   />
                 </button>

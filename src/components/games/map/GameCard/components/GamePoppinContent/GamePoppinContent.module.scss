@@ -10,7 +10,8 @@
   border: 2px solid white;
   border-radius: 20px;
   width: 90%;
-  > p {
+  min-height: 263px;
+  p {
     font-size: 20px;
     font-weight: 300;
   }
@@ -35,33 +36,46 @@
 
 .answerContainer {
   margin-top: 50px;
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .bonusContainer {
-  width: 400px;
+  width: 300px;
   font-size: 20px;
   > button {
     width: 85%;
   }
 }
 
-@media screen and (max-height: 820px) {
+@media screen and (max-height: $TabletBreakpoint) {
+  .descriptionContainer {
+    padding: 5px;
+    height: 60%;
+    overflow-y: auto;
+    justify-content: flex-start;
+    min-height: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   .answerContainer {
     margin-top: 5px;
-    font-size: 15px;
-  }
-  .descriptionContainer p {
-    font-size: 14px;
+    // font-size: 15px;
   }
 
-  .bonusContainer button {
-    font-size: 12px;
-  }
+  // .bonusContainer button {
+  //   font-size: 12px;
+  // }
 
-  .bonusContainer {
-    width: calc(50% + 40px);
-    // margin: auto;
-  }
+  // .bonusContainer {
+  //   width: calc(50% + 40px);
+  //   // margin: auto;
+  // }
 }
 
 // @media screen and (max-height: 650px) {

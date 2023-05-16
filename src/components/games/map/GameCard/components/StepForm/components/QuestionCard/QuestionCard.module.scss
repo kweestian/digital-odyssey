@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: center;
   height: 60%;
-  margin-top: 50px;
+  // margin-top: 50px;
   font-weight: 400;
   font-size: 16px;
 
@@ -38,7 +38,7 @@
   }
 }
 
-.choiceContainer {
+.choiceContainer:not(:first-child) {
   display: flex;
   margin-top: 20px;
   // fle
@@ -61,9 +61,9 @@
   display: none;
 }
 
+.questionImage {
+  height: 100%;
+  width: auto;
+}
 @media screen and (max-height: 810px) {
-  .questionImage {
-    height: 40vh;
-    width: auto;
-  }
 }

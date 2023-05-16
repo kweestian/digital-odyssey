@@ -5,6 +5,7 @@ import { useAtom } from 'jotai';
 
 import { useUpdateUserExperience } from '@/hooks';
 import { PopinCard, KeyLearningsContent } from '@/components/common';
+import { blurUrls } from '@/data/cards';
 
 import styles from './GameCard.module.scss';
 import GamePoppinContent from './components/GamePoppinContent';
@@ -61,7 +62,11 @@ const GameCard = ({
 
           const newFile = binaryStr;
 
-          const uploadPath = isBonus ? `${user?.id}/${key}/bonus/${file.name}` : `${user?.id}/${key}/${file.name}`;
+          const sanitizedFileName = `upload_${regionKey}_${key}_${Date.now()}.${file.type.split('/').pop()}`;
+
+          const uploadPath = isBonus
+            ? `${user?.id}/${key}/bonus/${sanitizedFileName}`
+            : `${user?.id}/${key}/${sanitizedFileName}`;
 
           if (newFile) {
             if (isBonus && interaction.bonus) {
@@ -117,6 +122,7 @@ const GameCard = ({
       setError,
       setIsUploadingImage,
       interactionType,
+      regionKey,
     ],
   );
 
@@ -131,8 +137,9 @@ const GameCard = ({
           }
         }}
       >
-        {interactionType === 'keyLearning' ? (
+        {interactionType === 'keyLearning' && regionKey ? (
           <KeyLearningsContent
+            blurUrl={blurUrls[regionKey]}
             cardUrl={`/static/image/cards/${key}.webp`}
             additionalRessources={keyLearning.additionalRessources}
             content={keyLearning.text}

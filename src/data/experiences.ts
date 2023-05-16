@@ -755,7 +755,7 @@ footprints of a website.`,
           title: 'Question Five',
           text: 'In which ways could 3D printing help brands reach closer to their sustainability goals?',
           key: 'all',
-          correctAnswer: 'track',
+          correctAnswer: 'all',
           choices: [
             { text: '3D printing could decrease production time', value: '3d' },
             { text: '3D printing can help imagine new product designs', value: 'new3d' },

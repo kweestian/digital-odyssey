@@ -97,12 +97,9 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
       {interactionType === 'quiz' && (
         <div
           className={styles.carouselNavigationContainer}
-          style={{ justifyContent: !questions[currentPageNumber].imageLink ? 'center' : 'flex-end' }}
+          style={{ right: !questions[currentPageNumber].imageLink ? '' : 200 }}
         >
-          <div
-            className={styles.buttonContainer}
-            style={{ marginLeft: 5, marginRight: !questions[currentPageNumber].imageLink ? 0 : 200 }}
-          >
+          <div className={styles.buttonContainer} style={{ marginLeft: 5 }}>
             <Button
               skin="ghost"
               disabled={!currentAnswer || isMutating}

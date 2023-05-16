@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit",
     "lint": "next lint",
     "test": "jest",
-    "test-ci": "jest --config ./jest.config.mjs --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false",
+    "test-ci": "jest --coverage",
     "postinstall": "husky install"
   },
   "dependencies": {

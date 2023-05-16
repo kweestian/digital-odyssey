@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useAtom } from 'jotai';
-import { FileRejection } from 'react-dropzone';
 
 import { Button, RenderHtml } from '@/components/common';
 import StepForm from '../StepForm';
@@ -55,7 +53,7 @@ const GamePoppinContent = ({
             onChange={(files) => onDrop(files, true)}
             isLoading={isUploadingImage}
             value={interaction.bonus}
-            label="Bonus Experience"
+            label="Upload Screenshot"
           />
         </div>
       </>

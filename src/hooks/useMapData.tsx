@@ -39,10 +39,17 @@ const useMapData = () => {
     };
   });
 
-  const regionsCompleted = mapDataWithApiData.filter(({ isComplete }) => isComplete).length;
+  const bonusCompleted = mapDataWithApiData.filter(({ hasCompletedBonus }) => hasCompletedBonus).length;
 
   const mapData =
-    regionsCompleted === 5 ? mapDataWithApiData.map((region) => ({ ...region, available: true })) : mapDataWithApiData;
+    bonusCompleted === 5
+      ? mapDataWithApiData.map((region) => {
+          if (region.regionKey === 'timeless-tundra') {
+            return { ...region, available: true, isComplete: true };
+          }
+          return { ...region };
+        })
+      : mapDataWithApiData;
 
   return { data: mapData, isLoading };
 };

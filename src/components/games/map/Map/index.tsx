@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
-import { Fragment, useCallback, useRef, useState } from 'react';
+import { Fragment, useCallback, useMemo, useRef, useState } from 'react';
 import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
 import styles from './Map.module.scss';
@@ -52,6 +52,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   //   },
   //   '.ignore-click',
   // );
+  // seperate each regions
 
   return (
     <div>
@@ -103,12 +104,19 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
           {/* then draw elements on top */}
           {customMap.map((region) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
+            if (showIcon) {
+              return (
+                <g className="z-20" key={`pictos-${regionKey}`}>
+                  <ExperiencePictos experiences={experiences} regionKey={regionKey} />
+                </g>
+              );
+            }
 
             if (!available) {
               return (
                 <a
                   key={`unavailable-${regionKey}`}
-                  onClick={() => onClickActions(regionKey)}
+                  // onClick={() => onClickActions(regionKey)}
                   style={{ cursor: 'pointer' }}
                   className="z-10"
                 >
@@ -127,8 +135,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                       ))}
                     </text>
                     <image
-                      x={regionOwl.x}
-                      y={regionOwl.y}
+                      x={Number(regionOwl.x) + 60}
+                      y={Number(regionOwl.y) + 15}
                       width="100"
                       height="50"
                       style={{ opacity: '0.6' }}
@@ -136,14 +144,6 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                     />
                   </g>
                 </a>
-              );
-            }
-
-            if (showIcon) {
-              return (
-                <g className="z-20" key={`pictos-${regionKey}`}>
-                  <ExperiencePictos experiences={experiences} regionKey={regionKey} />
-                </g>
               );
             }
 

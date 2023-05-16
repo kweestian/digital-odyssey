@@ -10,7 +10,7 @@ const BackGroud = ({
   children: React.ReactNode;
   onClickOutSideContinent?: () => void;
 }) => (
-  <svg id="backgroundAnchor" viewBox="0 0 1931.11 1143.41">
+  <svg id="backgroundAnchor" viewBox="0 0 1850.11 1100">
     <defs>
       <filter id="blur" width="1000%" height="1000%" x="-500%" y="-500%" colorInterpolationFilters="sRGB">
         <feGaussianBlur stdDeviation="10 10" radius={20} />

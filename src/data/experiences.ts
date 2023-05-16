@@ -333,85 +333,106 @@ export const loyaltyLagoonExperiences: Experience[] = [
       questions: [
         {
           key: 'question_one',
-          text: 'Launched for the first time on december 5 ...',
+          text: 'This year Le Bristol, one of the most famous luxury hotels in Paris, dives into the world of NFTs with a highly limited drop of 11 NFTs called ‘Le Bristol Unlocked.’ What are some of the ‘money-can’t-buy’ experiences that one of these NFTs can unlock for a prospective guest?',
           title: 'Question One',
-          imageLink: '/static/image/cards/card.svg',
-          correctAnswer: 'two',
+          imageLink: 'the-future-of-brand-loyalty-initiatives_question1.jpg',
+          correctAnswer: 'bristol',
           choices: [
             {
-              value: 'one',
-              text: 'This NFT drop gets you an invite to the next Prada show',
+              value: 'bristol',
+              text: 'The NFT-holding guest can access secret menus; access anytime to the hotel’s rooftop swimming pool; exclusive content & events.',
             },
             {
-              value: 'two',
-              text: 'This NFT drop is linked to a limited edition physiical ...',
+              value: 'fifty',
+              text: 'The NFT-holding guest gets 50% off on all room reservations.',
             },
             {
-              value: 'three',
-              text: 'This NFT drop gets you lifetime free coffee',
+              value: 'legend',
+              text: 'The NFT-holding guest can access a mysterious floor of the hotel that most guests think is only a legend.',
             },
           ],
         },
         {
           key: 'question_two',
-          text: 'Launched for the first time on december 5 ...',
+          text: 'Launched for the first time on December 5, 2019, Prada Timecapsule presents a new item on the first Thursday of every month – an online exclusive for just 24 hours. What is the key benefit attached to Prada’s latest Timecapsule NFT drop?',
           title: 'Question Two',
-          imageLink: '/static/image/cards/card.svg',
-          correctAnswer: 'three',
+          imageLink: 'the-future-of-brand-loyalty-initiatives_question2.jpg',
+          correctAnswer: 'nft',
           choices: [
             {
-              value: 'one',
-              text: 'This NFT drop gets you an invite to the next Prada show',
+              value: 'prada',
+              text: 'This NFT drop gets you an invite to the next Prada fashion show.',
             },
             {
-              value: 'two',
-              text: 'This NFT drop is linked to a limited edition physiical ...',
+              value: 'nft',
+              text: 'This NFT drop is linked to a limited edition physical product and a corresponding NFT.',
             },
             {
-              value: 'three',
-              text: 'This NFT drop gets you lifetime free coffee',
+              value: 'cafe',
+              text: 'This NFT drop gives you lifetime free coffee at a new Prada café in London.',
             },
           ],
         },
         {
           key: 'question_three',
-          text: 'Launched for the first time on december 5 ...',
+          text: 'The world’s first luxury NFT private golf course and destination club is soon opening in Oregon, US. What benefits does buying one of the ‘Founding Family Membership’ NFTs give to a consumer?',
           title: 'Question Three',
-          imageLink: '/static/image/cards/card.svg',
-          correctAnswer: 'three',
+          imageLink: 'the-future-of-brand-loyalty-initiatives_question3.jpg',
+          correctAnswer: 'duties',
           choices: [
             {
               value: 'one',
-              text: 'This NFT drop gets you an invite to the next Prada show',
+              text: 'Free alcohol and coffee whenever staying at the club.',
             },
             {
-              value: 'two',
-              text: 'This NFT drop is linked to a limited edition physiical ...',
+              value: 'duties',
+              text: 'Lifetime membership to the club without any annual dues or fees.',
             },
             {
               value: 'three',
-              text: 'This NFT drop gets you lifetime free coffee',
+              text: 'Free training from a world-class golf instructor whenever you stay at the club.',
             },
           ],
         },
         {
-          key: 'question_tfour',
-          text: 'Launched for the first time on december 5 ...',
+          key: 'question_four',
+          text: 'Last year, Tiffany’s debuted their NFTiff collection, which raised a total of 12.5 million USD - all 250 NFTs sold out in the first twenty minutes of the drop. Why was the collection so successful?',
           title: 'Question Four',
-          imageLink: '/static/image/cards/card.svg',
-          correctAnswer: 'three',
+          imageLink: 'the-future-of-brand-loyalty-initiatives_question4.jpg',
+          correctAnswer: 'one',
           choices: [
             {
               value: 'one',
-              text: 'This NFT drop gets you an invite to the next Prada show',
+              text: 'It was an opportunity for 250 of the 10,000 holders of the elite CryptoPunk NFTs to get their unique NFTs transformed into a gold, gem-laden physical pendant.',
             },
             {
               value: 'two',
-              text: 'This NFT drop is linked to a limited edition physiical ...',
+              text: 'It was an opportunity to go on a weekend retreat at a luxury resort in the Maldives.',
             },
             {
               value: 'three',
-              text: 'This NFT drop gets you lifetime free coffee',
+              text: 'It was an opportunity for 250 of the 10,000 CryptoPunk NFT holders to get lifetime 0.2% ownership of the Tiffany’s brand.',
+            },
+          ],
+        },
+        {
+          key: 'question_five',
+          text: 'YSL Beauté is a major beauty brand in the world of NFTs. What perks were associated with their first NFT drop?',
+          title: 'Question Five',
+          imageLink: 'the-future-of-brand-loyalty-initiatives_question5.jpg',
+          correctAnswer: 'one',
+          choices: [
+            {
+              value: 'one',
+              text: 'Access to the private sales of a future web3 activation, a yslbeauty.com gift voucher, and exclusive content created by master perfumer Nathalie Lorson.',
+            },
+            {
+              value: 'two',
+              text: 'Lifetime access to a private YSL Beauté membership club.',
+            },
+            {
+              value: 'three',
+              text: 'Five free YSL Beauté products of their choice.',
             },
           ],
         },
@@ -784,17 +805,72 @@ footprints of a website.`,
     encounter a future perfume made by one of Kering's brands. Across the
     questions in this quiz, you will follow the roadmap of the perfume's
     sustainable origins. Once the journey is over, read the key learnings about the
-    
     power of blockchain to drive sustainability in the future.`,
     interaction: {
       type: 'quiz',
       label: 'Enter Quiz',
       questions: [
         {
-          text: 'If this real life ?',
-          key: 'sure',
-          correctAnswer: 'true',
-          choices: [{ text: 'I think so', value: 'true' }],
+          title: 'Question One',
+          text: 'There are currently three major hotspots for rose cultivation in the world. Where was this perfume’s rose sourced from?',
+          key: 'one',
+          correctAnswer: 'turkey',
+          imageLink: 'the-future-of-product-traceability_question1.png',
+          choices: [
+            { text: 'Bulgaria', value: 'bulgaria' },
+            { text: 'Turkey', value: 'turkey' },
+            { text: 'Morocco', value: 'morocco' },
+          ],
+        },
+        {
+          title: 'Question Two',
+          text: 'There are currently three major hotspots for rose cultivation in the world. Where was this perfume’s rose sourced from?',
+          key: 'two',
+          imageLink: 'the-future-of-product-traceability_question2.png',
+
+          correctAnswer: 'Venezuela',
+          choices: [
+            { text: 'Venezuela', value: 'Venezuela' },
+            { text: 'Ethiopia', value: 'Ethiopia' },
+            { text: 'Brazil', value: 'Brazil' },
+          ],
+        },
+        {
+          title: 'Question Three',
+          text: 'Where is the perfume’s bourbon vanilla absolute found? Hint: this kind of vanilla is unique to this region!',
+          key: 'three',
+          imageLink: 'the-future-of-product-traceability_question3.png',
+          correctAnswer: 'Madagascar',
+          choices: [
+            { text: 'Mexico', value: 'Mexico' },
+            { text: 'French Polynesia', value: 'French_Polynesia' },
+            { text: 'Madagascar', value: 'Madagascar' },
+          ],
+        },
+        {
+          title: 'Question Four',
+          text: 'This next ingredient is almost primarily sourced for perfume today! Where is this particular perfume’s labdanum sourced from?',
+          key: 'four',
+          imageLink: 'the-future-of-product-traceability_question4.png',
+
+          correctAnswer: 'Spain',
+          choices: [
+            { text: 'Spain', value: 'Spain' },
+            { text: 'Taiwan', value: 'Taiwan' },
+            { text: 'Australia', value: 'Australia' },
+          ],
+        },
+        {
+          title: 'Question Five',
+          text: 'The last key component of the perfume is frankincense, to round out this perfume with sweet and smoky depth. Where is it traced to?',
+          key: 'five',
+          imageLink: 'the-future-of-product-traceability_question5.png',
+          correctAnswer: 'Somalia',
+          choices: [
+            { text: 'France', value: 'France' },
+            { text: 'South Africa', value: 'South_Africa' },
+            { text: 'Somalia', value: 'Somalia' },
+          ],
         },
       ],
     },
@@ -1007,7 +1083,7 @@ export const virtualValleysExperiences: Experience[] = [
     name: 'The Future of Shopping Experiences',
     key: 'the-future-of-shopping-experiences',
     description: `In this experience, dedicated to the future of shopping, visit the Ferragamo
-    House of Gifts, powered by Obsess — a platform for virtual store solutions.
+    House of Gifts, powered by <a href="https://ferragamo.obsessvr.com/holiday/#/" target="_blank">Obsess</a> — a platform for virtual store solutions.
     Immerse in the Ferragamo holiday world and search for a perfume in the
     virtual Italian villa – once you find a perfume, take a screenshot and upload
     it here, before unlocking key learnings on the potential future impact of

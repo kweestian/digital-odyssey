@@ -35,15 +35,17 @@ const QuestionCard = ({
   return (
     <div className={styles.questionCardContainer} style={{ justifyContent: imageLink ? 'space-between' : 'center' }}>
       {imageLink && (
-        <Image
-          placeholder="blur"
-          blurDataURL={blurUrl}
-          className={styles.questionImage}
-          alt="imageLink"
-          width={200}
-          height={355}
-          src={`/static/image/map/quiz/${imageLink}`}
-        />
+        <div className={styles.questionImageContainer}>
+          <Image
+            placeholder="blur"
+            blurDataURL={blurUrl}
+            className={styles.questionImage}
+            alt="imageLink"
+            width={200}
+            height={355}
+            src={`/static/image/map/quiz/${imageLink}`}
+          />
+        </div>
       )}
       <div className={styles.questionContainer}>
         <div>
@@ -51,7 +53,7 @@ const QuestionCard = ({
         </div>
         <div className={styles.questionContent}>
           <div>{text}</div>
-          <div>
+          <div className={styles.choicesContainer}>
             {choices.map(({ value: choiceValue, text: choiceText }) => (
               <div className={styles.choiceContainer} key={`${key}_${choiceValue}`}>
                 <Question

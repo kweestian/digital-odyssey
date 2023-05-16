@@ -20,7 +20,8 @@ import PopupVideo from '../../PopupVIdeo/PopupVideo';
 import styles from './GameLayout.module.scss';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [hasLoggedIn, setItem] = useLocalStorage('HAS_LOGGED_IN');
+  const [hasLogguedIn, setItem] = useLocalStorage('HAS_LOGGED_IN');
+  // const [hasLogguedIn, sethasLogguedIn] = useState(false);
   const [videoPopinOpen, setVideoPopinOpen] = useAtom(popinAtom);
 
   const { asPath } = useRouter();
@@ -61,9 +62,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setItem('true');
   };
 
-  const isFirstVisit = useMemo(() => hasLoggedIn !== 'true', [hasLoggedIn]);
-
-  const showPoppin = isFirstVisit || videoPopinOpen;
+  const showPoppin = (hasLogguedIn && hasLogguedIn !== 'true') || videoPopinOpen;
 
   return (
     <main className={styles.container}>

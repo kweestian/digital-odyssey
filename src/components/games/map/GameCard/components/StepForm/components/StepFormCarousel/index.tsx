@@ -77,6 +77,8 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
 
   const isLastQuestion = currentPageNumber === pagesArray.length - 1;
 
+  const isImageQuiz = questions[currentPageNumber].imageLink;
+
   return (
     <div className={styles.carousel}>
       <div role="button" tabIndex={0} className={styles.carouselMainContainer}>
@@ -95,15 +97,13 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
         </div>
       </div>
       {interactionType === 'quiz' && (
-        <div
-          className={styles.carouselNavigationContainer}
-          style={{ right: !questions[currentPageNumber].imageLink ? '' : 200 }}
-        >
-          <div className={styles.buttonContainer} style={{ marginLeft: 5 }}>
+        <div className={styles.carouselNavigationContainer} style={{ justifyContent: !isImageQuiz ? 'center' : '' }}>
+          {isImageQuiz && <div className={styles.column} />}
+          <div className={styles.buttonContainer}>
             <Button
               skin="ghost"
               disabled={!currentAnswer || isMutating}
-              customStyles={{ width: '100%', minWidth: 150 }}
+              customStyles={{ width: '80%', minWidth: 150, margin: 'auto' }}
               text="Check Answer"
               onClick={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
             />

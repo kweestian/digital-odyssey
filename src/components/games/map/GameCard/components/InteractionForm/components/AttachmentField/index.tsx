@@ -69,24 +69,26 @@ const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
           <input id="ignore-click" {...getInputProps()} accept="image/png" />
           {hasAnImage ? completedText : text}
         </div>
-        <Button
-          ariaLabel="on submit attachment"
-          loading={isLoading || isMutating}
-          bare
-          onClick={() => {
-            if (currentImage && currentImage.length > 0) {
-              setZoomImage(true);
-            }
-          }}
-        >
-          <Image
-            src={currentImage && currentImage.length > 0 ? Eye : Check}
-            alt="On Submit Button"
-            className={styles.submitButtonImage}
-            width={40}
-            height={40}
-          />
-        </Button>
+        <div className={styles.attachmentIconContainer}>
+          <Button
+            ariaLabel="on submit attachment"
+            loading={isLoading || isMutating}
+            bare
+            onClick={() => {
+              if (currentImage && currentImage.length > 0) {
+                setZoomImage(true);
+              }
+            }}
+          >
+            <Image
+              src={currentImage && currentImage.length > 0 ? Eye : Check}
+              alt="On Submit Button"
+              className={styles.submitButtonImage}
+              width={40}
+              height={40}
+            />
+          </Button>
+        </div>
       </div>
       {error && <div className={styles.errorContainer}>{error}</div>}
       <div className={zoomImage ? styles.imageContainerZoomed : styles.imageContainer}>

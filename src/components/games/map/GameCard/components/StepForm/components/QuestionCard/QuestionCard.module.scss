@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   width: 50%;
 }
 
@@ -28,9 +28,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 60%;
-  // margin-top: 50px;
-  font-weight: 400;
+
+  // height: 60%;
+  margin-top: 50px;
+  font-weight: 300;
   font-size: 16px;
   svg {
     height: 15px;
@@ -38,6 +39,18 @@
 
   > div {
     margin-bottom: 30px;
+  }
+}
+
+.choicesContainer {
+  width: fit-content;
+  margin: 15px auto 0 auto;
+}
+
+.questionImageContainer {
+  width: 50%;
+  img {
+    background-image: none !important;
   }
 }
 
@@ -76,5 +89,18 @@
     height: 80%;
     // width: auto;
     margin: auto 0;
+  }
+
+  .choicesContainer {
+    display: flex;
+  }
+
+  .choiceContainer {
+    align-items: flex-start;
+    width: 150px;
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
   }
 }

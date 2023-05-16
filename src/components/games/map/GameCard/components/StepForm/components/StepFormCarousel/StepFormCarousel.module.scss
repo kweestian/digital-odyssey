@@ -47,10 +47,16 @@
 
 .carouselNavigationContainer {
   display: flex;
+  z-index: 5;
   // width: 100%;
-  position: absolute;
-  bottom: 0;
-  // width: 20%;
+  // position: absolute;
+  // bottom: 0;
+  margin-top: -57px;
+  width: 80%;
+
+  .column {
+    width: 50%;
+  }
 }
 
 .carousel-navigation-button {
@@ -66,13 +72,25 @@
   background: rgb(255, 255, 255);
 }
 
-@media (max-width: 900px) {
+.buttonContainer {
+  width: 50%;
+}
+
+@media (max-height: 900px) {
   .carousel-slider {
     max-width: 450px;
   }
 
   .carousel-slide {
     width: 100%;
+  }
+
+  .carouselSlide {
+    min-height: 0;
+  }
+
+  .carouselNavigationContainer {
+    margin-top: 0;
   }
 }
 @media (max-width: 550px) {
@@ -90,6 +108,5 @@
 }
 
 .buttonContainer {
-  // width: 100%;
   min-width: 250px;
 }

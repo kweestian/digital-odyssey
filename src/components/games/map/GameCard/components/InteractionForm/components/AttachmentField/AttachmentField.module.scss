@@ -3,7 +3,9 @@
 .attachmentContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 400px;
+  position: relative;
 
   button {
     margin-top: 15px;
@@ -31,6 +33,12 @@
   min-height: 36px;
   // height: fit-content;
   font-weight: 400;
+}
+
+.attachmentIconContainer {
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
 }
 
 .imageContainer {

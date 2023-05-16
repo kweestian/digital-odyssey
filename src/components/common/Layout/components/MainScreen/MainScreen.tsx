@@ -13,7 +13,7 @@ const MainScreen = ({
 }) => (
   <div className={styles.subLayoutContainer}>
     <div className={styles.buttonContainer}>
-      <h1 style={{ color: titleColor }}>{title}</h1>
+      <h1 style={{ color: titleColor || 'white' }}>{title}</h1>
     </div>
     <div className={styles.mainScreenFirstBorder} />
     <div className={styles.mainScreenContainer}>{children}</div>

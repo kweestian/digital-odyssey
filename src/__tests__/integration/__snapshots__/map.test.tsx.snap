@@ -122,7 +122,9 @@ exports[`map page renders cards page unchange 1`] = `
       <div
         class="buttonContainer"
       >
-        <h1>
+        <h1
+          style="color: white;"
+        >
           Lost
         </h1>
       </div>
@@ -132,54 +134,6 @@ exports[`map page renders cards page unchange 1`] = `
       <div
         class="mainScreenContainer"
       >
-        <div
-          class="container"
-        >
-          <div
-            class="popinContainer"
-          >
-            <button
-              class="closeButton"
-              type="button"
-            >
-              <img
-                alt="Close Popup Button"
-                data-nimg="1"
-                decoding="async"
-                height="30"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
-                style="color: transparent;"
-                width="30"
-              />
-            </button>
-            <button
-              class="playButton"
-              type="button"
-            >
-              <img
-                alt="Play Video"
-                data-nimg="1"
-                decoding="async"
-                height="30"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
-                style="color: transparent;"
-                width="30"
-              />
-            </button>
-            <video
-              controls=""
-            >
-              <source
-                src="/static/video/teaser_kering_serious_game_2023.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
-        </div>
         <div
           class="mapContainer"
         >
@@ -196,7 +150,7 @@ exports[`map page renders cards page unchange 1`] = `
                 <div>
                   <svg
                     id="backgroundAnchor"
-                    viewBox="0 0 1931.11 1143.41"
+                    viewBox="0 0 1850.11 1100"
                   >
                     <defs>
                       <filter
@@ -1500,9 +1454,9 @@ exports[`map page renders cards page unchange 1`] = `
                             height="50"
                             style="opacity: 0.6;"
                             width="100"
-                            x="1020"
+                            x="1035"
                             xlink:href="/static/image/map/picto/lock-svgrepo-com.svg"
-                            y="400"
+                            y="385"
                           />
                         </g>
                       </a>

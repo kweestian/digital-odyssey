@@ -72,7 +72,7 @@ export const CreativityCoasts: Region = {
 };
 
 export const TimelessTundra: Region = {
-  title: { textParts: ['TIMESLESS', 'TUNDRA'], coordinates: { x: 1200, y: 390 } },
+  title: { textParts: ['TIMELESS', 'TUNDRA'], coordinates: { x: 1200, y: 390 } },
   regionKey: 'timeless-tundra',
   color: '#c09b45f0',
   filColour: 'black',

@@ -13,7 +13,6 @@ const Login: NextPageWithLayout = () => {
   const { push } = useRouter();
 
   const [password, setPassword] = useState('');
-  const [displayForm, setDisplayForm] = useState(false);
 
   const resetPassword = useCallback(async () => {
     if (password && password.length > 5) {
@@ -43,19 +42,10 @@ const Login: NextPageWithLayout = () => {
 
   return (
     <DefaultLayout>
-      {displayForm ? (
-        <Form title="Update your password" error={error} success={success}>
-          <Input name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
-          <Button text="Submit" loading={loading} onClick={() => resetPassword()} />
-        </Form>
-      ) : (
-        <div>
-          <Button onClick={() => setDisplayForm(true)}>Update Password</Button>
-          <Button as="a" href="/game/rules">
-            Go to Game
-          </Button>
-        </div>
-      )}
+      <Form title="Update your password" error={error} success={success}>
+        <Input name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
+        <Button text="Submit" loading={loading} onClick={() => resetPassword()} />
+      </Form>
     </DefaultLayout>
   );
 };

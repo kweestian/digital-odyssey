@@ -11,6 +11,7 @@
 .carouselMainContainer {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 /* The viewport of the carousel */
@@ -18,6 +19,7 @@
   overflow: hidden;
   position: relative;
   margin: auto;
+  height: 100%;
 }
 
 /* the container for the slides to go in (has the scroll effect) */
@@ -27,6 +29,7 @@
   position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  height: 100%;
 }
 
 .carouselSlides::-webkit-scrollbar {

@@ -1,3 +1,5 @@
+@import '@/styles/variables';
+
 .questionCardContainer {
   display: flex;
   height: 100%;
@@ -84,7 +86,7 @@
   height: 100%;
   width: auto;
 }
-@media screen and (max-height: 810px) {
+@media screen and (max-height: $MobileBreakpoint) {
   .questionImage {
     height: 80%;
     // width: auto;

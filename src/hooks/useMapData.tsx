@@ -39,7 +39,7 @@ const useMapData = () => {
     };
   });
 
-  const bonusCompleted = mapDataWithApiData.filter(({ hasCompletedBonus }) => hasCompletedBonus).length;
+  const bonusCompleted = mapDataWithApiData.filter(({ isComplete }) => isComplete).length;
 
   const mapData =
     bonusCompleted === 5

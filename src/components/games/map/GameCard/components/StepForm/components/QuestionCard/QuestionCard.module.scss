@@ -51,6 +51,7 @@
 
 .questionImageContainer {
   width: 50%;
+  margin-right: 20px;
   img {
     background-image: none !important;
   }
@@ -58,6 +59,7 @@
 
 .choiceContainer {
   display: flex;
+  align-items: flex-start;
 
   &:not(:first-child) {
     margin-top: 20px;
@@ -85,6 +87,8 @@
 .questionImage {
   height: 100%;
   width: auto;
+  max-width: 100%;
+  margin-right: 20px;
 }
 @media screen and (max-height: $MobileBreakpoint) {
   .questionImage {

@@ -45,3 +45,9 @@
   height: 35vh;
   width: 35vw;
 }
+
+@media screen and (max-width: 1100px) {
+  .popinContainer {
+    padding: 20px;
+  }
+}

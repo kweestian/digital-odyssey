@@ -6,7 +6,7 @@ import { GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
 
 import BasicOwl from '@/image/owls/3d/basic-owl.svg';
-import GoldOwl from '@/image/owls/3d/gold-owl.svg';
+import GoldOwl from '@/image/owls/gif/gold-owl.gif';
 
 import styles from './Owls.module.scss';
 

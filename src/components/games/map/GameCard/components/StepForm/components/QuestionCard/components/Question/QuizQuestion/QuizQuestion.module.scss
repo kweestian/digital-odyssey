@@ -1,3 +1,5 @@
+@import '@/styles/variables';
+
 .inputContainer {
   width: 100%;
   text-align: left;
@@ -15,7 +17,7 @@
   display: none;
 }
 
-@media screen and (max-height: 810px) {
+@media screen and (max-height: $MobileBreakpoint) {
   .inputContainer {
     label {
       margin-left: 5px;

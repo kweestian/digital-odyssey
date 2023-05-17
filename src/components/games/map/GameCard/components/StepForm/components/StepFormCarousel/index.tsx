@@ -59,7 +59,7 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
     },
     [setCurrentPageNumber, numberOfPages],
   );
-  const [stepFormState] = useAtom(stepFormAtom);
+  const [stepFormState, setStepFormState] = useAtom(stepFormAtom);
   const [, setInteractionType] = useAtom(interactionAtom);
 
   const { trigger, isMutating } = useUpdateUserExperience();
@@ -71,13 +71,15 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
     setInteractionType('keyLearning');
   }, [stepFormState, questions, trigger, experienceKey, user?.id, setInteractionType]);
 
-  const currentQuestionKey = questions[currentPageNumber].key;
+  const currentQuestion = questions[currentPageNumber];
+
+  const currentQuestionKey = currentQuestion.key;
 
   const currentAnswer = stepFormState[currentQuestionKey];
 
   const isLastQuestion = currentPageNumber === pagesArray.length - 1;
 
-  const isImageQuiz = questions[currentPageNumber].imageLink;
+  const isImageQuiz = currentQuestion.imageLink;
 
   return (
     <div className={styles.carousel}>
@@ -105,7 +107,19 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
               disabled={!currentAnswer || isMutating}
               customStyles={{ width: '80%', minWidth: 150, margin: 'auto' }}
               text="Check Answer"
-              onClick={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}
+              onClick={() => {
+                setStepFormState({
+                  ...stepFormState,
+                  [`${currentQuestion.key}_answer`]: currentQuestion.correctAnswer,
+                });
+                setTimeout(() => {
+                  if (isLastQuestion) {
+                    submit();
+                  } else {
+                    slideTo(currentPageNumber + 1);
+                  }
+                }, 500);
+              }}
             />
           </div>
         </div>

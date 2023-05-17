@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
 import { Button } from '@/components/common';
+import { useAtom } from 'jotai';
+import { stepFormAtom } from '../../../atom';
 import styles from './QuizQuestion.module.scss';
 
 type Props = {
-  isCorrectAnswer: boolean;
   color: string;
   checkedValue?: string;
   choiceValue: string;
@@ -31,32 +32,32 @@ const CheckCircle = ({ checked, color }: { checked: boolean; color: string }) =>
   </svg>
 );
 
-const QuizQuestion = ({
-  isCorrectAnswer,
-  color,
-  checkedValue,
-  choiceValue,
-  onChange,
-  choiceText,
-  questionKey,
-}: Props) => (
-  <>
-    <Button ariaLabel="checkcircle" bare onClick={() => onChange(choiceValue)}>
-      <CheckCircle color={isCorrectAnswer ? color : 'gray'} checked={checkedValue === choiceValue} />
-    </Button>
-    <div className={styles.inputContainer}>
-      <input
-        className={styles.input}
-        name={questionKey}
-        id={`${questionKey}_${choiceValue}`}
-        type="radio"
-        onChange={() => {
-          onChange(choiceValue);
-        }}
-      />
-      <label htmlFor={`${questionKey}_${choiceValue}`}>{choiceText}</label>
-    </div>
-  </>
-);
+const QuizQuestion = ({ color, checkedValue, choiceValue, onChange, choiceText, questionKey }: Props) => {
+  const [stepFormState] = useAtom(stepFormAtom);
+  const isCorrectAnswer = stepFormState[`${questionKey}_answer`] === choiceValue;
+
+  return (
+    <>
+      <Button ariaLabel="checkcircle" bare onClick={() => onChange(choiceValue)}>
+        <CheckCircle
+          color={isCorrectAnswer ? color : 'white'}
+          checked={checkedValue === choiceValue || isCorrectAnswer}
+        />
+      </Button>
+      <div className={styles.inputContainer}>
+        <input
+          className={styles.input}
+          name={questionKey}
+          id={`${questionKey}_${choiceValue}`}
+          type="radio"
+          onChange={() => {
+            onChange(choiceValue);
+          }}
+        />
+        <label htmlFor={`${questionKey}_${choiceValue}`}>{choiceText}</label>
+      </div>
+    </>
+  );
+};
 
 export default QuizQuestion;

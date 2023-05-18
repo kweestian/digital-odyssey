@@ -1353,7 +1353,7 @@ exports[`map page renders cards page unchange 1`] = `
                           </text>
                           <image
                             style="width: 110px; height: auto;"
-                            x="520"
+                            x="535"
                             xlink:href="/static/image/owls/3d/sea-of-sustainability.svg"
                             y="330"
                           />

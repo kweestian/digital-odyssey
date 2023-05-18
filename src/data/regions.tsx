@@ -18,7 +18,7 @@ export const SeaOfSustainability: Region = {
     <rect id="sea-of-sustainability" x={595} y={250} width="150" height="165" style={{ fill: 'transparent' }} />
   ),
   regionOwl: {
-    x: '520',
+    x: '535',
     y: '330',
   },
   experiences: seaOfSustainabilityExperiences,

@@ -1,4 +1,3 @@
-import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
 
 type Props = {
@@ -14,19 +13,14 @@ const ExperiencePictos = ({ experiences, regionKey }: Props) => {
       {experiences.map((experience) => (
         <image
           onClick={() => {
-            // setItems([
-            //   { key: 'regionKey', value: regionKey },
-            //   { key: 'experienceKey', value: experience.key },
-            // ])
             setUrlParams({ experienceKey: experience.key, regionKey });
-            // setRegionKey(regionKey);
           }}
           key={experience.name}
-          x={experience.coordinates.x}
-          y={experience.coordinates.y}
+          x={experience.isCompleted ? experience.coordinates.x - 5 : experience.coordinates.x}
+          y={experience.isCompleted ? experience.coordinates.y - 5 : experience.coordinates.y}
           style={{ cursor: 'pointer' }}
-          width="50"
-          height="50"
+          width={experience.isCompleted ? '75' : '50'}
+          height={experience.isCompleted ? '75' : '50'}
           xlinkHref={
             experience.isCompleted
               ? `/static/image/owls/3d/${regionKey}.svg`

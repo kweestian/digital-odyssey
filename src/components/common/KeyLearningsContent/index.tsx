@@ -25,12 +25,12 @@ const KeyLearningsContent = ({ cardUrl, additionalRessources, content, blurUrl }
     <div className={styles.contentContainer}>
       <h3 className={styles.keyLearningTitle}>KEY LEARNINGS : </h3>
       <RenderHtml customStyles={{}} htmlContent={content} />
-      <h4 className={styles.additionalResourcesTitle}>Additional Resources :</h4>
+      <h4 className={styles.additionalResourcesTitle}>Additional Resource :</h4>
       <div className={styles.additionalResourcesContainer}>
         {additionalRessources?.map(({ text, link }) => (
           <>
             <RenderHtml customStyles={{}} htmlContent={text} />
-            <Button external as="a" href={link} skin="ghost" text="Read" />
+            <Button customStyles={{ minWidth: 'fit-content' }} external as="a" href={link} skin="ghost" text="Read" />
           </>
         ))}
       </div>

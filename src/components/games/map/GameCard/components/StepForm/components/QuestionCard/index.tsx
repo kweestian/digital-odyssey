@@ -47,12 +47,15 @@ const QuestionCard = ({
           />
         </div>
       )}
-      <div className={styles.questionContainer}>
+      <div
+        className={styles.questionContainer}
+        style={interactionType === 'boolean' ? { justifyContent: 'center', marginTop: 0 } : {}}
+      >
         <div>
           <h3>{title}</h3>
         </div>
         <div className={styles.questionContent}>
-          <div>{text}</div>
+          {text && <div>{text}</div>}
           <div className={styles.choicesContainer}>
             {choices.map(({ value: choiceValue, text: choiceText }) => (
               <div className={styles.choiceContainer} key={`${key}_${choiceValue}`}>

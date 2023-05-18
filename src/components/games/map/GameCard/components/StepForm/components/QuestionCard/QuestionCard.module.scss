@@ -3,11 +3,11 @@
 .questionCardContainer {
   display: flex;
   height: 100%;
-  width: 80%;
+  width: 100%;
   h3 {
     font-family: monarch;
     font-weight: 100;
-    font-size: 38px;
+    font-size: 2.1rem;
     text-transform: uppercase;
   }
 }
@@ -18,6 +18,7 @@
   align-items: center;
   // justify-content: center;
   width: 50%;
+  padding-top: 20px;
 }
 
 .imagePlaceholder {
@@ -30,6 +31,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: poppins;
 
   // height: 60%;
   margin-top: 50px;
@@ -90,7 +92,22 @@
   max-width: 100%;
   margin-right: 20px;
 }
+@media screen and (max-height: $TabletBreakpoint) {
+  .questionContent {
+    margin-top: 5px;
+
+    > div {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 @media screen and (max-height: $MobileBreakpoint) {
+  .questionCardContainer {
+    h3 {
+      font-size: 1.6rem;
+    }
+  }
   .questionImage {
     height: 80%;
     // width: auto;

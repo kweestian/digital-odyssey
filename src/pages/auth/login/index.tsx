@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
+import { useSession } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/router';
 
 import { DefaultLayout, Input, Button, Loader } from '@/components';
@@ -15,18 +15,19 @@ const Login: NextPageWithLayout = () => {
   const [success, setSuccess] = useState('');
   const [email, setEmail] = useState('');
 
-  const supabase = useSupabaseClient();
   const session = useSession();
   const { push } = useRouter();
 
-  supabase.auth.onAuthStateChange(async (evt) => {
-    if (evt === 'SIGNED_IN') {
-      push('/auth/update-password');
-    }
-  });
+  // supabase.auth.onAuthStateChange(async (evt) => {
+  //   if (evt === 'SIGNED_IN') {
+  //     console.log(session?.user.created_at);
+  //     push('/auth/update-password');
+  //   }
+  // });
 
   useEffect(() => {
     if (session) {
+      // if (session)
       push('/game/rules');
     }
   }, [session, push]);

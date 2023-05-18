@@ -55,7 +55,7 @@
   // position: absolute;
   // bottom: 0;
   margin-top: -57px;
-  width: 80%;
+  width: 100%;
 
   .column {
     width: 50%;
@@ -92,9 +92,9 @@
     min-height: 0;
   }
 
-  .carouselNavigationContainer {
-    margin-top: 0;
-  }
+  // .carouselNavigationContainer {
+  //   margin-top: 0;
+  // }
 }
 @media (max-width: 550px) {
   .carousel-slide {

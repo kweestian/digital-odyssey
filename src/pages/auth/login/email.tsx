@@ -1,6 +1,6 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import { useSession, useSessionContext, useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/router';
 
 import { DefaultLayout, Input, Button } from '@/components';
@@ -17,7 +17,17 @@ const Login: NextPageWithLayout = () => {
   const [password, setPassword] = useState('');
 
   const supabase = useSupabaseClient();
+  const session = useSessionContext();
+  const user = useUser();
   const { push } = useRouter();
+
+  useEffect(() => {
+    if (session && user) {
+      // if (session)
+      console.log(session);
+      // push('/game/rules');
+    }
+  }, [session, push, user]);
 
   const signInWithEmail = useCallback(async () => {
     if (email && password) {

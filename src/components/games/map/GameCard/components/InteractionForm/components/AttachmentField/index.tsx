@@ -66,7 +66,7 @@ const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <div {...(hasAnImage && getRootProps())} className={styles.attachmentInputContainer}>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <input id="ignore-click" {...getInputProps()} accept="image/png" />
+          <input id="ignore-click" {...getInputProps()} />
           {hasAnImage ? completedText : text}
         </div>
         <div className={styles.attachmentIconContainer}>

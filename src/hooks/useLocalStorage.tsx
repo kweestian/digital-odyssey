@@ -1,31 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
-// eslint-disable-next-line comma-spacing
-const useLocalStorage = <S,>(
-  key: string,
-  initialState?: S | (() => S),
-): [S, React.Dispatch<React.SetStateAction<S>>] => {
-  const parse = (value: string) => {
+function useLocalStorage<T>(key: string, initialValue?: T): [T | undefined, (value?: T | ((val?: T) => T)) => void] {
+  const [storedValue, setStoredValue] = useState<T | undefined>();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (hasMounted) {
+      try {
+        const item = window.localStorage.getItem(key);
+        if (item) {
+          setStoredValue(JSON.parse(item));
+        } else if (initialValue !== undefined) {
+          setStoredValue(initialValue);
+        }
+      } catch (error) {
+        console.log(error);
+        if (initialValue !== undefined) {
+          setStoredValue(initialValue);
+        }
+      }
+    }
+  }, [key, initialValue, hasMounted]);
+
+  const setValue = (value?: T | ((val?: T) => T)) => {
     try {
-      return JSON.parse(value);
-    } catch {
-      return value;
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+      console.log(error);
     }
   };
-  const [state, setState] = useState<S>(initialState as S);
 
-  useEffect(() => {
-    const item = localStorage.getItem(key);
-    if (item) setState(parse(item));
-  }, [key]);
-
-  useEffect(() => {
-    if (state !== initialState) {
-      localStorage.setItem(key, JSON.stringify(state));
-    }
-  }, [state, initialState, key]);
-
-  return [state, setState];
-};
+  return [storedValue, setValue];
+}
 
 export default useLocalStorage;

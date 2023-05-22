@@ -10,6 +10,7 @@ type Props = {
   choiceText: string;
   questionKey: string;
   interactionType: 'boolean' | 'quiz';
+  correctAnswer?: string;
 };
 
 const Question = ({ interactionType, questionKey, ...passProps }: Props) => {

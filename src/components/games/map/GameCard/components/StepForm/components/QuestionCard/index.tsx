@@ -13,12 +13,14 @@ type Props = {
   question: Question;
   interactionType: 'quiz' | 'boolean';
   slide: () => void;
+  isCurrentSlide: boolean;
 };
 
 const QuestionCard = ({
   question: { imageLink, text, title, choices, key, correctAnswer },
   interactionType,
   slide,
+  isCurrentSlide,
 }: Props) => {
   const [stepFormState, setStepFormState] = useAtom(stepFormAtom);
 
@@ -32,19 +34,28 @@ const QuestionCard = ({
 
   const isCorrectAnwser = checkedValued === correctAnswer;
 
+  const isVideo = imageLink?.endsWith('.mp4');
+
   return (
     <div className={styles.questionCardContainer} style={{ justifyContent: imageLink ? 'space-between' : 'center' }}>
       {imageLink && (
         <div className={styles.questionImageContainer}>
-          <Image
-            placeholder="blur"
-            blurDataURL={blurUrl}
-            className={styles.questionImage}
-            alt="imageLink"
-            width={200}
-            height={355}
-            src={`/static/image/map/quiz/${imageLink}`}
-          />
+          {isVideo && isCurrentSlide ? (
+            // eslint-disable-next-line jsx-a11y/media-has-caption
+            <video muted autoPlay loop>
+              <source src={`/static/video/${imageLink}`} type="video/mp4" />
+            </video>
+          ) : (
+            <Image
+              placeholder="blur"
+              blurDataURL={blurUrl}
+              className={styles.questionImage}
+              alt="imageLink"
+              width={200}
+              height={355}
+              src={`/static/image/map/quiz/${imageLink}`}
+            />
+          )}
         </div>
       )}
       <div
@@ -54,7 +65,7 @@ const QuestionCard = ({
         <div>
           <h3>{title}</h3>
         </div>
-        <div className={styles.questionContent}>
+        <div className={styles.questionContent} style={interactionType === 'boolean' ? { marginTop: 0 } : {}}>
           {text && <div>{text}</div>}
           <div className={styles.choicesContainer}>
             {choices.map(({ value: choiceValue, text: choiceText }) => (
@@ -63,17 +74,18 @@ const QuestionCard = ({
                   choiceText={choiceText}
                   choiceValue={choiceValue}
                   color={color}
+                  correctAnswer={correctAnswer}
                   interactionType={interactionType}
                   isCorrectAnswer={isCorrectAnwser}
                   questionKey={key}
                   checkedValue={checkedValued}
                   onChange={(newValue) => {
+                    setStepFormState({ ...stepFormState, [key]: newValue });
                     if (interactionType === 'boolean' && newValue === correctAnswer) {
                       setTimeout(() => {
                         slide();
                       }, 500);
                     }
-                    setStepFormState({ ...stepFormState, [key]: newValue });
                   }}
                 />
               </div>

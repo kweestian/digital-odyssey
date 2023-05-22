@@ -139,8 +139,7 @@ const GameCard = ({
       >
         {interactionType === 'keyLearning' && regionKey ? (
           <KeyLearningsContent
-            blurUrl={blurUrls[regionKey]}
-            cardUrl={`/static/image/cards/${key}.webp`}
+            videoUrl={`/static/video/cards/${key}.mp4`}
             additionalRessources={keyLearning.additionalRessources}
             content={keyLearning.text}
           />

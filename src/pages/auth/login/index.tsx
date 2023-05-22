@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { DefaultLayout, Input, Button, Loader } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 import { MagicLinkRequestBody, ServerResponse } from '@/types/server';
+import { useOnEnterCallback } from '@/hooks';
 
 import styles from './Login.module.scss';
 
@@ -66,6 +67,8 @@ const Login: NextPageWithLayout = () => {
       setError('Email is required');
     }
   }, [setLoading, setError, email, setSuccess]);
+
+  useOnEnterCallback(sendMagicLink);
 
   if (!session) {
     return (

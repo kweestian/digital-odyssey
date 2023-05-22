@@ -765,16 +765,16 @@ footprints of a website.`,
         },
       ],
     },
-    bonus: {
-      description: `Just as AR can power the future of virtual try-on, it can also create
-      dynamic games – like Balenciaga’s Regenerative Agriculture
-      Experience, launched for Earth Day to raise awareness of new
-      investments to measure biodiversity. Take a screenshot of you
-      
-      navigating the Balenciaga AR farm, and upload it here!`,
-      type: 'attachment',
-      label: 'Bonus Experience',
-    },
+    // bonus: {
+    //   description: `Just as AR can power the future of virtual try-on, it can also create
+    //   dynamic games – like Balenciaga’s Regenerative Agriculture
+    //   Experience, launched for Earth Day to raise awareness of new
+    //   investments to measure biodiversity. Take a screenshot of you
+
+    //   navigating the Balenciaga AR farm, and upload it here!`,
+    //   type: 'attachment',
+    //   label: 'Bonus Experience',
+    // },
     keyLearning: {
       text: `While keeping an awareness of digital’s environmental
       impact in mind, we can endeavor to harness the power of
@@ -790,7 +790,7 @@ footprints of a website.`,
       harmony with nature – and much more!`,
       additionalRessources: [
         {
-          text: '<i>The intro guide to digital eco-design</i>’',
+          text: '<i>The intro guide to digital eco-design</i>',
           link: 'https://eco-conception.designersethiques.org/guide/en/content/0-introduction.html',
         },
       ],
@@ -920,7 +920,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'one',
           correctAnswer: 'true',
-          imageLink: 'brand_experience_question1.png',
+          imageLink: 'brand_experience_question1.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -930,7 +930,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'two',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question2.jpg',
+          imageLink: 'brand_experience_question2.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -940,7 +940,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'three',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question3.png',
+          imageLink: 'brand_experience_question3.jpg',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -950,7 +950,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'four',
           correctAnswer: 'true',
-          imageLink: 'brand_experience_question4.png',
+          imageLink: 'brand_experience_question4.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -960,7 +960,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'five',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question5.png',
+          imageLink: 'brand_experience_question5.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -970,7 +970,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'six',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question6.png',
+          imageLink: 'brand_experience_question6.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -980,7 +980,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'seven',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question7.png',
+          imageLink: 'brand_experience_question7.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -990,7 +990,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'eight',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question8.png',
+          imageLink: 'brand_experience_question8.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -1000,7 +1000,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'nine',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question9.png',
+          imageLink: 'brand_experience_question9.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },

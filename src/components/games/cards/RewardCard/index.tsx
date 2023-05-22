@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useRef, useState } from 'react';
 import classNames from 'classnames';
 
 import PopinCard from '@/components/common/PopinCard';
@@ -9,38 +8,35 @@ import styles from './RewardCard.module.scss';
 interface RewardCardProps {
   content: string;
   isActive?: boolean;
-  cardUrl: string;
   additionalRessources?: AdditionalResources[];
-  blurUrl: string;
+  videoUrl: string;
   // blurUrl;
 }
 
-const RewardCard = ({ content, isActive, cardUrl, additionalRessources, blurUrl }: RewardCardProps) => {
+const RewardCard = ({ content, isActive, additionalRessources, videoUrl }: RewardCardProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <>
       {isOpen && isActive && (
         <PopinCard onClick={() => setIsOpen(false)}>
-          <KeyLearningsContent
-            blurUrl={blurUrl}
-            cardUrl={cardUrl}
-            content={content}
-            additionalRessources={additionalRessources}
-          />
+          <KeyLearningsContent videoUrl={videoUrl} content={content} additionalRessources={additionalRessources} />
         </PopinCard>
       )}
       <div className={classNames(styles.container, { [styles.isNotActive]: !isActive })}>
-        <button onClick={() => setIsOpen(true)} type="button">
-          <Image
-            placeholder="blur"
-            blurDataURL={blurUrl}
-            src={cardUrl}
-            alt={content}
-            className={styles.cardImg}
-            width={96.03}
-            height={170.28}
-          />
+        <button onClick={() => isActive && setIsOpen(true)} type="button">
+          <div
+            className={styles.videoContainer}
+            onMouseEnter={() => isActive && videoRef.current?.play()}
+            onMouseLeave={() => isActive && videoRef.current?.pause()}
+          >
+            {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+            <video ref={videoRef} muted controls={false} width={96.03} height="auto">
+              <source src={videoUrl} type="video/mp4" />
+            </video>
+          </div>
         </button>
       </div>
     </>

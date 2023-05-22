@@ -9,7 +9,8 @@ const useMapData = () => {
     const allExperiences = region.experiences.map(({ key }) => key);
     const completedExperiences =
       userExperienceData?.data?.filter(
-        ({ experience_key: experienceKey }) => experienceKey && allExperiences.includes(experienceKey),
+        ({ experience_key: experienceKey, answer }) =>
+          answer && experienceKey && allExperiences.includes(experienceKey),
       ) || [];
     const isRegionCompleted = completedExperiences.length === 3;
 
@@ -39,10 +40,12 @@ const useMapData = () => {
     };
   });
 
-  const bonusCompleted = mapDataWithApiData.filter(({ isComplete }) => isComplete).length;
+  const regionFullyComplete = mapDataWithApiData.filter(
+    ({ isComplete, hasCompletedBonus }) => isComplete && hasCompletedBonus,
+  ).length;
 
   const mapData =
-    bonusCompleted === 5
+    regionFullyComplete === 5
       ? mapDataWithApiData.map((region) => {
           if (region.regionKey === 'timeless-tundra') {
             return { ...region, available: true, isComplete: true };

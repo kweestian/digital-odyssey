@@ -1,7 +1,8 @@
 import { Button, DefaultLayout, Form, Input } from '@/components';
+import { useOnEnterCallback } from '@/hooks';
 import { NextPageWithLayout } from '@/types/common';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const Login: NextPageWithLayout = () => {
   const supabase = useSupabaseClient();
@@ -37,6 +38,8 @@ const Login: NextPageWithLayout = () => {
       setError('Email is required');
     }
   }, [setLoading, setError, email, supabase.auth]);
+
+  useOnEnterCallback(sendPasswordLink);
 
   return (
     <DefaultLayout>

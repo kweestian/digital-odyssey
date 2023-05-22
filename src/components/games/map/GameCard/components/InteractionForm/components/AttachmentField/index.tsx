@@ -5,6 +5,8 @@ import { useAtom } from 'jotai';
 
 import { useGetPublicUrl } from '@/hooks';
 import Check from '@/image/submit-check.svg';
+import CloseIcon from '@/image/map/picto/PICTO_CROIX.svg';
+
 import Eye from '@/image/map/picto/PICTO_EYE.svg';
 
 import { Loader, Button } from '@/components/common';
@@ -19,7 +21,7 @@ type Props = {
   isBonus?: boolean;
 };
 
-const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
+const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) => {
   const [paths, setPaths] = useState<Array<string>>([]);
   const [zoomImage, setZoomImage] = useState(false);
   const { data, isLoading: loadingImageUrl } = useGetPublicUrl(value);
@@ -57,7 +59,7 @@ const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
 
   const hasAnImage = currentImage && currentImage.length > 0;
 
-  const completedText = 'Completed Experience';
+  const completedText = isBonus ? 'Completed Bonus' : 'Completed Experience';
 
   return (
     <>
@@ -95,28 +97,32 @@ const AttachmentField = ({ onDrop, value, label, isMutating }: Props) => {
         {isLoading ? (
           <Loader />
         ) : (
-          <Button
-            ariaLabel="image zoom in"
-            bare
-            onClick={() => setZoomImage(!zoomImage)}
-            customStyles={{ width: '100%', height: '100%' }}
-          >
-            {currentImage
-              .filter((path) => path !== '')
-              .map((path) => (
-                <Image
-                  key={path}
-                  src={path}
-                  alt={path}
-                  width={50}
-                  height={50}
-                  unoptimized
-                  placeholder="blur"
-                  // eslint-disable-next-line max-len
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
-                />
-              ))}
-          </Button>
+          <>
+            <Image className={styles.closeZoomIn} width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
+
+            <Button
+              ariaLabel="image zoom in"
+              bare
+              onClick={() => setZoomImage(!zoomImage)}
+              customStyles={{ width: '100%', height: '100%' }}
+            >
+              {currentImage
+                .filter((path) => path !== '')
+                .map((path) => (
+                  <Image
+                    key={path}
+                    src={path}
+                    alt={path}
+                    width={50}
+                    height={50}
+                    unoptimized
+                    placeholder="blur"
+                    // eslint-disable-next-line max-len
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
+                  />
+                ))}
+            </Button>
+          </>
         )}
       </div>
     </>

@@ -89,6 +89,7 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
             {questions.map((item, key) => (
               <div ref={carouselSlide} className={styles.carouselSlide} key={item.key} id={`slide_${key}`}>
                 <QuestionCard
+                  isCurrentSlide={currentPageNumber === key}
                   question={item}
                   interactionType={interactionType}
                   slide={() => (isLastQuestion ? submit() : slideTo(currentPageNumber + 1))}

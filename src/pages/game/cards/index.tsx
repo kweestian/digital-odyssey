@@ -25,8 +25,7 @@ const Cards: NextPage<Props> = () => {
                   additionalRessources={keyLearning.additionalRessources}
                   content={keyLearning.text}
                   isActive={isCompleted}
-                  cardUrl={`/static/image/cards/${key}.webp`}
-                  blurUrl={blurUrls[regionKey]}
+                  videoUrl={`/static/video/cards/${key}.mp4`}
                   key={key}
                 />
               ))}
@@ -41,8 +40,7 @@ const Cards: NextPage<Props> = () => {
                   additionalRessources={keyLearning.additionalRessources}
                   content={keyLearning.text}
                   isActive={isCompleted}
-                  cardUrl={`/static/image/cards/${key}.webp`}
-                  blurUrl={blurUrls[regionKey]}
+                  videoUrl={`/static/video/cards/${key}.mp4`}
                   key={key}
                 />
               ))}

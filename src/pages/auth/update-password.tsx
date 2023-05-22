@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import { Button, DefaultLayout, Form, Input } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
+import { useOnEnterCallback } from '@/hooks';
 
 const Login: NextPageWithLayout = () => {
   const supabase = useSupabaseClient();
@@ -43,6 +44,8 @@ const Login: NextPageWithLayout = () => {
       setError('Password must be at least 6 characters');
     }
   }, [setLoading, setError, password, supabase.auth, push]);
+
+  useOnEnterCallback(resetPassword);
 
   if (!user) {
     return <Button text="Log In" as="a" href="/auth/login" />;

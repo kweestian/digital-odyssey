@@ -20,7 +20,7 @@ import PopupVideo from '../../PopupVIdeo/PopupVideo';
 import styles from './GameLayout.module.scss';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [hasLogguedIn, setItem] = useLocalStorage('HAS_LOGGED_IN');
+  const [hasLogguedIn, setItem] = useLocalStorage('HAS_LOGGED_IN', false);
   // const [hasLogguedIn, sethasLogguedIn] = useState(false);
   const [videoPopinOpen, setVideoPopinOpen] = useAtom(popinAtom);
 
@@ -50,19 +50,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   }, [regionKey, menuItems, asPath, regionTitle]);
 
   // useEffect(() => {
-  //   if (getItem('HAS_LOGGED_IN') === 'true') {
+  //   // console.log(hasLogguedIn);
+  //   if (hasLogguedIn) {
   //     setVideoPopinOpen(false);
   //   } else {
   //     setVideoPopinOpen(true);
   //   }
-  // }, [setVideoPopinOpen, getItem]);
+  // }, [setVideoPopinOpen, hasLogguedIn]);
 
   const handleClick = () => {
     setVideoPopinOpen(false);
-    setItem('true');
+    setItem(true);
   };
 
-  const showPoppin = (hasLogguedIn && hasLogguedIn !== 'true') || videoPopinOpen;
+  const showPoppin = hasLogguedIn === false || videoPopinOpen;
 
   return (
     <main className={styles.container}>

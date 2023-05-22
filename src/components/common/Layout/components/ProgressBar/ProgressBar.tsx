@@ -6,7 +6,9 @@ import styles from './ProgressBar.module.scss';
 const ProgressBar = () => {
   const { data } = useMapData();
 
-  const completedRegions = data.filter(({ isComplete }) => isComplete).length;
+  const completedRegions = data.filter(
+    ({ isComplete, regionKey }) => isComplete && regionKey !== 'timeless-tundra',
+  ).length;
 
   const percentage = completedRegions ? completedRegions / 5 : 0;
 

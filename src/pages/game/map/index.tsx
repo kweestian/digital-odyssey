@@ -123,7 +123,7 @@ const MapPage: NextPage = () => {
           maxPositionY={500}
           ref={transformComponentRef}
           maxScale={4}
-          minScale={1.2}
+          minScale={initialScale}
           onZoom={(evt) => setZoom(evt.state.scale)}
           onPanning={() => setIsPanning(true)}
           onPanningStop={() =>

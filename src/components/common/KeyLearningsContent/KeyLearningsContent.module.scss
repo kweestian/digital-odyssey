@@ -60,9 +60,15 @@
   }
 }
 
-.cardImg {
-  width: auto;
+.videoContainer {
+  width: 40%;
   height: 100%;
+
+  video {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-height: $TabletBreakpoint) {

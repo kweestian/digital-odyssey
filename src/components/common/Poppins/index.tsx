@@ -1,1 +1,1 @@
-export { default as AdditionalResourcesPopin } from './AdditionalResourcesPopin';
+export { default as RegionalResourcesPopin } from './RegionalResourcesPopin';

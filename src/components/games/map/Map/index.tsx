@@ -173,7 +173,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                       x={regionOwl.x}
                       onClick={(evt) => {
                         // so it doesnt trigger zoom
-                        if (region.isComplete) {
+                        if (region.isComplete && regionKey !== 'timeless-tundra') {
                           evt.stopPropagation();
                           dispatch({
                             type: 'SET_ADDITIONAL_RESOURCES_POPIN',
@@ -181,13 +181,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                               regionKey,
                               title: region.title.textParts.join(' '),
                               description: 'Ceci est une description',
-                              additionalResources: region.experiences
-                                .filter(({ keyLearning }) => keyLearning?.additionalRessources !== undefined)
-                                .map(({ keyLearning }) => [
-                                  // ok since we filter
-                                  ...(keyLearning.additionalRessources as AdditionalResources[]),
-                                ])
-                                .flat(),
+                              regionalResources: region.regionalResources,
                             },
                           });
                         } else {

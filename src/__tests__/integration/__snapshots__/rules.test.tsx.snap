@@ -186,7 +186,7 @@ exports[`rules page renders rules page unchanged 1`] = `
           class="container"
         >
           <div
-            class="firstCard"
+            class="row"
           >
             <div
               class="container centered"
@@ -225,22 +225,18 @@ exports[`rules page renders rules page unchanged 1`] = `
                 />
               </div>
             </div>
-          </div>
-          <img
-            alt="Bottom Direction Line"
-            class="firstArrow"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
-          <div
-            class="secondCard"
-          >
+            <img
+              alt="Bottom Direction Line"
+              class="firstArrow"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
             <div
               class="container notCentered"
             >
@@ -279,20 +275,34 @@ exports[`rules page renders rules page unchanged 1`] = `
               </div>
             </div>
           </div>
-          <img
-            alt="Bottom Direction Line"
-            class="secondArrow"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
           <div
-            class="thirdCard"
+            class="row"
+          >
+            <div
+              class="emptyDescriptiveCard"
+            />
+            <div
+              class="emptyArrowSpace"
+            />
+            <div
+              class="emptyDescriptiveCard"
+            >
+              <img
+                alt="Bottom Direction Line"
+                class="secondArrow"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </div>
+          </div>
+          <div
+            class="row"
           >
             <div
               class="container notCentered"
@@ -331,22 +341,18 @@ exports[`rules page renders rules page unchanged 1`] = `
                 />
               </div>
             </div>
-          </div>
-          <img
-            alt="Bottom Direction Line"
-            class="thirdArrow"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
-          <div
-            class="fourthCard"
-          >
+            <img
+              alt="Bottom Direction Line"
+              class="thirdArrow"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
             <div
               class="container centered"
             >

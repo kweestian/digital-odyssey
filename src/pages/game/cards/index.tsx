@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 import { RewardCard, GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
-import { blurUrls } from '@/data/cards';
 
 import styles from './Cards.module.scss';
 

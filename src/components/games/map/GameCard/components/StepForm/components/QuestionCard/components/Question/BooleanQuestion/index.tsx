@@ -14,8 +14,6 @@ const QuizQuestion = ({ color, checkedValue, choiceValue, onChange, choiceText, 
   const isCurrentAnswer = checkedValue === choiceValue;
   const answerColor = checkedValue === correctAnswer ? color : 'gray';
 
-  console.log(checkedValue, choiceValue, choiceText, correctAnswer);
-
   return (
     <Button
       skin="ghost"

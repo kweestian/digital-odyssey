@@ -32,7 +32,7 @@ const Owls: NextPage<Props> = () => {
                     width={219}
                     height={130}
                     alt={regionKey}
-                    style={{ height: '130px', width: '219px' }}
+                    // style={{ height: '130px', width: '219px' }}
                   />
                 );
               }

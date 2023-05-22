@@ -3,8 +3,8 @@ import { createContext, useReducer, useContext, Dispatch, useMemo } from 'react'
 // Define the GlobalState type
 export interface GlobalState {
   experience?: Experience;
-  additionalResourcesPopinState?: {
-    additionalResources: AdditionalResources[];
+  regionalResourcesPopinState?: {
+    regionalResources: RegionalResource[];
     title: string;
     description: string;
     regionKey: RegionKey;
@@ -18,7 +18,7 @@ type Action =
   | { type: 'CLOSE_EXPERIENCE' }
   | {
       type: 'SET_ADDITIONAL_RESOURCES_POPIN';
-      payload: { additionalResources: AdditionalResources[]; title: string; description: string; regionKey: RegionKey };
+      payload: { regionalResources: RegionalResource[]; title: string; description: string; regionKey: RegionKey };
     }
   | { type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' }
   | { type: 'SET_ERROR'; payload: string }
@@ -37,10 +37,10 @@ const themeReducer = (state: GlobalState, action: Action): GlobalState => {
       return { ...state, experience: undefined };
     }
     case 'SET_ADDITIONAL_RESOURCES_POPIN': {
-      return { ...state, additionalResourcesPopinState: action.payload };
+      return { ...state, regionalResourcesPopinState: action.payload };
     }
     case 'CLOSE_ADDITONAL_RESOURCES_POPIN': {
-      return { ...state, additionalResourcesPopinState: undefined };
+      return { ...state, regionalResourcesPopinState: undefined };
     }
     case 'SET_ERROR': {
       return { ...state, errorMessage: action.payload };

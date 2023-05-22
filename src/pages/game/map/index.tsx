@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 
-import { AdditionalResourcesPopin, GameCard, GameLayout, Map } from '@/components';
+import { RegionalResourcesPopin, GameCard, GameLayout, Map } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
 import { useGlobalState } from '@/contexts/global';
 import { useMapData, useUrlParams } from '@/hooks';
@@ -50,7 +50,7 @@ const MapPage: NextPage = () => {
 
   const router = useRouter();
   const {
-    state: { additionalResourcesPopinState },
+    state: { regionalResourcesPopinState },
     dispatch,
   } = useGlobalState();
 
@@ -108,11 +108,10 @@ const MapPage: NextPage = () => {
           }}
         />
       )}
-      {additionalResourcesPopinState && (
-        <AdditionalResourcesPopin
-          regionKey={additionalResourcesPopinState.regionKey}
-          title={additionalResourcesPopinState.title}
-          additionalResources={additionalResourcesPopinState.additionalResources}
+      {regionalResourcesPopinState && (
+        <RegionalResourcesPopin
+          regionKey={regionalResourcesPopinState.regionKey}
+          regionalResources={regionalResourcesPopinState.regionalResources}
           onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
         />
       )}

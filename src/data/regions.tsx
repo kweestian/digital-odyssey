@@ -23,6 +23,67 @@ export const SeaOfSustainability: Region = {
   },
   experiences: seaOfSustainabilityExperiences,
   available: true,
+  regionalResources: [
+    {
+      source: 'Book',
+      resources: [
+        {
+          text: '‘Doughnut Economics’',
+          link: '',
+          author: 'Kate Raworth',
+          description:
+            'A great book to get a new model of what sustainability is, through a visual framework explaining upper - and lower - limits to development.',
+        },
+        {
+          text: '‘To save everything, click here’',
+          link: '',
+          author: 'Harvard researcher’s Evgeny Morozov',
+          description: 'On the risk of thinking uniquely through the prism of problems and tech solutions.',
+        },
+      ],
+    },
+    {
+      source: 'Podcast',
+      resources: [
+        {
+          text: '‘Degrowth: Slow is the New Cool’',
+          link: 'https://www.youtube.com/watch?v=DHpTNtRCk5U',
+          author: 'Timothée Parrique',
+          description:
+            'An interview with a leading expert on the economy of degrowth, and a researcher at the School of Economics and Management of Lund University in Sweden. How can this idea of ‘Degrowth: Slow is the New Cool’ apply to Kering?',
+        },
+        {
+          text: '‘How Future Thinking Can Drive Sustainability’ from Scandinavian Mind',
+          link: 'https://scandinavianmind.com/podcast/how-future-thinking-can-help-drive-sustainability-with-charlotte-sundaker',
+          author: 'Scandinavian Mind',
+          description:
+            'A thought-provoking interview with Charlotte Sundåker, CEO and co-founder of Planethon, a future and transformation agency.',
+        },
+      ],
+    },
+    {
+      source: 'Article',
+      resources: [
+        {
+          text: '‘Expanding Digital Sufficiency’',
+          link: 'https://theshiftproject.org/en/article/implementing-digital-sufficiency/',
+          author: 'The Shift Project',
+          description: 'A report diving into the implementation of digital sufficiency.',
+        },
+      ],
+    },
+    {
+      source: 'Video',
+      resources: [
+        {
+          text: "‘The future of fashion: Sustainable brands and ‘circular’ business models'",
+          link: 'https://www.youtube.com/watch?v=pRf0X3xETCc',
+          author: 'McKinsey',
+          description: '',
+        },
+      ],
+    },
+  ],
 };
 
 export const PlayfulPlains: Region = {
@@ -38,6 +99,61 @@ export const PlayfulPlains: Region = {
   },
   experiences: playfulPlainExperiences,
   available: true,
+  regionalResources: [
+    {
+      source: 'Podcast',
+      resources: [
+        {
+          text: '‘Why Phygital is the Future of Fashion’',
+          link: 'https://scandinavianmind.com/podcast/why-phygital-is-the-future-of-fashion',
+          author: 'Scandinavian Mind',
+          description: '',
+        },
+      ],
+    },
+    {
+      source: 'Article',
+      resources: [
+        {
+          text: '‘Product returns are wasteful for companies and the planet’ ',
+          link: 'https://www.fastcompany.com/90756025/product-returns-are-wasteful-for-companies-and-the-planet-heres-how-to-change-that',
+          author: 'Fast Company',
+          description: 'Detailing the huge financial and environmental stakes of product returns for brands today.',
+        },
+        {
+          text: '‘Augmented reality is the future of online shopping’ ',
+          link: 'https://time.com/6138147/augmented-reality-shopping/',
+          author: 'TIME Magazine',
+          description: '',
+        },
+        {
+          text: '‘How Luxury is Using Augmented Reality’ the Business of Fashion',
+          link: '',
+          author: 'Business of Fashion',
+          description: 'A great up-to-date read on the space today.',
+        },
+      ],
+    },
+    {
+      source: 'Video',
+      resources: [
+        {
+          text: '‘Will You Be Wearing Digital Fashion in the Near Future?’',
+          link: 'https://www.youtube.com/watch?v=44p44FnOKE8',
+          author: 'i-D Magazine',
+          description:
+            'A thought-provoking quick video from i-D Magazine on the use cases and potential future of digital fashion.',
+        },
+        {
+          text: '‘Authentic Branding for a Global Audience: Angela Ahrendts’',
+          link: 'https://www.youtube.com/watch?v=krQG2Hceov4',
+          author: 'Future of Storytelling',
+          description:
+            'At the first major pivot of luxury into digital in the late 2000s, then Burberry CEO Angela Ahrendts spoke about the brand’s innovations across digital immersive experiences. Her words remain equally relevant now as luxury enters an even more evolved, more immersive era of digital.',
+        },
+      ],
+    },
+  ],
 };
 
 export const LoyaltyLagoon: Region = {
@@ -54,6 +170,60 @@ export const LoyaltyLagoon: Region = {
   },
   experiences: loyaltyLagoonExperiences,
   available: true,
+  regionalResources: [
+    {
+      source: 'Podcast',
+      resources: [
+        {
+          text: '‘The Power of Passion Economy’',
+          link: 'https://scandinavianmind.com/podcast/the-power-of-passion-economy-with-gustaf-lundberg-toresson',
+          author: 'Scandinavian Mind',
+          description: 'An eye-opening dive into the next evolution of what we currently call the ‘creator economy’.',
+        },
+      ],
+    },
+    {
+      source: 'Article',
+      resources: [
+        {
+          text: '‘web3 beyond the hype’',
+          link: 'https://www.mckinsey.com/industries/financial-services/our-insights/web3-beyond-the-hype',
+          author: 'McKinsey',
+          description: 'A great read particularly for those less familiar with the web3 space.',
+        },
+        {
+          text: '‘Social Networks Are Going Much, Much Smaller’ from Slate',
+          link: 'https://slate.com/technology/2022/11/mastodon-discord-small-social-networks.html',
+          author: 'Slate',
+          description:
+            'Small social networks are increasingly emerging as a new kind of online community - we can see this with the rise of platforms like Discord or Mastodon.',
+        },
+      ],
+    },
+    {
+      source: 'Video',
+      resources: [
+        {
+          text: '‘Competing Visions for the Future of Social Media’ with Ethan Zuckerman',
+          link: 'https://youtu.be/tHnhowjiYi0?t=219',
+          author: 'Ethan Zuckerman',
+          description: 'He envisions the future of social media, and of the communities that form through it.',
+        },
+      ],
+    },
+    {
+      source: 'Other',
+      resources: [
+        {
+          text: 'New kind of communities: creation communities.',
+          link: 'https://www.chaos.build/',
+          author: 'Chaos',
+          description:
+            'Chaos is a headless band consisting of 80 artists including musicians, visual artists, engineers, writers, operatives + more.',
+        },
+      ],
+    },
+  ],
 };
 
 export const CreativityCoasts: Region = {
@@ -69,6 +239,68 @@ export const CreativityCoasts: Region = {
   },
   experiences: creativityCoastExperiences,
   available: true,
+  regionalResources: [
+    {
+      source: 'Book',
+      resources: [
+        {
+          author: 'Marcus du Sautoy',
+          text: '‘The Creativity Code: Art and Innovation in the Age of AI’',
+          description:
+            'A brilliant book about the type of creativity brought by machines - and how it redefines our own creativity.',
+          link: '',
+        },
+      ],
+    },
+    {
+      source: 'Podcast',
+      resources: [
+        {
+          text: '‘OpenAI CEO Sam Altman on GPT’',
+          link: 'https://podcasts.apple.com/us/podcast/openai-ceo-sam-altman-on-gpt-4-the-a-i-arms-race/id1643307527?i=1000605522804',
+          author: 'New York Magazine',
+          description:
+            'A fascinating interview with Open AI CEO & ChatGPT creator Sam Altman on a leading technology journalist’s podcast on the power and risks associated with this hyper-evolving AI.',
+        },
+        {
+          text: '‘The ethical dilemmas of AI’',
+          link: 'https://scandinavianmind.com/podcast/the-ethical-dilemmas-of-ai ',
+          author: 'Scandinavian Mind',
+          description: 'To be aware of in the creative industries, from diversity-washing to best use practices.',
+        },
+      ],
+    },
+    {
+      source: 'Article',
+      resources: [
+        {
+          text: '‘Generative AI: Unlocking the future of fashion’',
+          link: 'https://www.mckinsey.com/industries/retail/our-insights/generative-ai-unlocking-the-future-of-fashion',
+          author: 'McKinsey',
+          description:
+            'Deep dive from a leading consulting firm on how generative AI can unlock the future of fashion.',
+        },
+        {
+          text: '‘Zegna’s Made-to-Measure Business is Getting a Tech Upgrade’ from Business of Fashion diving into a brand making innovative strides into this fashion model.',
+          link: 'https://www.businessoffashion.com/articles/technology/zegnas-made-to-measure-business-is-getting-a-tech-upgrade/',
+          author: 'Business of Fashion',
+          description: 'Diving into a brand making innovative strides into this fashion model.',
+        },
+      ],
+    },
+    {
+      source: 'Video',
+      resources: [
+        {
+          text: '‘Introducing Chat GPT-4’ from Open AI',
+          link: '',
+          author: 'Open AI',
+          description:
+            'A strong overview of the potential of the groundbreaking technology, produced by those who are making it.',
+        },
+      ],
+    },
+  ],
 };
 
 export const TimelessTundra: Region = {
@@ -84,6 +316,7 @@ export const TimelessTundra: Region = {
   },
   experiences: [],
   available: false,
+  regionalResources: [],
 };
 
 export const VirtualValleys: Region = {
@@ -99,6 +332,67 @@ export const VirtualValleys: Region = {
   },
   experiences: virtualValleysExperiences,
   available: true,
+  regionalResources: [
+    {
+      source: 'Book',
+      resources: [
+        {
+          text: '‘Doughnut Economics’',
+          link: '',
+          author: 'Kate Raworth',
+          description:
+            'A great book to get a new model of what sustainability is, through a visual framework explaining upper - and lower - limits to development.',
+        },
+        {
+          text: '‘To save everything, click here’',
+          link: '',
+          author: 'Harvard researcher’s Evgeny Morozov',
+          description: 'On the risk of thinking uniquely through the prism of problems and tech solutions.',
+        },
+      ],
+    },
+    {
+      source: 'Podcast',
+      resources: [
+        {
+          text: '‘Degrowth: Slow is the New Cool’',
+          link: 'https://www.youtube.com/watch?v=DHpTNtRCk5U',
+          author: 'Timothée Parrique',
+          description:
+            'An interview with a leading expert on the economy of degrowth, and a researcher at the School of Economics and Management of Lund University in Sweden. How can this idea of ‘Degrowth: Slow is the New Cool’ apply to Kering?',
+        },
+        {
+          text: '‘How Future Thinking Can Drive Sustainability’ from Scandinavian Mind',
+          link: 'https://scandinavianmind.com/podcast/how-future-thinking-can-help-drive-sustainability-with-charlotte-sundaker',
+          author: 'Scandinavian Mind',
+          description:
+            'A thought-provoking interview with Charlotte Sundåker, CEO and co-founder of Planethon, a future and transformation agency.',
+        },
+      ],
+    },
+    {
+      source: 'Article',
+      resources: [
+        {
+          text: '‘Expanding Digital Sufficiency’',
+          link: 'https://theshiftproject.org/en/article/implementing-digital-sufficiency/',
+          author: 'The Shift Project',
+          description: 'A report diving into the implementation of digital sufficiency.',
+        },
+      ],
+    },
+    {
+      source: 'Video',
+      resources: [
+        {
+          text: "‘The future of fashion: Sustainable brands and ‘circular’ business models'",
+          link: 'https://www.youtube.com/watch?v=pRf0X3xETCc',
+          author: 'McKinsey',
+          description: '',
+        },
+      ],
+    },
+  ],
 };
 
 export const CustomMap: CustomMap = [

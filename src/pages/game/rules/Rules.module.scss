@@ -3,19 +3,41 @@
 .container {
   width: 100%;
   height: 100%;
-  display: grid;
+  // display: grid;
   z-index: 1;
-  grid-template-columns: 45% 10% 45%;
-  grid-template-rows: 45% 10% 45%;
-  grid-template-areas:
-    'a m b'
-    'z z n'
-    'c o d';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // // grid-template-columns: 45% 10% 45%;
+  // // grid-template-rows: 45% 10% 45%;
+  // // grid-template-areas:
+  //   'a m b'
+  //   'z z n'
+  //   'c o d';
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+}
+
+.emptyDescriptiveCard {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyArrowSpace {
+  width: 15%;
 }
 
 .firstCard {
-  grid-area: a;
-  display: flex;
+  // grid-area: a;
+  // display: flex;
   align-items: flex-end;
   justify-content: right;
   z-index: 2;
@@ -26,7 +48,7 @@
 
 .secondCard {
   grid-area: b;
-  display: flex;
+  // display: flex;
   align-items: flex-end;
   z-index: 2;
   justify-content: left;
@@ -37,7 +59,7 @@
 
 .thirdCard {
   grid-area: d;
-  display: flex;
+  // display: flex;
   align-items: flex-start;
   z-index: 2;
   justify-content: left;
@@ -48,7 +70,7 @@
 
 .fourthCard {
   grid-area: c;
-  display: flex;
+  // display: flex;
   align-items: flex-start;
   z-index: 2;
   justify-content: right;
@@ -58,28 +80,29 @@
 }
 
 .firstArrow {
-  grid-area: m;
-  justify-self: center;
-  align-self: center;
-  margin-top: 70px;
-  width: 100%;
+  width: 15%;
+  height: auto;
+  // grid-area: m;
+  // justify-self: center;
+  // align-self: center;
+  // margin-top: 70px;
+  // width: 100%;
 }
 
 .secondArrow {
-  grid-area: n;
-  justify-self: center;
-  margin-right: 70px;
-  align-self: center;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  // width: 15%;
+  width: 8px;
+  // margin-left: 58px;
+  // height: 100%;
 }
 
 .thirdArrow {
   grid-area: o;
   justify-self: center;
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
   align-self: center;
-  width: 100%;
+  // width: 100%;
+  width: 15%;
+  height: auto;
   z-index: 0;
 }

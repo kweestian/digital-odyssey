@@ -13,6 +13,11 @@ type AdditionalResources = {
   link: string;
 };
 
+type RegionalResource = {
+  resources: { text: string; link: string; author: string; description: string }[];
+  source: 'Book' | 'Podcast' | 'Article' | 'Video' | 'Other';
+};
+
 type Question = {
   title: string;
   imageLink?: string;
@@ -71,6 +76,7 @@ type Region = {
   };
   experiences: Experience[];
   available: boolean;
+  regionalResources: RegionalResource[];
 };
 
 type CustomMap = Region[];

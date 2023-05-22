@@ -1,0 +1,72 @@
+.parentContainer {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
+  h1 {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+}
+
+.descriptionContainer {
+  font-size: 22px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  > h4 {
+    font-family: Poppins;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 5px;
+  }
+}
+
+.resourceContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.resourceTitle {
+  color: white;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.resourcesContainer {
+  margin-left: 35px;
+  color: white;
+  font-weight: 400;
+
+  > div {
+    margin-bottom: 10px;
+  }
+}
+
+.resourceDescriptionContainer {
+  font-weight: 200;
+}
+
+.linksContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 18px;
+  color: #ab5ca0;
+  text-align: left;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 30px;
+}

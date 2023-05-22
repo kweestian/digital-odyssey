@@ -5,7 +5,6 @@ import { useAtom } from 'jotai';
 
 import { useUpdateUserExperience } from '@/hooks';
 import { PopinCard, KeyLearningsContent } from '@/components/common';
-import { blurUrls } from '@/data/cards';
 
 import styles from './GameCard.module.scss';
 import GamePoppinContent from './components/GamePoppinContent';

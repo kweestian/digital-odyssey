@@ -311,7 +311,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
         },
         {
           key: 'question_five',
-          text: 'YSL Beauté is a major beauty brand in the world of NFTs. What perks were associated with their first NFT drop?',
+          text: 'YSL Beauté is a major beauty brand in the world of NFTs. <br />What perks were associated with their first NFT drop?',
           title: 'Question Five',
           imageLink: 'the-future-of-brand-loyalty-initiatives_question5.jpg',
           correctAnswer: 'one',

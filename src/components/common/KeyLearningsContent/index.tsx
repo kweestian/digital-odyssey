@@ -29,9 +29,9 @@ const KeyLearningsContent = ({ additionalRessources, content, videoUrl }: Props)
       height={421.74}
     /> */}
     <div className={styles.contentContainer}>
-      <h3 className={styles.keyLearningTitle}>KEY LEARNINGS : </h3>
+      <h3 className={styles.keyLearningTitle}>KEY LEARNINGS </h3>
       <RenderHtml customStyles={{}} htmlContent={content} />
-      <h4 className={styles.additionalResourcesTitle}>Additional Resource :</h4>
+      <h4 className={styles.additionalResourcesTitle}>Additional Resource:</h4>
       <div className={styles.additionalResourcesContainer}>
         {additionalRessources?.map(({ text, link }) => (
           <Fragment key={text}>

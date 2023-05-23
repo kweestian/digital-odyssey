@@ -63,7 +63,7 @@ const QuestionCard = ({
         style={interactionType === 'boolean' ? { justifyContent: 'center', marginTop: 0 } : {}}
       >
         <div>
-          <h3>{title}</h3>
+          <h3>{title}:</h3>
         </div>
         <div className={styles.questionContent} style={interactionType === 'boolean' ? { marginTop: 0 } : {}}>
           {text && <div>{text}</div>}

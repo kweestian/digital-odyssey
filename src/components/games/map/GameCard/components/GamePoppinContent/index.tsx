@@ -1,10 +1,16 @@
+import { useState } from 'react';
+import { useGetPublicUrl } from '@/hooks';
+import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 import { useAtom } from 'jotai';
 
-import { Button, RenderHtml } from '@/components/common';
+import CloseIcon from '@/image/map/picto/PICTO_CROIX.svg';
+import Eye from '@/image/map/picto/PICTO_EYE.svg';
+
+import { Button, Loader, RenderHtml } from '@/components/common';
+
 import StepForm from '../StepForm';
 import InteractionForm from '../InteractionForm';
-
 import styles from './GamePoppinContent.module.scss';
 import { stepFormAtom, scoreAtom } from '../StepForm/components/QuestionCard/atom';
 import { interactionAtom } from './atom';
@@ -29,6 +35,8 @@ const GamePoppinContent = ({
   const { t } = useTranslation();
 
   const [currentInteration, setCurrentInteraction] = useAtom(interactionAtom);
+  const [zoomImage, setZoomImage] = useState(false);
+  const { data, isLoading: loadingImageUrl } = useGetPublicUrl(interaction.bonus);
 
   const [, setStepFormState] = useAtom(stepFormAtom);
   const [, setScore] = useAtom(scoreAtom);
@@ -61,6 +69,10 @@ const GamePoppinContent = ({
   }
 
   const showQuizButton = ['boolean', 'quiz'].includes(interaction.type);
+
+  const currentImage = data?.data?.signedUrl && [data?.data?.signedUrl];
+
+  console.log(currentImage);
 
   return (
     <>
@@ -112,7 +124,70 @@ const GamePoppinContent = ({
               skin="ghost"
               text={interaction.bonus ? 'Completed Bonus' : 'Bonus Experience'}
               onClick={() => setCurrentInteraction('bonus')}
+              customStyles={{ marginTop: 0 }}
             />
+            {currentImage && currentImage.length > 0 && (
+              <>
+                <div className={styles.attachmentIconContainer}>
+                  <Button
+                    ariaLabel="on submit attachment"
+                    loading={isUploadingImage || loadingImageUrl}
+                    bare
+                    onClick={() => {
+                      if (currentImage && currentImage.length > 0) {
+                        setZoomImage(true);
+                      }
+                    }}
+                  >
+                    <Image
+                      src={Eye}
+                      alt="On Submit Button"
+                      className={styles.submitButtonImage}
+                      width={40}
+                      height={40}
+                    />
+                  </Button>
+                </div>
+                <div className={zoomImage ? styles.imageContainerZoomed : styles.imageContainer}>
+                  {isUploadingImage || loadingImageUrl ? (
+                    <Loader />
+                  ) : (
+                    <>
+                      <Image
+                        className={styles.closeZoomIn}
+                        width={30}
+                        height={30}
+                        src={CloseIcon}
+                        alt="Close Popup Button"
+                      />
+
+                      <Button
+                        ariaLabel="image zoom in"
+                        bare
+                        onClick={() => setZoomImage(!zoomImage)}
+                        customStyles={{ width: '100%', height: '100%' }}
+                      >
+                        {currentImage
+                          .filter((path) => path !== '')
+                          .map((path) => (
+                            <Image
+                              key={path}
+                              src={path}
+                              alt={path}
+                              width={50}
+                              height={50}
+                              unoptimized
+                              placeholder="blur"
+                              // eslint-disable-next-line max-len
+                              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
+                            />
+                          ))}
+                      </Button>
+                    </>
+                  )}
+                </div>
+              </>
+            )}
           </div>
         )}
       </div>

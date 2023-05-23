@@ -46,12 +46,61 @@
 }
 
 .bonusContainer {
-  width: 300px;
+  margin-top: 15px;
+  width: 400px;
   font-size: 20px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  // margin: 0 auto;
   > button {
     width: 85%;
   }
+}
+
+.imageContainer {
+  margin-top: 15px;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all;
+  display: none;
+}
+
+.imageContainerZoomed {
+  position: fixed;
+  transition: all;
+  display: block;
+  height: 75%;
+  margin: auto;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+
+  img:not(.closeZoomIn) {
+    max-height: 100%;
+    width: auto;
+  }
+}
+
+.attachmentIconContainer {
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
+}
+
+.closeZoomIn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 15%;
+  top: 5%;
 }
 
 @media screen and (min-width: 1800px) {

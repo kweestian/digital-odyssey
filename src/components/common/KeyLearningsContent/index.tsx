@@ -31,15 +31,26 @@ const KeyLearningsContent = ({ additionalRessources, content, videoUrl }: Props)
     <div className={styles.contentContainer}>
       <h3 className={styles.keyLearningTitle}>KEY LEARNINGS </h3>
       <RenderHtml customStyles={{}} htmlContent={content} />
-      <h4 className={styles.additionalResourcesTitle}>Additional Resource:</h4>
-      <div className={styles.additionalResourcesContainer}>
-        {additionalRessources?.map(({ text, link }) => (
-          <Fragment key={text}>
-            <RenderHtml customStyles={{}} htmlContent={text} />
-            <Button customStyles={{ minWidth: 'fit-content' }} external as="a" href={link} skin="ghost" text="Read" />
-          </Fragment>
-        ))}
-      </div>
+      {additionalRessources && additionalRessources.length > 0 && (
+        <>
+          <h4 className={styles.additionalResourcesTitle}>Additional Resource:</h4>
+          <div className={styles.additionalResourcesContainer}>
+            {additionalRessources?.map(({ text, link }) => (
+              <Fragment key={text}>
+                <RenderHtml customStyles={{}} htmlContent={text} />
+                <Button
+                  customStyles={{ minWidth: 'fit-content' }}
+                  external
+                  as="a"
+                  href={link}
+                  skin="ghost"
+                  text="Open"
+                />
+              </Fragment>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   </div>
 );

@@ -89,6 +89,7 @@ const StepFormCarousel = ({ questions, experienceKey, interactionType }: Props) 
             {questions.map((item, key) => (
               <div ref={carouselSlide} className={styles.carouselSlide} key={item.key} id={`slide_${key}`}>
                 <QuestionCard
+                  experienceKey={experienceKey}
                   isCurrentSlide={currentPageNumber === key}
                   question={item}
                   interactionType={interactionType}

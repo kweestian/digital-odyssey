@@ -170,7 +170,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   </text>
                   {available && (
                     <image
-                      x={regionOwl.x}
+                      x={isRegionComplete ? Number(regionOwl.x) - 15 : regionOwl.x}
                       onClick={(evt) => {
                         // so it doesnt trigger zoom
                         if (region.isComplete && regionKey !== 'timeless-tundra') {
@@ -188,7 +188,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                           onClickActions(regionKey);
                         }
                       }}
-                      y={regionOwl.y}
+                      y={isRegionComplete ? Number(regionOwl.y) - 15 : regionOwl.y}
                       // width="110"
                       // height="60"
                       style={{ width: isRegionComplete ? 150 : 110, height: 'auto' }}

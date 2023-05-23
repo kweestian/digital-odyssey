@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { blurUrls } from '@/data/cards';
 import { useUrlParams, useRegionData } from '@/hooks';
+import { RenderHtml } from '@/components/common';
 
 import styles from './QuestionCard.module.scss';
 import { stepFormAtom } from './atom';
@@ -14,6 +15,7 @@ type Props = {
   interactionType: 'quiz' | 'boolean';
   slide: () => void;
   isCurrentSlide: boolean;
+  experienceKey: string;
 };
 
 const QuestionCard = ({
@@ -21,6 +23,7 @@ const QuestionCard = ({
   interactionType,
   slide,
   isCurrentSlide,
+  experienceKey,
 }: Props) => {
   const [stepFormState, setStepFormState] = useAtom(stepFormAtom);
 
@@ -54,6 +57,11 @@ const QuestionCard = ({
               width={200}
               height={355}
               src={`/static/image/map/quiz/${imageLink}`}
+              style={
+                experienceKey === 'the-future-of-product-traceability'
+                  ? { backgroundImage: 'none !important', width: '100%', height: 'auto' }
+                  : {}
+              }
             />
           )}
         </div>
@@ -62,11 +70,13 @@ const QuestionCard = ({
         className={styles.questionContainer}
         style={interactionType === 'boolean' ? { justifyContent: 'center', marginTop: 0 } : {}}
       >
-        <div>
-          <h3>{title}:</h3>
-        </div>
+        <div>{title && <h3>{title}:</h3>}</div>
         <div className={styles.questionContent} style={interactionType === 'boolean' ? { marginTop: 0 } : {}}>
-          {text && <div>{text}</div>}
+          {text && (
+            <div>
+              <RenderHtml customStyles={{}} htmlContent={text} />
+            </div>
+          )}
           <div className={styles.choicesContainer}>
             {choices.map(({ value: choiceValue, text: choiceText }) => (
               <div className={styles.choiceContainer} key={`${key}_${choiceValue}`}>

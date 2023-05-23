@@ -55,11 +55,12 @@ export const creativityCoastExperiences: Experience[] = [
       label: 'JOIN ATTACHMENT',
     },
     bonus: {
-      description: `Follow the instructions in <a href="https://docs.midjourney.com/docs/quick-start" target="_blank">Midjourney's quick start guide</a> to go to
-    Discord and creatively imagine a future Kering product - for example,
-    you could search "/imagine a Saint Laurent suit made of moon dust
-    
-    and roses"! Take a screenshot and attach it here!`,
+      description: `You’ve just experienced Chat GPT in its basic form – now experience
+      Kering’s newly launched chatbot <a href="https://chat.openai.com/" target="_blank">‘/madeline,’</a> which harnesses
+      ChatGPT to become the first AI personal shopper of its kind!
+      Ask for an outfit recommendation suited to your specific desires, and
+      
+      upload a screenshot of /madeline’s results here!`,
       type: 'attachment',
       label: 'Bonus Experience',
     },
@@ -132,7 +133,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
     key: 'the-future-of-brand-communities',
     description: `In this experience, we will venture into Gucci Town on Roblox. Once you've
     downloaded Roblox, open the app, log in to your account and search for
-    <a href="https://www.gucci.com/fr/fr/st/stories/article/gucci-town-on-roblox" target="_blank"> "Gucci Town" </a>. You'll then be ready to start a mini-quest - you'll need to
+    "<a href="https://www.gucci.com/fr/fr/st/stories/article/gucci-town-on-roblox" target="_blank">Gucci Town</a>". You'll then be ready to start a mini-quest - you'll need to
     explore the world and find floating letters in this virtual space - G-U-C-C-I!
     Once you've found all the letters, leave a message in the Gucci Town
     community chatbox and upload a screenshot here. Then continue
@@ -143,113 +144,6 @@ export const loyaltyLagoonExperiences: Experience[] = [
     interaction: {
       type: 'attachment',
       label: 'Copy text here',
-      // questions: [
-      //   {
-      //     key: 'question_one',
-      //     text: 'Launched for the first time on december 5 ...',
-      //     title: 'Question 1',
-      //     imageLink: '/static/image/cards/card.svg',
-      //     correctAnswer: 'two',
-      //     choices: [
-      //       {
-      //         value: 'one',
-      //         text: 'This NFT drop gets you an invite to the next Prada show',
-      //       },
-      //       {
-      //         value: 'two',
-      //         text: 'This NFT drop is linked to a limited edition physiical ...',
-      //       },
-      //       {
-      //         value: 'three',
-      //         text: 'This NFT drop gets you lifetime free coffee',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     key: 'question_two',
-      //     text: 'Launched for the first time on december 5 ...',
-      //     title: 'Question 12',
-      //     imageLink: '/static/image/cards/card.svg',
-      //     correctAnswer: 'three',
-      //     choices: [
-      //       {
-      //         value: 'one',
-      //         text: 'This NFT drop gets you an invite to the next Prada show',
-      //       },
-      //       {
-      //         value: 'two',
-      //         text: 'This NFT drop is linked to a limited edition physiical ...',
-      //       },
-      //       {
-      //         value: 'three',
-      //         text: 'This NFT drop gets you lifetime free coffee',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     key: 'question_three',
-      //     text: 'Launched for the first time on december 5 ...',
-      //     title: 'Question 12',
-      //     imageLink: '/static/image/cards/card.svg',
-      //     correctAnswer: 'three',
-      //     choices: [
-      //       {
-      //         value: 'one',
-      //         text: 'This NFT drop gets you an invite to the next Prada show',
-      //       },
-      //       {
-      //         value: 'two',
-      //         text: 'This NFT drop is linked to a limited edition physiical ...',
-      //       },
-      //       {
-      //         value: 'three',
-      //         text: 'This NFT drop gets you lifetime free coffee',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     key: 'question_four',
-      //     text: 'Launched for the first time on december 5 ...',
-      //     title: 'Question 123',
-      //     imageLink: '/static/image/cards/card.svg',
-      //     correctAnswer: 'three',
-      //     choices: [
-      //       {
-      //         value: 'one',
-      //         text: 'This NFT drop gets you an invite to the next Prada show',
-      //       },
-      //       {
-      //         value: 'two',
-      //         text: 'This NFT drop is linked to a limited edition physiical ...',
-      //       },
-      //       {
-      //         value: 'three',
-      //         text: 'This NFT drop gets you lifetime free coffee',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     key: 'question_five',
-      //     text: 'Launched for the first time on december 5 ...',
-      //     title: 'Question 12',
-      //     imageLink: '/static/image/cards/card.svg',
-      //     correctAnswer: 'three',
-      //     choices: [
-      //       {
-      //         value: 'one',
-      //         text: 'This NFT drop gets you an invite to the next Prada show',
-      //       },
-      //       {
-      //         value: 'two',
-      //         text: 'This NFT drop is linked to a limited edition physiical ...',
-      //       },
-      //       {
-      //         value: 'three',
-      //         text: 'This NFT drop gets you lifetime free coffee',
-      //       },
-      //     ],
-      //   },
-      // ],
     },
     bonus: {
       description: `Join the <a href="https://discord.com/invite/guccivault" target="_blank">Gucci Vault Discord</a>, the site designed to host a variety of
@@ -275,7 +169,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
       sustainably drive brand growth.`,
       additionalRessources: [
         {
-          text: 'Business ofFashion: ‘<i>Why Fashion Loves Roblox</i>’',
+          text: 'Business of Fashion: ‘<i>Why Fashion Loves Roblox</i>’',
           link: 'https://www.businessoffashion.com/articles/technology/why-fashion-loves-roblox/',
         },
       ],
@@ -505,7 +399,7 @@ export const playfulPlainExperiences: Experience[] = [
   {
     name: 'The Future of Virtual Try-On',
     key: 'the-future-of-virtual-try-on',
-    description: `In this experience, visit <a href="https://www.snapchat.com/add/gucci" target="_target">Gucci’s page on Snapchat</a>, and experiment with the
+    description: `In this experience, download the Snapchat app and visit <a href="https://www.snapchat.com/add/gucci" target="_target">Gucci’s page</a>, and experiment with the
     varying AR lenses available – try on Gucci sneakers for example, or a
     lipstick from Gucci Beauty. Take a screenshot and upload a photo of your
     favorite Gucci product here. Then read the key learnings for how future AR
@@ -551,7 +445,7 @@ export const playfulPlainExperiences: Experience[] = [
     key: 'the-future-of-virtual-merchandising',
     description: `Across several brands, Kering is developing holograms to be used in retail
     spaces to enhance the shopping experience and introduce consumers to
-    products that aren’t physically available. In this quiz, we’ll show several
+    products that aren’t physically available. In this four question quiz, we’ll show several
     holograms and you’ll have to guess their intended purpose. Once you’ve
     completed the quiz, you will then encounter key learnings behind why
     holograms could be a powerful augmented reality tool in the future of luxury
@@ -656,17 +550,17 @@ export const seaOfSustainabilityExperiences: Experience[] = [
     key: 'the-future-of-digital-carbon-footprint',
     description: `
     In this experience, visit <a href="https://digitalbeacon.co/" target="_blank">Beacon</a> to calculate the environmental impact of
-the website page of your choice. See the breakdown of the digital carbon
-footprint, take a screenshot and upload it here. Then read the key learnings
-to learn what measures can be taken to reduce the digital carbon
+    the website page of your choice. See the breakdown of the digital carbon
+    footprint, take a screenshot and upload it here. Then read the key learnings
+    to learn what measures can be taken to reduce the digital carbon
 
-footprints of a website.`,
+    footprints of a website.`,
     interaction: {
       type: 'attachment',
       label: 'Copy text here',
     },
     bonus: {
-      description: `Go to <a href="https://digitalbeacon.co/" target="_blank">Digital Carbon Footprint</a> and calculate your own estimated digital
+      description: `Go to <a href="https://www.digitalcarbonfootprint.eu/" target="_blank">Digital Carbon Footprint</a> and calculate your own estimated digital
     footprint. Then take a screenshot of the results and attach it here.`,
       type: 'attachment',
       label: 'Upload Screenshot',
@@ -685,6 +579,12 @@ footprints of a website.`,
       store might.<br /> <br />
       At Kering, we need to continue to imagine how we can
       steer digital forward in creative, conscious ways!`,
+      additionalRessources: [
+        {
+          text: 'Business of Fashion Podcast: ‘How Fashion can Use Digital IDs’',
+          link: 'https://www.businessoffashion.com/podcasts/technology/how-fashion-can-use-digital-ids/',
+        },
+      ],
     },
     coordinates: { x: 655, y: 250 },
   },
@@ -696,9 +596,7 @@ footprints of a website.`,
     questions relating to the subjects of big data and analytics, digital carbon
     footprint tools, artificial intelligence, Internet of Things, and ecodesign. With
     each question, you will be able to take away a new insight on how new
-    
     technologies can power sustainable solutions in luxury.`,
-
     interaction: {
       type: 'quiz',
       label: 'Enter Quiz',
@@ -722,9 +620,9 @@ footprints of a website.`,
           correctAnswer: 'all',
           choices: [
             { text: 'Up-to-date market and purchasing trends', value: 'trends' },
-            { text: 'Product life cycle information.', value: 'prodct' },
+            { text: 'Product life cycle information', value: 'prodct' },
             { text: 'Supply chain development', value: 'offset' },
-            { text: 'All of the above.', value: 'all' },
+            { text: 'All of the above', value: 'all' },
           ],
         },
         {
@@ -743,7 +641,7 @@ footprints of a website.`,
           title: 'Question Four',
           text: 'Until recently, after a product has been purchased, brands have lost their link to these products. What can the breakthrough of Digital IDs do for Kering?',
           key: 'digital',
-          correctAnswer: 'track',
+          correctAnswer: 'unlock',
           choices: [
             { text: 'Unlock new circular business models (resale, rental, etc).', value: 'unlock' },
             { text: 'Give consumers an NFT of the physical product automatically.', value: 'nft' },
@@ -790,7 +688,7 @@ footprints of a website.`,
       harmony with nature – and much more!`,
       additionalRessources: [
         {
-          text: '<i>The intro guide to digital eco-design</i>',
+          text: '‘<i>The intro guide to digital eco-design</i>’',
           link: 'https://eco-conception.designersethiques.org/guide/en/content/0-introduction.html',
         },
       ],
@@ -812,7 +710,7 @@ footprints of a website.`,
       questions: [
         {
           title: 'Question One',
-          text: 'There are currently three major hotspots for rose cultivation in the world. Where was this perfume’s rose sourced from?',
+          text: 'There are currently three major hotspots for rose cultivation in the world.<br /> Where was this perfume’s rose sourced from?',
           key: 'one',
           correctAnswer: 'turkey',
           imageLink: 'the-future-of-product-traceability_question1.png',
@@ -824,7 +722,12 @@ footprints of a website.`,
         },
         {
           title: 'Question Two',
-          text: 'There are currently three major hotspots for rose cultivation in the world. Where was this perfume’s rose sourced from?',
+          text: `
+          Coffee is incredibly important to be sustainable
+          sourced, as it's a crop deeply threatened by climate
+          change – the amount of land suitable for coffee
+          cultivation globally may halve by 2050.<br />
+          Where is this perfume’s coffee sourced from?`,
           key: 'two',
           imageLink: 'the-future-of-product-traceability_question2.png',
 
@@ -837,7 +740,7 @@ footprints of a website.`,
         },
         {
           title: 'Question Three',
-          text: 'Where is the perfume’s bourbon vanilla absolute found? Hint: this kind of vanilla is unique to this region!',
+          text: 'Where is the perfume’s bourbon vanilla absolute found?<br /> Hint: this kind of vanilla is unique to this region!',
           key: 'three',
           imageLink: 'the-future-of-product-traceability_question3.png',
           correctAnswer: 'Madagascar',
@@ -862,7 +765,7 @@ footprints of a website.`,
         },
         {
           title: 'Question Five',
-          text: 'The last key component of the perfume is frankincense, to round out this perfume with sweet and smoky depth. Where is it traced to?',
+          text: 'The last key component of the perfume is frankincense, to round out this perfume with sweet and smoky depth.<br /> Where is it traced to?',
           key: 'five',
           imageLink: 'the-future-of-product-traceability_question5.png',
           correctAnswer: 'Somalia',
@@ -907,7 +810,7 @@ export const virtualValleysExperiences: Experience[] = [
     description: `
     Reality is evolving rapidly. In this experience, discover if you can tell the
     difference between virtual reality vs entirely authentic videos. For each
-    video clip you are about to watch, click on "REAL" or "UNREAL" depending on
+    of the ten video clips you are about to watch, click on "REAL" or "UNREAL" depending on
     whether you think the visual was made with virtual reality technology or not.
     Then go on to the key learnings centered on how immersive VR technology
 
@@ -1044,7 +947,7 @@ export const virtualValleysExperiences: Experience[] = [
   {
     name: 'the Future of Co-Created Experiences',
     key: 'the-future-of-co-created-experiences',
-    description: `In this experience, dive into the BOSS virtual showroom on <a href="https://www.spatial.io/@boss" target="_blank">spatial.io</a>, and
+    description: `In this experience, dive into the BOSS virtual showroom on <a href="https://www.spatial.io/s/BOSS-Immersive-Showroom-641e08bd6127ed8eaff70faa?share=3302646144092575883" target="_blank">spatial.io</a>, and
     complete a mini-quest by following the on-screen instructions to collect three
     floating orbs – screenshot once you claim your digital outfit prize, before
     returning to the Kering Digital Odyssey to unlock the key learnings on how
@@ -1068,7 +971,6 @@ export const virtualValleysExperiences: Experience[] = [
       of individual consumers; and fostering co-creation and
       collaboration between brands and consumers, allowing
       them to work together to design and create innovative
-      
       products and experiences.`,
       additionalRessources: [
         {
@@ -1082,10 +984,10 @@ export const virtualValleysExperiences: Experience[] = [
   {
     name: 'The Future of Shopping Experiences',
     key: 'the-future-of-shopping-experiences',
-    description: `In this experience, dedicated to the future of shopping, visit the Ferragamo
-    House of Gifts, powered by <a href="https://ferragamo.obsessvr.com/holiday/#/" target="_blank">Obsess</a> — a platform for virtual store solutions.
+    description: `In this experience, dedicated to the future of shopping, visit <a href="https://ferragamo.obsessvr.com/holiday/#/" target="_blank">the Ferragamo
+    House of Gifts,</a> powered by Obsess — a platform for virtual store solutions.
     Immerse in the Ferragamo holiday world and search for a perfume in the
-    virtual Italian villa – once you find a perfume, take a screenshot and upload
+    virtual Italian villa – Once you find a perfume, take a screenshot and upload
     it here, before unlocking key learnings on the potential future impact of
     metaverse ecommerce.`,
     interaction: {
@@ -1112,11 +1014,11 @@ export const virtualValleysExperiences: Experience[] = [
       and build brand awareness, engagement and loyalty.`,
       additionalRessources: [
         {
-          text: 'The Drum: ‘<i>What is Nikeland, & why was it considered a success?</i>’',
+          text: 'The Drum: ‘<i>Nearly 7 million people have visited Nike’s metaverse store</i>’',
           link: 'https://www.thedrum.com/news/2022/03/22/nearly-7-million-people-have-visited-nike-s-metaverse-store',
         },
       ],
     },
-    coordinates: { x: 950, y: 240 },
+    coordinates: { x: 975, y: 240 },
   },
 ];

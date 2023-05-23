@@ -54,7 +54,9 @@ const QuizQuestion = ({ color, checkedValue, choiceValue, onChange, choiceText, 
             onChange(choiceValue);
           }}
         />
-        <label htmlFor={`${questionKey}_${choiceValue}`}>{choiceText}</label>
+        <label htmlFor={`${questionKey}_${choiceValue}`}>
+          <span>{choiceText}</span>
+        </label>
       </div>
     </>
   );

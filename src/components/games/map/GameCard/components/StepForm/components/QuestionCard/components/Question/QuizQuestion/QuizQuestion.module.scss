@@ -1,8 +1,8 @@
 @import '@/styles/variables';
 
 .inputContainer {
-  width: 100%;
   text-align: left;
+  text-align-last: left;
 
   label {
     margin-left: 20px;

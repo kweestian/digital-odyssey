@@ -97,32 +97,29 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
         {isLoading ? (
           <Loader />
         ) : (
-          <>
+          <Button
+            ariaLabel="image zoom in"
+            bare
+            onClick={() => setZoomImage(!zoomImage)}
+            customStyles={{ width: '100%', height: '100%' }}
+          >
             <Image className={styles.closeZoomIn} width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
-
-            <Button
-              ariaLabel="image zoom in"
-              bare
-              onClick={() => setZoomImage(!zoomImage)}
-              customStyles={{ width: '100%', height: '100%' }}
-            >
-              {currentImage
-                .filter((path) => path !== '')
-                .map((path) => (
-                  <Image
-                    key={path}
-                    src={path}
-                    alt={path}
-                    width={50}
-                    height={50}
-                    unoptimized
-                    placeholder="blur"
-                    // eslint-disable-next-line max-len
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
-                  />
-                ))}
-            </Button>
-          </>
+            {currentImage
+              .filter((path) => path !== '')
+              .map((path) => (
+                <Image
+                  key={path}
+                  src={path}
+                  alt={path}
+                  width={50}
+                  height={50}
+                  unoptimized
+                  placeholder="blur"
+                  // eslint-disable-next-line max-len
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
+                />
+              ))}
+          </Button>
         )}
       </div>
     </>

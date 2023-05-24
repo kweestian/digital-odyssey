@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  padding: 16px 0;
   // padding-top: 40px;
 }
 
@@ -17,16 +18,19 @@
 
 .contentContainer {
   width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 
   > p {
-    font-weight: 300;
+    font-weight: normal;
     text-align: justify;
     text-align-last: center;
     font-family: var(--font-poppins);
-  }
-
-  > h3 {
-    margin-bottom: 4rem;
+    width: 90%;
+    height: 60%;
   }
 
   > h4 {
@@ -37,13 +41,15 @@
 .keyLearningTitle {
   font-family: monarch;
   font-weight: 300;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 
 .additionalResourcesTitle {
-  margin-top: 25px;
+  // margin-top: 25px;
   margin-bottom: 5px;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .additionalResourcesContainer {
@@ -65,9 +71,9 @@
   height: 100%;
 
   video {
-    width: auto;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
+    // max-width: 100%;
   }
 }
 
@@ -78,7 +84,7 @@
     height: 100%;
 
     > h3 {
-      margin-bottom: 25px;
+      // margin-bottom: 25px;
     }
   }
 
@@ -90,13 +96,13 @@
     }
   }
 
-  .keyLearningTitle {
-    font-size: 1.8rem;
-  }
+  // .keyLearningTitle {
+  //   font-size: 1.8rem;
+  // }
 
   .additionalResourcesTitle {
-    font-size: 1.6rem;
-    margin-top: 35px;
+    font-size: 1.2rem;
+    // margin-top: 35px;
   }
 
   .additionalResourcesContainer {
@@ -131,10 +137,6 @@
 
   .keyLearningTitle {
     font-size: 1.1rem;
-  }
-
-  .additionalResourcesTitle {
-    font-size: 1rem;
   }
 
   .cardImg {

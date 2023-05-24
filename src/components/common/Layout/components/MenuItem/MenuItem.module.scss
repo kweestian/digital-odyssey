@@ -7,10 +7,10 @@
   text-align: center;
   > div > h1 {
     color: $TextMainColor;
-    font-size: 20px;
-    font-family: 'Monument';
+    font-size: 25px;
+    font-family: var(--font-poppins);
     font-weight: 400;
-    padding-top: 20px;
+    padding-top: 10px;
     margin-bottom: 5px;
   }
 }

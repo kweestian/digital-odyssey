@@ -148,7 +148,7 @@ const GameCard = ({
               <>
                 <h1>{name.toUpperCase()}</h1>
                 <Image
-                  src={`/static/image/owls/flat/${regionKey}.png`}
+                  src={`/static/image/owls/3d/${regionKey}.svg`}
                   alt={`${name} owl icon`}
                   width={210}
                   height={130}

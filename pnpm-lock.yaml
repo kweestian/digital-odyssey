@@ -25,6 +25,9 @@ dependencies:
   global:
     specifier: ^4.4.0
     version: 4.4.0
+  google:
+    specifier: link:next/font/google
+    version: link:next/font/google
   html-react-parser:
     specifier: ^3.0.16
     version: 3.0.16(react@18.2.0)

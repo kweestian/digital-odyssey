@@ -45,17 +45,17 @@
 }
 
 @media screen and (max-height: $TabletBreakpoint) {
-  .progressBar {
-    margin-right: 0;
-  }
+  // .progressBar {
+  //   margin-right: 0;
+  // }
 
-  .progressBarContainer {
-    margin-bottom: 10px;
-  }
+  // .progressBarContainer {
+  //   margin-bottom: 10px;
+  // }
 
-  .percentage {
-    margin-bottom: 15px;
-  }
+  // .percentage {
+  //   margin-bottom: 15px;
+  // }
 }
 
 @media screen and (orientation: portrait) {

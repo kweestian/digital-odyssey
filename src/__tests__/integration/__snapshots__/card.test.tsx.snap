@@ -199,6 +199,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(255, 112, 78);"
                   >
                     <video
                       height="auto"
@@ -220,6 +221,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(255, 112, 78);"
                   >
                     <video
                       height="auto"
@@ -241,6 +243,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(255, 112, 78);"
                   >
                     <video
                       height="auto"
@@ -266,6 +269,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(255, 63, 160);"
                   >
                     <video
                       height="auto"
@@ -287,6 +291,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(255, 63, 160);"
                   >
                     <video
                       height="auto"
@@ -308,6 +313,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(255, 63, 160);"
                   >
                     <video
                       height="auto"
@@ -337,6 +343,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(0, 172, 255);"
                   >
                     <video
                       height="auto"
@@ -358,6 +365,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(0, 172, 255);"
                   >
                     <video
                       height="auto"
@@ -379,6 +387,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(0, 172, 255);"
                   >
                     <video
                       height="auto"
@@ -404,6 +413,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(0, 177, 110);"
                   >
                     <video
                       height="auto"
@@ -425,6 +435,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(0, 177, 110);"
                   >
                     <video
                       height="auto"
@@ -446,6 +457,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(0, 177, 110);"
                   >
                     <video
                       height="auto"
@@ -471,6 +483,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(147, 110, 241);"
                   >
                     <video
                       height="auto"
@@ -492,6 +505,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(147, 110, 241);"
                   >
                     <video
                       height="auto"
@@ -513,6 +527,7 @@ exports[`cards page renders cards page unchange 1`] = `
                 >
                   <div
                     class="videoContainer"
+                    style="background-color: rgb(147, 110, 241);"
                   >
                     <video
                       height="auto"

@@ -51,3 +51,9 @@
     padding: 20px;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .popinContainer {
+    height: 90% !important;
+  }
+}

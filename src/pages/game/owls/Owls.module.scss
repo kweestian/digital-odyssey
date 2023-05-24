@@ -18,16 +18,18 @@
   display: flex;
   > img {
     margin: 0 5px;
-    width: 14vw;
-    max-height: 30vh;
+    // width: 14vw;
+    // max-height: 30vh;
   }
 }
 
 .normalOwlContainer {
+  padding-top: 20px;
+  margin: 0 10px;
   height: 141px;
   display: flex;
   img {
-    width: 183px;
+    width: 190px;
     height: auto;
   }
 }
@@ -43,7 +45,7 @@
   }
   .owlsList {
     > img {
-      width: 10vw;
+      // width: 10vw;
       height: auto;
       // max-height: 30vh;
     }

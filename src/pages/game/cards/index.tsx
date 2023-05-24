@@ -17,7 +17,7 @@ const Cards: NextPage<Props> = () => {
     <GameLayout>
       <div className={styles.container}>
         <div className={styles.firstRegionsContainer}>
-          {firstTwoRegions.map(({ regionKey, experiences }) => (
+          {firstTwoRegions.map(({ regionKey, experiences, color }) => (
             <div key={regionKey} className={styles.firstRegions}>
               {experiences.map(({ isCompleted, key, keyLearning }) => (
                 <RewardCard
@@ -26,13 +26,14 @@ const Cards: NextPage<Props> = () => {
                   isActive={isCompleted}
                   videoUrl={`/static/video/cards/${key}.mp4`}
                   key={key}
+                  color={color}
                 />
               ))}
             </div>
           ))}
         </div>
         <div className={styles.lastRegionsContainer}>
-          {lastRegions.map(({ regionKey, experiences }) => (
+          {lastRegions.map(({ regionKey, experiences, color }) => (
             <div key={regionKey} className={styles.lastRegions}>
               {experiences.map(({ isCompleted, key, keyLearning }) => (
                 <RewardCard
@@ -41,6 +42,7 @@ const Cards: NextPage<Props> = () => {
                   isActive={isCompleted}
                   videoUrl={`/static/video/cards/${key}.mp4`}
                   key={key}
+                  color={color}
                 />
               ))}
             </div>

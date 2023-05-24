@@ -10,10 +10,11 @@ interface RewardCardProps {
   isActive?: boolean;
   additionalRessources?: AdditionalResources[];
   videoUrl: string;
+  color: Region['color'];
   // blurUrl;
 }
 
-const RewardCard = ({ content, isActive, additionalRessources, videoUrl }: RewardCardProps) => {
+const RewardCard = ({ content, isActive, additionalRessources, videoUrl, color }: RewardCardProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -29,6 +30,7 @@ const RewardCard = ({ content, isActive, additionalRessources, videoUrl }: Rewar
         <button onClick={() => isActive && setIsOpen(true)} type="button">
           <div
             className={styles.videoContainer}
+            style={{ backgroundColor: color }}
             onMouseEnter={() => isActive && videoRef.current?.play()}
             onMouseLeave={() => isActive && videoRef.current?.pause()}
           >

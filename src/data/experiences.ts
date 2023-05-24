@@ -56,7 +56,7 @@ export const creativityCoastExperiences: Experience[] = [
     },
     bonus: {
       description: `You’ve just experienced Chat GPT in its basic form – now experience
-      Kering’s newly launched chatbot <a href="https://chat.openai.com/" target="_blank">‘/madeline,’</a> which harnesses
+      Kering’s newly launched chatbot <a href="https://www.knxt-madeline.com/chat" target="_blank">‘/madeline,’</a> which harnesses
       ChatGPT to become the first AI personal shopper of its kind!
       Ask for an outfit recommendation suited to your specific desires, and
       

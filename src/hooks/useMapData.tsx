@@ -9,12 +9,11 @@ const useMapData = () => {
     const allExperiences = region.experiences.map(({ key }) => key);
     const completedExperiences =
       userExperienceData?.data?.filter(
-        ({ experience_key: experienceKey, answer }) =>
-          answer && experienceKey && allExperiences.includes(experienceKey),
+        ({ experience_key: experienceKey }) => experienceKey && allExperiences.includes(experienceKey),
       ) || [];
-    const isRegionCompleted = completedExperiences.length === 3;
-
     const hasCompletedBonus = completedExperiences.some(({ bonus }) => bonus);
+    const isRegionCompleted = completedExperiences.filter(({ answer }) => answer).length === 3 && hasCompletedBonus;
+
     return {
       ...region,
       isComplete: isRegionCompleted,

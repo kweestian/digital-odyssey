@@ -1,6 +1,8 @@
 import { NextPage } from 'next';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
+import { useAtom } from 'jotai';
+import { interactionAtom } from '@/components/games/map/GameCard/components/GamePoppinContent/atom';
 
 import { RegionalResourcesPopin, GameCard, GameLayout, Map } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
@@ -16,6 +18,8 @@ const MapPage: NextPage = () => {
   const isFirst = useRef(true);
 
   const { getUrlParam, setUrlParam, removeUrlParam } = useUrlParams();
+
+  const [, setInteractionType] = useAtom(interactionAtom);
 
   const currentExperienceKey = getUrlParam('experienceKey');
 
@@ -82,8 +86,9 @@ const MapPage: NextPage = () => {
     router.events.on('routeChangeStart', () => {
       // dispatch({ type: 'CLOSE_EXPERIENCE' });
       dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' });
+      setInteractionType(null);
     });
-  }, [router, dispatch]);
+  }, [router, dispatch, setInteractionType]);
 
   const currentOpenedExperience = useMemo(
     () =>

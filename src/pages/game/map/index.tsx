@@ -85,8 +85,10 @@ const MapPage: NextPage = () => {
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
       // dispatch({ type: 'CLOSE_EXPERIENCE' });
-      dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' });
-      setInteractionType(null);
+      if (!router.asPath.startsWith('/game/map')) {
+        dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' });
+        setInteractionType(null);
+      }
     });
   }, [router, dispatch, setInteractionType]);
 

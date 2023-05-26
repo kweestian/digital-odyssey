@@ -8,29 +8,28 @@
   position: relative;
 
   button {
-    margin-top: 15px;
+    // margin-top: 15px;
     margin-left: 15px;
   }
 }
 
 .attachmentInputContainer {
-  margin-top: 15px;
   cursor: pointer;
-  height: fit-content;
+  // height: fit-content;
   text-transform: uppercase;
   border: 2px solid;
   border-radius: 50px;
-  width: 85%;
-  max-width: 300px;
-  padding: 0 20px;
+  width: 62%;
+  font-size: 16px;
+  max-width: 226px;
+  padding: 5px 10px;
   text-align: center;
   background-color: $BackgroundSecondaryColor;
-  font-size: 20px;
   // min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 36px;
+  height: 32px;
   // height: fit-content;
   font-weight: 400;
 }
@@ -38,7 +37,10 @@
 .attachmentIconContainer {
   margin-left: 15px;
   position: absolute;
-  right: 0;
+  right: 29px;
+  height: 32px;
+  display: flex;
+  align-items: center;
 }
 
 .imageContainer {
@@ -88,17 +90,17 @@
 }
 
 @media screen and (max-height: 820px) {
-  .attachmentInputContainer {
-    margin-top: 5px;
-    // width: 50%;
-    // font-size: 12px;
-  }
+  // .attachmentInputContainer {
+  //   margin-top: 30px;
+  //   // width: 50%;
+  //   // font-size: 12px;
+  // }
 
-  .attachmentContainer {
-    button {
-      margin-top: 5px;
-    }
-  }
+  // .attachmentContainer {
+  //   button {
+  //     margin-top: 15px;
+  //   }
+  // }
 }
 
 // @media screen and (max-height: 650px) {

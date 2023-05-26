@@ -86,8 +86,8 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
               src={currentImage && currentImage.length > 0 ? Eye : Check}
               alt="On Submit Button"
               className={styles.submitButtonImage}
-              width={40}
-              height={40}
+              width={30}
+              height={30}
             />
           </Button>
         </div>

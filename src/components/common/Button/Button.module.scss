@@ -58,10 +58,11 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .ghost {
-  font-size: 20px;
+  font-size: 16px;
 
   margin-top: 15px;
   cursor: pointer;
@@ -71,8 +72,8 @@
   border: 2px solid white;
   border-radius: 50px;
   width: 100%;
-  max-width: 300px;
-  min-width: 300px;
+  max-width: 226px;
+  min-width: 226px;
   padding: 0 5px;
   text-align: center;
   background-color: $BackgroundSecondaryColor;
@@ -80,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 36px;
+  min-height: 32px;
   // height: fit-content;
   font-weight: 400;
 }

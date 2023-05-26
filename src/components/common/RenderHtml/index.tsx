@@ -13,7 +13,7 @@ const RenderHtml = ({ htmlContent, customStyles }: { htmlContent: string; custom
     return null; // Render nothing or a loading indicator while waiting for parsing
   }
 
-  return <p style={customStyles || { fontWeight: 400, textAlign: 'justify', padding: '20px 20px' }}>{parsedContent}</p>;
+  return <p style={customStyles || { fontWeight: 300, textAlign: 'justify', padding: '20px 20px' }}>{parsedContent}</p>;
 };
 
 export default RenderHtml;

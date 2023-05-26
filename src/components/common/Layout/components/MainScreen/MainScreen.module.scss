@@ -18,7 +18,7 @@
 .mainScreenContainer {
   width: 79vw;
   height: 90vh;
-  border: solid 0.15rem $TextMainColor;
+  border: solid 0.1rem $TextMainColor;
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -47,7 +47,7 @@
   min-width: 357.67px;
   padding: 8px 20px 0 20px;
   background-color: $BackgroundColor;
-  border: solid $BorderColor 2px;
+  border: solid $BorderColor 1px;
   border-radius: 20px;
   justify-content: center;
   > h1 {

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
-import { Fragment, useCallback, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useRef, useState } from 'react';
 import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
 import styles from './Map.module.scss';
@@ -17,7 +17,7 @@ interface Props {
 
 const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
-  const { getUrlParam } = useUrlParams();
+  const { getUrlParam, setUrlParam } = useUrlParams();
 
   const currentRegion = getUrlParam('regionKey');
 
@@ -105,6 +105,60 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
           {customMap.map((region) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
             if (showIcon) {
+              if (regionKey === 'timeless-tundra') {
+                return (
+                  <a
+                    key={`pictos-${regionKey}`}
+                    onClick={() => onClickActions(regionKey)}
+                    style={{ cursor: 'pointer' }}
+                    className="z-10"
+                  >
+                    <g>
+                      <text
+                        className={styles.region__title}
+                        x={region.title.coordinates.x}
+                        y={region.title.coordinates.y}
+                        style={{
+                          fill: available ? region.color : 'lightgray',
+                          fontWeight: '400',
+                          fontSize: '1.6rem',
+                          textTransform: 'uppercase',
+                        }}
+                        textAnchor="middle"
+                      >
+                        {region.title.textParts.map((text) => (
+                          <tspan x={region.title.coordinates.x} dy="1.2em" key={text}>
+                            {text}
+                          </tspan>
+                        ))}
+                      </text>
+                      {available ? (
+                        <image
+                          x={isRegionComplete ? Number(regionOwl.x) - 15 : regionOwl.x}
+                          y={isRegionComplete ? Number(regionOwl.y) - 15 : regionOwl.y}
+                          // width="110"
+                          // height="60"
+                          style={{ width: isRegionComplete ? 150 : 110, height: 'auto' }}
+                          xlinkHref={
+                            isRegionComplete
+                              ? `/static/image/owls/gif/${regionKey}.gif`
+                              : `/static/image/owls/3d/${regionKey}.svg`
+                          }
+                        />
+                      ) : (
+                        <image
+                          x={Number(regionOwl.x) + 60}
+                          y={Number(regionOwl.y) + 15}
+                          width="100"
+                          height="50"
+                          style={{ opacity: '0.6' }}
+                          xlinkHref="/static/image/map/picto/lock-svgrepo-com.svg"
+                        />
+                      )}
+                    </g>
+                  </a>
+                );
+              }
               return (
                 <g className="z-20" key={`pictos-${regionKey}`}>
                   <ExperiencePictos experiences={experiences} regionKey={regionKey} />
@@ -175,6 +229,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                         // so it doesnt trigger zoom
                         if (region.isComplete && regionKey !== 'timeless-tundra') {
                           evt.stopPropagation();
+
                           dispatch({
                             type: 'SET_ADDITIONAL_RESOURCES_POPIN',
                             payload: {
@@ -184,6 +239,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                               regionalResources: region.regionalResources,
                             },
                           });
+                          setUrlParam('regionKey', regionKey);
                         } else {
                           onClickActions(regionKey);
                         }

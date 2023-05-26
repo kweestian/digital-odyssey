@@ -39,7 +39,7 @@ const KeyLearningsContent = ({ additionalRessources, content, videoUrl }: Props)
               <Fragment key={text}>
                 <RenderHtml customStyles={{}} htmlContent={text} />
                 <Button
-                  customStyles={{ minWidth: 'fit-content' }}
+                  customStyles={{ minWidth: 'fit-content', minHeight: 28, width: 86, fontSize: 16 }}
                   external
                   as="a"
                   href={link}

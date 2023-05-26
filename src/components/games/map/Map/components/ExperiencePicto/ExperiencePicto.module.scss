@@ -1,0 +1,28 @@
+%basePicto {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.experiencePicto {
+  @extend %basePicto;
+  width: 50px;
+  height: 50px;
+  &:hover {
+    height: 55px;
+    transform: translateX(-2.5px) translateY(-5px);
+    width: 55px;
+  }
+}
+
+.completedExperiencePicto {
+  @extend %basePicto;
+
+  width: 75px;
+  height: 75px;
+  &:hover {
+    height: 80px;
+    transform: translateX(-2.5px) translateY(-5px);
+
+    width: 80px;
+  }
+}

@@ -979,7 +979,7 @@ export const virtualValleysExperiences: Experience[] = [
         },
       ],
     },
-    coordinates: { x: 890, y: 250 },
+    coordinates: { x: 875, y: 250 },
   },
   {
     name: 'The Future of Shopping Experiences',
@@ -1019,6 +1019,6 @@ export const virtualValleysExperiences: Experience[] = [
         },
       ],
     },
-    coordinates: { x: 975, y: 240 },
+    coordinates: { x: 955, y: 240 },
   },
 ];

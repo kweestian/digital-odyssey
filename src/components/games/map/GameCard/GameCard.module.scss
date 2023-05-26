@@ -25,18 +25,18 @@
   margin: 5px 0;
 }
 
-@media screen and (max-height: $TabletBreakpoint) {
-  .cardContainer {
-    > h1 {
-      font-size: 1.6rem;
-    }
-  }
+// @media screen and (max-height: $TabletBreakpoint) {
+//   .cardContainer {
+//     > h1 {
+//       font-size: 1.6rem;
+//     }
+//   }
 
-  // .owlImage {
-  //   width: 50px;
-  //   height: auto;
-  // }
-}
+//   // .owlImage {
+//   //   width: 50px;
+//   //   height: auto;
+//   // }
+// }
 
 // @media screen and (max-height: 650px) {
 //   .cardContainer {

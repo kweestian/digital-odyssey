@@ -54,7 +54,7 @@ const GamePoppinContent = ({
             <RenderHtml htmlContent={bonus.description} customStyles={{}} />
           </div>
         </div>
-        <div className={styles.answerContainer}>
+        <div className={styles.answerContainer} style={{ marginTop: 43 }}>
           <InteractionForm
             isBonus
             fieldType="attachment"
@@ -82,7 +82,7 @@ const GamePoppinContent = ({
           <RenderHtml htmlContent={description} />
         </div>
       </div>
-      <div className={styles.answerContainer}>
+      <div className={styles.answerContainer} style={{ marginTop: bonus ? 26 : 43 }}>
         {interaction.type === 'text' && (
           <InteractionForm
             value={interaction.answer && interaction.answer[0].value}
@@ -141,8 +141,8 @@ const GamePoppinContent = ({
                       src={Eye}
                       alt="On Submit Button"
                       className={styles.submitButtonImage}
-                      width={40}
-                      height={40}
+                      width={30}
+                      height={30}
                     />
                   </Button>
                 </div>

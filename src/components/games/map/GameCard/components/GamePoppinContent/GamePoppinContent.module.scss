@@ -3,25 +3,23 @@
 .descriptionContainer {
   display: flex;
   flex-direction: column;
-  padding: 20px 5px;
+  padding: 13px 20px;
   margin-top: 10px;
   justify-content: center;
-  align-items: center;
+  text-align: justify;
+  align-items: flex-start;
   border: 2px solid white;
   font-family: var(--font-poppins);
   border-radius: 20px;
   width: 100%;
   height: 60%;
 
-  min-height: 263px;
+  min-height: 264px;
   p {
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 5px 20px;
   }
-}
-
-.descriptionTitle {
-  padding: 5px 0;
 }
 
 .errorText {
@@ -38,7 +36,8 @@
 }
 
 .answerContainer {
-  margin-top: 50px;
+  margin-bottom: 10px;
+  min-height: 38px;
 
   button {
     margin-left: auto;
@@ -49,14 +48,18 @@
 .bonusContainer {
   margin-top: 15px;
   width: 400px;
-  font-size: 20px;
+  // font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   // margin: 0 auto;
   > button {
-    width: 85%;
+    font-weight: 500;
+    width: 62%;
+    min-width: 0;
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 
@@ -86,6 +89,7 @@
 
   img:not(.closeZoomIn) {
     max-height: 100%;
+    max-width: 80%;
     width: auto;
   }
 }
@@ -93,7 +97,9 @@
 .attachmentIconContainer {
   margin-left: 15px;
   position: absolute;
-  right: 0;
+  display: flex;
+  align-items: center;
+  right: 29px;
 }
 
 .closeZoomIn {
@@ -104,17 +110,17 @@
   top: 5%;
 }
 
-@media screen and (min-width: 1800px) {
-  .descriptionContainer {
-    p {
-      font-size: 1.6rem;
-    }
-  }
-}
+// @media screen and (min-width: 1800px) {
+//   .descriptionContainer {
+//     p {
+//       font-size: 1rem;
+//     }
+//   }
+// }
 
 @media screen and (max-height: $TabletBreakpoint) {
   .descriptionContainer {
-    padding: 5px 15px 5px 15px;
+    // padding: 5px 15px 5px 15px;
     height: 60%;
     overflow-y: auto;
     min-height: 0;
@@ -124,14 +130,14 @@
       display: none;
     }
   }
-  .answerContainer {
-    margin-top: 5px;
-    // font-size: 15px;
-  }
 }
 
 @media screen and (max-height: $MobileBreakpoint) {
   .descriptionContainer {
     justify-content: flex-start;
+  }
+  .answerContainer {
+    margin-top: 15px;
+    // font-size: 15px;
   }
 }

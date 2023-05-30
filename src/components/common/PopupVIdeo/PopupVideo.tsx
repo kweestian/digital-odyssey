@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 import CloseIcon from '@/image/CloseIcon.svg';
@@ -9,6 +9,9 @@ import styles from './PopupVideo.module.scss';
 const PopupVideo = ({ onClick }: { onClick: () => void }) => {
   const vidRef = useRef<HTMLVideoElement>(null);
   // const [videoPlaying, setVideoPlaying] = useState(false);
+  useEffect(() => {
+    vidRef.current?.play();
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -23,7 +26,6 @@ const PopupVideo = ({ onClick }: { onClick: () => void }) => {
         )} */}
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video
-          autoPlay
           // onPlay={() => setVideoPlaying(true)}
           ref={vidRef}
           onEnded={() => {

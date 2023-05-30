@@ -154,7 +154,6 @@ exports[`rules page renders rules page unchanged 1`] = `
               />
             </button>
             <video
-              autoplay=""
               controls=""
             >
               <source

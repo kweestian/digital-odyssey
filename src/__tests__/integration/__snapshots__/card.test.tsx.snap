@@ -154,7 +154,6 @@ exports[`cards page renders cards page unchange 1`] = `
               />
             </button>
             <video
-              autoplay=""
               controls=""
             >
               <source

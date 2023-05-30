@@ -154,7 +154,6 @@ exports[`owls page renders owls page unchanged 1`] = `
               />
             </button>
             <video
-              autoplay=""
               controls=""
             >
               <source

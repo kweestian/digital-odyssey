@@ -34,6 +34,17 @@
   }
 }
 
+.textBox {
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  margin-top: 20px;
+  padding: 20px 100px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
 @media screen and (max-height: $TabletBreakpoint), screen and (max-width: 1380px) {
   .container {
     padding-top: 5px;

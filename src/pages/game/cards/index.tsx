@@ -101,10 +101,12 @@ const Cards: NextPage<Props> = () => {
           ))}
         </div>
         <p className={styles.textBox}>
-          You win a concept card after each completed experience. Click on any illuminated card to read again the key
-          learnings of the experience. Once you have completed all the experiences of a region, you will be able to
-          click on the region’s name to access some additional resources - including articles, books, podcasts and
-          videos - to explore further the topic.
+          You win a concept card after each completed experience.
+          <br /> Click on any illuminated card to read again the key learnings of the experience.
+          <br /> Once you have completed all the experiences of a region, you will be able to click on the
+          <br />
+          region’s name to access some additional resources - including articles, books, podcasts
+          <br /> and videos - to explore further the topic.
         </p>
       </div>
     </GameLayout>

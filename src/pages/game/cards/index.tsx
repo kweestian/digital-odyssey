@@ -19,32 +19,42 @@ const Cards: NextPage<Props> = () => {
         <div className={styles.firstRegionsContainer}>
           {firstTwoRegions.map(({ regionKey, experiences, color }) => (
             <div key={regionKey} className={styles.firstRegions}>
-              {experiences.map(({ isCompleted, key, keyLearning }) => (
-                <RewardCard
-                  additionalRessources={keyLearning.additionalRessources}
-                  content={keyLearning.text}
-                  isActive={isCompleted}
-                  videoUrl={`/static/video/cards/${key}.mp4`}
-                  key={key}
-                  color={color}
-                />
-              ))}
+              <div className={styles.regionCards}>
+                {experiences.map(({ isCompleted, key, keyLearning }) => (
+                  <RewardCard
+                    additionalRessources={keyLearning.additionalRessources}
+                    content={keyLearning.text}
+                    isActive={isCompleted}
+                    videoUrl={`/static/video/cards/${key}.mp4`}
+                    key={key}
+                    color={color}
+                  />
+                ))}
+              </div>
+              <button type="button" className={styles.regionName} style={{ color }}>
+                {regionKey.replace('-', ' ').toUpperCase()}
+              </button>
             </div>
           ))}
         </div>
         <div className={styles.lastRegionsContainer}>
           {lastRegions.map(({ regionKey, experiences, color }) => (
             <div key={regionKey} className={styles.lastRegions}>
-              {experiences.map(({ isCompleted, key, keyLearning }) => (
-                <RewardCard
-                  additionalRessources={keyLearning.additionalRessources}
-                  content={keyLearning.text}
-                  isActive={isCompleted}
-                  videoUrl={`/static/video/cards/${key}.mp4`}
-                  key={key}
-                  color={color}
-                />
-              ))}
+              <div className={styles.regionCards}>
+                {experiences.map(({ isCompleted, key, keyLearning }) => (
+                  <RewardCard
+                    additionalRessources={keyLearning.additionalRessources}
+                    content={keyLearning.text}
+                    isActive={isCompleted}
+                    videoUrl={`/static/video/cards/${key}.mp4`}
+                    key={key}
+                    color={color}
+                  />
+                ))}
+              </div>
+              <button type="button" className={styles.regionName} style={{ color }}>
+                {regionKey.replace('-', ' ').toUpperCase()}
+              </button>
             </div>
           ))}
         </div>

@@ -20,10 +20,16 @@
 
 .firstRegions {
   display: flex;
+  flex-direction: column;
   margin-right: 20px;
 }
 
 .lastRegions {
   display: flex;
+  flex-direction: column;
   margin-right: 20px;
+}
+
+.regionCards {
+  display: flex;
 }

@@ -15,12 +15,26 @@ interface DescriptiveCardProps {
   descriptionKey: string;
   hasIconAction?: boolean;
   icon: string;
+  bigImage?: boolean;
 }
 
-const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconAction }: DescriptiveCardProps) => {
+const DescriptiveCard = ({
+  isCentered,
+  title,
+  descriptionKey,
+  icon,
+  hasIconAction,
+  bigImage,
+}: DescriptiveCardProps) => {
   const [, setIsPopupOpen] = useAtom(popinAtom);
   return (
-    <div className={classNames(styles.container, { [styles.centered]: isCentered, [styles.notCentered]: !isCentered })}>
+    <div
+      className={classNames(styles.container, {
+        [styles.centered]: isCentered,
+        [styles.notCentered]: !isCentered,
+        [styles.bigImage]: bigImage,
+      })}
+    >
       <div className={classNames(styles.cornerDecoration, styles.topLeftCorner)} />
       <div className={classNames(styles.cornerDecoration, styles.topRightCorner)} />
       <div className={classNames(styles.cornerDecoration, styles.bottomRightCorner)} />
@@ -41,7 +55,13 @@ const DescriptiveCard = ({ isCentered, title, descriptionKey, icon, hasIconActio
             onClick={() => setIsPopupOpen(true)}
           />
         ) : (
-          <Image src={icon} alt={title} width={150} height={81} />
+          <Image
+            src={icon}
+            alt={title}
+            width={150}
+            height={81}
+            className={classNames({ [styles.bigImage]: bigImage })}
+          />
         )}
       </div>
     </div>

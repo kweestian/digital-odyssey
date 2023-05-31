@@ -244,12 +244,13 @@ exports[`rules page renders rules page unchanged 1`] = `
                 </p>
                 <img
                   alt="rules:cards.card2.title"
+                  class=""
                   data-nimg="1"
                   decoding="async"
                   height="81"
                   loading="lazy"
-                  src="/static/image/rules/PICTO_CONTOUR_MAP.svg"
-                  srcset="/static/image/rules/PICTO_CONTOUR_MAP.svg 1x, /static/image/rules/PICTO_CONTOUR_MAP.svg 2x"
+                  src="/static/image/navbar/card-icon.svg"
+                  srcset="/static/image/navbar/card-icon.svg 1x, /static/image/navbar/card-icon.svg 2x"
                   style="color: transparent;"
                   width="150"
                 />
@@ -286,7 +287,7 @@ exports[`rules page renders rules page unchanged 1`] = `
             class="row"
           >
             <div
-              class="container notCentered"
+              class="container notCentered bigImage"
             >
               <div
                 class="cornerDecoration topLeftCorner"
@@ -311,12 +312,13 @@ exports[`rules page renders rules page unchanged 1`] = `
                 </p>
                 <img
                   alt="rules:cards.card4.title"
+                  class="bigImage"
                   data-nimg="1"
                   decoding="async"
                   height="81"
                   loading="lazy"
-                  src="/static/image/rules/PICTO_POSITION.svg"
-                  srcset="/static/image/rules/PICTO_POSITION.svg 1x, /static/image/rules/PICTO_POSITION.svg 2x"
+                  src="/static/image/owls/flat/gold-owl.svg"
+                  srcset="/static/image/owls/flat/gold-owl.svg 1x, /static/image/owls/flat/gold-owl.svg 2x"
                   style="color: transparent;"
                   width="150"
                 />
@@ -360,12 +362,13 @@ exports[`rules page renders rules page unchanged 1`] = `
                 </p>
                 <img
                   alt="rules:cards.card3.title"
+                  class=""
                   data-nimg="1"
                   decoding="async"
                   height="81"
                   loading="lazy"
-                  src="/_next/image?url=%2Fstatic%2Fimage%2Fowls%2Fflat%2Fgold-owl.png&w=384&q=75"
-                  srcset="/_next/image?url=%2Fstatic%2Fimage%2Fowls%2Fflat%2Fgold-owl.png&w=256&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fowls%2Fflat%2Fgold-owl.png&w=384&q=75 2x"
+                  src="/static/image/navbar/owl-icon.svg"
+                  srcset="/static/image/navbar/owl-icon.svg 1x, /static/image/navbar/owl-icon.svg 2x"
                   style="color: transparent;"
                   width="150"
                 />

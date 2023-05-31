@@ -59,7 +59,7 @@ const QuestionCard = ({
               src={`/static/image/map/quiz/${imageLink}`}
               style={
                 experienceKey === 'the-future-of-product-traceability'
-                  ? { backgroundImage: 'none !important', width: '100%', height: 'auto' }
+                  ? { backgroundImage: 'none !important', width: 'auto', height: '100%' }
                   : {}
               }
             />

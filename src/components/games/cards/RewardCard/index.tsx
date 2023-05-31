@@ -10,11 +10,11 @@ interface RewardCardProps {
   isActive?: boolean;
   additionalRessources?: AdditionalResources[];
   videoUrl: string;
-  color: Region['color'];
+  experienceKey: string;
   // blurUrl;
 }
 
-const RewardCard = ({ content, isActive, additionalRessources, videoUrl, color }: RewardCardProps) => {
+const RewardCard = ({ content, isActive, additionalRessources, videoUrl, experienceKey }: RewardCardProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -23,14 +23,18 @@ const RewardCard = ({ content, isActive, additionalRessources, videoUrl, color }
     <>
       {isOpen && isActive && (
         <PopinCard onClick={() => setIsOpen(false)}>
-          <KeyLearningsContent videoUrl={videoUrl} content={content} additionalRessources={additionalRessources} />
+          <KeyLearningsContent
+            videoUrl={`/static/video/cards/big-${experienceKey}.mp4`}
+            content={content}
+            additionalRessources={additionalRessources}
+          />
         </PopinCard>
       )}
       <div className={classNames(styles.container, { [styles.isNotActive]: !isActive })}>
         <button onClick={() => isActive && setIsOpen(true)} type="button">
           <div
             className={styles.videoContainer}
-            style={{ backgroundColor: color }}
+            // style={{ backgroundColor: color }}
             onMouseEnter={() => isActive && videoRef.current?.play()}
             onMouseLeave={() => isActive && videoRef.current?.pause()}
           >

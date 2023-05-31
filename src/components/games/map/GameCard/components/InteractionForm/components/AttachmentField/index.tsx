@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useDropzone, DropzoneOptions, DropEvent, FileRejection } from 'react-dropzone';
 import Image from 'next/image';
 import { useAtom } from 'jotai';
@@ -97,29 +98,34 @@ const AttachmentField = ({ onDrop, value, label, isMutating, isBonus }: Props) =
         {isLoading ? (
           <Loader />
         ) : (
-          <Button
-            ariaLabel="image zoom in"
-            bare
-            onClick={() => setZoomImage(!zoomImage)}
-            customStyles={{ width: '100%', height: '100%' }}
-          >
-            <Image className={styles.closeZoomIn} width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
-            {currentImage
-              .filter((path) => path !== '')
-              .map((path) => (
-                <Image
-                  key={path}
-                  src={path}
-                  alt={path}
-                  width={50}
-                  height={50}
-                  unoptimized
-                  placeholder="blur"
-                  // eslint-disable-next-line max-len
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
-                />
-              ))}
-          </Button>
+          createPortal(
+            <div className={zoomImage ? styles.imageContainerZoomed : styles.imageContainer}>
+              <Button
+                ariaLabel="image zoom in"
+                bare
+                onClick={() => setZoomImage(!zoomImage)}
+                customStyles={{ width: '100%', height: '100%' }}
+              >
+                <Image className={styles.closeZoomIn} width={30} height={30} src={CloseIcon} alt="Close Popup Button" />
+                {currentImage
+                  .filter((path) => path !== '')
+                  .map((path) => (
+                    <Image
+                      key={path}
+                      src={path}
+                      alt={path}
+                      width={50}
+                      height={50}
+                      unoptimized
+                      placeholder="blur"
+                      // eslint-disable-next-line max-len
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
+                    />
+                  ))}
+              </Button>
+            </div>,
+            document.body,
+          )
         )}
       </div>
     </>

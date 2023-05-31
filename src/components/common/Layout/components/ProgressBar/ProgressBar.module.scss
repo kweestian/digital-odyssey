@@ -3,45 +3,47 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 10vw;
+  width: 2vw;
   background-color: $BackgroundColor;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
 .progressBarContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 37px;
+  // margin-bottom: 37px;
   transition: all;
+  padding-top: 80px;
 }
 
 .percentage {
   color: $TextMainColor;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   // margin-right: 10px;
   align-self: center;
-  font-size: 27px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   font-family: var(--font-poppins);
 }
 
 .progressBar {
   display: flex;
-  width: 6vw;
-  height: 81vh;
-  border: solid 0.2rem $BorderColor;
-  margin-right: 10px;
-  border-radius: 200px;
+  width: 1vw;
+  height: 74vh;
+  border: solid 0.1rem $BorderColor;
+  margin-bottom: 17px;
+  // margin-right: 10px;
+  // border-radius: 200px;
 }
 
 .progress {
   background-color: $GradientColor;
   width: inherit;
   align-self: flex-end;
-  border-radius: 200px;
+  // border-radius: 200px;
 }
 
 @media screen and (max-height: $TabletBreakpoint) {

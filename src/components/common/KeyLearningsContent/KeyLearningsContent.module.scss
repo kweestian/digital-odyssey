@@ -28,10 +28,13 @@
     font-weight: normal;
     text-align: justify;
     font-size: 14px;
+    line-height: 18.5px;
     font-family: var(--font-poppins);
     width: 90%;
     height: 85%;
     margin-top: 15px;
+    display: flex;
+    align-items: center;
   }
 
   > h4 {

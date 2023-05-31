@@ -1,20 +1,20 @@
 {
   "cards": {
     "card1": {
-      "title": "Introduction",
-      "description": "Watch the intro video to learn<br></br>the rules of the game<br></br>and its central challenge:<br></br>to explore powerful future digital solutions<br></br>in a fun, imaginative way."
+      "title": "Gameplay Concept",
+      "description": "The Kering Digital Odyssey is a quest into the future of luxury. During this journey, you will explore 5 regions and discover new digital tools and concepts across 15 experiences – once you conquer all of them, you will unlock the final region, the Timeless Tundra. Together let’s craft the customer journey of tomorrow!"
     },
     "card2": {
-      "title": "Exploration",
-      "description": "The Kering Digital Odyssey<br></br>is a digital board game with a map <br></br> presenting the different regions to explore, <br></br>each ofwhich embodies a great value of the group<br></br>and aspect of our Digital future."
+      "title": "CONCEPT CARDS",
+      "description": "You win a concept card after each completed experience that sums up the respective digital concept or tool’s key learnings. Once you have completed the 3 experiences of a region, you will be able to access some additional resources (articles, books, podcasts) to go further into the region’s central topic."
     },
     "card3": {
-      "title": "Final",
-      "description": "Finish the game by completing all <br></br> experiences and capture the Golden Owl<br></br>in the last region.<br></br><br></br>The first finisher will be heralded the Kering<br></br>Explorer of the Future."
+      "title": "COLLECTIBLE OWLS",
+      "description": "There is one bonus experience in each region that will enable you to win a collectible owl. The Golden Owl will only be caught once you have completed all the experiences – including bonuses!"
     },
     "card4": {
-      "title": "Experiences",
-      "description": "On each region, you are invited<br></br>to participate in experiences.<br></br>After each completed experience,<br></br>you win a concept card and some owls<br></br>when you complete a bonus."
+      "title": "EndGame",
+      "description": "Capture the Golden Owl in the final region! The first to finish the game will be heralded the Kering Explorer of the Future – but everyone who completes the odyssey will gain a certificate, plus dynamic new insights to integrate into your daily lives at Kering."
     }
   }
 }

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
+
 import { useGetPublicUrl } from '@/hooks';
 import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
@@ -150,35 +152,40 @@ const GamePoppinContent = ({
                   {isUploadingImage || loadingImageUrl ? (
                     <Loader />
                   ) : (
-                    <Button
-                      ariaLabel="image zoom in"
-                      bare
-                      onClick={() => setZoomImage(!zoomImage)}
-                      customStyles={{ width: '100%', height: '100%' }}
-                    >
-                      <Image
-                        className={styles.closeZoomIn}
-                        width={30}
-                        height={30}
-                        src={CloseIcon}
-                        alt="Close Popup Button"
-                      />
-                      {currentImage
-                        .filter((path) => path !== '')
-                        .map((path) => (
+                    createPortal(
+                      <div className={zoomImage ? styles.imageContainerZoomed : styles.imageContainer}>
+                        <Button
+                          ariaLabel="image zoom in"
+                          bare
+                          onClick={() => setZoomImage(!zoomImage)}
+                          customStyles={{ width: '100%', height: '100%' }}
+                        >
                           <Image
-                            key={path}
-                            src={path}
-                            alt={path}
-                            width={50}
-                            height={50}
-                            unoptimized
-                            placeholder="blur"
-                            // eslint-disable-next-line max-len
-                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
+                            className={styles.closeZoomIn}
+                            width={30}
+                            height={30}
+                            src={CloseIcon}
+                            alt="Close Popup Button"
                           />
-                        ))}
-                    </Button>
+                          {currentImage
+                            .filter((path) => path !== '')
+                            .map((path) => (
+                              <Image
+                                key={path}
+                                src={path}
+                                alt={path}
+                                width={50}
+                                height={50}
+                                unoptimized
+                                placeholder="blur"
+                                // eslint-disable-next-line max-len
+                                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk/Q8AAQ8BBubT3LQAAAAASUVORK5CYII="
+                              />
+                            ))}
+                        </Button>
+                      </div>,
+                      document.body,
+                    )
                   )}
                 </div>
               </>

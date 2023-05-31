@@ -30,7 +30,7 @@ const Rules: NextPage<Props> = () => {
           <DescriptiveCard
             title={t('rules:cards.card2.title')}
             descriptionKey="rules:cards.card2.description"
-            icon="/static/image/rules/PICTO_CONTOUR_MAP.svg"
+            icon="/static/image/navbar/card-icon.svg"
           />
         </div>
         {/* <div className={styles.secondCard}>
@@ -49,14 +49,15 @@ const Rules: NextPage<Props> = () => {
           <DescriptiveCard
             title={t('rules:cards.card4.title')}
             descriptionKey="rules:cards.card4.description"
-            icon="/static/image/rules/PICTO_POSITION.svg"
+            icon="/static/image/owls/flat/gold-owl.svg"
+            bigImage
           />
           <Image className={styles.thirdArrow} src={LeftArrow} alt="Bottom Direction Line" />
           <DescriptiveCard
             isCentered
             title={t('rules:cards.card3.title')}
             descriptionKey="rules:cards.card3.description"
-            icon="/static/image/owls/flat/gold-owl.png"
+            icon="/static/image/navbar/owl-icon.svg"
           />
         </div>
         {/* <div className={styles.fourthCard}>

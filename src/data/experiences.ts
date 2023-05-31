@@ -5,10 +5,10 @@ export const creativityCoastExperiences: Experience[] = [
     name: 'The Future of Product Personalization',
     key: 'the-future-of-personalization',
     description: `
-      In this experience, follow the link to <a href="https://froggypix.com/" target='_blank'>Froggy Pix</a>, a collaborative platform to design
+      In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?
+      id=democonfbal" target='_blank'>Froggy Pix</a>, a collaborative platform to design
       a made-to-measure product with ultra-realistic renderings - and an active
-      partner of Kering brands. In this actual pilot experience partnered with
-      Balenciaga, you will be able to customize your ideal sneaker, adjusting every
+      partner of Kering brands. In this demo created for Balenciaga, you will be able to customize your ideal sneaker, adjusting every
       detail of the shoe. Once you’re content with your Balenciaga shoe, take a
       screenshot, and upload it here! Then discover key learnings about the potential
       future of made-to-order fashion.`,
@@ -56,7 +56,7 @@ export const creativityCoastExperiences: Experience[] = [
     },
     bonus: {
       description: `You’ve just experienced Chat GPT in its basic form – now experience
-      Kering’s newly launched chatbot <a href="https://www.knxt-madeline.com/chat" target="_blank">‘/madeline,’</a> which harnesses
+      Kering’s newly launched chatbot <a href="https://www.knxt-madeline.com" target="_blank">‘/madeline,’</a> which harnesses
       ChatGPT to become the first AI personal shopper of its kind!
       Ask for an outfit recommendation suited to your specific desires, and
       
@@ -349,7 +349,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
       brand long-term.`,
       additionalRessources: [
         {
-          text: 'Jing Daily: ‘<i> How NFTs are Uncovering New Value in Art &amp; Luxury</i>’',
+          text: 'Jing Daily: ‘<i>How NFTs are Uncovering New Value in Art &amp; Luxury</i>’',
           link: 'https://jingdaily.com/how-nfts-are-uncovering-new-value-in-art-and-luxury/',
         },
       ],
@@ -608,9 +608,9 @@ export const seaOfSustainabilityExperiences: Experience[] = [
           correctAnswer: 'all',
           choices: [
             { text: 'Stream videos in lower resolution when possible!', value: 'stream' },
-            { text: 'Keep your inboxes as empty as possible.', value: 'inboxes' },
-            { text: 'Monitor your usage and offset emissions (using a site like offsetmode.com).', value: 'offset' },
-            { text: 'All of the above.', value: 'all' },
+            { text: 'Keep your inboxes as empty as possible', value: 'inboxes' },
+            { text: 'Monitor your usage and offset emissions (using a site like offsetmode.com)', value: 'offset' },
+            { text: 'All of the above', value: 'all' },
           ],
         },
         {
@@ -700,7 +700,7 @@ export const seaOfSustainabilityExperiences: Experience[] = [
     key: 'the-future-of-product-traceability',
     description: `Blockchain technology enables the tracking of products from its creation, all
     the way to after the product is purchased. In this experience, you will
-    encounter a future perfume made by one of Kering's brands. Across the
+    encounter a future perfume made by one of Kering's brands. Across the five
     questions in this quiz, you will follow the roadmap of the perfume's
     sustainable origins. Once the journey is over, read the key learnings about the
     power of blockchain to drive sustainability in the future.`,

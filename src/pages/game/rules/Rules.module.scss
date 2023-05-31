@@ -25,14 +25,14 @@
 }
 
 .emptyDescriptiveCard {
-  width: 30vw;
+  width: 32vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .emptyArrowSpace {
-  width: 15%;
+  width: 10%;
 }
 
 .firstCard {
@@ -80,7 +80,7 @@
 }
 
 .firstArrow {
-  width: 15%;
+  width: 10%;
   height: auto;
   // grid-area: m;
   // justify-self: center;
@@ -91,7 +91,7 @@
 
 .secondArrow {
   // width: 15%;
-  width: 8px;
+  // width: 6px;
   // margin-left: 58px;
   // height: 100%;
 }
@@ -102,7 +102,7 @@
   // margin-bottom: 70px;
   align-self: center;
   // width: 100%;
-  width: 15%;
+  width: 10%;
   height: auto;
   z-index: 0;
 }

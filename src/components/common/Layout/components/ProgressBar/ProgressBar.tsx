@@ -5,12 +5,22 @@ import styles from './ProgressBar.module.scss';
 
 const ProgressBar = () => {
   const { data } = useMapData();
+  const answers = [];
+  const allExperiences = data.map(({ experiences }) => experiences).flat();
 
-  const completedRegions = data.filter(
-    ({ isComplete, regionKey }) => isComplete && regionKey !== 'timeless-tundra',
-  ).length;
+  allExperiences.forEach(({ interaction: { answer, bonus } }) => {
+    if (bonus) {
+      answers.push({});
+    }
 
-  const percentage = completedRegions ? completedRegions / 5 : 0;
+    if (answer) {
+      answers.push({});
+    }
+  });
+
+  // const completedRegions = data.filter(({ experiences }) => isComplete && regionKey !== 'timeless-tundra').length;
+
+  const percentage = answers.length > 0 ? answers.length / 20 : 0;
 
   return (
     <div className={styles.container}>

@@ -41,3 +41,15 @@
   text-decoration-line: underline;
   line-height: 127.5%;
 }
+
+.textBox {
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  width: 70%;
+  margin-top: 50px;
+  padding: 20px 100px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}

@@ -564,6 +564,11 @@ exports[`cards page renders cards page unchange 1`] = `
               </button>
             </div>
           </div>
+          <p
+            class="textBox"
+          >
+            You win a concept card after each completed experience. Click on any illuminated card to read again the key learnings of the experience. Once you have completed all the experiences of a region, you will be able to click on the region’s name to access some additional resources - including articles, books, podcasts and videos - to explore further the topic.
+          </p>
         </div>
       </div>
     </div>

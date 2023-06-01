@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   background-color: $BackgroundColor;
- 
+  margin-right: 5px;
 }
 
 .subContainer {
   display: flex;
-  margin-left: 10px;
+  // margin-left: 10px;
   height: 90vh;
   flex-direction: column;
   justify-content: space-around;

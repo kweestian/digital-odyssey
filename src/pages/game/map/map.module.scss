@@ -3,6 +3,7 @@
 .mapContainer {
   position: relative;
   background-image: url('/static/image/map/MAP_BACKGROUNG.png');
+  background-repeat: round;
   height: 100%;
   width: 100%;
   > div {

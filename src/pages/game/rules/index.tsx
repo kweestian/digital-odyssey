@@ -49,7 +49,7 @@ const Rules: NextPage<Props> = () => {
           <DescriptiveCard
             title={t('rules:cards.card4.title')}
             descriptionKey="rules:cards.card4.description"
-            icon="/static/image/owls/flat/gold-owl.svg"
+            icon="/static/image/owls/gif/gold-owl.gif"
             bigImage
           />
           <Image className={styles.thirdArrow} src={LeftArrow} alt="Bottom Direction Line" />

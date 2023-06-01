@@ -2,7 +2,7 @@
 
 export const creativityCoastExperiences: Experience[] = [
   {
-    name: 'The Future of Product Personalization',
+    name: 'The Future of Personalization',
     key: 'the-future-of-personalization',
     description: `
       In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?
@@ -458,7 +458,7 @@ export const playfulPlainExperiences: Experience[] = [
           title: 'Question One',
           text: 'What does this Jacquemus hologram depict?',
           key: 'jacquemus',
-          imageLink: 'virtual_merch_question1.jpg',
+          imageLink: 'virtual_merchandising_question1.mp4',
           correctAnswer: 'virtual',
           choices: [
             { text: 'A rising ‘virtual influencer’ named Zlu', value: 'virtual' },
@@ -469,7 +469,7 @@ export const playfulPlainExperiences: Experience[] = [
           title: 'Question Two',
           text: 'What is the purpose of this Boucheron hologram?',
           key: 'holo',
-          imageLink: 'virtual_merch_question2.jpg',
+          imageLink: 'virtual_merchandising_question2.mp4',
           correctAnswer: 'all',
           choices: [
             {
@@ -485,7 +485,7 @@ export const playfulPlainExperiences: Experience[] = [
           title: 'Question Three',
           text: 'What is the purpose of this viral cat hologram on a Tokyo street?',
           key: 'cat',
-          imageLink: 'virtual_merch_question3.jpg',
+          imageLink: 'virtual_merchandising_question3.mp4',
 
           correctAnswer: 'joy',
           choices: [
@@ -500,7 +500,7 @@ export const playfulPlainExperiences: Experience[] = [
           title: 'Question Four',
           text: 'What is the purpose of this Qeelin hologram?',
           key: 'queel',
-          imageLink: 'virtual_merch_question4.jpg',
+          imageLink: 'virtual_merchandising_question3.mp4',
 
           correctAnswer: 'both',
           choices: [
@@ -752,7 +752,7 @@ export const seaOfSustainabilityExperiences: Experience[] = [
         },
         {
           title: 'Question Four',
-          text: 'This next ingredient is almost primarily sourced for perfume today! Where is this particular perfume’s labdanum sourced from?',
+          text: 'This next ingredient is almost primarily sourced for perfume today!<br /> Where is this particular perfume’s labdanum sourced from?',
           key: 'four',
           imageLink: 'the-future-of-product-traceability_question4.png',
 
@@ -822,7 +822,7 @@ export const virtualValleysExperiences: Experience[] = [
         {
           text: '',
           key: 'one',
-          correctAnswer: 'true',
+          correctAnswer: 'false',
           imageLink: 'brand_experience_question1.mp4',
           choices: [
             { text: 'Real', value: 'true' },
@@ -832,7 +832,7 @@ export const virtualValleysExperiences: Experience[] = [
         {
           text: '',
           key: 'two',
-          correctAnswer: 'false',
+          correctAnswer: 'true',
           imageLink: 'brand_experience_question2.mp4',
           choices: [
             { text: 'Real', value: 'true' },
@@ -843,7 +843,7 @@ export const virtualValleysExperiences: Experience[] = [
           text: '',
           key: 'three',
           correctAnswer: 'false',
-          imageLink: 'brand_experience_question3.mp4',
+          imageLink: 'brand_experience_question3.jpg',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
@@ -852,63 +852,63 @@ export const virtualValleysExperiences: Experience[] = [
         {
           text: '',
           key: 'four',
-          correctAnswer: 'true',
+          correctAnswer: 'false',
           imageLink: 'brand_experience_question4.mp4',
           choices: [
             { text: 'Real', value: 'true' },
             { text: 'Unreal', value: 'false' },
           ],
         },
-        // {
-        //   text: '',
-        //   key: 'five',
-        //   correctAnswer: 'false',
-        //   imageLink: 'brand_experience_question5.mp4',
-        //   choices: [
-        //     { text: 'Real', value: 'true' },
-        //     { text: 'Unreal', value: 'false' },
-        //   ],
-        // },
-        // {
-        //   text: '',
-        //   key: 'six',
-        //   correctAnswer: 'false',
-        //   imageLink: 'brand_experience_question6.mp4',
-        //   choices: [
-        //     { text: 'Real', value: 'true' },
-        //     { text: 'Unreal', value: 'false' },
-        //   ],
-        // },
-        // {
-        //   text: '',
-        //   key: 'seven',
-        //   correctAnswer: 'false',
-        //   imageLink: 'brand_experience_question7.mp4',
-        //   choices: [
-        //     { text: 'Real', value: 'true' },
-        //     { text: 'Unreal', value: 'false' },
-        //   ],
-        // },
-        // {
-        //   text: '',
-        //   key: 'eight',
-        //   correctAnswer: 'false',
-        //   imageLink: 'brand_experience_question8.mp4',
-        //   choices: [
-        //     { text: 'Real', value: 'true' },
-        //     { text: 'Unreal', value: 'false' },
-        //   ],
-        // },
-        // {
-        //   text: '',
-        //   key: 'nine',
-        //   correctAnswer: 'false',
-        //   imageLink: 'brand_experience_question9.mp4',
-        //   choices: [
-        //     { text: 'Real', value: 'true' },
-        //     { text: 'Unreal', value: 'false' },
-        //   ],
-        // },
+        {
+          text: '',
+          key: 'five',
+          correctAnswer: 'false',
+          imageLink: 'brand_experience_question5.mp4',
+          choices: [
+            { text: 'Real', value: 'true' },
+            { text: 'Unreal', value: 'false' },
+          ],
+        },
+        {
+          text: '',
+          key: 'six',
+          correctAnswer: 'false',
+          imageLink: 'brand_experience_question6.mp4',
+          choices: [
+            { text: 'Real', value: 'true' },
+            { text: 'Unreal', value: 'false' },
+          ],
+        },
+        {
+          text: '',
+          key: 'seven',
+          correctAnswer: 'false',
+          imageLink: 'brand_experience_question7.mp4',
+          choices: [
+            { text: 'Real', value: 'true' },
+            { text: 'Unreal', value: 'false' },
+          ],
+        },
+        {
+          text: '',
+          key: 'eight',
+          correctAnswer: 'false',
+          imageLink: 'brand_experience_question8.mp4',
+          choices: [
+            { text: 'Real', value: 'true' },
+            { text: 'Unreal', value: 'false' },
+          ],
+        },
+        {
+          text: '',
+          key: 'nine',
+          correctAnswer: 'false',
+          imageLink: 'brand_experience_question9.mp4',
+          choices: [
+            { text: 'Real', value: 'true' },
+            { text: 'Unreal', value: 'false' },
+          ],
+        },
       ],
     },
     bonus: {
@@ -974,7 +974,7 @@ export const virtualValleysExperiences: Experience[] = [
       products and experiences.`,
       additionalRessources: [
         {
-          text: 'RetailDive: ‘<i> How can brands find meaning in the metaverse? Co creation </i>’',
+          text: 'RetailDive: ‘<i>How can brands find meaning in the metaverse? Co creation </i>’',
           link: 'https://www.retaildive.com/spons/how-can-brands-find-meaning-in-the-metaverse-co-creation-and-community/621399/',
         },
       ],

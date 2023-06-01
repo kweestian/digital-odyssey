@@ -68,7 +68,7 @@ const QuestionCard = ({
       )}
       <div
         className={styles.questionContainer}
-        style={interactionType === 'boolean' ? { justifyContent: 'center', marginTop: 0 } : {}}
+        style={interactionType === 'boolean' || imageLink ? { justifyContent: 'center', marginTop: 0 } : {}}
       >
         <div>{title && <h3>{title}:</h3>}</div>
         <div className={styles.questionContent} style={interactionType === 'boolean' ? { marginTop: 0 } : {}}>
@@ -91,7 +91,7 @@ const QuestionCard = ({
                   checkedValue={checkedValued}
                   onChange={(newValue) => {
                     setStepFormState({ ...stepFormState, [key]: newValue });
-                    if (interactionType === 'boolean' && newValue === correctAnswer) {
+                    if (interactionType === 'boolean') {
                       setTimeout(() => {
                         slide();
                       }, 500);

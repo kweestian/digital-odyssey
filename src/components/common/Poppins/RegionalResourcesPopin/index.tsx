@@ -29,8 +29,8 @@ const RegionalResourcesPopin = ({ regionalResources, onClose, regionKey }: Props
               <Image
                 alt={`regionalResources_${regionKey}`}
                 src={`/static/image/owls/3d/${regionKey}.svg`}
-                width={30}
-                height={30}
+                width={25}
+                height={25}
               />
               <h4>{source}</h4>
             </div>
@@ -39,8 +39,7 @@ const RegionalResourcesPopin = ({ regionalResources, onClose, regionKey }: Props
                 <div key={text}>
                   <div>
                     <div>
-                      <Anchor link={link}>{text}</Anchor>
-                      by {author}
+                      <Anchor link={link}>{text}</Anchor>- {author}
                     </div>
                   </div>
 

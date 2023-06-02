@@ -1,7 +1,3 @@
-import { useAtom } from 'jotai';
-
-import { Button } from '@/components/common';
-
 import StepFormCarousel from './components/StepFormCarousel';
 
 type Props = {

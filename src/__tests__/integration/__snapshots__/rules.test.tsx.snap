@@ -317,8 +317,8 @@ exports[`rules page renders rules page unchanged 1`] = `
                   decoding="async"
                   height="81"
                   loading="lazy"
-                  src="/static/image/owls/flat/gold-owl.svg"
-                  srcset="/static/image/owls/flat/gold-owl.svg 1x, /static/image/owls/flat/gold-owl.svg 2x"
+                  src="/_next/image?url=%2Fstatic%2Fimage%2Fowls%2Fgif%2Fgold-owl.gif&w=384&q=75"
+                  srcset="/_next/image?url=%2Fstatic%2Fimage%2Fowls%2Fgif%2Fgold-owl.gif&w=256&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fowls%2Fgif%2Fgold-owl.gif&w=384&q=75 2x"
                   style="color: transparent;"
                   width="150"
                 />

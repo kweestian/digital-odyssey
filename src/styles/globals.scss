@@ -32,6 +32,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Akzidenz Medium';
+  src: url('/static/font/AkzidenzGrotesk-MediumExtended.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('/static/font/AkzidenzGrotesk-Extended.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Portrait Light';
+  src: url('/static/font/Portrait-Light-Webwoff.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --color-light: #f3f4f6;
   --color-green-lightest: #fafffb;

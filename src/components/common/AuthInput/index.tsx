@@ -1,7 +1,7 @@
 import { HTMLInputTypeAttribute, useState } from 'react';
 import classNames from 'classnames';
 
-import styles from './Input.module.scss';
+import styles from './AuthInput.module.scss';
 
 type Props = {
   required?: boolean;
@@ -11,7 +11,7 @@ type Props = {
   onChange?: (val: string) => void;
 };
 
-const Input = ({ required, type = 'input', name, label, onChange }: Props) => {
+const AuthInput = ({ required, type = 'input', name, label, onChange }: Props) => {
   const [value, setValue] = useState('');
 
   return (
@@ -21,7 +21,7 @@ const Input = ({ required, type = 'input', name, label, onChange }: Props) => {
         id={name}
         type={type}
         className={styles.form__field}
-        placeholder="Name"
+        placeholder="Email"
         required={required}
         onInput={(evt) => {
           if (evt.target instanceof HTMLInputElement) {
@@ -33,11 +33,8 @@ const Input = ({ required, type = 'input', name, label, onChange }: Props) => {
           }
         }}
       />
-      <label htmlFor={name} className={styles.form__label}>
-        {label}
-      </label>
     </div>
   );
 };
 
-export default Input;
+export default AuthInput;

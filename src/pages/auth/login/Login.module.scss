@@ -1,21 +1,61 @@
 .form__group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   // height: 50%;
   gap: 2rem;
+  > h4 {
+    font-family: 'Akzidenz';
+    font-weight: 400;
+    font-size: 30px;
+  }
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  > a {
+    font-family: 'Portrait Light';
+    align-self: flex-start;
+    padding-top: 40px;
+  }
+}
+
+.form__emailInput {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  > a {
+    font-family: 'Portrait Light';
+    align-self: flex-start;
+    padding-top: 40px;
+  }
+}
+
+.logoImage {
+  width: 226px;
+  align-self: center;
+  margin-bottom: 50px;
 }
 
 .error {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffcccc;
-  color: #cc0000;
-  border: 1px solid #cc0000;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 14px;
-  font-weight: bold;
+  font-family: 'Portrait Light';
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  min-width: 300px;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 15px 60px;
+  font-size: 19px;
+  font-weight: 400;
   text-align: center;
 }
 

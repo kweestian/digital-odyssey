@@ -21,7 +21,7 @@ const AuthInput = ({ required, type = 'input', name, label, onChange }: Props) =
         id={name}
         type={type}
         className={styles.form__field}
-        placeholder="Email"
+        placeholder={label}
         required={required}
         onInput={(evt) => {
           if (evt.target instanceof HTMLInputElement) {

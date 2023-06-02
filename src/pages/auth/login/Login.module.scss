@@ -8,13 +8,18 @@
     font-family: 'Akzidenz';
     font-weight: 400;
     font-size: 30px;
+    margin-bottom: 50px;
   }
+}
+
+.signInTitle {
+  margin-bottom: 0 !important;
 }
 
 .form__inputs {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   align-items: center;
   > a {
     font-family: 'Portrait Light';
@@ -71,6 +76,23 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.errorSignIn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Portrait Light';
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  min-width: 350px;
+  margin-left: 20px;
+  padding: 15px 60px;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .message__container {

@@ -261,6 +261,13 @@ exports[`owls page renders owls page unchanged 1`] = `
             style="color: transparent;"
             width="40"
           />
+          <p
+            class="textBox"
+          >
+            You win a collectible owl after each completed bonus experience (one in each region!).
+            <br />
+             The Golden Owl will only be caught once you have completed all the experiences, including bonuses.
+          </p>
         </div>
       </div>
     </div>

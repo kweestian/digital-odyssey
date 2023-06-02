@@ -4,9 +4,12 @@ import { useSession, useSessionContext, useSupabaseClient, useUser } from '@supa
 import { useRouter } from 'next/router';
 import { useOnEnterCallback } from '@/hooks';
 
-import { DefaultLayout, Input, Button } from '@/components';
+import { DefaultLayout, Button, AuthInput } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 
+import * as KeringImaginationLab from '@/../public/static/image/kering-imagination-lab-white.png';
+
+import Image from 'next/image';
 import styles from './Login.module.scss';
 
 const Login: NextPageWithLayout = () => {
@@ -75,17 +78,25 @@ const Login: NextPageWithLayout = () => {
   return (
     <DefaultLayout>
       <div className={styles.form__group}>
-        <h4>Sign in using your email and password</h4>
-        <div className={styles.message__container}>
-          {error && <span className={styles.error}>{error}</span>}
-          {success && <span className={styles.success}>{success}</span>}
-        </div>
-        <Input name="email" label="Email" type="input" onChange={(val) => setEmail(val)} />
-        <Input name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
+        <Image className={styles.logoImage} src={KeringImaginationLab} alt="Kering Imagination Lab Logo" />
+        <h4 className={styles.signInTitle}>SIGN IN USING YOUR EMAIL AND PASSWORD</h4>
 
-        <Button text="Submit" loading={loading} onClick={() => signInWithEmail(email, password)} />
-        <Link href="/auth/login">Use magic link instead</Link>
-        <Link href="/auth/reset-password">Forgot password ?</Link>
+        <div className={styles.form__inputs}>
+          <div className={styles.form__emailInput}>
+            <AuthInput name="email" label="Email" type="input" onChange={(val) => setEmail(val)} />
+          </div>
+          <div className={styles.form__emailInput}>
+            <AuthInput name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
+            <div className={styles.message__container}>
+              {error && <span className={styles.errorSignIn}>{error}</span>}
+              {success && <span className={styles.successSignIn}>{success}</span>}
+            </div>
+          </div>
+
+          <Button text="Submit" skin="submit" loading={loading} onClick={() => signInWithEmail(email, password)} />
+          <Link href="/auth/login">Use magic link instead</Link>
+          <Link href="/auth/reset-password">Forgot password ?</Link>
+        </div>
       </div>
     </DefaultLayout>
   );

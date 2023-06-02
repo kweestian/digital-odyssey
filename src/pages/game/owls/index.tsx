@@ -49,6 +49,10 @@ const Owls: NextPage<Props> = () => {
             })}
         </div>
         {timelessTundra?.available ? <Image src={GoldOwl} alt="Gold Owl" /> : <Image src={BasicOwl} alt="Basic Owl" />}
+        <p className={styles.textBox}>
+          You win a collectible owl after each completed bonus experience (one in each region!).
+          <br /> The Golden Owl will only be caught once you have completed all the experiences, including bonuses.
+        </p>
       </div>
     </GameLayout>
   );

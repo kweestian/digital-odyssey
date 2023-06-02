@@ -20,10 +20,35 @@
 
 .firstRegions {
   display: flex;
+  flex-direction: column;
   margin-right: 20px;
 }
 
 .lastRegions {
   display: flex;
+  flex-direction: column;
   margin-right: 20px;
+}
+
+.regionCards {
+  display: flex;
+}
+
+.regionName {
+  padding-top: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration-line: underline;
+  line-height: 127.5%;
+}
+
+.textBox {
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  margin-top: 50px;
+  padding: 20px 100px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
 }

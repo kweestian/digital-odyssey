@@ -21,7 +21,7 @@ type BaseProps = {
   disabled?: boolean;
   color?: string;
   customStyles?: CSSProperties;
-  skin?: 'normal' | 'ghost';
+  skin?: 'normal' | 'ghost' | 'submit';
   /**
    * For buttons that dont need styling, eg event listenser on big divs
    */
@@ -80,6 +80,7 @@ const Button = ({
   const skins = {
     normal: styles.button,
     ghost: styles.ghost,
+    submit: styles.submit,
   };
 
   return (

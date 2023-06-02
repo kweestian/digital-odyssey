@@ -22,10 +22,10 @@
   }
   > p {
     // margin-top: 15px;
-    font-size: 12px;
+    font-size: 13px;
     white-space: pre;
     line-height: 1.3em;
-    font-weight: 400;
+    font-weight: 300;
     min-height: 98px;
     width: 85%;
     white-space: pre-wrap;
@@ -94,21 +94,21 @@
 @media screen and (max-height: 754px) {
   .content {
     > h1 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     > p {
       padding-top: 0;
-      min-height: 0;
+      // min-height: 0;
 
       font-size: 0.8rem;
     }
     > img {
       padding-top: 0;
-      height: 60px;
+      height: 45px;
     }
 
     > .bigImage {
-      height: 80px;
+      height: 55px;
     }
   }
 }

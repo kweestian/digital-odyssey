@@ -24,3 +24,35 @@
   //   height: 100%;
   // }
 }
+
+.contactLogo {
+  position: absolute;
+  z-index: 5;
+  border: 1px solid white;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  > p {
+    font-family: 'monarch';
+    font-size: 20px;
+    padding-top: 5px;
+  }
+}
+
+.contactTitle {
+  font-family: 'monarch';
+  font-weight: lighter;
+  padding-bottom: 20px;
+}
+
+.contactEmail {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px 50px;
+  font-weight: lighter;
+}

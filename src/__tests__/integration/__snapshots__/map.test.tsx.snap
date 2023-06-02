@@ -163,6 +163,16 @@ exports[`map page renders cards page unchange 1`] = `
             </video>
           </div>
         </div>
+        <div>
+          <button
+            class="contactLogo"
+            type="button"
+          >
+            <p>
+              ?
+            </p>
+          </button>
+        </div>
         <div
           class="mapContainer"
         >

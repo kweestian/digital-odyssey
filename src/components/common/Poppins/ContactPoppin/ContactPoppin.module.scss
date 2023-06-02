@@ -1,0 +1,15 @@
+@import '@/styles/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 60px;
+  width: 500px;
+  height: 150px;
+  bottom: 20px;
+  z-index: 3;
+  background-color: $BackgroundSecondaryColor;
+}

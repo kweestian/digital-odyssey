@@ -52,9 +52,7 @@ const Rules: NextPage<Props> = () => {
             icon="/static/image/owls/gif/gold-owl.gif"
             bigImage
           />
-          <div className={styles.thirdArrow}>
-            <Image src={LeftArrow} alt="Bottom Direction Line" />
-          </div>
+          <Image className={styles.thirdArrow} src={LeftArrow} alt="Bottom Direction Line" />
           <DescriptiveCard
             isCentered
             title={t('rules:cards.card3.title')}

@@ -4,17 +4,20 @@ import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'reac
 import { useAtom } from 'jotai';
 import { interactionAtom } from '@/components/games/map/GameCard/components/GamePoppinContent/atom';
 
-import { RegionalResourcesPopin, GameCard, GameLayout, Map } from '@/components';
+import { RegionalResourcesPopin, GameCard, GameLayout, Map, ContactPoppin } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
+import useClickOutside from '@/hooks/useClickOutSide';
 import { useGlobalState } from '@/contexts/global';
 import { useMapData, useUrlParams } from '@/hooks';
 import { useRouter } from 'next/router';
+
 import styles from './map.module.scss';
 
 const DEFAULT_REGION_ZOOM = 3;
 
 const MapPage: NextPage = () => {
   const transformComponentRef = useRef<ReactZoomPanPinchRef | null>(null);
+  const helpRef = useRef(null);
   const isFirst = useRef(true);
 
   const { getUrlParam, setUrlParam, removeUrlParam } = useUrlParams();
@@ -26,6 +29,8 @@ const MapPage: NextPage = () => {
   const currentRegionKey = getUrlParam('regionKey');
 
   const [isPanning, setIsPanning] = useState(false);
+
+  const [isContactPoppinOpen, setIsContactPoppinOpen] = useState(false);
 
   const { width } = useWindowSize();
 
@@ -100,8 +105,27 @@ const MapPage: NextPage = () => {
     [CustomMap, currentExperienceKey, currentRegionKey],
   );
 
+  useClickOutside(helpRef, () => setIsContactPoppinOpen(false));
+
   return (
     <GameLayout>
+      <div ref={helpRef}>
+        <button
+          className={styles.contactLogo}
+          onClick={() => setIsContactPoppinOpen(!isContactPoppinOpen)}
+          type="button"
+        >
+          <p>?</p>
+        </button>
+        {isContactPoppinOpen && (
+          <ContactPoppin>
+            <h4 className={styles.contactTitle}>A QUESTION ?</h4>
+            <p className={styles.contactEmail}>
+              <a href="mailto:contact@kering-digital-odyssey.com">contact@keringdigitalodyssey.com</a>
+            </p>
+          </ContactPoppin>
+        )}
+      </div>
       {currentOpenedExperience && (
         <GameCard
           experience={currentOpenedExperience}

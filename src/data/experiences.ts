@@ -5,7 +5,7 @@ export const creativityCoastExperiences: Experience[] = [
     name: 'The Future of Personalization',
     key: 'the-future-of-personalization',
     description: `
-      In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?
+      In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?id=democonfbal?
       id=democonfbal" target='_blank'>Froggy Pix</a>, a collaborative platform to design
       a made-to-measure product with ultra-realistic renderings - and an active
       partner of Kering brands. In this demo created for Balenciaga, you will be able to customize your ideal sneaker, adjusting every

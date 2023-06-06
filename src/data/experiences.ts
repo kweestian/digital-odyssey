@@ -5,8 +5,7 @@ export const creativityCoastExperiences: Experience[] = [
     name: 'The Future of Personalization',
     key: 'the-future-of-personalization',
     description: `
-      In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?id=democonfbal?
-      id=democonfbal" target='_blank'>Froggy Pix</a>, a collaborative platform to design
+      In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?id=democonfbal" target='_blank'>Froggy Pix</a>, a collaborative platform to design
       a made-to-measure product with ultra-realistic renderings - and an active
       partner of Kering brands. In this demo created for Balenciaga, you will be able to customize your ideal sneaker, adjusting every
       detail of the shoe. Once you’re content with your Balenciaga shoe, take a
@@ -180,11 +179,11 @@ export const loyaltyLagoonExperiences: Experience[] = [
     name: 'the Future of Consumer Expression',
     key: 'the-future-of-consumer-expression',
     description: `In this experience, visit <a href="https://www.unrealengine.com/en-US/metahuman" target="_blank">Unreal Engine's MetaHuman</a> - an app that lets you
-      create photorealistic digital humans. Create your avatar of the future that you
-      could use to navigate the brand experiences of the future! Take a screenshot
-      of the final result of your avatar and upload it here – and discover the key
-      
-      learnings about the future of online identity.`,
+      create photorealistic digital humans. Create an avatar for the brand experiences of the future!
+      Once you arrive to the site, click on ‘launch the app’, then ‘launch the MetaHuman
+      creator,’ choose a face and finally press ‘create’ to personalize your own avatar. Take
+      a screenshot of the final result and upload it here – and discover the key learnings
+      about the future of online identity.`,
 
     interaction: {
       type: 'attachment',
@@ -365,12 +364,12 @@ export const playfulPlainExperiences: Experience[] = [
     description: `
     DRESS X believes that the amount of clothing produced today far exceeds
     the needs of humanity. The company's motto is: "Don't shop less, shop
-    digital." As part of this experience, download the <a href="https://app.dressx.com" target="_blank">DRESS X app</a> and search
-    for new looks you could soon be wearing in the virtual world. Try on a
-    garment using the DRESS X fitting feature and upload the photo of your
-    digital look here! Then discover the key learnings on how we can continue
-    
-    to express ourselves sustainably through digital fashion.`,
+    digital." Download the
+    <a href="https://app.dressx.com" target="_blank">DRESS X app</a>  and search for new looks you could soon be wearing in the virtual world.
+    Try on a garment using the DRESS X fitting feature and upload the photo of your digital
+    look here! Please note that many items are free to try on. Then discover the key
+    learnings on how we can continue to express ourselves sustainably through digital
+    fashion.`,
     interaction: {
       type: 'attachment',
       label: 'Copy text here',
@@ -811,7 +810,7 @@ export const virtualValleysExperiences: Experience[] = [
     Reality is evolving rapidly. In this experience, discover if you can tell the
     difference between virtual reality vs entirely authentic videos. For each
     of the ten video clips you are about to watch, click on "REAL" or "UNREAL" depending on
-    whether you think the visual was made with virtual reality technology or not.
+    whether you think the visual was made with virtual reality technology or generative AI technology.
     Then go on to the key learnings centered on how immersive VR technology
 
     can power future sustainable brand experiences.`,
@@ -953,7 +952,8 @@ export const virtualValleysExperiences: Experience[] = [
     returning to the Kering Digital Odyssey to unlock the key learnings on how
     co-created experiences can lead to a future luxury that is more conscious and
     
-    experiential for customers.`,
+    experiential for customers. Please note that the keyboard
+    navigation is not the same in azerty mode - W=Z and A=Q.`,
 
     interaction: {
       type: 'attachment',

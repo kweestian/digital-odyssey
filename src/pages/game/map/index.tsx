@@ -2,14 +2,17 @@ import { NextPage } from 'next';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 import { useAtom } from 'jotai';
-import { interactionAtom } from '@/components/games/map/GameCard/components/GamePoppinContent/atom';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
+import { interactionAtom } from '@/components/games/map/GameCard/components/GamePoppinContent/atom';
 import { RegionalResourcesPopin, GameCard, GameLayout, Map, ContactPoppin } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
 import useClickOutside from '@/hooks/useClickOutSide';
 import { useGlobalState } from '@/contexts/global';
 import { useMapData, useUrlParams } from '@/hooks';
-import { useRouter } from 'next/router';
+
+import CloseIcon from '@/image/CloseIcon.svg';
 
 import styles from './map.module.scss';
 
@@ -119,10 +122,18 @@ const MapPage: NextPage = () => {
         </button>
         {isContactPoppinOpen && (
           <ContactPoppin>
-            <h4 className={styles.contactTitle}>A QUESTION ?</h4>
-            <p className={styles.contactEmail}>
-              <a href="mailto:contact@kering-digital-odyssey.com">contact@keringdigitalodyssey.com</a>
-            </p>
+            <Image
+              onClick={() => setIsContactPoppinOpen(false)}
+              className={styles.closeIconContact}
+              src={CloseIcon}
+              alt="Contact Poppin close button"
+            />
+            <div>
+              <h4 className={styles.contactTitle}>A QUESTION ?</h4>
+              <p className={styles.contactEmail}>
+                <a href="mailto:contact@kering-digital-odyssey.com">contact@keringdigitalodyssey.com</a>
+              </p>
+            </div>
           </ContactPoppin>
         )}
       </div>

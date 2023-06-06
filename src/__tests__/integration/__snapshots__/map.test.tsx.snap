@@ -1471,19 +1471,21 @@ exports[`map page renders cards page unchange 1`] = `
                         <g>
                           <text
                             class="region__title"
-                            style="fill: lightgray; opacity: 0.45; font-weight: 400; font-size: 1.6rem;"
+                            style="fill: lightgray; opacity: 1; font-weight: 400; font-size: 1.6rem;"
                             text-anchor="middle"
                             x="1200"
                             y="390"
                           >
                             <tspan
                               dy="1.2em"
+                              style="padding: 30px;"
                               x="1200"
                             >
                               TIMELESS
                             </tspan>
                             <tspan
                               dy="1.2em"
+                              style="padding: 30px;"
                               x="1200"
                             >
                               TUNDRA

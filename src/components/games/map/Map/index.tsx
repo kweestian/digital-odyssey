@@ -70,7 +70,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   <CustomElement />
                 ) : (
                   <a
-                    onClick={() => onClickActions(regionKey)}
+                    onClick={() => {
+                      if (available) {
+                        // reroute here
+                      } else {
+                        onClickActions(regionKey);
+                      }
+                    }}
                     onMouseEnter={() => setActiveRegion(regionKey)}
                     style={{ cursor: 'pointer' }}
                     key={regionKey}
@@ -104,6 +110,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
           {/* then draw elements on top */}
           {customMap.map((region) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
+            const test = () => onClickActions(regionKey);
+
             if (showIcon) {
               if (regionKey === 'timeless-tundra') {
                 return (
@@ -204,7 +212,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
             return (
               <a
                 key={`pictos-${regionKey}`}
-                onClick={() => onClickActions(regionKey)}
+                onClick={() => {
+                  if (available) {
+                    // reroute here
+                  } else {
+                    onClickActions(regionKey);
+                  }
+                }}
                 style={{ cursor: 'pointer' }}
                 className="z-10"
               >

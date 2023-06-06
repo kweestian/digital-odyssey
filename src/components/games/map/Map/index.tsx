@@ -127,7 +127,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                         textAnchor="middle"
                       >
                         {region.title.textParts.map((text) => (
-                          <tspan x={region.title.coordinates.x} dy="1.2em" key={text}>
+                          <tspan x={region.title.coordinates.x} dy="1.2em" key={text} style={{ paddingTop: '30px' }}>
                             {text}
                           </tspan>
                         ))}
@@ -179,11 +179,11 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                       className={styles.region__title}
                       x={region.title.coordinates.x}
                       y={region.title.coordinates.y}
-                      style={{ fill: 'lightgray', opacity: 0.45, fontWeight: '400', fontSize: '1.6rem' }}
+                      style={{ fill: 'lightgray', opacity: 1, fontWeight: '400', fontSize: '1.6rem' }}
                       textAnchor="middle"
                     >
                       {region.title.textParts.map((text) => (
-                        <tspan x={region.title.coordinates.x} dy="1.2em" key={text}>
+                        <tspan x={region.title.coordinates.x} dy="1.2em" key={text} style={{ padding: '30px' }}>
                           {text}
                         </tspan>
                       ))}

@@ -46,7 +46,7 @@
 
 .contactTitle {
   font-family: 'monarch';
-  font-weight: lighter;
+  font-weight: 300;
   padding-bottom: 20px;
 }
 
@@ -54,5 +54,12 @@
   border: 1px solid white;
   border-radius: 10px;
   padding: 15px 50px;
-  font-weight: lighter;
+  font-weight: 300;
+}
+
+.closeIconContact {
+  width: 20px;
+  align-self: flex-end;
+  margin-right: 20px;
+  cursor: pointer;
 }

@@ -20,7 +20,7 @@ const ProgressBar = () => {
 
   // const completedRegions = data.filter(({ experiences }) => isComplete && regionKey !== 'timeless-tundra').length;
 
-  const percentage = answers.length > 0 ? answers.length / 20 : 0;
+  const percentage = answers.length > 0 ? Math.round(answers.length / 20) : 0;
 
   return (
     <div className={styles.container}>

@@ -34,7 +34,7 @@ const MapPage: NextPage = () => {
 
   const { width } = useWindowSize();
 
-  const initialScale = width && width < 1200 ? 1.2 : 1.6;
+  const initialScale = width && width < 1200 ? 1.2 : 1.4;
   const [zoom, setZoom] = useState(initialScale);
 
   const zoomToImage = useCallback(

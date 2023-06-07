@@ -27,7 +27,9 @@ export default async function handler(req: GeneratePdfRequest, res: NextApiRespo
 
     // const pdfBytes = fs.readFileSync(filePath, 'utf8');
 
-    const pdfBytes = await fetch('http://localhost:3000/static/image/blank.pdf').then((pdfRes) => pdfRes.arrayBuffer());
+    const pdfBytes = await fetch('https://digital-odyssey-staging.enverselabs.com/static/image/blank.pdf').then(
+      (pdfRes) => pdfRes.arrayBuffer(),
+    );
 
     const pdfDoc = await PDFDocument.load(pdfBytes);
 

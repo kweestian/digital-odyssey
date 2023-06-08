@@ -20,16 +20,16 @@ const ProgressBar = () => {
 
   // const completedRegions = data.filter(({ experiences }) => isComplete && regionKey !== 'timeless-tundra').length;
 
-  const percentage = answers.length > 0 ? Math.round(answers.length / 20) : 0;
+  const percentage = answers.length > 0 ? Math.round((answers.length / 20) * 100) : 0;
 
   return (
     <div className={styles.container}>
       <div className={styles.progressBarContainer}>
         <div className={styles.progressBar}>
-          <div className={styles.progress} style={{ height: `${percentage * 100}%` }} />
+          <div className={styles.progress} style={{ height: `${percentage}%` }} />
         </div>
       </div>
-      <h2 className={styles.percentage}>{percentage * 100}%</h2>
+      <h2 className={styles.percentage}>{percentage}%</h2>
     </div>
   );
 };

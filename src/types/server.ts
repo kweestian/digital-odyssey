@@ -4,6 +4,13 @@ export interface MagicLinkRequestBody {
   email: string;
 }
 
+export interface GeneratePdfRequestBody {
+  record: {
+    email: string;
+    user_id: string;
+  };
+}
+
 export interface EmailRequestBody {
   email: string;
   password: string;
@@ -21,6 +28,10 @@ export type ServerResponse =
 
 export interface SupabaseMagicLinkRequest extends NextApiRequest {
   body: MagicLinkRequestBody;
+}
+
+export interface GeneratePdfRequest extends NextApiRequest {
+  body: GeneratePdfRequestBody;
 }
 
 export interface SupabaseEmailRequest extends NextApiRequest {

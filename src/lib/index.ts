@@ -33,3 +33,7 @@ export function replaceAWSErrorCharacters(filename: string) {
   const sanitizedFilename = filename.replace(illegalCharacters, replacementCharacter);
   return sanitizedFilename;
 }
+
+export function capitalizeFirstLetter(string: string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

@@ -49,7 +49,9 @@ const TimelessTundraPage: NextPage = () => {
           certificate and post-it on our internal network Workplace
         </p>
         <Image src={Certificate} alt="Certificate" />
-        <p>DOWNLOAD YOUR CERTIFICATE</p>
+        <button className={styles.downloadButton} type="button">
+          DOWNLOAD YOUR CERTIFICATE
+        </button>
       </div>
     </GameLayout>
   );

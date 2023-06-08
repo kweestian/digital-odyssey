@@ -29,7 +29,7 @@ const MenuItem = ({ title, href, icon }: MenuItemProps) => {
       <Image src={icon} alt="" className={styles.menuImage} />
       <div className={styles.linkContainer}>
         <h1>{title}</h1>
-        {pathname === href || isHovering ? <div className={styles.activeLink} /> : null}
+        {pathname.startsWith(href) || isHovering ? <div className={styles.activeLink} /> : null}
       </div>
     </Link>
   );

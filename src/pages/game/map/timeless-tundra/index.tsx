@@ -48,7 +48,7 @@ const TimelessTundraPage: NextPage = () => {
           Congratulations, you're now part of the Digital Odyssey community of finishers. Download your <br />{' '}
           certificate and post-it on our internal network Workplace
         </p>
-        <Image src={Certificate} alt="Certificate" />
+        <Image className={styles.certificateImage} src={Certificate} alt="Certificate" />
         <button className={styles.downloadButton} type="button">
           DOWNLOAD YOUR CERTIFICATE
         </button>

@@ -3,10 +3,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
 import { Fragment, useCallback, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+
 import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
-import styles from './Map.module.scss';
 import { ExperiencePictos, MapBackground } from './components';
+
+import styles from './Map.module.scss';
 
 interface Props {
   zoomImageTrigger: (regionName: string, newZoom?: number) => void;
@@ -18,6 +21,7 @@ interface Props {
 const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
   const { getUrlParam, setUrlParam } = useUrlParams();
+  const router = useRouter();
 
   const currentRegion = getUrlParam('regionKey');
 
@@ -72,7 +76,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   <a
                     onClick={() => {
                       if (available) {
-                        // reroute here
+                        router.push('/game/map/timeless-tundra');
                       } else {
                         onClickActions(regionKey);
                       }
@@ -110,7 +114,6 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
           {/* then draw elements on top */}
           {customMap.map((region) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
-            const test = () => onClickActions(regionKey);
 
             if (showIcon) {
               if (regionKey === 'timeless-tundra') {
@@ -214,7 +217,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                 key={`pictos-${regionKey}`}
                 onClick={() => {
                   if (available) {
-                    // reroute here
+                    router.push('/game/map/timeless-tundra');
                   } else {
                     onClickActions(regionKey);
                   }

@@ -215,17 +215,17 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
             return (
               <a
                 key={`pictos-${regionKey}`}
-                onClick={() => onClickActions(regionKey)}
+                onClick={() => {
+                  if (available && regionKey === 'timeless-tundra') {
+                    router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                  } else {
+                    onClickActions(regionKey);
+                  }
+                }}
                 style={{ cursor: 'pointer' }}
                 className="z-10"
               >
-                <g
-                  onClick={() => {
-                    if (available && regionKey === 'timeless-tundra') {
-                      router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
-                    }
-                  }}
-                >
+                <g>
                   <text
                     className={styles.region__title}
                     x={region.title.coordinates.x}

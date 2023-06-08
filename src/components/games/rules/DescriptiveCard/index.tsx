@@ -59,13 +59,7 @@ const DescriptiveCard = ({
             onClick={() => setIsPopupOpen(true)}
           />
         ) : (
-          <Image
-            src={icon}
-            alt={title}
-            width={width}
-            height={height}
-            className={classNames({ [styles.bigImage]: bigImage })}
-          />
+          <Image src={icon} alt={title} width={width} height={height} />
         )}
       </div>
     </div>

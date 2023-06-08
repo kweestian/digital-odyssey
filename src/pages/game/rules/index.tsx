@@ -54,13 +54,11 @@ const Rules: NextPage<Props> = () => {
             title={t('rules:cards.card4.title')}
             descriptionKey="rules:cards.card4.description"
             icon="/static/image/rules/gold-owl-rules.gif"
-            bigImage
             width={150}
             height={81}
           />
           <Image className={styles.thirdArrow} src={LeftArrow} alt="Bottom Direction Line" />
           <DescriptiveCard
-            isCentered
             title={t('rules:cards.card3.title')}
             descriptionKey="rules:cards.card3.description"
             icon="/static/image/rules/rules-owl.gif"

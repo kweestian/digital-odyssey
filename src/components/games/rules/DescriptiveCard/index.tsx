@@ -16,6 +16,8 @@ interface DescriptiveCardProps {
   hasIconAction?: boolean;
   icon: string;
   bigImage?: boolean;
+  width: number;
+  height: number;
 }
 
 const DescriptiveCard = ({
@@ -25,6 +27,8 @@ const DescriptiveCard = ({
   icon,
   hasIconAction,
   bigImage,
+  width,
+  height,
 }: DescriptiveCardProps) => {
   const [, setIsPopupOpen] = useAtom(popinAtom);
   return (
@@ -48,8 +52,8 @@ const DescriptiveCard = ({
         {hasIconAction ? (
           <Image
             style={{ cursor: 'pointer' }}
-            width={150}
-            height={81}
+            width={width}
+            height={height}
             src={icon}
             alt={title}
             onClick={() => setIsPopupOpen(true)}
@@ -58,8 +62,8 @@ const DescriptiveCard = ({
           <Image
             src={icon}
             alt={title}
-            width={150}
-            height={81}
+            width={width}
+            height={height}
             className={classNames({ [styles.bigImage]: bigImage })}
           />
         )}

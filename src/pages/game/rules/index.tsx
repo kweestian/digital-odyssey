@@ -25,12 +25,17 @@ const Rules: NextPage<Props> = () => {
             descriptionKey="rules:cards.card1.description"
             icon="/static/image/rules/PICTO_VIDEO.svg"
             hasIconAction
+            width={150}
+            height={81}
           />
           <Image className={styles.firstArrow} src={RightDirection} alt="Bottom Direction Line" />
           <DescriptiveCard
             title={t('rules:cards.card2.title')}
             descriptionKey="rules:cards.card2.description"
-            icon="/static/image/navbar/card-icon.svg"
+            icon="/static/image/rules/rules-spinning-card.gif"
+            width={150}
+            height={81}
+            bigImage
           />
         </div>
         {/* <div className={styles.secondCard}>
@@ -49,15 +54,17 @@ const Rules: NextPage<Props> = () => {
           <DescriptiveCard
             title={t('rules:cards.card4.title')}
             descriptionKey="rules:cards.card4.description"
-            icon="/static/image/owls/gif/gold-owl.gif"
-            bigImage
+            icon="/static/image/rules/gold-owl-rules.gif"
+            width={150}
+            height={81}
           />
           <Image className={styles.thirdArrow} src={LeftArrow} alt="Bottom Direction Line" />
           <DescriptiveCard
-            isCentered
             title={t('rules:cards.card3.title')}
             descriptionKey="rules:cards.card3.description"
-            icon="/static/image/navbar/owl-icon.svg"
+            icon="/static/image/rules/rules-owl.gif"
+            width={150}
+            height={81}
           />
         </div>
         {/* <div className={styles.fourthCard}>

@@ -3,10 +3,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
 import { Fragment, useCallback, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+
 import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
-import styles from './Map.module.scss';
 import { ExperiencePictos, MapBackground } from './components';
+
+import styles from './Map.module.scss';
 
 interface Props {
   zoomImageTrigger: (regionName: string, newZoom?: number) => void;
@@ -18,6 +21,7 @@ interface Props {
 const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
   const { getUrlParam, setUrlParam } = useUrlParams();
+  const router = useRouter();
 
   const currentRegion = getUrlParam('regionKey');
 
@@ -70,7 +74,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   <CustomElement />
                 ) : (
                   <a
-                    onClick={() => onClickActions(regionKey)}
+                    // onClick={() => {
+                    //   if (available && regionKey === 'timeless-tundra') {
+                    //     router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                    //   } else {
+                    //     // onClickActions(regionKey);
+                    //   }
+                    // }}
                     onMouseEnter={() => setActiveRegion(regionKey)}
                     style={{ cursor: 'pointer' }}
                     key={regionKey}
@@ -104,12 +114,19 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
           {/* then draw elements on top */}
           {customMap.map((region) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
+
             if (showIcon) {
               if (regionKey === 'timeless-tundra') {
                 return (
                   <a
                     key={`pictos-${regionKey}`}
-                    onClick={() => onClickActions(regionKey)}
+                    onClick={() => {
+                      if (available) {
+                        router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                      } else {
+                        // onClickActions(regionKey);
+                      }
+                    }}
                     style={{ cursor: 'pointer' }}
                     className="z-10"
                   >
@@ -204,7 +221,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
             return (
               <a
                 key={`pictos-${regionKey}`}
-                onClick={() => onClickActions(regionKey)}
+                onClick={() => {
+                  if (available && regionKey === 'timeless-tundra') {
+                    router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                  } else {
+                    // onClickActions(regionKey);
+                  }
+                }}
                 style={{ cursor: 'pointer' }}
                 className="z-10"
               >
@@ -240,6 +263,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                             },
                           });
                           setUrlParam('regionKey', regionKey);
+                        } else if (regionKey === 'timeless-tundra') {
+                          router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
                         } else {
                           onClickActions(regionKey);
                         }

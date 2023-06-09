@@ -74,13 +74,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   <CustomElement />
                 ) : (
                   <a
-                    onClick={() => {
-                      if (available && regionKey === 'timeless-tundra') {
-                        router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
-                      } else {
-                        onClickActions(regionKey);
-                      }
-                    }}
+                    // onClick={() => {
+                    //   if (available && regionKey === 'timeless-tundra') {
+                    //     router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                    //   } else {
+                    //     // onClickActions(regionKey);
+                    //   }
+                    // }}
                     onMouseEnter={() => setActiveRegion(regionKey)}
                     style={{ cursor: 'pointer' }}
                     key={regionKey}
@@ -120,7 +120,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                 return (
                   <a
                     key={`pictos-${regionKey}`}
-                    onClick={() => onClickActions(regionKey)}
+                    onClick={() => {
+                      if (available) {
+                        router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                      } else {
+                        // onClickActions(regionKey);
+                      }
+                    }}
                     style={{ cursor: 'pointer' }}
                     className="z-10"
                   >
@@ -219,7 +225,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                   if (available && regionKey === 'timeless-tundra') {
                     router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
                   } else {
-                    onClickActions(regionKey);
+                    // onClickActions(regionKey);
                   }
                 }}
                 style={{ cursor: 'pointer' }}
@@ -257,6 +263,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                             },
                           });
                           setUrlParam('regionKey', regionKey);
+                        } else if (regionKey === 'timeless-tundra') {
+                          router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
                         } else {
                           onClickActions(regionKey);
                         }

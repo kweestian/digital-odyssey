@@ -35,6 +35,7 @@ const Rules: NextPage<Props> = () => {
             icon="/static/image/rules/rules-spinning-card.gif"
             width={150}
             height={81}
+            bigImage
           />
         </div>
         {/* <div className={styles.secondCard}>

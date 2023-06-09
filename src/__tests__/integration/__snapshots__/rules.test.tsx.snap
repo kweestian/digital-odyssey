@@ -219,7 +219,7 @@ exports[`rules page renders rules page unchanged 1`] = `
               width="40"
             />
             <div
-              class="container notCentered"
+              class="container notCentered bigImage"
             >
               <div
                 class="cornerDecoration topLeftCorner"
@@ -244,7 +244,6 @@ exports[`rules page renders rules page unchanged 1`] = `
                 </p>
                 <img
                   alt="rules:cards.card2.title"
-                  class=""
                   data-nimg="1"
                   decoding="async"
                   height="81"
@@ -287,7 +286,7 @@ exports[`rules page renders rules page unchanged 1`] = `
             class="row"
           >
             <div
-              class="container notCentered bigImage"
+              class="container notCentered"
             >
               <div
                 class="cornerDecoration topLeftCorner"
@@ -312,7 +311,6 @@ exports[`rules page renders rules page unchanged 1`] = `
                 </p>
                 <img
                   alt="rules:cards.card4.title"
-                  class="bigImage"
                   data-nimg="1"
                   decoding="async"
                   height="81"
@@ -337,7 +335,7 @@ exports[`rules page renders rules page unchanged 1`] = `
               width="40"
             />
             <div
-              class="container centered"
+              class="container notCentered"
             >
               <div
                 class="cornerDecoration topLeftCorner"
@@ -362,7 +360,6 @@ exports[`rules page renders rules page unchanged 1`] = `
                 </p>
                 <img
                   alt="rules:cards.card3.title"
-                  class=""
                   data-nimg="1"
                   decoding="async"
                   height="81"

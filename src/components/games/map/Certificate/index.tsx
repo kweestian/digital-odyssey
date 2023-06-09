@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import { useRef, useEffect } from 'react';
 import { backgroundImageString, overlay } from './base64Strings';
-import styles from './Certificate.module.scss';
 
 type Props = {
   firstName: string;

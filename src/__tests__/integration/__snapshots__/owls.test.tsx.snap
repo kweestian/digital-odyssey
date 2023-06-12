@@ -169,98 +169,77 @@ exports[`owls page renders owls page unchanged 1`] = `
           <div
             class="owlsList"
           >
-            <a
-              class="normalOwlContainer"
-              href="/game/map?regionKey=creativity-coast&experienceKey=the-future-of-recommendation"
-            >
-              <img
-                alt="creativity-coast"
-                data-nimg="1"
-                decoding="async"
-                height="130"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
-                width="219"
-              />
-            </a>
-            <a
-              class="normalOwlContainer"
-              href="/game/map?regionKey=loyalty-lagoon&experienceKey=the-future-of-brand-communities"
-            >
-              <img
-                alt="loyalty-lagoon"
-                data-nimg="1"
-                decoding="async"
-                height="130"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
-                width="219"
-              />
-            </a>
-            <a
-              class="normalOwlContainer"
-              href="/game/map?regionKey=sea-of-sustainability&experienceKey=the-future-of-digital-carbon-footprint"
-            >
-              <img
-                alt="sea-of-sustainability"
-                data-nimg="1"
-                decoding="async"
-                height="130"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
-                width="219"
-              />
-            </a>
-            <a
-              class="normalOwlContainer"
-              href="/game/map?regionKey=virtual-valleys&experienceKey=the-future-of-brand-experience"
-            >
-              <img
-                alt="virtual-valleys"
-                data-nimg="1"
-                decoding="async"
-                height="130"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
-                width="219"
-              />
-            </a>
-            <a
-              class="normalOwlContainer"
-              href="/game/map?regionKey=playful-plains&experienceKey=the-future-of-virtual-try-on"
-            >
-              <img
-                alt="playful-plains"
-                data-nimg="1"
-                decoding="async"
-                height="130"
-                loading="lazy"
-                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
-                style="color: transparent;"
-                width="219"
-              />
-            </a>
+            <img
+              alt="creativity-coast"
+              data-nimg="1"
+              decoding="async"
+              height="130"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="219"
+            />
+            <img
+              alt="loyalty-lagoon"
+              data-nimg="1"
+              decoding="async"
+              height="130"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="219"
+            />
+            <img
+              alt="sea-of-sustainability"
+              data-nimg="1"
+              decoding="async"
+              height="130"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="219"
+            />
+            <img
+              alt="virtual-valleys"
+              data-nimg="1"
+              decoding="async"
+              height="130"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="219"
+            />
+            <img
+              alt="playful-plains"
+              data-nimg="1"
+              decoding="async"
+              height="130"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="219"
+            />
           </div>
-          <img
-            alt="Basic Owl"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
+          <div
+            class="bigOwl"
+          >
+            <img
+              alt="Basic Owl"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
           <p
             class="textBox"
           >

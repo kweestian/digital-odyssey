@@ -1,7 +1,7 @@
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
-import { Button, DefaultLayout, Form, Input } from '@/components';
+import { AuthInput, Button, DefaultLayout, Form } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 import { useOnEnterCallback } from '@/hooks';
 
@@ -47,15 +47,11 @@ const Login: NextPageWithLayout = () => {
 
   useOnEnterCallback(resetPassword);
 
-  if (!user) {
-    return <Button text="Log In" as="a" href="/auth/login" />;
-  }
-
   return (
     <DefaultLayout>
-      <Form title="Update your password" error={error} success={success}>
-        <Input name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
-        <Button text="Submit" loading={loading} onClick={() => resetPassword()} />
+      <Form size="medium" title="Update your password" error={error} success={success}>
+        <AuthInput name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
+        <Button text="Submit" skin="submit" loading={loading} onClick={() => resetPassword()} />
       </Form>
     </DefaultLayout>
   );

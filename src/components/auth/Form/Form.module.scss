@@ -3,6 +3,22 @@
   flex-direction: column;
   // height: 50%;
   gap: 2rem;
+  > h4 {
+    font-family: 'Akzidenz';
+    font-weight: 400;
+    font-size: 30px;
+  }
+}
+
+.medium {
+  width: 40%;
+  align-items: center;
+}
+
+.logoImage {
+  width: 226px;
+  align-self: center;
+  margin-bottom: 50px;
 }
 
 .error {

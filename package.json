@@ -23,6 +23,7 @@
     "@supabase/supabase-js": "^2.21.0",
     "@types/dom-to-image": "^2.6.4",
     "@types/file-saver": "^2.0.5",
+    "base64-arraybuffer": "^1.0.2",
     "canvg": "^4.0.1",
     "classnames": "^2.3.2",
     "dom-to-image": "^2.6.0",
@@ -38,6 +39,8 @@
     "next": "13.0.6",
     "next-translate": "^1.6.0",
     "pdf-lib": "^1.17.1",
+    "pdf-poppler": "^0.2.1",
+    "pdf-to-png-converter": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-dropzone": "^14.2.3",
@@ -48,7 +51,8 @@
     "sass": "^1.60.0",
     "supabase": "^1.52.2",
     "svg-path-commander": "^2.0.7",
-    "swr": "^2.1.5"
+    "swr": "^2.1.5",
+    "tmp-promise": "^3.0.3"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",

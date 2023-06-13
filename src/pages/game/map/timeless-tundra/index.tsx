@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from 'react';
 /* eslint-disable react/no-unescaped-entities */
 import { NextPage } from 'next';
 import Image from 'next/image';
@@ -7,22 +8,47 @@ import { Button, GameLayout, Loader } from '@/components';
 import { useGetPublicUrl } from '@/hooks';
 
 import GoldenOwl from '@/image/rules/gold-owl-rules.gif';
-import { useUser } from '@supabase/auth-helpers-react';
+import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 
 import classNames from 'classnames';
 import styles from './TimelessTundra.module.scss';
 
 const TimelessTundraPage: NextPage = () => {
   const user = useUser();
+  const supabase = useSupabaseClient();
   // const [loading, setLoading] = useState(false);
-
+  const [downloadUrl, setDowloadUrl] = useState('');
   const emailWithoutDomain = user?.email?.split('@')[0];
   const emailSplit = emailWithoutDomain?.split('.');
   const [firstName, lastName] = emailSplit || [];
-  console.log(firstName);
   const { data, isLoading } = useGetPublicUrl(
     firstName ? `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf` : undefined,
   );
+
+  // const { data: fileData } = useDownloadFile(
+  //   `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`,
+  // );
+  const downloadFile = useCallback(async () => {
+    const { data: downloadLink } = await supabase.storage
+      .from('kering')
+      .download(`${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`);
+
+    if (downloadLink) {
+      const url = URL.createObjectURL(downloadLink);
+      setDowloadUrl(url);
+    }
+  }, [firstName, lastName, user?.id, supabase]);
+
+  useEffect(() => {
+    if (downloadUrl) {
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = `digital-odyssey-certificate_${firstName}-${lastName}.pdf`; // or any other filename you want
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }, [downloadUrl, firstName, lastName]);
   // const saveAsPdf = useCallback(async () => {
   //   setLoading(true);
   //   const container = document.getElementById('certificateContainer');
@@ -101,8 +127,14 @@ const TimelessTundraPage: NextPage = () => {
           </p>
           {currentImage && (
             <>
-              <iframe title="test" src={currentImage} />
-              <Button bare className={styles.downloadButton} onClick={() => ''}>
+              {/* eslint-disable-next-line max-len */}
+              <Image
+                alt="certificate"
+                src="https://jtefeyxtvoloibgobpss.supabase.co/storage/v1/object/public/digital-odyssey-public/blank.png"
+                width={300}
+                height={800}
+              />
+              <Button bare className={styles.downloadButton} onClick={() => downloadFile()}>
                 DOWNLOAD YOUR CERTIFICATE
               </Button>
             </>

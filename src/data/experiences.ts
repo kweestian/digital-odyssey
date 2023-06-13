@@ -2,7 +2,7 @@
 
 export const creativityCoastExperiences: Experience[] = [
   {
-    name: 'The Future of Personalization',
+    name: 'The Future of Product Personalization',
     key: 'the-future-of-personalization',
     description: `
       In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?id=democonfbal" target='_blank'>Froggy Pix</a>, a collaborative platform to design
@@ -413,12 +413,13 @@ export const playfulPlainExperiences: Experience[] = [
       label: 'JOIN ATTACHMENT',
     },
     bonus: {
-      description: `Just as AR can power the future of virtual try-on, it can also create
-      dynamic games – like <a href="https://regenerative.balenciaga.com/" target="_blank"> Balenciaga’s Regenerative Agriculture
-      Experience</a>, launched for Earth Day to raise awareness of new
-      investments to measure biodiversity. Take a screenshot of you
-      
-      navigating the Balenciaga AR farm, and upload it here!`,
+      description: `Thanks to AR, consumers can now ‘place’ products in their own spaces,
+      inspecting them up close from all angles as if the product was there in real life. This
+      kind of 3D Visualization was taken advantage of during the Covid-19 pandemic by
+      Lamborghini, which used AR to promote its new car model Huracán EVO RWD
+      Spyder. Follow the link to the <a href="https://www.lamborghini.com/en-en/history/huracan-evo-rwd" target="_blank">AR experience</a> – try placing the Lamborghini in your
+      home, office, or driveway, and explore its features before taking a screenshot, and
+      uploading it here!`,
       type: 'attachment',
       label: 'Bonus Experience',
     },
@@ -642,23 +643,23 @@ export const seaOfSustainabilityExperiences: Experience[] = [
           title: 'Question Four',
           text: 'Until recently, after a product has been purchased, brands have lost their link to these products. What can the breakthrough of Digital IDs do for Kering?',
           key: 'digital',
-          correctAnswer: 'unlock',
+          correctAnswer: 'all',
           choices: [
             { text: 'Unlock new circular business models (resale, rental, etc).', value: 'unlock' },
             { text: 'Give consumers an NFT of the physical product automatically.', value: 'nft' },
             { text: 'Help products more easily be sent around the world.', value: 'world' },
-            { text: 'Track the consumer at all times.', value: 'track' },
+            { text: 'All of the above.', value: 'all' },
           ],
         },
         {
           title: 'Question Five',
-          text: 'In which ways could 3D printing help brands reach closer to their sustainability goals?',
+          text: 'In which ways could 3D printing help brands get closer to their sustainability goals?',
           key: 'all',
           correctAnswer: 'all',
           choices: [
-            { text: '3D printing could decrease production time', value: '3d' },
-            { text: '3D printing can help imagine new product designs', value: 'new3d' },
-            { text: '3D printing can empower customers to make their own designs at home', value: 'world' },
+            { text: 'By increasing localized production, reducing the need for transportation of goods', value: '3d' },
+            { text: 'By enabling brands to optimize the use of resources', value: 'new3d' },
+            { text: 'By reducing the number of physical prototypes required', value: 'world' },
             { text: 'All of the above', value: 'all' },
           ],
         },

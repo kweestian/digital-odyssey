@@ -100,6 +100,9 @@ dependencies:
   supabase:
     specifier: ^1.52.2
     version: 1.52.2
+  svg-path-commander:
+    specifier: ^2.0.7
+    version: 2.0.7
   swr:
     specifier: ^2.1.5
     version: 2.1.5(react@18.2.0)
@@ -1270,6 +1273,10 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
+
+  /@thednp/dommatrix@2.0.5:
+    resolution: {integrity: sha512-WiilNOZ3Bj+KU8XJ/cH9ZBjxeCQqBbTRSjwUFf88Uip1cfR1UgtnY1jdYdIf9rB03DLH7rQN7Yt+LeSPmUTAZQ==}
+    dev: false
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -5517,6 +5524,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /svg-path-commander@2.0.7:
+    resolution: {integrity: sha512-jfBabCTf0drEICl5837psQlZD4lv0+s/aQXjn2x4ZhTM69DekHwWO4zqZEf4AOXzAfcnP7qAzUGXXtLU7kDLZg==}
+    dependencies:
+      '@thednp/dommatrix': 2.0.5
+    dev: false
 
   /svg-pathdata@6.0.3:
     resolution: {integrity: sha512-qsjeeq5YjBZ5eMdFuUa4ZosMLxgr5RZ+F+Y1OrDhuOCEInRMA3x74XdBtggJcj9kOeInz0WE+LgCPDkZFlBYJw==}

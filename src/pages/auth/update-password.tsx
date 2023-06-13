@@ -1,4 +1,4 @@
-import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import { AuthInput, Button, DefaultLayout, Form } from '@/components';
@@ -10,8 +10,6 @@ const Login: NextPageWithLayout = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-
-  const user = useUser();
 
   const { push } = useRouter();
 

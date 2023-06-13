@@ -11,14 +11,14 @@ type Props = {
 };
 
 const QuizQuestion = ({ color, checkedValue, choiceValue, onChange, choiceText, correctAnswer }: Props) => {
-  const isCurrentAnswer = checkedValue === choiceValue;
-  const answerColor = checkedValue === correctAnswer ? color : 'gray';
+  const hasAnwsered = checkedValue;
+  const answerColor = checkedValue && choiceValue === correctAnswer ? color : 'gray';
 
   return (
     <Button
       skin="ghost"
       onClick={() => onChange(choiceValue)}
-      customStyles={{ borderColor: isCurrentAnswer ? answerColor : 'white' }}
+      customStyles={{ borderColor: hasAnwsered ? answerColor : 'white' }}
     >
       {choiceText}
     </Button>

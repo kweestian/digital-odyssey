@@ -22,9 +22,8 @@ const Owls: NextPage<Props> = () => {
         <div className={styles.owlsList}>
           {data
             .filter(({ regionKey }) => regionKey !== 'timeless-tundra')
-            .map(({ color, hasCompletedBonus, regionKey, experiences }) => {
-              const bonusExperienceKey = experiences.find(({ bonus }) => bonus)?.key;
-              if (hasCompletedBonus) {
+            .map(({ color, isComplete, regionKey }) => {
+              if (isComplete) {
                 return (
                   <Image
                     key={color}
@@ -32,23 +31,25 @@ const Owls: NextPage<Props> = () => {
                     width={219}
                     height={130}
                     alt={regionKey}
-                    // style={{ height: '130px', width: '219px' }}
+                    style={{
+                      paddingBottom: 14,
+                      transform: 'scale(1.5)',
+                      marginLeft: 28,
+                    }}
                   />
                 );
               }
 
-              return (
-                <Link
-                  key={color}
-                  href={{ pathname: '/game/map', query: { regionKey, experienceKey: bonusExperienceKey } }}
-                  className={styles.normalOwlContainer}
-                >
-                  <Image src={BasicOwl} width={219} height={130} alt={regionKey} />
-                </Link>
-              );
+              return <Image key={regionKey} src={BasicOwl} width={219} height={130} alt={regionKey} />;
             })}
         </div>
-        {timelessTundra?.available ? <Image src={GoldOwl} alt="Gold Owl" /> : <Image src={BasicOwl} alt="Basic Owl" />}
+        <div className={styles.bigOwl}>
+          {timelessTundra?.available ? (
+            <Image src={GoldOwl} alt="Gold Owl" />
+          ) : (
+            <Image src={BasicOwl} alt="Basic Owl" />
+          )}
+        </div>
         <p className={styles.textBox}>
           You win a collectible owl after each completed bonus experience (one in each region!).
           <br /> The Golden Owl will only be caught once you have completed all the experiences, including bonuses.

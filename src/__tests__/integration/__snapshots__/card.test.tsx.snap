@@ -166,402 +166,412 @@ exports[`cards page renders cards page unchange 1`] = `
         <div
           class="container"
         >
+          <div />
           <div
-            class="firstRegionsContainer"
+            class="cardsContainer"
           >
             <div
-              class="firstRegions"
+              class="firstRegionsContainer"
             >
               <div
-                class="regionCards"
+                class="firstRegions"
               >
                 <div
-                  class="container isNotActive"
+                  class="regionCards"
                 >
-                  <button
-                    type="button"
+                  <div
+                    class="container isNotActive"
                   >
-                    <div
-                      class="videoContainer"
+                    <button
+                      type="button"
                     >
-                      <video
-                        height="auto"
-                        width="96.03"
+                      <div
+                        class="videoContainer"
                       >
-                        <source
-                          src="/static/video/cards/the-future-of-personalization.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-personalization.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-recommendation.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-virtual-assistants.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <div
-                  class="container isNotActive"
+                <button
+                  class="regionName"
+                  disabled=""
+                  style="color: rgb(255, 112, 78);"
+                  type="button"
                 >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-recommendation.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-virtual-assistants.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
+                  CREATIVITY COAST
+                </button>
               </div>
-              <button
-                class="regionName"
-                style="color: rgb(255, 112, 78);"
-                type="button"
+              <div
+                class="firstRegions"
               >
-                CREATIVITY COAST
-              </button>
+                <div
+                  class="regionCards"
+                >
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-brand-communities.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-consumer-expression.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-brand-loyalty-initiatives.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <button
+                  class="regionName"
+                  disabled=""
+                  style="color: rgb(255, 63, 160);"
+                  type="button"
+                >
+                  COMMUNITY LAGOON
+                </button>
+              </div>
             </div>
             <div
-              class="firstRegions"
+              class="lastRegionsContainer"
             >
               <div
-                class="regionCards"
+                class="lastRegions"
               >
                 <div
-                  class="container isNotActive"
+                  class="regionCards"
                 >
-                  <button
-                    type="button"
+                  <div
+                    class="container isNotActive"
                   >
-                    <div
-                      class="videoContainer"
+                    <button
+                      type="button"
                     >
-                      <video
-                        height="auto"
-                        width="96.03"
+                      <div
+                        class="videoContainer"
                       >
-                        <source
-                          src="/static/video/cards/the-future-of-brand-communities.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-digital-carbon-footprint.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-digital-sustainability.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-product-traceability.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <div
-                  class="container isNotActive"
+                <button
+                  class="regionName"
+                  disabled=""
+                  style="color: rgb(0, 172, 255);"
+                  type="button"
                 >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-consumer-expression.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-brand-loyalty-initiatives.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
+                  SEA OF SUSTAINABILITY
+                </button>
               </div>
-              <button
-                class="regionName"
-                style="color: rgb(255, 63, 160);"
-                type="button"
-              >
-                LOYALTY LAGOON
-              </button>
-            </div>
-          </div>
-          <div
-            class="lastRegionsContainer"
-          >
-            <div
-              class="lastRegions"
-            >
               <div
-                class="regionCards"
+                class="lastRegions"
               >
                 <div
-                  class="container isNotActive"
+                  class="regionCards"
                 >
-                  <button
-                    type="button"
+                  <div
+                    class="container isNotActive"
                   >
-                    <div
-                      class="videoContainer"
+                    <button
+                      type="button"
                     >
-                      <video
-                        height="auto"
-                        width="96.03"
+                      <div
+                        class="videoContainer"
                       >
-                        <source
-                          src="/static/video/cards/the-future-of-digital-carbon-footprint.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-brand-experience.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-co-created-experiences.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-shopping-experiences.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <div
-                  class="container isNotActive"
+                <button
+                  class="regionName"
+                  disabled=""
+                  style="color: rgb(0, 177, 110);"
+                  type="button"
                 >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-digital-sustainability.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-product-traceability.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
+                  VIRTUAL VALLEYS
+                </button>
               </div>
-              <button
-                class="regionName"
-                style="color: rgb(0, 172, 255);"
-                type="button"
-              >
-                SEA OF-SUSTAINABILITY
-              </button>
-            </div>
-            <div
-              class="lastRegions"
-            >
               <div
-                class="regionCards"
+                class="lastRegions"
               >
                 <div
-                  class="container isNotActive"
+                  class="regionCards"
                 >
-                  <button
-                    type="button"
+                  <div
+                    class="container isNotActive"
                   >
-                    <div
-                      class="videoContainer"
+                    <button
+                      type="button"
                     >
-                      <video
-                        height="auto"
-                        width="96.03"
+                      <div
+                        class="videoContainer"
                       >
-                        <source
-                          src="/static/video/cards/the-future-of-brand-experience.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-fashion-design.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-virtual-try-on.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    class="container isNotActive"
+                  >
+                    <button
+                      type="button"
+                    >
+                      <div
+                        class="videoContainer"
+                      >
+                        <video
+                          height="auto"
+                          width="85"
+                        >
+                          <source
+                            src="/static/video/cards/the-future-of-virtual-merchandising.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <div
-                  class="container isNotActive"
+                <button
+                  class="regionName"
+                  disabled=""
+                  style="color: rgb(147, 110, 241);"
+                  type="button"
                 >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-co-created-experiences.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-shopping-experiences.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
+                  PLAYFUL PLAINS
+                </button>
               </div>
-              <button
-                class="regionName"
-                style="color: rgb(0, 177, 110);"
-                type="button"
-              >
-                VIRTUAL VALLEYS
-              </button>
-            </div>
-            <div
-              class="lastRegions"
-            >
-              <div
-                class="regionCards"
-              >
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-fashion-design.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-virtual-try-on.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  class="container isNotActive"
-                >
-                  <button
-                    type="button"
-                  >
-                    <div
-                      class="videoContainer"
-                    >
-                      <video
-                        height="auto"
-                        width="96.03"
-                      >
-                        <source
-                          src="/static/video/cards/the-future-of-virtual-merchandising.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <button
-                class="regionName"
-                style="color: rgb(147, 110, 241);"
-                type="button"
-              >
-                PLAYFUL PLAINS
-              </button>
             </div>
           </div>
           <p

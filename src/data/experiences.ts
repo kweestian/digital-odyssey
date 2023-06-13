@@ -2,7 +2,7 @@
 
 export const creativityCoastExperiences: Experience[] = [
   {
-    name: 'The Future of Personalization',
+    name: 'The Future of Product Personalization',
     key: 'the-future-of-personalization',
     description: `
       In this experience, follow the link to <a href="https://1c8108d90190eb846e9cbd3b2dce9fd0.froggypix.com/configurator/balfpconfiguratoriframe.jsp?id=democonfbal" target='_blank'>Froggy Pix</a>, a collaborative platform to design
@@ -87,14 +87,16 @@ export const creativityCoastExperiences: Experience[] = [
   {
     name: 'the Future of Virtual Assistants',
     key: 'the-future-of-virtual-assistants',
-    description: `In the coming years, our interactions with virtual assistants and chatbots will
-    radically change. Personalization will increase, creating new emotional
-    connections between brands and consumers. For this experience, visit
-    <a href="https://beta.character.ai/" target="_blank">character.ai</a>, a platform where you can choose from thousands of AI characters
-    and have a unique conversation. Search and talk with a "fashion designer" or
-    other character of your choice, and upload a screenshot of your conversation
-    here! Then discover how virtual assistants in the future can lead to a more
-    luxurious and sustainable ecommerce experience.`,
+    description: `In the coming years, our interactions with virtual assistants and chatbots will radically
+    change. Personalization will increase, creating new emotional connections between
+    brands and consumers. For this experience, visit <a href="https://www.d-id.com/" target="_blank">D-ID</a>, a platform where you can craft
+    your unique virtual assistants and AI-driven avatars. Click on ‘try it now,’ then ‘free trial,’
+    and then watch the introduction video before clicking on ‘create video’ to prepare you
+    to begin! Note that you’ll have to sign up for a free account. Generate a custom
+    assistant according to your specific prompt, and then download a video of it speaking
+    aloud your words (or AI-written words)! Then in the key learnings discover how virtual
+    assistants in the future can lead to a more luxurious and sustainable ecommerce
+    experience.`,
     interaction: {
       type: 'attachment',
       label: 'Copy text here',
@@ -130,9 +132,9 @@ export const loyaltyLagoonExperiences: Experience[] = [
   {
     name: 'The Future of Brand Communities',
     key: 'the-future-of-brand-communities',
-    description: `In this experience, we will venture into Gucci Town on Roblox. Once you've
+    description: `In this experience, we will venture into Gucci Town on <a href="https://www.roblox.com/home" target="_blank">Roblox</a>. Once you've
     downloaded Roblox, open the app, log in to your account and search for
-    "<a href="https://www.gucci.com/fr/fr/st/stories/article/gucci-town-on-roblox" target="_blank">Gucci Town</a>". You'll then be ready to start a mini-quest - you'll need to
+    "Gucci Town". You'll then be ready to start a mini-quest - you'll need to
     explore the world and find floating letters in this virtual space - G-U-C-C-I!
     Once you've found all the letters, leave a message in the Gucci Town
     community chatbox and upload a screenshot here. Then continue
@@ -411,12 +413,13 @@ export const playfulPlainExperiences: Experience[] = [
       label: 'JOIN ATTACHMENT',
     },
     bonus: {
-      description: `Just as AR can power the future of virtual try-on, it can also create
-      dynamic games – like <a href="https://regenerative.balenciaga.com/" target="_blank"> Balenciaga’s Regenerative Agriculture
-      Experience</a>, launched for Earth Day to raise awareness of new
-      investments to measure biodiversity. Take a screenshot of you
-      
-      navigating the Balenciaga AR farm, and upload it here!`,
+      description: `Thanks to AR, consumers can now ‘place’ products in their own spaces,
+      inspecting them up close from all angles as if the product was there in real life. This
+      kind of 3D Visualization was taken advantage of during the Covid-19 pandemic by
+      Lamborghini, which used AR to promote its new car model Huracán EVO RWD
+      Spyder. Follow the link to the <a href="https://www.lamborghini.com/en-en/history/huracan-evo-rwd" target="_blank">AR experience</a> – try placing the Lamborghini in your
+      home, office, or driveway, and explore its features before taking a screenshot, and
+      uploading it here!`,
       type: 'attachment',
       label: 'Bonus Experience',
     },
@@ -580,8 +583,8 @@ export const seaOfSustainabilityExperiences: Experience[] = [
       steer digital forward in creative, conscious ways!`,
       additionalRessources: [
         {
-          text: 'Business of Fashion Podcast: ‘How Fashion can Use Digital IDs’',
-          link: 'https://www.businessoffashion.com/podcasts/technology/how-fashion-can-use-digital-ids/',
+          text: 'New York Times: ‘How to Reduce Your Carbon Footprint’',
+          link: 'https://www.nytimes.com/guides/year-of-living-better/how-to-reduce-your-carbon-footprint',
         },
       ],
     },
@@ -640,23 +643,23 @@ export const seaOfSustainabilityExperiences: Experience[] = [
           title: 'Question Four',
           text: 'Until recently, after a product has been purchased, brands have lost their link to these products. What can the breakthrough of Digital IDs do for Kering?',
           key: 'digital',
-          correctAnswer: 'unlock',
+          correctAnswer: 'all',
           choices: [
             { text: 'Unlock new circular business models (resale, rental, etc).', value: 'unlock' },
             { text: 'Give consumers an NFT of the physical product automatically.', value: 'nft' },
             { text: 'Help products more easily be sent around the world.', value: 'world' },
-            { text: 'Track the consumer at all times.', value: 'track' },
+            { text: 'All of the above.', value: 'all' },
           ],
         },
         {
           title: 'Question Five',
-          text: 'In which ways could 3D printing help brands reach closer to their sustainability goals?',
+          text: 'In which ways could 3D printing help brands get closer to their sustainability goals?',
           key: 'all',
           correctAnswer: 'all',
           choices: [
-            { text: '3D printing could decrease production time', value: '3d' },
-            { text: '3D printing can help imagine new product designs', value: 'new3d' },
-            { text: '3D printing can empower customers to make their own designs at home', value: 'world' },
+            { text: 'By increasing localized production, reducing the need for transportation of goods', value: '3d' },
+            { text: 'By enabling brands to optimize the use of resources', value: 'new3d' },
+            { text: 'By reducing the number of physical prototypes required', value: 'world' },
             { text: 'All of the above', value: 'all' },
           ],
         },
@@ -697,12 +700,13 @@ export const seaOfSustainabilityExperiences: Experience[] = [
   {
     name: 'The Future of Product Traceability',
     key: 'the-future-of-product-traceability',
-    description: `Blockchain technology enables the tracking of products from its creation, all
-    the way to after the product is purchased. In this experience, you will
-    encounter a future perfume made by one of Kering's brands. Across the five
-    questions in this quiz, you will follow the roadmap of the perfume's
-    sustainable origins. Once the journey is over, read the key learnings about the
-    power of blockchain to drive sustainability in the future.`,
+    description: `Just as AR can power the future of virtual try-on, it can also create dynamic games and
+    learning experiences – like <a href="https://regenerative.balenciaga.com/" target="_blank">Balenciaga’s Regenerative Agriculture Experience</a>,
+    launched for Earth Day to raise awareness of new investments to measure biodiversity.
+    It’s crucial to consider how we can continue creating digital experiences to educate our
+    consumers and each other on the importance of sustainability. Take a screenshot of
+    you navigating the Balenciaga AR farm, and upload it here, before reading the key
+    learnings on the future of AR experiences!`,
     interaction: {
       type: 'quiz',
       label: 'Enter Quiz',
@@ -778,23 +782,17 @@ export const seaOfSustainabilityExperiences: Experience[] = [
     },
     bonus: undefined,
     keyLearning: {
-      text: `The future power of blockchain tech is immense —
-      beyond holding the power to eliminate counterfeits, it can
-      enhance transparency and circularity, allowing tracking
-      of raw materials, and guaranteeing greater efficiency and
-      responsibile practices throughout the supply chain. There
-      is huge potential here for positive environmental impact,
-      given that around 70% of the fashion industry’s emissions
-      come from upstream actives like material sourcing. <br /> <br />
-      
-      Luxury consumers can prioritize quality over quantity and
-      ensure via any physical product’s ‘digital twin’ that it was
-
-      made responsibly and ethically.`,
+      text: `AR holds the power to create powerful consumer experiences, including in the
+      education process regarding sustainability and eco-conscious initiatives. Apple
+      recently announced their Vision Pro mixed-reality headset, expected by experts to be
+      a major advancement in mixed-reality technology – luxury brands should stay ahead
+      of these future tools and technologies to create a more impactful future consumer
+      experience. For example, what if in the future a brand could use AR technology to
+      immerse the consumer in a product’s sustainable creation, right from their home?`,
       additionalRessources: [
         {
-          text: 'Circularise: ‘<i>Blockchain: The key to the traceability and trust in sustainable manufacturing</i>’',
-          link: 'https://www.circularise.com/blogs/blockchain-the-key-to-the-traceability-and-trust-in-sustainable-manufacturing',
+          text: 'Vogue Business: ‘<i>Apple’s AR Glasses are Here: Fashion is Watching</i>’',
+          link: 'https://www.voguebusiness.com/technology/apples-ar-glasses-are-here-fashion-is-watching',
         },
       ],
     },

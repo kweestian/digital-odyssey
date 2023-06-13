@@ -2,9 +2,9 @@
 
 .isNotActive {
   opacity: 50%;
-  > button {
-    cursor: default;
-  }
+  // > button {
+  //   cursor: default;
+  // }
 }
 
 .contentContainer {
@@ -38,8 +38,8 @@
 }
 
 .videoContainer {
-  width: 96px;
-  height: 169px;
+  width: 85px;
+  height: 150px;
 }
 
 // .videoContainer {

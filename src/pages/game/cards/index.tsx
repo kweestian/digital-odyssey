@@ -28,77 +28,87 @@ const Cards: NextPage<Props> = () => {
             onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
           />
         )}
-        <div className={styles.firstRegionsContainer}>
-          {firstTwoRegions.map(({ regionKey, regionalResources, experiences, color }) => (
-            <div key={regionKey} className={styles.firstRegions}>
-              <div className={styles.regionCards}>
-                {experiences.map(({ isCompleted, key, keyLearning }) => (
-                  <RewardCard
-                    additionalRessources={keyLearning.additionalRessources}
-                    content={keyLearning.text}
-                    isActive={isCompleted}
-                    videoUrl={`/static/video/cards/${key}.mp4`}
-                    key={key}
-                    experienceKey={key}
-                  />
-                ))}
+        <div />
+        <div className={styles.cardsContainer}>
+          <div className={styles.firstRegionsContainer}>
+            {firstTwoRegions.map(
+              ({ regionKey, regionalResources, experiences, color, isComplete: isRegionComplete, title }) => (
+                <div key={regionKey} className={styles.firstRegions}>
+                  <div className={styles.regionCards}>
+                    {experiences.map(({ isCompleted, key, keyLearning }) => (
+                      <RewardCard
+                        regionKey={regionKey}
+                        additionalRessources={keyLearning.additionalRessources}
+                        content={keyLearning.text}
+                        isActive={isCompleted}
+                        videoUrl={`/static/video/cards/${key}.mp4`}
+                        key={key}
+                        experienceKey={key}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    className={styles.regionName}
+                    style={{ color }}
+                    disabled={!isRegionComplete}
+                    onClick={() =>
+                      dispatch({
+                        type: 'SET_ADDITIONAL_RESOURCES_POPIN',
+                        payload: {
+                          regionKey,
+                          title: title.textParts.join(' ').toUpperCase(),
+                          description: 'Ceci est une description',
+                          regionalResources,
+                        },
+                      })
+                    }
+                  >
+                    {title.textParts.join(' ').toUpperCase()}
+                  </button>
+                </div>
+              ),
+            )}
+          </div>
+          <div className={styles.lastRegionsContainer}>
+            {lastRegions.map(({ regionKey, regionalResources, color, experiences, isComplete, title }) => (
+              <div key={regionKey} className={styles.lastRegions}>
+                <div className={styles.regionCards}>
+                  {experiences.map(({ isCompleted, key, keyLearning }) => (
+                    <RewardCard
+                      regionKey={regionKey}
+                      key={key}
+                      additionalRessources={keyLearning.additionalRessources}
+                      content={keyLearning.text}
+                      isActive={isCompleted}
+                      videoUrl={`/static/video/cards/${key}.mp4`}
+                      experienceKey={key}
+                    />
+                  ))}
+                </div>
+                {/* {console.log(isComplete, regionKey)} */}
+                <button
+                  type="button"
+                  className={styles.regionName}
+                  style={{ color }}
+                  disabled={!isComplete}
+                  onClick={() =>
+                    dispatch({
+                      type: 'SET_ADDITIONAL_RESOURCES_POPIN',
+                      payload: {
+                        regionKey,
+                        title: title.textParts.join(' ').toUpperCase(),
+                        description: 'Ceci est une description',
+                        regionalResources,
+                      },
+                    })
+                  }
+                >
+                  {title.textParts.join(' ').toUpperCase()}
+                </button>
               </div>
-              <button
-                type="button"
-                className={styles.regionName}
-                style={{ color }}
-                onClick={() =>
-                  dispatch({
-                    type: 'SET_ADDITIONAL_RESOURCES_POPIN',
-                    payload: {
-                      regionKey,
-                      title: regionKey.replace('-', ' ').toUpperCase(),
-                      description: 'Ceci est une description',
-                      regionalResources,
-                    },
-                  })
-                }
-              >
-                {regionKey.replace('-', ' ').toUpperCase()}
-              </button>
-            </div>
-          ))}
-        </div>
-        <div className={styles.lastRegionsContainer}>
-          {lastRegions.map(({ regionKey, regionalResources, color, experiences }) => (
-            <div key={regionKey} className={styles.lastRegions}>
-              <div className={styles.regionCards}>
-                {experiences.map(({ isCompleted, key, keyLearning }) => (
-                  <RewardCard
-                    key={key}
-                    additionalRessources={keyLearning.additionalRessources}
-                    content={keyLearning.text}
-                    isActive={isCompleted}
-                    videoUrl={`/static/video/cards/${key}.mp4`}
-                    experienceKey={key}
-                  />
-                ))}
-              </div>
-              <button
-                type="button"
-                className={styles.regionName}
-                style={{ color }}
-                onClick={() =>
-                  dispatch({
-                    type: 'SET_ADDITIONAL_RESOURCES_POPIN',
-                    payload: {
-                      regionKey,
-                      title: regionKey.replace('-', ' ').toUpperCase(),
-                      description: 'Ceci est une description',
-                      regionalResources,
-                    },
-                  })
-                }
-              >
-                {regionKey.replace('-', ' ').toUpperCase()}
-              </button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <p className={styles.textBox}>
           You win a concept card after each completed experience.

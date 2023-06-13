@@ -157,7 +157,7 @@ export const PlayfulPlains: Region = {
 };
 
 export const LoyaltyLagoon: Region = {
-  title: { textParts: ['LOYALTY', 'LAGOON'], coordinates: { x: 780, y: 620 } },
+  title: { textParts: ['COMMUNITY', 'LAGOON'], coordinates: { x: 780, y: 620 } },
   regionKey: 'loyalty-lagoon',
   color: '#FF3FA0',
   filColour: 'black',

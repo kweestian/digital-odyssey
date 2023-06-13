@@ -10,7 +10,7 @@ const useGetUserExperience = (path?: string | null) => {
     () => (path ? '/user/attachments' : null),
     async () =>
       supabase.storage.from('kering').createSignedUrl(path || '', 6000, {
-        download: true,
+        // download: true,
         transform: {
           quality: 100,
         },

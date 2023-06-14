@@ -29,10 +29,13 @@
 
 .downloadButton {
   // font-weight: 300;
-  text-decoration-line: underline;
-  font-family: 'Poppins';
-  text-decoration: underline;
-  font-weight: 400;
+  > button {
+    text-decoration-line: underline;
+    font-family: 'Poppins';
+    text-decoration: underline;
+    font-weight: 400;
+  }
+
   // margin-top: 28px;
   // margin-bottom: 28px;
 }

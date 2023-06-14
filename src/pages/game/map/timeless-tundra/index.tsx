@@ -148,7 +148,13 @@ const TimelessTundraPage: NextPage = () => {
             width={500}
             height={1200}
           />
-          <Button loading={loading} bare className={styles.downloadButton} onClick={() => downloadFile()}>
+          <Button
+            loading={loading}
+            customStyles={{ textDecoration: 'underline', fontWeight: 400 }}
+            bare
+            className={styles.downloadButton}
+            onClick={() => downloadFile()}
+          >
             DOWNLOAD YOUR CERTIFICATE
           </Button>
         </div>

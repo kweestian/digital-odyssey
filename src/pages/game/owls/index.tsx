@@ -33,6 +33,7 @@ const Owls: NextPage<Props> = () => {
                     alt={regionKey}
                     style={{
                       paddingBottom: 14,
+                      transform: 'scale(1.5)',
                       marginLeft: 28,
                     }}
                   />
@@ -50,8 +51,7 @@ const Owls: NextPage<Props> = () => {
           )}
         </div>
         <p className={styles.textBox}>
-          You win a collectible owl once you have completed the four experiences of a region including the bonuse (one
-          in each region!).
+          You win a collectible owl after each completed bonus experience (one in each region!).
           <br /> The Golden Owl will only be caught once you have completed all the experiences, including bonuses.
         </p>
       </div>

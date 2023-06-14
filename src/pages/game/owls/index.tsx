@@ -33,7 +33,6 @@ const Owls: NextPage<Props> = () => {
                     alt={regionKey}
                     style={{
                       paddingBottom: 14,
-                      transform: 'scale(1.5)',
                       marginLeft: 28,
                     }}
                   />

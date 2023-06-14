@@ -18,7 +18,7 @@ export default async function handler(req: GeneratePdfRequest, res: NextApiRespo
   if (req.method !== 'POST') {
     return res.status(405);
   }
-  console.log('test----------', req.body);
+  console.log('get started ----------', req.body);
   const {
     record: { email, user_id: userId },
   } = req.body;

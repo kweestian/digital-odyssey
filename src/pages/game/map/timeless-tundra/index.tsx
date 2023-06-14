@@ -16,28 +16,44 @@ import styles from './TimelessTundra.module.scss';
 const TimelessTundraPage: NextPage = () => {
   const user = useUser();
   const supabase = useSupabaseClient();
+  const [loading, setLoading] = useState(false);
   // const [loading, setLoading] = useState(false);
   const [downloadUrl, setDowloadUrl] = useState('');
   const emailWithoutDomain = user?.email?.split('@')[0];
   const emailSplit = emailWithoutDomain?.split('.');
   const [firstName, lastName] = emailSplit || [];
-  const { data, isLoading } = useGetPublicUrl(
-    firstName ? `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf` : undefined,
-  );
+  // const { data, isLoading } = useGetPublicUrl(
+  //   firstName ? `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf` : undefined,
+  // );
 
   // const { data: fileData } = useDownloadFile(
   //   `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`,
   // );
   const downloadFile = useCallback(async () => {
-    const { data: downloadLink } = await supabase.storage
-      .from('kering')
-      .download(`${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`);
+    setLoading(true);
+    try {
+      const result = await fetch('/api/generatePdf', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ record: { email: user?.email, user_id: user?.id } }),
+      });
+      if (result) {
+        const { data: downloadLink } = await supabase.storage
+          .from('kering')
+          .download(`${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`);
 
-    if (downloadLink) {
-      const url = URL.createObjectURL(downloadLink);
-      setDowloadUrl(url);
+        if (downloadLink) {
+          const url = URL.createObjectURL(downloadLink);
+          setDowloadUrl(url);
+          setLoading(false);
+        }
+      }
+    } catch (e) {
+      setLoading(false);
     }
-  }, [firstName, lastName, user?.id, supabase]);
+  }, [firstName, lastName, user?.id, supabase, user?.email]);
 
   useEffect(() => {
     if (downloadUrl) {
@@ -85,11 +101,11 @@ const TimelessTundraPage: NextPage = () => {
     return <Loader />;
   }
 
-  const currentImage = data?.data?.signedUrl || '';
+  // const currentImage = data?.data?.signedUrl || '';
 
   return (
     <GameLayout>
-      {isLoading ? (
+      {loading ? (
         <Loader />
       ) : (
         <div className={styles.container}>
@@ -125,20 +141,16 @@ const TimelessTundraPage: NextPage = () => {
             Congratulations, you're now part of the Digital Odyssey community of finishers. Download your <br />
             certificate and share it with the Kering community on our internal network Workplace.
           </p>
-          {currentImage && (
-            <>
-              {/* eslint-disable-next-line max-len */}
-              <Image
-                alt="certificate"
-                src="https://jtefeyxtvoloibgobpss.supabase.co/storage/v1/object/public/digital-odyssey-public/blank.png"
-                width={300}
-                height={800}
-              />
-              <Button bare className={styles.downloadButton} onClick={() => downloadFile()}>
-                DOWNLOAD YOUR CERTIFICATE
-              </Button>
-            </>
-          )}
+
+          <Image
+            alt="certificate"
+            src="https://jtefeyxtvoloibgobpss.supabase.co/storage/v1/object/public/digital-odyssey-public/blank.png"
+            width={500}
+            height={1200}
+          />
+          <Button loading={loading} bare className={styles.downloadButton} onClick={() => downloadFile()}>
+            DOWNLOAD YOUR CERTIFICATE
+          </Button>
         </div>
       )}
     </GameLayout>

@@ -102,6 +102,7 @@ const QuestionCard = ({
             ))}
           </div>
         </div>
+        <div style={{ height: 40 }} />
       </div>
     </div>
   );

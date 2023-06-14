@@ -64,7 +64,9 @@ const Cards: NextPage<Props> = () => {
                       })
                     }
                   >
-                    {title.textParts.join(' ').toUpperCase()}
+                    <span style={{ opacity: isRegionComplete ? 1 : 0.5 }}>
+                      {title.textParts.join(' ').toUpperCase()}
+                    </span>{' '}
                   </button>
                 </div>
               ),
@@ -104,7 +106,7 @@ const Cards: NextPage<Props> = () => {
                     })
                   }
                 >
-                  {title.textParts.join(' ').toUpperCase()}
+                  <span style={{ opacity: isComplete ? 1 : 0.5 }}>{title.textParts.join(' ').toUpperCase()}</span>
                 </button>
               </div>
             ))}

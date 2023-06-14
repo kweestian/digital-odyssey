@@ -249,7 +249,12 @@ exports[`cards page renders cards page unchange 1`] = `
                   style="color: rgb(255, 112, 78);"
                   type="button"
                 >
-                  CREATIVITY COAST
+                  <span
+                    style="opacity: 0.5;"
+                  >
+                    CREATIVITY COAST
+                  </span>
+                   
                 </button>
               </div>
               <div
@@ -328,7 +333,12 @@ exports[`cards page renders cards page unchange 1`] = `
                   style="color: rgb(255, 63, 160);"
                   type="button"
                 >
-                  COMMUNITY LAGOON
+                  <span
+                    style="opacity: 0.5;"
+                  >
+                    COMMUNITY LAGOON
+                  </span>
+                   
                 </button>
               </div>
             </div>
@@ -411,7 +421,11 @@ exports[`cards page renders cards page unchange 1`] = `
                   style="color: rgb(0, 172, 255);"
                   type="button"
                 >
-                  SEA OF SUSTAINABILITY
+                  <span
+                    style="opacity: 0.5;"
+                  >
+                    SEA OF SUSTAINABILITY
+                  </span>
                 </button>
               </div>
               <div
@@ -490,7 +504,11 @@ exports[`cards page renders cards page unchange 1`] = `
                   style="color: rgb(0, 177, 110);"
                   type="button"
                 >
-                  VIRTUAL VALLEYS
+                  <span
+                    style="opacity: 0.5;"
+                  >
+                    VIRTUAL VALLEYS
+                  </span>
                 </button>
               </div>
               <div
@@ -569,7 +587,11 @@ exports[`cards page renders cards page unchange 1`] = `
                   style="color: rgb(147, 110, 241);"
                   type="button"
                 >
-                  PLAYFUL PLAINS
+                  <span
+                    style="opacity: 0.5;"
+                  >
+                    PLAYFUL PLAINS
+                  </span>
                 </button>
               </div>
             </div>

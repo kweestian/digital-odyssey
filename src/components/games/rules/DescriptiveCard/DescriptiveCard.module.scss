@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   background-color: $BackgroundSecondaryColor;
-  height: 29vh;
-  width: 26vw;
+  // height: 33vh;
+  width: 27vw;
 }
 
 .bigImage img {
@@ -33,6 +33,7 @@
     min-height: 98px;
     width: 85%;
     white-space: pre-wrap;
+    padding-bottom: 10px;
   }
 
   img {

@@ -18,22 +18,24 @@
   display: flex;
   margin-bottom: 20px;
   justify-content: center;
+  gap: 20px;
 }
 
 .lastRegionsContainer {
   display: flex;
+  gap: 20px;
 }
 
 .firstRegions {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  // margin-right: 20px;
 }
 
 .lastRegions {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  // margin-right: 20px;
 }
 
 .regionCards {

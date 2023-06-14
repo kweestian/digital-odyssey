@@ -502,7 +502,7 @@ export const playfulPlainExperiences: Experience[] = [
           title: 'Question Four',
           text: 'What is the purpose of this Qeelin hologram?',
           key: 'queel',
-          imageLink: 'virtual_merchandising_question3.mp4',
+          imageLink: 'virtual_merchandising_question4.mp4',
 
           correctAnswer: 'both',
           choices: [
@@ -583,7 +583,7 @@ export const seaOfSustainabilityExperiences: Experience[] = [
       steer digital forward in creative, conscious ways!`,
       additionalRessources: [
         {
-          text: 'New York Times: ‘How to Reduce Your Carbon Footprint’',
+          text: 'New York Times: ‘<i>How to Reduce Your Carbon Footprint</i>’',
           link: 'https://www.nytimes.com/guides/year-of-living-better/how-to-reduce-your-carbon-footprint',
         },
       ],
@@ -698,7 +698,7 @@ export const seaOfSustainabilityExperiences: Experience[] = [
     coordinates: { x: 560, y: 260 },
   },
   {
-    name: 'The Future of Product Traceability',
+    name: 'The Future of Mixed Reality Experiences',
     key: 'the-future-of-product-traceability',
     description: `Just as AR can power the future of virtual try-on, it can also create dynamic games and
     learning experiences – like <a href="https://regenerative.balenciaga.com/" target="_blank">Balenciaga’s Regenerative Agriculture Experience</a>,
@@ -708,77 +708,77 @@ export const seaOfSustainabilityExperiences: Experience[] = [
     you navigating the Balenciaga AR farm, and upload it here, before reading the key
     learnings on the future of AR experiences!`,
     interaction: {
-      type: 'quiz',
+      type: 'attachment',
       label: 'Enter Quiz',
-      questions: [
-        {
-          title: 'Question One',
-          text: 'There are currently three major hotspots for rose cultivation in the world.<br /> Where was this perfume’s rose sourced from?',
-          key: 'one',
-          correctAnswer: 'turkey',
-          imageLink: 'the-future-of-product-traceability_question1.png',
-          choices: [
-            { text: 'Bulgaria', value: 'bulgaria' },
-            { text: 'Turkey', value: 'turkey' },
-            { text: 'Morocco', value: 'morocco' },
-          ],
-        },
-        {
-          title: 'Question Two',
-          text: `
-          Coffee is incredibly important to be sustainable
-          sourced, as it's a crop deeply threatened by climate
-          change – the amount of land suitable for coffee
-          cultivation globally may halve by 2050.<br />
-          Where is this perfume’s coffee sourced from?`,
-          key: 'two',
-          imageLink: 'the-future-of-product-traceability_question2.png',
+      // questions: [
+      //   {
+      //     title: 'Question One',
+      //     text: 'There are currently three major hotspots for rose cultivation in the world.<br /> Where was this perfume’s rose sourced from?',
+      //     key: 'one',
+      //     correctAnswer: 'turkey',
+      //     imageLink: 'the-future-of-product-traceability_question1.png',
+      //     choices: [
+      //       { text: 'Bulgaria', value: 'bulgaria' },
+      //       { text: 'Turkey', value: 'turkey' },
+      //       { text: 'Morocco', value: 'morocco' },
+      //     ],
+      //   },
+      //   {
+      //     title: 'Question Two',
+      //     text: `
+      //     Coffee is incredibly important to be sustainable
+      //     sourced, as it's a crop deeply threatened by climate
+      //     change – the amount of land suitable for coffee
+      //     cultivation globally may halve by 2050.<br />
+      //     Where is this perfume’s coffee sourced from?`,
+      //     key: 'two',
+      //     imageLink: 'the-future-of-product-traceability_question2.png',
 
-          correctAnswer: 'Venezuela',
-          choices: [
-            { text: 'Venezuela', value: 'Venezuela' },
-            { text: 'Ethiopia', value: 'Ethiopia' },
-            { text: 'Brazil', value: 'Brazil' },
-          ],
-        },
-        {
-          title: 'Question Three',
-          text: 'Where is the perfume’s bourbon vanilla absolute found?<br /> Hint: this kind of vanilla is unique to this region!',
-          key: 'three',
-          imageLink: 'the-future-of-product-traceability_question3.png',
-          correctAnswer: 'Madagascar',
-          choices: [
-            { text: 'Mexico', value: 'Mexico' },
-            { text: 'French Polynesia', value: 'French_Polynesia' },
-            { text: 'Madagascar', value: 'Madagascar' },
-          ],
-        },
-        {
-          title: 'Question Four',
-          text: 'This next ingredient is almost primarily sourced for perfume today!<br /> Where is this particular perfume’s labdanum sourced from?',
-          key: 'four',
-          imageLink: 'the-future-of-product-traceability_question4.png',
+      //     correctAnswer: 'Venezuela',
+      //     choices: [
+      //       { text: 'Venezuela', value: 'Venezuela' },
+      //       { text: 'Ethiopia', value: 'Ethiopia' },
+      //       { text: 'Brazil', value: 'Brazil' },
+      //     ],
+      //   },
+      //   {
+      //     title: 'Question Three',
+      //     text: 'Where is the perfume’s bourbon vanilla absolute found?<br /> Hint: this kind of vanilla is unique to this region!',
+      //     key: 'three',
+      //     imageLink: 'the-future-of-product-traceability_question3.png',
+      //     correctAnswer: 'Madagascar',
+      //     choices: [
+      //       { text: 'Mexico', value: 'Mexico' },
+      //       { text: 'French Polynesia', value: 'French_Polynesia' },
+      //       { text: 'Madagascar', value: 'Madagascar' },
+      //     ],
+      //   },
+      //   {
+      //     title: 'Question Four',
+      //     text: 'This next ingredient is almost primarily sourced for perfume today!<br /> Where is this particular perfume’s labdanum sourced from?',
+      //     key: 'four',
+      //     imageLink: 'the-future-of-product-traceability_question4.png',
 
-          correctAnswer: 'Spain',
-          choices: [
-            { text: 'Spain', value: 'Spain' },
-            { text: 'Taiwan', value: 'Taiwan' },
-            { text: 'Australia', value: 'Australia' },
-          ],
-        },
-        {
-          title: 'Question Five',
-          text: 'The last key component of the perfume is frankincense, to round out this perfume with sweet and smoky depth.<br /> Where is it traced to?',
-          key: 'five',
-          imageLink: 'the-future-of-product-traceability_question5.png',
-          correctAnswer: 'Somalia',
-          choices: [
-            { text: 'France', value: 'France' },
-            { text: 'South Africa', value: 'South_Africa' },
-            { text: 'Somalia', value: 'Somalia' },
-          ],
-        },
-      ],
+      //     correctAnswer: 'Spain',
+      //     choices: [
+      //       { text: 'Spain', value: 'Spain' },
+      //       { text: 'Taiwan', value: 'Taiwan' },
+      //       { text: 'Australia', value: 'Australia' },
+      //     ],
+      //   },
+      //   {
+      //     title: 'Question Five',
+      //     text: 'The last key component of the perfume is frankincense, to round out this perfume with sweet and smoky depth.<br /> Where is it traced to?',
+      //     key: 'five',
+      //     imageLink: 'the-future-of-product-traceability_question5.png',
+      //     correctAnswer: 'Somalia',
+      //     choices: [
+      //       { text: 'France', value: 'France' },
+      //       { text: 'South Africa', value: 'South_Africa' },
+      //       { text: 'Somalia', value: 'Somalia' },
+      //     ],
+      //   },
+      // ],
     },
     bonus: undefined,
     keyLearning: {
@@ -808,7 +808,7 @@ export const virtualValleysExperiences: Experience[] = [
     Reality is evolving rapidly. In this experience, discover if you can tell the
     difference between virtual reality vs entirely authentic videos. For each
     of the ten video clips you are about to watch, click on "REAL" or "UNREAL" depending on
-    whether you think the visual was made with virtual reality technology or generative AI technology.
+    whether you think the visual was made with virtual reality or generative AI technology.
     Then go on to the key learnings centered on how immersive VR technology
 
     can power future sustainable brand experiences.`,

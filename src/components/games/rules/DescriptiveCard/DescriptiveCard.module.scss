@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   background-color: $BackgroundSecondaryColor;
-  // height: 33vh;
+  height: 31vh;
   width: 27vw;
 }
 
@@ -92,6 +92,9 @@
 // }
 
 @media screen and (max-height: 754px) {
+  .container {
+    height: 100%;
+  }
   .content {
     > h1 {
       font-size: 1rem;

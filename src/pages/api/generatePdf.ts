@@ -18,7 +18,6 @@ export default async function handler(req: GeneratePdfRequest, res: NextApiRespo
   if (req.method !== 'POST') {
     return res.status(405);
   }
-  console.log('get started ----------', req.body);
   const {
     record: { email, user_id: userId },
   } = req.body;
@@ -49,7 +48,9 @@ export default async function handler(req: GeneratePdfRequest, res: NextApiRespo
 
     // Get the width and height of the first page
 
-    const displayName = `${firstName?.toLocaleUpperCase()} ${lastName?.toLocaleUpperCase()}`;
+    const lastNameOrEmpty = lastName ? lastName?.toLocaleUpperCase() : '';
+
+    const displayName = `${firstName?.toLocaleUpperCase()} ${lastNameOrEmpty}`;
 
     const textWidth = monarchFont.widthOfTextAtSize(displayName, 48);
     const textHeight = monarchFont.heightAtSize(48);
@@ -87,9 +88,11 @@ export default async function handler(req: GeneratePdfRequest, res: NextApiRespo
 
     const uploadFile = await pdfDoc.save();
 
+    const fileName = lastName ? `${firstName}-${lastName}` : `${firstName}`;
+
     const { error: supbaBaseError } = await supabase.storage
       .from('kering')
-      .upload(`${userId}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`, uploadFile, {
+      .upload(`${userId}/certificate/digital-odyssey-certificate_${fileName}.pdf`, uploadFile, {
         cacheControl: '3600',
         upsert: true,
       });

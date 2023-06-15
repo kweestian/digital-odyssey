@@ -5,8 +5,6 @@ import Image from 'next/image';
 
 import { Button, GameLayout, Loader } from '@/components';
 
-import { useGetPublicUrl } from '@/hooks';
-
 import GoldenOwl from '@/image/rules/gold-owl-rules.gif';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 
@@ -22,12 +20,15 @@ const TimelessTundraPage: NextPage = () => {
   const emailWithoutDomain = user?.email?.split('@')[0];
   const emailSplit = emailWithoutDomain?.split('.');
   const [firstName, lastName] = emailSplit || [];
+
+  const fileName = lastName ? `${firstName}-${lastName}` : `${firstName}`;
+
   // const { data, isLoading } = useGetPublicUrl(
-  //   firstName ? `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf` : undefined,
+  //   firstName ? `${user?.id}/certificate/digital-odyssey-certificate_${fileName}.pdf` : undefined,
   // );
 
   // const { data: fileData } = useDownloadFile(
-  //   `${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`,
+  //   `${user?.id}/certificate/digital-odyssey-certificate_${fileName}.pdf`,
   // );
   const downloadFile = useCallback(async () => {
     setLoading(true);
@@ -42,7 +43,7 @@ const TimelessTundraPage: NextPage = () => {
       if (result) {
         const { data: downloadLink } = await supabase.storage
           .from('kering')
-          .download(`${user?.id}/certificate/digital-odyssey-certificate_${firstName}-${lastName}.pdf`);
+          .download(`${user?.id}/certificate/digital-odyssey-certificate_${fileName}.pdf`);
 
         if (downloadLink) {
           const url = URL.createObjectURL(downloadLink);
@@ -53,18 +54,18 @@ const TimelessTundraPage: NextPage = () => {
     } catch (e) {
       setLoading(false);
     }
-  }, [firstName, lastName, user?.id, supabase, user?.email]);
+  }, [fileName, user?.id, supabase, user?.email]);
 
   useEffect(() => {
     if (downloadUrl) {
       const link = document.createElement('a');
       link.href = downloadUrl;
-      link.download = `digital-odyssey-certificate_${firstName}-${lastName}.pdf`; // or any other filename you want
+      link.download = `digital-odyssey-certificate_${fileName}.pdf`; // or any other filename you want
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
-  }, [downloadUrl, firstName, lastName]);
+  }, [downloadUrl, fileName]);
   // const saveAsPdf = useCallback(async () => {
   //   setLoading(true);
   //   const container = document.getElementById('certificateContainer');

@@ -26,6 +26,10 @@
   overflow: hidden;
   z-index: 2;
   position: relative;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .mainScreenFirstBorder {

@@ -50,7 +50,7 @@
 //   }
 // }
 
-@media screen and (max-height: $TabletBreakpoint), screen and (max-width: $DesktopBreakpoint) {
+@media screen and (max-height: $TabletBreakpoint) {
   // .container {
   //   height: 40vh;
   //   width: 14vw;
@@ -59,4 +59,13 @@
   //   height: 40vh;
   //   width: 14vw;
   // }
+
+  .videoContainer {
+    width: auto;
+    height: 20vh;
+    video {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }

@@ -91,7 +91,7 @@
 //   }
 // }
 
-@media screen and (max-height: 754px) {
+@media screen and (max-height: 900px) {
   .container {
     height: 100%;
   }
@@ -115,7 +115,7 @@
 @media screen and (max-height: $MobileBreakpoint) {
   .content {
     > h1 {
-      font-size: 16px;
+      font-size: 14px;
     }
     > p {
       padding-top: 0;

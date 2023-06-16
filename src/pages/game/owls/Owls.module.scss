@@ -52,24 +52,24 @@
   border-radius: 13px;
   padding: 20px 100px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
 }
 
-@media screen and (max-height: $TabletBreakpoint), screen and (max-width: 1380px) {
+@media screen and (max-height: $TabletBreakpoint) {
   .container {
-    padding-top: 5px;
-    // > img {
-    //   width: 30vw;
-    //   height: auto;
-    //   // max-height: 50vh;
-    // }
+    padding-top: 50px;
+  }
+  .bigOwl img {
+    height: 20vh;
+    width: auto;
+    // max-height: 50vh;
   }
   .owlsList {
-    // > img {
-    //   // width: 10vw;
-    //   height: auto;
-    //   // max-height: 30vh;
-    // }
+    > img {
+      width: auto;
+      height: 10vh;
+      // max-height: 30vh;
+    }
   }
 }

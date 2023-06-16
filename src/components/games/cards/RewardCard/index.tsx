@@ -58,7 +58,7 @@ const RewardCard = ({
             onMouseLeave={() => isActive && videoRef.current?.pause()}
           >
             {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-            <video ref={videoRef} muted controls={false}>
+            <video ref={videoRef} muted controls={false} width={85} height="auto">
               <source src={videoUrl} type="video/mp4" />
             </video>
           </div>

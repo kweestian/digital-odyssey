@@ -188,7 +188,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-personalization.mp4"
                             type="video/mp4"
@@ -206,7 +209,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-recommendation.mp4"
                             type="video/mp4"
@@ -224,7 +230,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-virtual-assistants.mp4"
                             type="video/mp4"
@@ -263,7 +272,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-brand-communities.mp4"
                             type="video/mp4"
@@ -281,7 +293,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-consumer-expression.mp4"
                             type="video/mp4"
@@ -299,7 +314,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-brand-loyalty-initiatives.mp4"
                             type="video/mp4"
@@ -342,7 +360,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-digital-carbon-footprint.mp4"
                             type="video/mp4"
@@ -360,7 +381,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-digital-sustainability.mp4"
                             type="video/mp4"
@@ -378,7 +402,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-product-traceability.mp4"
                             type="video/mp4"
@@ -416,7 +443,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-brand-experience.mp4"
                             type="video/mp4"
@@ -434,7 +464,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-co-created-experiences.mp4"
                             type="video/mp4"
@@ -452,7 +485,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-shopping-experiences.mp4"
                             type="video/mp4"
@@ -490,7 +526,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-fashion-design.mp4"
                             type="video/mp4"
@@ -508,7 +547,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-virtual-try-on.mp4"
                             type="video/mp4"
@@ -526,7 +568,10 @@ exports[`cards page renders cards page unchange 1`] = `
                       <div
                         class="videoContainer"
                       >
-                        <video>
+                        <video
+                          height="auto"
+                          width="85"
+                        >
                           <source
                             src="/static/video/cards/the-future-of-virtual-merchandising.mp4"
                             type="video/mp4"

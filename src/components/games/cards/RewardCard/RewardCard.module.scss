@@ -40,6 +40,11 @@
 .videoContainer {
   width: 85px;
   height: 150px;
+
+  // video {
+  //   width: auto;
+  //   height: 20vh;
+  // }
 }
 
 // .videoContainer {
@@ -64,8 +69,8 @@
     width: auto;
     height: 20vh;
     video {
-      height: 100%;
-      width: 100%;
+      width: auto;
+      height: 20vh;
     }
   }
 }

@@ -22,7 +22,9 @@
 .owlsList {
   display: flex;
   align-items: center;
-  margin-left: 3px;
+  width: 80%;
+  justify-content: center;
+  gap: 40px;
   > img {
     margin: 0 4px;
     // width: 14vw;
@@ -42,7 +44,7 @@
 // }
 
 .bigOwl img {
-  height: 200px;
+  height: 300px;
   width: auto;
 }
 
@@ -61,14 +63,14 @@
     padding-top: 50px;
   }
   .bigOwl img {
-    height: 20vh;
+    height: 28vh;
     width: auto;
     // max-height: 50vh;
   }
   .owlsList {
     > img {
       width: auto;
-      height: 10vh;
+      height: 12vh;
       // max-height: 30vh;
     }
   }

@@ -55,11 +55,11 @@
   border: 1px solid #ffffff;
   border-radius: 13px;
   margin-top: 35px;
-  padding: 20px 100px;
+  padding: 20px 5px;
   font-weight: 400;
   font-size: 12px;
   text-align: center;
-  width: 824px;
+  width: 804px;
 }
 
 .cardsContainer {
@@ -71,6 +71,5 @@
 @media screen and (max-height: $TabletBreakpoint) {
   .textBox {
     margin-top: 20px;
-    width: 70%;
   }
 }

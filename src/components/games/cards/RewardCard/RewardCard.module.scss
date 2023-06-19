@@ -68,8 +68,12 @@
   .videoContainer {
     width: auto;
     height: 20vh;
+    // position: relative;
     video {
-      width: 100%;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      width: auto;
       height: 100%;
     }
   }

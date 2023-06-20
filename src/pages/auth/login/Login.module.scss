@@ -1,14 +1,38 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+
+  .legal__paragraph {
+    text-align: center;
+    font-family: 'Portrait Light';
+    width: 80%;
+    margin: 0 auto;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
 .form__group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // justify-content: center;
+  margin: auto;
   // height: 50%;
+  width: 60%;
   gap: 2rem;
   > h4 {
     font-family: 'Akzidenz';
     font-weight: 400;
     font-size: 30px;
     margin-bottom: 50px;
+    text-align: center;
   }
 }
 
@@ -19,13 +43,26 @@
 .form__inputs {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 60%;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   > a {
     font-family: 'Portrait Light';
     align-self: flex-start;
-    padding-top: 40px;
+    padding-top: 20px;
+    font-size: 17px;
+
+    &:last-child {
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
   }
+}
+
+.submitButtonRow {
+  display: flex;
+  justify-content: center;
 }
 
 .form__emailInput {

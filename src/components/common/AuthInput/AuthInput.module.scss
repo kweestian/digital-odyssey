@@ -31,8 +31,8 @@
 
 .form__field::placeholder:focus {
   font-weight: 700;
-  border-width: 3px;
-  border-image-slice: 1;
+  // border-width: 3px;
+  // border-image-slice: 1;
 }
 
 .form__field:placeholder-shown ~ .form__label {
@@ -42,15 +42,15 @@
 }
 
 .form__field:focus {
-  padding-bottom: 6px;
+  // padding-bottom: 6px;
   font-weight: 700;
 }
 
 .form__field:focus ~ .form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
+  // position: absolute;
+  // top: 0;
+  // display: block;
+  // transition: 0.2s;
   font-size: 17px;
   color: $TextSecondaryColor;
   font-weight: 700;

@@ -2,6 +2,7 @@ stages:
   - build
   - test
   - deploy_staging
+  - deploy_production
 
 image: docker:latest
 
@@ -95,3 +96,14 @@ deploy_staging:
       make pull-staging && make start-staging &&
       docker image prune -a -f
       "
+deploy_production:
+  stage: deploy_production
+  only:
+    - tags
+  except:
+    - branches
+  script:
+    - npm install --global vercel
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel build --prod --token=$VERCEL_TOKEN
+    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN

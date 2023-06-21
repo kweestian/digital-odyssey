@@ -160,8 +160,8 @@ const MapPage: NextPage = () => {
       <div className={styles.mapContainer}>
         <TransformWrapper
           centerOnInit
-          maxPositionX={500}
-          maxPositionY={500}
+          // maxPositionX={500}
+          // maxPositionY={5000}
           ref={transformComponentRef}
           maxScale={4}
           minScale={initialScale}

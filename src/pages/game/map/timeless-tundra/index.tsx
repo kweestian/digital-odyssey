@@ -139,11 +139,13 @@ const TimelessTundraPage: NextPage = () => {
             <p>CONGRATULATIONS</p>
           </div>
           <p className={styles.description}>
-            Congratulations, you’ve conquered this year’s Digital Odyssey! Download your certificate and share <br />
+            Congratulations, you’ve conquered this year’s Imagination Odyssey! Download your certificate and share{' '}
+            <br />
             it with the Kering community on our internal network Workplace.
           </p>
 
           <Image
+            className={styles.certificateImageBlank}
             alt="certificate"
             src="https://jtefeyxtvoloibgobpss.supabase.co/storage/v1/object/public/digital-odyssey-public/blank.png"
             width={500}

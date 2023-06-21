@@ -18,7 +18,7 @@ const Header = () => {
       {/* <meta name="google-site-verification" content="" /> */}
 
       <meta name="description" content={metaDescription} />
-      <title>Digital Odyssey</title>
+      <title>Imagination Odyssey</title>
     </Head>
   );
 };

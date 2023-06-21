@@ -131,7 +131,7 @@ const MapPage: NextPage = () => {
             <div>
               <h4 className={styles.contactTitle}>A QUESTION ?</h4>
               <p className={styles.contactEmail}>
-                <a href="mailto:contact@kering-digital-odyssey.com">contact@keringdigitalodyssey.com</a>
+                <a href="mailto:contact@kering-imagination-odyssey.com">contact@keringimaginationodyssey.com</a>
               </p>
             </div>
           </ContactPoppin>

@@ -138,7 +138,7 @@ export const loyaltyLagoonExperiences: Experience[] = [
     explore the world and find floating letters in this virtual space - G-U-C-C-I!
     Once you've found all the letters, leave a message in the Gucci Town
     community chatbox and upload a screenshot here. Then continue
-    exploring, or go straight back to the Kering Digital Odyssey to unlock key
+    exploring, or go straight back to the Kering Imagination Odyssey to unlock key
     
     learnings on the future power of brand communities.`,
 
@@ -947,7 +947,7 @@ export const virtualValleysExperiences: Experience[] = [
     description: `In this experience, dive into the BOSS virtual showroom on <a href="https://www.spatial.io/s/BOSS-Immersive-Showroom-641e08bd6127ed8eaff70faa?share=3302646144092575883" target="_blank">spatial.io</a>, and
     complete a mini-quest by following the on-screen instructions to collect three
     floating orbs – screenshot once you claim your digital outfit prize, before
-    returning to the Kering Digital Odyssey to unlock the key learnings on how
+    returning to the Kering Imagination Odyssey to unlock the key learnings on how
     co-created experiences can lead to a future luxury that is more conscious and
     
     experiential for customers. Please note that the keyboard

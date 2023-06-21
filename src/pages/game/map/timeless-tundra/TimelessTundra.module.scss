@@ -78,3 +78,15 @@
   top: 35px;
   left: calc(50% - 45px);
 }
+
+@media screen and (max-height: $TabletBreakpoint) {
+  .certificateImageBlank {
+    height: 55%;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .title {
+    margin-bottom: 45px;
+  }
+}

@@ -1,4 +1,4 @@
-#  Digital Odyssey
+#  Imagination Odyssey
 
 An interactive odyssey to discover the digital landscape
 

@@ -103,6 +103,7 @@ deploy_production:
   except:
     - branches
   script:
+    - make create-env
     - npm install --global vercel
     - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
     - vercel build --prod --token=$VERCEL_TOKEN

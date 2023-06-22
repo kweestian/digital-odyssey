@@ -23,7 +23,7 @@ const Rules: NextPage<Props> = () => {
             isCentered
             title={t('rules:cards.card1.title')}
             descriptionKey="rules:cards.card1.description"
-            icon="/static/image/rules/PICTO_VIDEO.svg"
+            icon="/static/image/rules/rules-map.gif"
             hasIconAction
             width={150}
             height={81}

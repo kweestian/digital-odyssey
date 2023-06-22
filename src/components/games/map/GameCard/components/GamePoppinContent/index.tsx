@@ -108,7 +108,7 @@ const GamePoppinContent = ({
         {showQuizButton && (
           <Button
             skin="ghost"
-            customStyles={{ marginTop: 5 }}
+            customStyles={{ marginTop: 5, fontSize: 13 }}
             text={interaction.answer ? 'ReDo Quiz' : 'Enter Quiz'}
             onClick={() => {
               setStepFormState({});

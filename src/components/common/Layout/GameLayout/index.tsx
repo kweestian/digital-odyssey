@@ -72,7 +72,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </div>
       <Navbar menuItems={menuItems} />
       <MainScreen titleColor={color} title={title}>
-        {showPoppin && <PopupVideo onClick={handleClick} />}
+        {showPoppin && (
+          <PopupVideo videoUrl="/static/video/teaser_kering_serious_game_2023.mp4" onClick={handleClick} />
+        )}
         {children}
       </MainScreen>
       <ProgressBar />

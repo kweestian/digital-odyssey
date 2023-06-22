@@ -5,6 +5,7 @@ export { default as Button } from './Button';
 export { default as RenderHtml } from './RenderHtml';
 export { default as PopinCard } from './PopinCard';
 export { default as KeyLearningsContent } from './KeyLearningsContent';
+export { default as PopupVideo } from './PopupVIdeo/PopupVideo';
 
 export * from './Poppins';
 export * from './Layout';

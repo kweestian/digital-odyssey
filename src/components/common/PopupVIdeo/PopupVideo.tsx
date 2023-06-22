@@ -6,7 +6,7 @@ import CloseIcon from '@/image/CloseIcon.svg';
 
 import styles from './PopupVideo.module.scss';
 
-const PopupVideo = ({ onClick }: { onClick: () => void }) => {
+const PopupVideo = ({ onClick, videoUrl }: { onClick: () => void; videoUrl: string }) => {
   const vidRef = useRef<HTMLVideoElement>(null);
   // const [videoPlaying, setVideoPlaying] = useState(false);
   useEffect(() => {
@@ -34,7 +34,7 @@ const PopupVideo = ({ onClick }: { onClick: () => void }) => {
           }}
           controls
         >
-          <source src="/static/video/teaser_kering_serious_game_2023.mp4" type="video/mp4" />
+          <source src={videoUrl} type="video/mp4" />
         </video>
       </div>
     </div>

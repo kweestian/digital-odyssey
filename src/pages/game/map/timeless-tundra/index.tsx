@@ -3,9 +3,10 @@ import { useCallback, useEffect, useState } from 'react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 
-import { Button, GameLayout, Loader } from '@/components';
+import { Button, GameLayout, Loader, PopupVideo } from '@/components';
 
 import GoldenOwl from '@/image/rules/gold-owl-rules.gif';
+import useLocalStorage from '@/hooks/useLocalStorage';
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 
 import classNames from 'classnames';
@@ -15,6 +16,9 @@ const TimelessTundraPage: NextPage = () => {
   const user = useUser();
   const supabase = useSupabaseClient();
   const [loading, setLoading] = useState(false);
+  const [hasLogguedIn, setItem] = useLocalStorage('HAS_VIEWED_FINAL', false);
+  const [videoPopinOpen, setVideoPopinOpen] = useState(false);
+
   // const [loading, setLoading] = useState(false);
   const [downloadUrl, setDowloadUrl] = useState('');
   const emailWithoutDomain = user?.email?.split('@')[0];
@@ -56,6 +60,11 @@ const TimelessTundraPage: NextPage = () => {
     }
   }, [fileName, user?.id, supabase, user?.email]);
 
+  const handleCloseVideo = useCallback(() => {
+    setVideoPopinOpen(false);
+    setItem(true);
+  }, [setVideoPopinOpen, setItem]);
+
   useEffect(() => {
     if (downloadUrl) {
       const link = document.createElement('a');
@@ -66,44 +75,12 @@ const TimelessTundraPage: NextPage = () => {
       document.body.removeChild(link);
     }
   }, [downloadUrl, fileName]);
-  // const saveAsPdf = useCallback(async () => {
-  //   setLoading(true);
-  //   const container = document.getElementById('certificateContainer');
-  //   const svgElement = document.getElementById('certificate');
-
-  //   if (container && svgElement) {
-  //     const width = 540; // Set the desired width
-  //     const height = 380; // Set the desired height
-
-  //     svgElement.setAttribute('width', width.toString());
-  //     svgElement.setAttribute('height', height.toString());
-
-  //     const options = {
-  //       width,
-  //       height,
-  //     };
-
-  //     // Combine the font URLs with the SVG content
-
-  //     const pngBlob = await domtoimage.toPng(container, options);
-  //     saveAs(pngBlob, `certificate-digital-odyssey-${firstName}_${lastName}.png`);
-
-  //     svgElement.setAttribute('width', '100%');
-  //     svgElement.setAttribute('height', '100%');
-  //     setLoading(false);
-
-  //     // If you prefer to save as PDF:
-  //     // const pdfBlob = await domtoimage.toBlob(svgElement, { quality: 1, bgcolor: 'white' });
-  //     // saveAs(pdfBlob, 'certificate.pdf');
-  //   }
-  // }, [firstName, lastName]);
 
   if (!user || !user.email) {
     return <Loader />;
   }
 
-  // const currentImage = data?.data?.signedUrl || '';
-
+  const showPoppin = hasLogguedIn === false || videoPopinOpen;
   return (
     <GameLayout>
       {loading ? (
@@ -160,6 +137,9 @@ const TimelessTundraPage: NextPage = () => {
           >
             DOWNLOAD YOUR CERTIFICATE
           </Button>
+          {showPoppin && (
+            <PopupVideo videoUrl="/static/video/video_outro_serious_game.mp4" onClick={handleCloseVideo} />
+          )}
         </div>
       )}
     </GameLayout>

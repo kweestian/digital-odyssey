@@ -14,6 +14,10 @@ const Header = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" type="image/svg+xml" href="/static/image/favicon.svg" />
       <meta name="color-scheme" content="only" />
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content="default-src 'self'; connect-src 'self' vitals.vercel-insights.com;"
+      />
 
       {/* <meta name="google-site-verification" content="" /> */}
 

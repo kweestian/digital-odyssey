@@ -90,7 +90,8 @@ deploy_staging:
     - make push-staging
     - scp -r ./docker/staging ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey/docker
     - scp ./Makefile ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey
-    - ssh ubuntu@46.226.106.181 "
+    - ssh ubuntu@46.226.106.181
+      "
       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
       cd /home/enverse/clients/aldente/digital-odyssey &&
       make pull-staging && make start-staging &&
@@ -98,6 +99,7 @@ deploy_staging:
       "
 
 deploy_production:
+  stage: deploy_production
   before_script:
     ##
     ## Install ssh-agent if not already installed, it is required by Docker.
@@ -143,7 +145,8 @@ deploy_production:
     - make push-production
     - scp -r ./docker/production ubuntu@46.226.106.170:/home/ubuntu/digital-odyssey/docker
     - scp ./Makefile ubuntu@46.226.106.170:/home/ubuntu/digital-odyssey
-    - ssh ubuntu@46.226.106.170 "
+    - ssh ubuntu@46.226.106.170
+      "
       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
       cd /home/ubuntu/digital-odyssey &&
       make pull-production && make start-production &&

@@ -116,9 +116,8 @@ const TimelessTundraPage: NextPage = () => {
             <p>CONGRATULATIONS</p>
           </div>
           <p className={styles.description}>
-            Congratulations, you’ve conquered this year’s Imagination Odyssey! Download your certificate and share{' '}
-            <br />
-            it with the Kering community on our internal network Workplace.
+            Congratulations, you’ve conquered this year’s Imagination Odyssey!
+            <br /> Download your certificate and share it with the Kering community on our internal network Workplace.
           </p>
 
           <Image

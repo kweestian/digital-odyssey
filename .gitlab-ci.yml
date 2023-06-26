@@ -88,14 +88,15 @@ deploy_staging:
     - make build-staging
     # - make delete-env
     - make push-staging
-    - scp -r ./docker/staging ubuntu@46.226.106.170:/home/enverse/clients/aldente/digital-odyssey/docker
-    - scp ./Makefile ubuntu@46.226.106.170:/home/enverse/clients/aldente/digital-odyssey
-    - ssh ubuntu@46.226.106.170 "
+    - scp -r ./docker/staging ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey/docker
+    - scp ./Makefile ubuntu@46.226.106.181:/home/enverse/clients/aldente/digital-odyssey
+    - ssh ubuntu@46.226.106.181 "
       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
       cd /home/enverse/clients/aldente/digital-odyssey &&
       make pull-staging && make start-staging &&
       docker image prune -a -f
       "
+
 deploy_production:
   before_script:
     ##
@@ -132,7 +133,7 @@ deploy_production:
     - chmod 644 ~/.ssh/known_hosts
     - docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
   only:
-    - main
+    - tags
   script:
     - make create-env
     - make build-production

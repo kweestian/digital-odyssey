@@ -909,7 +909,7 @@ export const virtualValleysExperiences: Experience[] = [
       ],
     },
     bonus: {
-      description: `Discover <a href="https://ferragamo.obsessvr.com/holiday/#/" target="_blank">The New Space</a> – an immersive gaming and social experience
+      description: `Discover <a href="http://thenewface.xyz/" target="_blank">The New Space</a> – an immersive gaming and social experience
       powered by Unreal Engine 5, where brands can craft photorealistic
       campaigns and marketing activations. In this mini-quest, you will have
       two minutes to find a Golden Owl hidden in the virtual space – once

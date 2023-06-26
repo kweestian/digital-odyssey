@@ -131,7 +131,7 @@ deploy_production:
     ##
     ## Check identity of server to avoid Man-in-the-middle
     ##
-    - ssh-keyscan 46.226.106.181 >> ~/.ssh/known_hosts
+    - ssh-keyscan 46.226.106.170 >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
     - docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
   only:

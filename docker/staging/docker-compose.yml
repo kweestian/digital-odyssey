@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  kering-imagination-odyssey:
+  digital-odyssey-staging:
     build:
       context: ../../
       dockerfile: docker/staging/Dockerfile
@@ -9,14 +9,14 @@ services:
     #   - ./:/app
     #   - /app/node_modules
     environment:
-      VIRTUAL_HOST: kering-imagination-odyssey.com
+      VIRTUAL_HOST: digital-odyssey-staging.enverselabs.com
       VIRTUAL_PORT: 4111
-      LETSENCRYPT_HOST: kering-imagination-odyssey.com
+      LETSENCRYPT_HOST: digital-odyssey-staging.enverselabs.com
 
       PORT: 4111
     ports:
       - '4111:4111'
-    container_name: kering-imagination-odyssey
+    container_name: digital-odyssey-staging
     networks:
       - nginx_proxy_network
 

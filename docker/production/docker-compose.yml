@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  digital-odyssey-production:
+  kering-imagination-odyssey:
     build:
       context: ../../
       dockerfile: docker/production/Dockerfile
@@ -9,13 +9,14 @@ services:
     #   - ./:/app
     #   - /app/node_modules
     environment:
-      VIRTUAL_HOST: digital-odysser.enverselabs.com
-      VIRTUAL_PORT: 4112
-      LETSENCRYPT_HOST: digital-odysser.enverselabs.com
-      PORT: 4112
+      VIRTUAL_HOST: kering-imagination-odyssey.com
+      VIRTUAL_PORT: 4111
+      LETSENCRYPT_HOST: kering-imagination-odyssey.com
+
+      PORT: 4111
     ports:
-      - '4112:4112'
-    container_name: digital-odyssey-production
+      - '4111:4111'
+    container_name: kering-imagination-odyssey
     networks:
       - nginx_proxy_network
 

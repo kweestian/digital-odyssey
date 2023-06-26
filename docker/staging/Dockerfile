@@ -27,6 +27,10 @@ FROM node:16-alpine AS runner
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
+ENV VIRTUAL_HOST="digital-odyssey.enverselabs.com"
+ENV VIRTUAL_PORT=4112
+ENV LETSENCRYPT_HOST="digital-odyssey.enverselabs.com"
+
 
 WORKDIR /app
 

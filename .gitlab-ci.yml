@@ -97,7 +97,7 @@ deploy_staging:
       docker image prune -a -f
       "
 deploy_production:
-  sbefore_script:
+  before_script:
     ##
     ## Install ssh-agent if not already installed, it is required by Docker.
     ## (change apt-get to yum if you use an RPM-based image)
@@ -138,11 +138,11 @@ deploy_production:
     - make build-production
     # - make delete-env
     - make push-production
-    - scp -r ./docker/production ubuntu@46.226.106.170:/home/ubuntu/clients/aldente/digital-odyssey/docker
-    - scp ./Makefile ubuntu@46.226.106.170:/home/enverse/clients/aldente/digital-odyssey
+    - scp -r ./docker/production ubuntu@46.226.106.170:/home/ubuntu/digital-odyssey/docker
+    - scp ./Makefile ubuntu@46.226.106.170:/home/ubuntu/digital-odyssey
     - ssh ubuntu@46.226.106.170 "
       docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD &&
-      cd /home/enverse/clients/aldente/digital-odyssey &&
+      cd /home/ubuntu/digital-odyssey &&
       make pull-production && make start-production &&
       docker image prune -a -f
       "

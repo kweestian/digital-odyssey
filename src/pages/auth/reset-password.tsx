@@ -46,8 +46,14 @@ const Login: NextPageWithLayout = () => {
   return (
     <DefaultLayout>
       <div className={styles.form__container}>
-        <Form title="Enter the email you signed up with" error={error} success={success}>
-          <AuthInput name="email" label="Email" type="email" onChange={(val) => setEmail(val)} />
+        <Form title="Enter the email you signed up with">
+          <div className={styles.formInputCOntainer}>
+            <AuthInput name="email" label="Email" type="email" onChange={(val) => setEmail(val)} />
+            <div className={styles.message__container}>
+              {error && <span className={styles.errorSignIn}>{error}</span>}
+              {success && <span className={styles.successSignin}>{success}</span>}
+            </div>
+          </div>
           <div className={styles.submitButtonRow}>
             <Button text="Submit" skin="submit" loading={loading} onClick={() => sendPasswordLink()} />
           </div>

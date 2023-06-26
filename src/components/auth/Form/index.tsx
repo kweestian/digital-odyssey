@@ -9,13 +9,12 @@ import styles from './Form.module.scss';
 
 type Props = {
   children: React.ReactNode;
-  success: string;
-  error: string;
+
   title: string;
   size?: string;
 };
 
-const Form = ({ children, error, success, title, size }: Props) => (
+const Form = ({ children, title, size }: Props) => (
   <DefaultLayout>
     <div
       className={classNames(styles.form__group, {
@@ -24,10 +23,10 @@ const Form = ({ children, error, success, title, size }: Props) => (
     >
       <Image className={styles.logoImage} src={KeringImaginationLab} alt="Kering Imagination Lab Logo" />
       <h4>{title.toUpperCase()}</h4>
-      <div className={styles.message__container}>
+      {/* <div className={styles.message__container}>
         {error && <span className={styles.error}>{error}</span>}
         {success && <span className={styles.success}>{success}</span>}
-      </div>
+      </div> */}
       {children}
     </div>
   </DefaultLayout>

@@ -77,6 +77,13 @@
   }
 }
 
+.formInputCOntainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
 .logoImage {
   width: 226px;
   align-self: center;
@@ -101,7 +108,7 @@
   text-align: center;
 }
 
-.success {
+.successSignin {
   position: absolute;
   display: flex;
   align-items: center;

@@ -5,6 +5,8 @@ import { AuthInput, Button, DefaultLayout, Form } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 import { useOnEnterCallback } from '@/hooks';
 
+import styles from './login/Login.module.scss';
+
 const Login: NextPageWithLayout = () => {
   const supabase = useSupabaseClient();
   const [loading, setLoading] = useState(false);
@@ -47,8 +49,14 @@ const Login: NextPageWithLayout = () => {
 
   return (
     <DefaultLayout>
-      <Form size="medium" title="Update your password" error={error} success={success}>
-        <AuthInput name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
+      <Form size="medium" title="Update your password">
+        <div className={styles.formInputCOntainer}>
+          <AuthInput name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
+          <div className={styles.message__container}>
+            {error && <span className={styles.error}>{error}</span>}
+            {success && <span className={styles.success}>{success}</span>}
+          </div>
+        </div>
         <Button text="Submit" skin="submit" loading={loading} onClick={() => resetPassword()} />
       </Form>
     </DefaultLayout>

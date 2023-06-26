@@ -134,6 +134,8 @@ deploy_production:
     - docker login registry.gitlab.com -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
   only:
     - tags
+  except:
+    - branches
   script:
     - make create-env
     - make build-production

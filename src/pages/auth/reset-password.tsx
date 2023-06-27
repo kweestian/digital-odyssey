@@ -51,7 +51,7 @@ const Login: NextPageWithLayout = () => {
             <AuthInput name="email" label="Email" type="email" onChange={(val) => setEmail(val)} />
             <div className={styles.message__container}>
               {error && <span className={styles.errorSignIn}>{error}</span>}
-              {success && <span className={styles.successSignin}>{success}</span>}
+              {success && <span className={styles.successReset}>{success}</span>}
             </div>
           </div>
           <div className={styles.submitButtonRow}>

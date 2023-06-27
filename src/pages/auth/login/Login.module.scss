@@ -126,6 +126,24 @@
   text-align: center;
 }
 
+.successReset {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Portrait Light';
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  min-width: 300px;
+  margin-top: -5px;
+  margin-left: 20px;
+  padding: 15px 60px;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+
 .errorSignIn {
   position: absolute;
   display: flex;

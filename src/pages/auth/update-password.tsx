@@ -53,8 +53,8 @@ const Login: NextPageWithLayout = () => {
         <div className={styles.formInputCOntainer}>
           <AuthInput name="password" label="Password" type="password" onChange={(val) => setPassword(val)} />
           <div className={styles.message__container}>
-            {error && <span className={styles.error}>{error}</span>}
-            {success && <span className={styles.success}>{success}</span>}
+            {error && <span className={styles.errorSignIn}>{error}</span>}
+            {success && <span className={styles.successReset}>{success}</span>}
           </div>
         </div>
         <Button text="Submit" skin="submit" loading={loading} onClick={() => resetPassword()} />

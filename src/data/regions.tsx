@@ -53,7 +53,7 @@ export const SeaOfSustainability: Region = {
             'An interview with a leading expert on the economy of degrowth, and a researcher at the School of Economics and Management of Lund University in Sweden. How can this idea of ‘Degrowth: Slow is the New Cool’ apply to Kering?',
         },
         {
-          text: '‘How Future Thinking Can Drive Sustainability’ from Scandinavian Mind',
+          text: '‘How Future Thinking Can Drive Sustainability’',
           link: 'https://scandinavianmind.com/podcast/how-future-thinking-can-help-drive-sustainability-with-charlotte-sundaker',
           author: 'Scandinavian Mind',
           description:
@@ -128,7 +128,7 @@ export const PlayfulPlains: Region = {
         },
         {
           text: '‘How Luxury is Using Augmented Reality’ the Business of Fashion',
-          link: '',
+          link: 'https://www.businessoffashion.com/articles/technology/how-luxury-is-using-augmented-reality/',
           author: 'Business of Fashion',
           description: 'A great up-to-date read on the space today.',
         },
@@ -192,7 +192,7 @@ export const LoyaltyLagoon: Region = {
           description: 'A great read particularly for those less familiar with the web3 space.',
         },
         {
-          text: '‘Social Networks Are Going Much, Much Smaller’ from Slate',
+          text: '‘Social Networks Are Going Much, Much Smaller’',
           link: 'https://slate.com/technology/2022/11/mastodon-discord-small-social-networks.html',
           author: 'Slate',
           description:
@@ -204,7 +204,7 @@ export const LoyaltyLagoon: Region = {
       source: 'Video',
       resources: [
         {
-          text: '‘Competing Visions for the Future of Social Media’ with Ethan Zuckerman',
+          text: '‘Competing Visions for the Future of Social Media’',
           link: 'https://youtu.be/tHnhowjiYi0?t=219',
           author: 'Ethan Zuckerman',
           description: 'He envisions the future of social media, and of the communities that form through it.',
@@ -264,7 +264,7 @@ export const CreativityCoasts: Region = {
         },
         {
           text: '‘The ethical dilemmas of AI’',
-          link: 'https://scandinavianmind.com/podcast/the-ethical-dilemmas-of-ai ',
+          link: 'https://scandinavianmind.com/podcast/the-ethical-dilemmas-of-ai',
           author: 'Scandinavian Mind',
           description: 'To be aware of in the creative industries, from diversity-washing to best use practices.',
         },
@@ -281,7 +281,7 @@ export const CreativityCoasts: Region = {
             'Deep dive from a leading consulting firm on how generative AI can unlock the future of fashion.',
         },
         {
-          text: '‘Zegna’s Made-to-Measure Business is Getting a Tech Upgrade’ from Business of Fashion diving into a brand making innovative strides into this fashion model.',
+          text: '‘Zegna’s Made-to-Measure Business is Getting a Tech Upgrade’',
           link: 'https://www.businessoffashion.com/articles/technology/zegnas-made-to-measure-business-is-getting-a-tech-upgrade/',
           author: 'Business of Fashion',
           description: 'Diving into a brand making innovative strides into this fashion model.',
@@ -292,8 +292,8 @@ export const CreativityCoasts: Region = {
       source: 'Video',
       resources: [
         {
-          text: '‘Introducing Chat GPT-4’ from Open AI',
-          link: '',
+          text: '‘Introducing Chat GPT-4’',
+          link: 'https://www.youtube.com/watch?v=--khbXchTeE',
           author: 'Open AI',
           description:
             'A strong overview of the potential of the groundbreaking technology, produced by those who are making it.',
@@ -337,17 +337,18 @@ export const VirtualValleys: Region = {
       source: 'Book',
       resources: [
         {
-          text: '‘Doughnut Economics’',
+          text: '‘The Metaverse: And How it Will Revolutionize Everything’',
           link: '',
-          author: 'Kate Raworth',
+          author: 'Matthew Ball',
           description:
-            'A great book to get a new model of what sustainability is, through a visual framework explaining upper - and lower - limits to development.',
+            'An insightful, easy-to-read book to immerse into the virtual world of the future, written by one of the foremost strategists and investors at the heart of this digital evolution.',
         },
         {
-          text: '‘To save everything, click here’',
+          text: '‘Reality+: Virtual Worlds and the Problems of Philosophy’',
           link: '',
-          author: 'Harvard researcher’s Evgeny Morozov',
-          description: 'On the risk of thinking uniquely through the prism of problems and tech solutions.',
+          author: 'David J Chalmers',
+          description:
+            'A thought-provoking book on the moral questions raised by increasingly advanced virtual spaces, written by a leading NYU philosophy professor.',
         },
       ],
     },
@@ -355,14 +356,25 @@ export const VirtualValleys: Region = {
       source: 'Podcast',
       resources: [
         {
-          text: '‘Degrowth: Slow is the New Cool’',
-          link: 'https://www.youtube.com/watch?v=DHpTNtRCk5U',
-          author: 'Timothée Parrique',
+          text: '‘Values in the metaverse: Q&A with H&M’s menswear department’',
+          link: 'https://scandinavianmind.com/podcast/values-in-the-metaverse-qa-with-hms-menswear-department',
+          author: 'Scandinavian Mind',
           description:
-            'An interview with a leading expert on the economy of degrowth, and a researcher at the School of Economics and Management of Lund University in Sweden. How can this idea of ‘Degrowth: Slow is the New Cool’ apply to Kering?',
+            'An interview series from leading culture tech publication Scandinavian Mind on the value in the emerging metaverse.',
+        },
+      ],
+    },
+    {
+      source: 'Article',
+      resources: [
+        {
+          text: '‘What should brands sound like in the metaverse?’',
+          link: 'https://www.thedrum.com/news/2022/05/11/what-should-brands-sound-the-metaverse',
+          author: 'THE DRUM',
+          description: '',
         },
         {
-          text: '‘How Future Thinking Can Drive Sustainability’ from Scandinavian Mind',
+          text: '‘How Future Thinking Can Drive Sustainability’',
           link: 'https://scandinavianmind.com/podcast/how-future-thinking-can-help-drive-sustainability-with-charlotte-sundaker',
           author: 'Scandinavian Mind',
           description:
@@ -371,24 +383,14 @@ export const VirtualValleys: Region = {
       ],
     },
     {
-      source: 'Article',
-      resources: [
-        {
-          text: '‘Expanding Digital Sufficiency’',
-          link: 'https://theshiftproject.org/en/article/implementing-digital-sufficiency/',
-          author: 'The Shift Project',
-          description: 'A report diving into the implementation of digital sufficiency.',
-        },
-      ],
-    },
-    {
       source: 'Video',
       resources: [
         {
-          text: "‘The future of fashion: Sustainable brands and ‘circular’ business models'",
-          link: 'https://www.youtube.com/watch?v=pRf0X3xETCc',
-          author: 'McKinsey',
-          description: '',
+          text: '‘We Met in Virtual Reality’',
+          link: 'https://www.youtube.com/watch?v=UMBxESl38o0',
+          author: 'HBO',
+          description:
+            'a striking, unexpectedly poignant documentary that illuminates the communities and human connections forming in virtual worlds.',
         },
       ],
     },

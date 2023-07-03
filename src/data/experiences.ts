@@ -909,12 +909,8 @@ export const virtualValleysExperiences: Experience[] = [
       ],
     },
     bonus: {
-      description: `Discover <a href="https://matchmaker.demo.thenewface.xyz/" target="_blank">The New Space</a> – an immersive gaming and social experience
-      powered by Unreal Engine 5, where brands can craft photorealistic
-      campaigns and marketing activations. In this mini-quest, you will have
-      two minutes to find a Golden Owl hidden in the virtual space – once
-      
-      you find it, take a screenshot and upload it here!`,
+      description:
+        'Discover <a href="https://www.spatial.io/s/KERING-IMAGINATION-ODYSSEY-64a298d4f9bd5d584cdbc86d?share=7202556218725142632" target="_blank">Spatial</a> – an immersive social experience where people and brands can craft their own 3D space. In this mini-quest, you will have to find an Owl hidden in the virtual space – once you find it, take a screenshot and upload it here!',
       type: 'attachment',
       label: 'Upload Screenshot',
     },

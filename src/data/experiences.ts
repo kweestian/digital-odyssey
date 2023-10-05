@@ -132,15 +132,13 @@ export const loyaltyLagoonExperiences: Experience[] = [
   {
     name: 'The Future of Brand Communities',
     key: 'the-future-of-brand-communities',
-    description: `In this experience, we will venture into Gucci Town on <a href="https://www.roblox.com/home" target="_blank">Roblox</a>. Once you've
-    downloaded Roblox, open the app, log in to your account and search for
-    "Gucci Town". You'll then be ready to start a mini-quest - you'll need to
-    explore the world and find floating letters in this virtual space - G-U-C-C-I!
-    Once you've found all the letters, leave a message in the Gucci Town
-    community chatbox and upload a screenshot here. Then continue
-    exploring, or go straight back to the Kering Imagination Odyssey to unlock key
-    
-    learnings on the future power of brand communities.`,
+    description: `
+    In this experience, we will venture into the new Gucci Ancora Fashion Show on <a href="https://www.roblox.com/home" target="_blank">Roblox</a>.
+    Once you've downloaded Roblox, open the app, log in to your account and search for "Gucci Ancora".
+    Click play, traverse beautiful virtual Milan, and enter a red central building to then pass through a portal to reach the fashion show!
+    Retrieve a missing fashion item to gain your exclusive Gucci Ancora UGC!  Take a screenshot of your prize and upload it here.
+    Then continue to explore and play the other mini-quests or return back to the Kering Imagination
+    Odyssey to unlock key learnings from the experience on the future power of brand communities.`,
 
     interaction: {
       type: 'attachment',

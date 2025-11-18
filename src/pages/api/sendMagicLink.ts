@@ -28,6 +28,7 @@ export default async function handler(req: SupabaseMagicLinkRequest, res: NextAp
   });
 
   if (error) {
+    console.error(error);
     return res.status(500).json({ error: error.message });
   }
 

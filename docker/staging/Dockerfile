@@ -1,5 +1,5 @@
 # 1. Install dependencies only when needed
-FROM node:16-alpine AS deps
+FROM node:18-alpine AS deps
 
 RUN apk add --no-cache libc6-compat
 
@@ -12,7 +12,7 @@ COPY ./package.json ./pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
 # 2. Build image, build all soruce code
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
@@ -23,7 +23,7 @@ COPY . .
 RUN yarn build
 
 # 3. Production image, copy all the files and run next
-FROM node:16-alpine AS runner
+FROM node:18-alpine AS runner
 
 ENV NEXT_TELEMETRY_DISABLED=1
 

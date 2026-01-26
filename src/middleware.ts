@@ -17,13 +17,9 @@ export async function middleware(req: NextRequest) {
       data: { session },
     } = await supabase.auth.getSession();
 
-    // Check auth condition
-    // if (ALLOWED_DOMAINS.some((emailPattern) => session?.user.email?.endsWith(emailPattern))) {
-    //   // Authentication successful, forward request to protected route.
-
-    //   return res;
-    // }
-    return res;
+    if (session) {
+      return res;
+    }
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e);

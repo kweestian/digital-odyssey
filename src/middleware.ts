@@ -23,6 +23,7 @@ export async function middleware(req: NextRequest) {
 
     //   return res;
     // }
+    return res;
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e);

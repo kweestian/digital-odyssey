@@ -5,7 +5,8 @@ RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
 
-RUN yarn global add pnpm 
+RUN corepack enable pnpm
+
 
 COPY ./package.json ./pnpm-lock.yaml ./
 
@@ -19,8 +20,9 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
+RUN corepack enable pnpm
 COPY . .
-RUN yarn build
+RUN pnpm build
 
 # 3. Production image, copy all the files and run next
 FROM node:16-alpine AS runner

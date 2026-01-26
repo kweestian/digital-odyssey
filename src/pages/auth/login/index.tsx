@@ -7,6 +7,7 @@ import { DefaultLayout, AuthInput, Button, Loader } from '@/components';
 import { NextPageWithLayout } from '@/types/common';
 import { MagicLinkRequestBody, ServerResponse } from '@/types/server';
 import { useOnEnterCallback } from '@/hooks';
+import { supabase } from '@/lib/supabaseClient';
 
 import * as KeringImaginationLab from '@/../public/static/image/kering-imagination-lab-white.png';
 
@@ -35,6 +36,24 @@ const Login: NextPageWithLayout = () => {
       push('/game/rules');
     }
   }, [session, push]);
+
+  const handleSSOLogin = useCallback(async () => {
+    setLoading(true);
+    try {
+      const { error: ssoError, data: ssoData } = await supabase.auth.signInWithSSO({
+        domain: 'kering.com',
+      });
+
+      if (ssoError) {
+        throw new Error(ssoError.message);
+      }
+      setLoading(false);
+      push(ssoData.url);
+    } catch (ssoError) {
+      console.error(ssoError);
+      setLoading(false);
+    }
+  }, [push]);
 
   const sendMagicLink = useCallback(async () => {
     if (email) {
@@ -93,6 +112,13 @@ const Login: NextPageWithLayout = () => {
               skin="submit"
               loading={loading}
               onClick={() => sendMagicLink()}
+              className={styles.submitButton}
+            />
+            <Button
+              text="Sign in with SSO"
+              skin="submit"
+              loading={loading}
+              onClick={() => handleSSOLogin()}
               className={styles.submitButton}
             />
             <Link href="/auth/login/email">Already signed up ? Sign In</Link>

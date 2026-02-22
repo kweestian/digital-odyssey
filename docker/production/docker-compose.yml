@@ -9,9 +9,9 @@ services:
     #   - ./:/app
     #   - /app/node_modules
     environment:
-      VIRTUAL_HOST: kering-imagination-odyssey.com
+      VIRTUAL_HOST: kering-learning-odyssey.com
       VIRTUAL_PORT: 4111
-      LETSENCRYPT_HOST: kering-imagination-odyssey.com
+      LETSENCRYPT_HOST: kering-learning-odyssey.com
 
       PORT: 4111
     ports:

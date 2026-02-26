@@ -138,18 +138,13 @@
 
 @media screen and (max-height: $MobileBreakpoint) {
   .descriptionContainer {
-    // padding: 5px 15px 5px 15px;
-    height: 60%;
-    overflow-y: auto;
-    min-height: 0;
+    height: auto !important; /* allow natural height */
+    min-height: auto !important;
+    overflow: visible !important; /* no scrolling */
     justify-content: flex-start;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
+
   .answerContainer {
     margin-top: 15px;
-    // font-size: 15px;
   }
 }

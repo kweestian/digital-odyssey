@@ -164,3 +164,32 @@
 .message__container {
   min-height: 60px;
 }
+
+@media screen and (max-width: 768px), screen and (max-height: 650px) {
+  .form__container {
+    height: auto; /* grow with content */
+    justify-content: flex-start; /* stack naturally */
+    overflow-y: visible; /* no scroll inside container */
+    padding-bottom: 20px;
+  }
+
+  .form__group {
+    margin: 20px auto; /* keep centered horizontally only */
+    width: 90%; /* fill most of screen */
+    gap: 1rem;
+  }
+
+  .form__group > h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .logoImage {
+    width: 150px; /* shrink logo on mobile */
+    margin-bottom: 20px;
+  }
+
+  .form__inputs {
+    width: 90%; /* make inputs wider on small screens */
+  }
+}

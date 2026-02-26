@@ -9,3 +9,9 @@
   background-color: $BackgroundColor;
   color: $TextMainColor;
 }
+
+@media screen and (max-width: 768px), screen and (max-height: 650px) {
+  .container {
+    height: auto;
+  }
+}

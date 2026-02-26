@@ -60,3 +60,44 @@
 .message__container {
   min-height: 60px;
 }
+
+@media screen and (max-height: 650px), screen and (max-width: 768px) {
+  .form__group {
+    gap: 1rem; /* smaller gap */
+    width: 90%; /* fill screen width */
+    margin: 20px auto; /* center horizontally */
+  }
+
+  .form__group > h4 {
+    font-size: 20px; /* smaller heading for short screens */
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .logoImage {
+    width: 150px; /* scale down logo */
+    margin-bottom: 20px;
+  }
+
+  .medium {
+    width: 80%;
+    align-items: center;
+  }
+
+  .message__container {
+    min-height: auto; /* remove fixed height */
+    margin-top: 10px;
+  }
+
+  .error,
+  .success {
+    position: relative; /* avoid overlap in short screens */
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 10px 20px;
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}

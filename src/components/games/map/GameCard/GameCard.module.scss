@@ -1,5 +1,29 @@
 @import '@/styles/variables';
 
+@media screen and (max-height: $MobileBreakpoint) {
+  .cardContainer {
+    height: 100vh; /* full viewport height */
+    overflow-y: auto; /* scroll the card if needed */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* allow content to grow naturally */
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .cardContainer > h1 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .cardContainer .owlImage {
+    width: 70px;
+    height: auto;
+    margin: 5px 0;
+  }
+}
+
 .cardContainer {
   display: flex;
   position: relative;

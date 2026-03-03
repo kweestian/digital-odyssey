@@ -1,0 +1,19 @@
+config:
+  target: 'https://digital-odyssey-staging.enverselabs.com'
+  phases:
+    - duration: 300 # 5 min ramp up to 50k
+      arrivalRate: 1
+      rampTo: 167
+      maxVusers: 50000
+      name: 'Ramp-up Phase'
+    - duration: 600 # 10 min hold at 50k
+      arrivalRate: 167
+      maxVusers: 50000
+      name: 'Sustained Load Phase'
+  defaults:
+    headers:
+      Authorization: 'Bearer {{ $processEnvironment.SUPABASE_SERVICE_ROLE_KEY }}'
+scenarios:
+  - flow:
+      - get:
+          url: '/game/rules'

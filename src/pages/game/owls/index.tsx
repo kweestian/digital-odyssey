@@ -14,14 +14,14 @@ type Props = {};
 
 const Owls: NextPage<Props> = () => {
   const { data } = useMapData();
-  const timelessTundra = data.find(({ regionKey }) => regionKey === 'timeless-tundra');
+  const timelessTundra = data.find(({ regionKey }) => regionKey === 'learning-agility-oasis');
 
   return (
     <GameLayout>
       <div className={styles.container}>
         <div className={styles.owlsList}>
           {data
-            .filter(({ regionKey }) => regionKey !== 'timeless-tundra')
+            .filter(({ regionKey }) => regionKey !== 'learning-agility-oasis')
             .map(({ color, isComplete, regionKey }) => {
               if (isComplete) {
                 return (

@@ -7,6 +7,7 @@ import RulesIcon from '@/image/navbar/rules-icon.svg';
 import MapIcon from '@/image/navbar/map-icon.svg';
 import CardIcon from '@/image/navbar/card-icon.svg';
 import OwlIcon from '@/image/navbar/owl-icon.svg';
+import LeaderboardIcon from '@/image/navbar/leaderboard-icon.svg';
 
 import { popinAtom } from '@/contexts/atom';
 import useLocalStorage from '@/hooks/useLocalStorage';
@@ -33,6 +34,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       { title: t('menuTitles.map'), href: '/game/map', icon: MapIcon },
       { title: t('menuTitles.cards'), href: '/game/cards', icon: CardIcon },
       { title: t('menuTitles.owls'), href: '/game/owls', icon: OwlIcon },
+      { title: t('menuTitles.leaderboard'), href: '/game/leaderboard', icon: LeaderboardIcon },
     ],
     [t],
   );

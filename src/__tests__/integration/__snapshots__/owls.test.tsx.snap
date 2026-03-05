@@ -114,6 +114,30 @@ exports[`owls page renders owls page unchanged 1`] = `
             </h1>
           </div>
         </a>
+        <a
+          class="menuItem"
+          href="/game/leaderboard"
+        >
+          <img
+            alt=""
+            class="menuImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="linkContainer"
+          >
+            <h1>
+              menuTitles.leaderboard
+            </h1>
+          </div>
+        </a>
       </div>
     </div>
     <div
@@ -170,7 +194,7 @@ exports[`owls page renders owls page unchanged 1`] = `
             class="owlsList"
           >
             <img
-              alt="creativity-coast"
+              alt="craft-canyon"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -181,7 +205,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="loyalty-lagoon"
+              alt="efficiency-valley"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -192,7 +216,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="sea-of-sustainability"
+              alt="leadership-lighthouse"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -203,7 +227,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="virtual-valleys"
+              alt="adaptability-dunes"
               data-nimg="1"
               decoding="async"
               height="130"
@@ -214,7 +238,7 @@ exports[`owls page renders owls page unchanged 1`] = `
               width="219"
             />
             <img
-              alt="playful-plains"
+              alt="collaboration-horizon"
               data-nimg="1"
               decoding="async"
               height="130"

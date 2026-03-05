@@ -114,6 +114,30 @@ exports[`cards page renders cards page unchange 1`] = `
             </h1>
           </div>
         </a>
+        <a
+          class="menuItem"
+          href="/game/leaderboard"
+        >
+          <img
+            alt=""
+            class="menuImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="linkContainer"
+          >
+            <h1>
+              menuTitles.leaderboard
+            </h1>
+          </div>
+        </a>
       </div>
     </div>
     <div
@@ -193,7 +217,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-personalization.mp4"
+                            src="/static/video/cards/craft-quiz.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -214,7 +238,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-recommendation.mp4"
+                            src="/static/video/cards/craft-deevid.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -235,7 +259,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-virtual-assistants.mp4"
+                            src="/static/video/cards/craft-gucci-snap.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -252,7 +276,7 @@ exports[`cards page renders cards page unchange 1`] = `
                   <span
                     style="opacity: 0.5;"
                   >
-                    CREATIVITY COAST
+                    CRAFT CANYON
                   </span>
                    
                 </button>
@@ -277,7 +301,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-brand-communities.mp4"
+                            src="/static/video/cards/efficiency-copilot.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -298,7 +322,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-consumer-expression.mp4"
+                            src="/static/video/cards/efficiency-pomellato-quiz.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -319,7 +343,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-brand-loyalty-initiatives.mp4"
+                            src="/static/video/cards/efficiency-vittorio-demo.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -336,7 +360,7 @@ exports[`cards page renders cards page unchange 1`] = `
                   <span
                     style="opacity: 0.5;"
                   >
-                    COMMUNITY LAGOON
+                    EFFICIENCY VALLEY
                   </span>
                    
                 </button>
@@ -365,7 +389,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-digital-carbon-footprint.mp4"
+                            src="/static/video/cards/leadership-quiz.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -386,7 +410,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-digital-sustainability.mp4"
+                            src="/static/video/cards/leadership-masterclass.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -407,7 +431,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-product-traceability.mp4"
+                            src="/static/video/cards/leadership-video-challenge.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -424,7 +448,7 @@ exports[`cards page renders cards page unchange 1`] = `
                   <span
                     style="opacity: 0.5;"
                   >
-                    SEA OF SUSTAINABILITY
+                    LEADERSHIP LIGHTHOUSE
                   </span>
                 </button>
               </div>
@@ -448,7 +472,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-brand-experience.mp4"
+                            src="/static/video/cards/adaptability-object.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -469,7 +493,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-co-created-experiences.mp4"
+                            src="/static/video/cards/adaptability-video-quiz.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -490,7 +514,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-shopping-experiences.mp4"
+                            src="/static/video/cards/adaptability-lovable.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -507,7 +531,7 @@ exports[`cards page renders cards page unchange 1`] = `
                   <span
                     style="opacity: 0.5;"
                   >
-                    VIRTUAL VALLEYS
+                    ADAPTABILITY DUNES
                   </span>
                 </button>
               </div>
@@ -531,7 +555,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-fashion-design.mp4"
+                            src="/static/video/cards/collaboration-dominic-video.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -552,7 +576,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-virtual-try-on.mp4"
+                            src="/static/video/cards/collaboration-quiz.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -573,7 +597,7 @@ exports[`cards page renders cards page unchange 1`] = `
                           width="85"
                         >
                           <source
-                            src="/static/video/cards/the-future-of-virtual-merchandising.mp4"
+                            src="/static/video/cards/collaboration-awen.mp4"
                             type="video/mp4"
                           />
                         </video>
@@ -590,7 +614,7 @@ exports[`cards page renders cards page unchange 1`] = `
                   <span
                     style="opacity: 0.5;"
                   >
-                    PLAYFUL PLAINS
+                    COLLABORATION HORIZON
                   </span>
                 </button>
               </div>

@@ -1,12 +1,12 @@
 type Answer = { key: string; value: string; error?: boolean };
 
 type RegionKey =
-  | 'sea-of-sustainability'
-  | 'playful-plains'
-  | 'loyalty-lagoon'
-  | 'creativity-coast'
-  | 'virtual-valleys'
-  | 'timeless-tundra';
+  | 'leadership-lighthouse'
+  | 'collaboration-horizon'
+  | 'efficiency-valley'
+  | 'craft-canyon'
+  | 'adaptability-dunes'
+  | 'learning-agility-oasis';
 
 type AdditionalResources = {
   text: string;

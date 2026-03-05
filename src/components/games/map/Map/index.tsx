@@ -75,8 +75,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                 ) : (
                   <a
                     onClick={() => {
-                      if (available && regionKey === 'timeless-tundra') {
-                        router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                      if (available && regionKey === 'learning-agility-oasis') {
+                        router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
                       } else {
                         onClickActions(regionKey);
                       }
@@ -116,13 +116,13 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
 
             if (showIcon) {
-              if (regionKey === 'timeless-tundra') {
+              if (regionKey === 'learning-agility-oasis') {
                 return (
                   <a
                     key={`pictos-${regionKey}`}
                     onClick={() => {
                       if (available) {
-                        router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                        router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
                       } else {
                         onClickActions(regionKey);
                       }
@@ -222,8 +222,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
               <a
                 key={`pictos-${regionKey}`}
                 onClick={() => {
-                  if (available && regionKey === 'timeless-tundra') {
-                    router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                  if (available && regionKey === 'learning-agility-oasis') {
+                    router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
                   } else {
                     onClickActions(regionKey);
                   }
@@ -250,7 +250,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                       x={isRegionComplete ? Number(regionOwl.x) - 15 : regionOwl.x}
                       onClick={(evt) => {
                         // so it doesnt trigger zoom
-                        if (region.isComplete && regionKey !== 'timeless-tundra') {
+                        if (region.isComplete && regionKey !== 'learning-agility-oasis') {
                           evt.stopPropagation();
 
                           dispatch({
@@ -263,8 +263,8 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                             },
                           });
                           setUrlParam('regionKey', regionKey);
-                        } else if (regionKey === 'timeless-tundra') {
-                          router.push('/game/map/timeless-tundra?regionKey=timeless-tundra');
+                        } else if (regionKey === 'learning-agility-oasis') {
+                          router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
                         } else {
                           onClickActions(regionKey);
                         }

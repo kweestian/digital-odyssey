@@ -18,8 +18,6 @@ const ProgressBar = () => {
     }
   });
 
-  // const completedRegions = data.filter(({ experiences }) => isComplete && regionKey !== 'timeless-tundra').length;
-
   const percentage = answers.length > 0 ? Math.round((answers.length / 20) * 100) : 0;
 
   return (

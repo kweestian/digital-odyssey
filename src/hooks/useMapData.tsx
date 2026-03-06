@@ -16,7 +16,6 @@ const OASIS_REGION_KEY = 'learning-agility-oasis';
  */
 const useMapData = () => {
   const { data: userExperienceData, isLoading } = useGetUserExperience();
-
   const allUserExperiences = userExperienceData?.data || [];
 
   const { owlsCollected } = calculateUserProgress(
@@ -32,18 +31,18 @@ const useMapData = () => {
 
   const mapDataWithApiData: CustomMap = CustomMap.map((region) => {
     const allExperienceKeys = region.experiences.map(({ key }) => key);
-
     const completedExperiences = allUserExperiences.filter(
       ({ experience_key: experienceKey }) => experienceKey && allExperienceKeys.includes(experienceKey),
     );
 
-    const hasCompletedBonus = completedExperiences.some(({ bonus }) => bonus);
-    const isRegionCompleted = completedExperiences.filter(({ answer }) => answer).length === 3 && hasCompletedBonus;
+    const isRegionCompleted =
+      region.regionKey === OASIS_REGION_KEY
+        ? completedExperiences.filter(({ answer }) => answer).length >= 1
+        : completedExperiences.filter(({ answer }) => answer).length >= allExperienceKeys.length;
 
     return {
       ...region,
       isComplete: isRegionCompleted,
-      hasCompletedBonus,
       experiences: region.experiences.map(({ interaction, ...experience }) => {
         const userExperience = allUserExperiences.find(
           ({ experience_key: experienceKey }) => experience.key === experienceKey,

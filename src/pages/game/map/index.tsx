@@ -150,13 +150,13 @@ const MapPage: NextPage = () => {
           }}
         />
       )}
-      {regionalResourcesPopinState && (
+      {/* {regionalResourcesPopinState && (
         <RegionalResourcesPopin
           regionKey={regionalResourcesPopinState.regionKey}
           regionalResources={regionalResourcesPopinState.regionalResources}
           onClose={() => dispatch({ type: 'CLOSE_ADDITONAL_RESOURCES_POPIN' })}
         />
-      )}
+      )} */}
       <div className={styles.mapContainer}>
         <TransformWrapper
           centerOnInit

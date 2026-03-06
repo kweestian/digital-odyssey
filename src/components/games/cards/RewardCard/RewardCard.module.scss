@@ -1,10 +1,42 @@
 @import '@/styles/variables';
 
+.container {
+  width: 85px;
+  height: 150px;
+  position: relative;
+  cursor: pointer;
+
+  > button {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
 .isNotActive {
   opacity: 50%;
-  // > button {
-  //   cursor: default;
-  // }
+}
+
+.imageContainer {
+  width: 85px;
+  height: 151px; /* matches 936:1663 aspect ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  width: 85px;
+  height: 151px;
+  object-fit: contain;
+}
+
+.videoContainer {
+  width: 85px;
+  height: 150px;
 }
 
 .contentContainer {
@@ -25,11 +57,9 @@
 
 .additionalResourcesContainer {
   p {
-    // color: gray;
     font-weight: 200;
     margin-bottom: 15px;
   }
-
   a {
     width: 100px;
     min-width: none;
@@ -37,43 +67,30 @@
   }
 }
 
-.videoContainer {
-  width: 85px;
-  height: 150px;
-
-  // video {
-  //   width: auto;
-  //   height: 20vh;
-  // }
-}
-
-// .videoContainer {
-//   width: 10%;
-
-//   video {
-//     width: 100%;
-//   }
-// }
-
 @media screen and (max-height: $TabletBreakpoint) {
-  // .container {
-  //   height: 40vh;
-  //   width: 14vw;
-  // }
-  // .cardImg {
-  //   height: 40vh;
-  //   width: 14vw;
-  // }
+  .container {
+    width: auto;
+    height: 20vh;
+    max-width: 85px;
+  }
+
+  .imageContainer {
+    width: auto;
+    height: 20vh;
+    max-width: 85px;
+  }
+
+  .cardImage {
+    width: auto;
+    height: 100%;
+  }
 
   .videoContainer {
     width: auto;
     height: 20vh;
     max-width: 85px;
-    // position: relative;
+
     video {
-      // position: absolute;
-      // top: 0;
-      // left: 0;
       width: auto;
       height: 100%;
     }

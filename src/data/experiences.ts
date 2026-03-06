@@ -117,19 +117,6 @@ export const leadershipLighthouseExperiences: Experience[] = [
         },
       ],
     },
-    keyLearning: {
-      text: `Leadership is evolving. As organisations grow more complex and interconnected,
-        leadership is less about control and more about fostering faster decisions and
-        harnessing the power of people. Whether you're new to a managerial role or a
-        seasoned leader, continuous learning and psychological safety are at the heart
-        of future-facing leadership.`,
-      additionalRessources: [
-        {
-          text: 'Grow your Leadership — Degreed Learning Plan',
-          link: 'https://eu.degreed.com/plan/855671',
-        },
-      ],
-    },
     coordinates: { x: 595, y: 250 },
   },
   {
@@ -146,33 +133,6 @@ export const leadershipLighthouseExperiences: Experience[] = [
     interaction: {
       type: 'attachment',
       label: 'Upload your document',
-    },
-    bonus: {
-      description: `Leadership is shaped by how principles translate into action. Watch a short extract
-        from <strong>Roger Federer's Dartmouth University 2024 commencement speech</strong> to identify
-        key leadership insights around performance, resilience, and responsibility.<br /><br />
-        Note 2–3 leadership insights from Mr. Federer's speech. Open
-        <a href="https://gemini.google.com" target="_blank">Gemini</a> (or DeepSeek / Kering AI for
-        participants from China) and use the prompt below to generate a short visual storybook
-        illustrating these insights in a contemporary work context. Upload a screenshot of the
-        generated visuals below.<br /><br />
-        <em>Prompt: "Create a short visual storybook (5 scenes) that illustrates these leadership
-        insights: [insert your 2–3 insights]. Each scene should depict a realistic workplace moment
-        showing how these principles are applied in action. Describe each scene visually and
-        narratively."</em>`,
-      type: 'attachment',
-      label: 'Upload your screenshot',
-    },
-    keyLearning: {
-      text: `Great leaders are continuous learners. By exposing ourselves to diverse perspectives —
-        whether through a Masterclass lesson or a commencement speech — we sharpen our
-        ability to lead with influence, empathy, and purpose.`,
-      additionalRessources: [
-        {
-          text: 'Grow your Leadership — Degreed Learning Plan',
-          link: 'https://eu.degreed.com/plan/855671',
-        },
-      ],
     },
     coordinates: { x: 560, y: 270 },
   },
@@ -194,17 +154,6 @@ export const leadershipLighthouseExperiences: Experience[] = [
       label: 'Upload your screenshot',
     },
     bonus: undefined,
-    keyLearning: {
-      text: `The best leaders translate principles into action. Roger Federer's reflections on
-        resilience, effort, and responsibility offer timeless insights that apply as much in the
-        boardroom as on the court.`,
-      additionalRessources: [
-        {
-          text: 'Grow your Leadership — Degreed Learning Plan',
-          link: 'https://eu.degreed.com/plan/855671',
-        },
-      ],
-    },
     coordinates: { x: 630, y: 260 },
   },
 ];
@@ -228,18 +177,6 @@ export const collaborationHorizonExperiences: Experience[] = [
     interaction: {
       type: 'attachment',
       label: 'Upload your reflection',
-    },
-    keyLearning: {
-      text: `Collaboration is like an orchestra: each member brings unique skills that contribute
-        differently to the whole. A steady foundation — like the double bass — enables
-        others to perform. Extraordinary performance requires coordination and confidence
-        in executing a shared direction.`,
-      additionalRessources: [
-        {
-          text: 'Collaboration — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/08qdv74lpr',
-        },
-      ],
     },
     coordinates: { x: 580, y: 530 },
   },
@@ -317,17 +254,6 @@ export const collaborationHorizonExperiences: Experience[] = [
         },
       ],
     },
-    keyLearning: {
-      text: `Teamwork makes the dream work. Collaboration at its best means every person
-        understands their unique contribution and trusts others to do the same — creating
-        the conditions for extraordinary collective performance.`,
-      additionalRessources: [
-        {
-          text: 'Collaboration — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/08qdv74lpr',
-        },
-      ],
-    },
     coordinates: { x: 600, y: 550 },
   },
   {
@@ -342,27 +268,6 @@ export const collaborationHorizonExperiences: Experience[] = [
     interaction: {
       type: 'attachment',
       label: 'Upload your creation',
-    },
-    bonus: {
-      description: `Innovation at Kering matters most when it serves our business and people. Through
-        the <strong>Kering Imagination Lab Hackathon</strong>, we spark collective intelligence by uniting
-        House talents and operational experts.<br /><br />
-        Watch the Hackathon video to see this synergy in action. Then help shape our future:
-        what should be our next theme? Identify the frontier where technology and teamwork
-        redefine luxury — and submit your idea below.`,
-      type: 'attachment',
-      label: 'Upload your idea',
-    },
-    keyLearning: {
-      text: `Creativity flourishes in collaboration. When diverse perspectives come together
-        around a shared challenge — whether designing a bag or imagining the next
-        innovation sprint — the results are always greater than the sum of their parts.`,
-      additionalRessources: [
-        {
-          text: 'Collaboration — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/08qdv74lpr',
-        },
-      ],
     },
     coordinates: { x: 620, y: 570 },
   },
@@ -390,17 +295,6 @@ export const efficiencyValleyExperiences: Experience[] = [
     interaction: {
       type: 'attachment',
       label: 'Upload your reflection document',
-    },
-    keyLearning: {
-      text: `Efficiency is not about doing more — it's about designing smarter ways of working.
-        Small structural shifts in how you plan, batch, and sequence work can unlock
-        greater focus and flow, and create space for high-value work.`,
-      additionalRessources: [
-        {
-          text: 'Unlock productivity to increase impact — Degreed Course',
-          link: 'https://eu.degreed.com/courses/unlock-productivity-to-increase-impact?d=28097545&inputtype=course&inputType=Course',
-        },
-      ],
     },
     coordinates: { x: 780, y: 620 },
   },
@@ -477,18 +371,6 @@ export const efficiencyValleyExperiences: Experience[] = [
         },
       ],
     },
-    keyLearning: {
-      text: `AI is a supportive tool, not a replacement for human judgment. The Pomellato
-        experiment shows how thoughtful integration of AI into existing workflows can
-        accelerate product development while preserving the craft and creativity at the
-        heart of luxury.`,
-      additionalRessources: [
-        {
-          text: 'Unlock productivity to increase impact — Degreed Course',
-          link: 'https://eu.degreed.com/courses/unlock-productivity-to-increase-impact?d=28097545&inputtype=course&inputType=Course',
-        },
-      ],
-    },
     coordinates: { x: 800, y: 640 },
   },
   {
@@ -505,17 +387,6 @@ export const efficiencyValleyExperiences: Experience[] = [
       label: 'Upload your reflection',
     },
     bonus: undefined,
-    keyLearning: {
-      text: `AI assistants like Vittorio show how institutional knowledge can be made instantly
-        accessible — turning static handbooks into dynamic, conversational tools that
-        empower teams to work smarter and serve clients better.`,
-      additionalRessources: [
-        {
-          text: 'Unlock productivity to increase impact — Degreed Course',
-          link: 'https://eu.degreed.com/courses/unlock-productivity-to-increase-impact?d=28097545&inputtype=course&inputType=Course',
-        },
-      ],
-    },
     coordinates: { x: 820, y: 600 },
   },
 ];
@@ -661,17 +532,6 @@ export const craftCanyonExperiences: Experience[] = [
         },
       ],
     },
-    keyLearning: {
-      text: `Craft at Kering is a living practice — shaped by heritage, reinvented through
-        innovation, and expressed through the savoir-faire of each House. From Intrecciato
-        leather to precision-cut gemstones, excellence is always in the detail.`,
-      additionalRessources: [
-        {
-          text: 'Balenciaga Behind the Seams — Degreed Learning Plan',
-          link: 'https://eu.degreed.com/plan/968107',
-        },
-      ],
-    },
     coordinates: { x: 1140, y: 620 },
   },
   {
@@ -690,16 +550,6 @@ export const craftCanyonExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your video or still frame',
     },
-    keyLearning: {
-      text: `AI tools like DeeVid open new possibilities for bringing archival heritage to life —
-        creating a bridge between the past and the future of luxury craft.`,
-      additionalRessources: [
-        {
-          text: 'Balenciaga Behind the Seams — Degreed Learning Plan',
-          link: 'https://eu.degreed.com/plan/968107',
-        },
-      ],
-    },
     coordinates: { x: 1060, y: 640 },
   },
   {
@@ -717,17 +567,6 @@ export const craftCanyonExperiences: Experience[] = [
       label: 'Upload your La Famiglia result',
     },
     bonus: undefined,
-    keyLearning: {
-      text: `AR technology allows brands to create deeply personal, immersive experiences that
-        bring their creative world directly to the consumer. Gucci's La Famiglia filter is a
-        compelling example of how craft and storytelling can merge in the digital space.`,
-      additionalRessources: [
-        {
-          text: 'Balenciaga Behind the Seams — Degreed Learning Plan',
-          link: 'https://eu.degreed.com/plan/968107',
-        },
-      ],
-    },
     coordinates: { x: 1080, y: 700 },
   },
 ];
@@ -751,17 +590,6 @@ export const adaptabilityDunesExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your list',
     },
-    keyLearning: {
-      text: `Adaptability starts with the mindset to reframe constraints. When we force ourselves
-        to see familiar objects in unfamiliar ways, we train the creative flexibility that makes
-        us more agile in the face of real challenges.`,
-      additionalRessources: [
-        {
-          text: 'Adaptability — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/08godlnrpw',
-        },
-      ],
-    },
     coordinates: { x: 860, y: 290 },
   },
   {
@@ -779,17 +607,6 @@ export const adaptabilityDunesExperiences: Experience[] = [
     interaction: {
       type: 'attachment',
       label: 'Upload your reflection',
-    },
-    keyLearning: {
-      text: `Adaptability is measurable and learnable. Natalie Fratto's three markers —
-        curiosity, the ability to experiment, and releasing old patterns — give us a
-        practical framework for building resilience and staying relevant in a fast-changing world.`,
-      additionalRessources: [
-        {
-          text: 'Adaptability — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/08godlnrpw',
-        },
-      ],
     },
     coordinates: { x: 880, y: 310 },
   },
@@ -812,17 +629,6 @@ export const adaptabilityDunesExperiences: Experience[] = [
       label: 'Upload your screenshot',
     },
     bonus: undefined,
-    keyLearning: {
-      text: `Iteration under constraint is at the heart of adaptability. Tools like Lovable let
-        us experience firsthand how adjusting direction — while preserving core purpose —
-        is a skill that applies as much in work as in design.`,
-      additionalRessources: [
-        {
-          text: 'Adaptability — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/08godlnrpw',
-        },
-      ],
-    },
     coordinates: { x: 900, y: 270 },
   },
 ];
@@ -854,19 +660,6 @@ export const learningAgilityOasisExperiences: Experience[] = [
       label: 'Upload your summary or teaser',
     },
     bonus: undefined,
-    keyLearning: {
-      text: `Learning agility is the ability to learn quickly and easily in unknown situations.
-        Your willingness to seek new information and connect insights across disciplines
-        creates the agility that organisations need today. This journey is not an end point —
-        it's a milestone. The Golden Owl recognises that you are ready to look ahead with
-        clarity and purpose.`,
-      additionalRessources: [
-        {
-          text: 'Learning Agility — Degreed Pathway',
-          link: 'https://eu.degreed.com/pathway/e9kjnw2o8o',
-        },
-      ],
-    },
     coordinates: { x: 1200, y: 390 },
   },
 ];

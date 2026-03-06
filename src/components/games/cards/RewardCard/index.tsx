@@ -1,42 +1,32 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 import PopinCard from '@/components/common/PopinCard';
 import { KeyLearningsContent } from '@/components/common';
 import styles from './RewardCard.module.scss';
 
 interface RewardCardProps {
-  content: string;
+  keyLearning: {
+    text: string;
+    additionalResources?: AdditionalResources[];
+  };
   isActive?: boolean;
-  additionalRessources?: AdditionalResources[];
-  videoUrl: string;
-  experienceKey: string;
   regionKey: RegionKey;
-  // blurUrl;
 }
 
-const RewardCard = ({
-  content,
-  isActive,
-  additionalRessources,
-  videoUrl,
-  experienceKey,
-  regionKey,
-}: RewardCardProps) => {
+const RewardCard = ({ keyLearning, isActive, regionKey }: RewardCardProps) => {
   const { push } = useRouter();
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <>
       {isOpen && isActive && (
         <PopinCard onClick={() => setIsOpen(false)}>
           <KeyLearningsContent
-            videoUrl={`/static/video/cards/big-${experienceKey}.mp4`}
-            content={content}
-            additionalRessources={additionalRessources}
+            content={keyLearning.text}
+            additionalResources={keyLearning.additionalResources}
+            videoUrl={`/static/video/cards/${regionKey}.mp4`}
           />
         </PopinCard>
       )}
@@ -46,21 +36,19 @@ const RewardCard = ({
             if (isActive) {
               setIsOpen(true);
             } else {
-              push({ pathname: '/game/map', query: { regionKey, experienceKey } });
+              push({ pathname: '/game/map', query: { regionKey } });
             }
           }}
           type="button"
         >
-          <div
-            className={styles.videoContainer}
-            // style={{ backgroundColor: color }}
-            onMouseEnter={() => isActive && videoRef.current?.play()}
-            onMouseLeave={() => isActive && videoRef.current?.pause()}
-          >
-            {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-            <video ref={videoRef} muted controls={false} width={85} height="auto">
-              <source src={videoUrl} type="video/mp4" />
-            </video>
+          <div className={styles.imageContainer}>
+            <Image
+              src={`/static/image/cards/${regionKey}.png`}
+              alt={`${regionKey} card`}
+              width={936}
+              height={1663}
+              className={styles.cardImage}
+            />
           </div>
         </button>
       </div>

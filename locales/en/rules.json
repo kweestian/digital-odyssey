@@ -1,20 +1,20 @@
 {
   "cards": {
     "card1": {
-      "title": "Gameplay Concept",
-      "description": "The Kering Imagination Odyssey is a quest into the future of luxury. During this journey, you will explore 5 regions and discover new digital tools and concepts across 20 experiences – once you conquer all of them, you will unlock the final region, the Timeless Tundra. Together let’s craft the customer journey of tomorrow!"
+      "title": "GAMEPLAY CONCEPT",
+      "description": "Welcome to the Kering Learning Odyssey. By embarking on this interactive serious game, each Kering employee becomes an Explorer of the Future. As more players join the journey, new territories unlock, each representing a critical skill needed to deliver with excellence today and continue growing tomorrow. Your journey culminates in the final territory, the Learning Agility Oasis, where you will reflect on how to navigate today’s fast-changing world with confidence and curiosity."
     },
     "card2": {
-      "title": "CONCEPT CARDS",
-      "description": "You win a concept card after each completed experience that sums up the respective digital concept or tool’s key learnings. Once you have completed the 3 experiences of a region, you will be able to access some additional resources (articles, books, podcasts) to go further into the region’s central topic."
+      "title": "KEY LEARNINGS",
+      "description": "In every territory, you will complete challenges designed to help you experiment, reflect, and strengthen the skills of the future. Upon completing a territory, you will unlock its key learnings, consolidating the insights gained and reinforcing your ability to apply them in your day-to-day work."
     },
     "card3": {
       "title": "COLLECTIBLE OWLS",
-      "description": "Once you have completed the three experiences of a region plus the bonus (one in each region), you will win a collectible owl. The Golden Owl will only be caught once you have completed all the experiences and bonuses of the 5 regions."
+      "description": "Once all the challenges are completed, each territory awards a Silver Owl: an emblem of mastery for that skill. After collecting all six Silver Owls, the Golden Owl is revealed as a symbol of integrated learning across the Odyssey."
     },
     "card4": {
-      "title": "EndGame",
-      "description": "Capture the Golden Owl in the final region! You will be heralded a Kering Explorer of the Future and gain a certificate commemorating the knowledge gathered during your odyssey. Now you’re ready to integrate these new digital insights into your daily lives at Kering."
+      "title": "PRIZES",
+      "description": "Top Explorers in each global region will unlock exclusive House Experiences designed to strengthen Group culture at a local level. These may include in-store immersions, archive visits, or behind-the-scenes moments with one of Kering’s Houses!"
     }
   }
 }

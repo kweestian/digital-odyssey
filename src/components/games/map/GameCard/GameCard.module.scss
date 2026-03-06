@@ -1,29 +1,5 @@
 @import '@/styles/variables';
 
-@media screen and (max-height: $MobileBreakpoint) {
-  .cardContainer {
-    height: 100vh; /* full viewport height */
-    overflow-y: auto; /* scroll the card if needed */
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* allow content to grow naturally */
-    padding: 0.5rem;
-    box-sizing: border-box;
-  }
-
-  .cardContainer > h1 {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .cardContainer .owlImage {
-    width: 70px;
-    height: auto;
-    margin: 5px 0;
-  }
-}
-
 .cardContainer {
   display: flex;
   position: relative;
@@ -31,11 +7,19 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   > h1 {
     font-weight: 500;
     font-size: 1.6rem;
     margin-top: 20px;
+    flex-shrink: 0;
   }
 
   a {
@@ -48,41 +32,23 @@
   width: 97px;
   height: auto;
   margin: 5px 0;
+  flex-shrink: 0;
 }
 
-// @media screen and (max-height: $TabletBreakpoint) {
-//   .cardContainer {
-//     > h1 {
-//       font-size: 1.6rem;
-//     }
-//   }
+@media screen and (max-height: $MobileBreakpoint) {
+  .cardContainer {
+    padding: 0.5rem;
+    box-sizing: border-box;
 
-//   // .owlImage {
-//   //   width: 50px;
-//   //   height: auto;
-//   // }
-// }
+    > h1 {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
 
-// @media screen and (max-height: 650px) {
-//   .cardContainer {
-//     > h1 {
-//       font-size: 20px;
-//     }
-//   }
-
-//   .owlImage {
-//     width: 60px;
-//   }
-// }
-
-// @media screen and (max-height: 550px) {
-//   .cardContainer {
-//     > h1 {
-//       font-size: 1.2rem;
-//     }
-//   }
-
-//   // .owlImage {
-//   //   width: 40px;
-//   // }
-// }
+  .owlImage {
+    width: 70px;
+    margin: 5px 0;
+  }
+}

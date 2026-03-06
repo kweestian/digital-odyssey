@@ -12,9 +12,9 @@
   font-family: var(--font-poppins);
   border-radius: 20px;
   width: 100%;
-  height: 60%;
-
   min-height: 264px;
+  height: auto;
+
   p {
     font-size: 16px;
     font-weight: 300;
@@ -48,12 +48,11 @@
 .bonusContainer {
   margin-top: 15px;
   width: 400px;
-  // font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  // margin: 0 auto;
+
   > button {
     font-weight: 500;
     width: 62%;
@@ -79,7 +78,6 @@
   display: block;
   height: 100%;
   margin: auto;
-
   top: 0;
   left: 0;
   right: 0;
@@ -115,20 +113,11 @@
   text-align: center;
 }
 
-// @media screen and (min-width: 1800px) {
-//   .descriptionContainer {
-//     p {
-//       font-size: 1rem;
-//     }
-//   }
-// }
-
 @media screen and (max-height: $TabletBreakpoint) {
   .descriptionContainer {
-    // padding: 5px 15px 5px 15px;
-    height: 60%;
-    overflow-y: auto;
+    height: auto;
     min-height: 0;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
       display: none;
@@ -138,9 +127,9 @@
 
 @media screen and (max-height: $MobileBreakpoint) {
   .descriptionContainer {
-    height: auto !important; /* allow natural height */
-    min-height: auto !important;
-    overflow: visible !important; /* no scrolling */
+    height: auto;
+    min-height: auto;
+    overflow: visible;
     justify-content: flex-start;
   }
 

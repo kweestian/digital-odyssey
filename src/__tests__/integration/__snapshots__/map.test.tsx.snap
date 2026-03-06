@@ -1332,27 +1332,27 @@ exports[`map page renders cards page unchange 1`] = `
                             class="region__title"
                             style="fill: #FF704E; font-weight: 400; font-size: 1.6rem; text-transform: uppercase;"
                             text-anchor="middle"
-                            x="1140"
+                            x="1130"
                             y="620"
                           >
                             <tspan
                               dy="1.2em"
-                              x="1140"
+                              x="1130"
                             >
                               Craft
                             </tspan>
                             <tspan
                               dy="1.2em"
-                              x="1140"
+                              x="1130"
                             >
                               Canyon
                             </tspan>
                           </text>
                           <image
                             style="width: 110px; height: auto;"
-                            x="1020"
+                            x="1030"
                             xlink:href="/static/image/owls/3d/craft-canyon.svg"
-                            y="720"
+                            y="700"
                           />
                         </g>
                       </a>
@@ -1365,25 +1365,25 @@ exports[`map page renders cards page unchange 1`] = `
                             class="region__title"
                             style="fill: #FF3FA0; font-weight: 400; font-size: 1.6rem; text-transform: uppercase;"
                             text-anchor="middle"
-                            x="780"
+                            x="790"
                             y="620"
                           >
                             <tspan
                               dy="1.2em"
-                              x="780"
+                              x="790"
                             >
                               Efficiency
                             </tspan>
                             <tspan
                               dy="1.2em"
-                              x="780"
+                              x="790"
                             >
                               Valley
                             </tspan>
                           </text>
                           <image
                             style="width: 110px; height: auto;"
-                            x="850"
+                            x="855"
                             xlink:href="/static/image/owls/3d/efficiency-valley.svg"
                             y="600"
                           />
@@ -1398,27 +1398,27 @@ exports[`map page renders cards page unchange 1`] = `
                             class="region__title"
                             style="fill: #00ACFF; font-weight: 400; font-size: 1.6rem; text-transform: uppercase;"
                             text-anchor="middle"
-                            x="595"
-                            y="250"
+                            x="580"
+                            y="270"
                           >
                             <tspan
                               dy="1.2em"
-                              x="595"
+                              x="580"
                             >
                               Leadership
                             </tspan>
                             <tspan
                               dy="1.2em"
-                              x="595"
+                              x="580"
                             >
                               Lighthouse
                             </tspan>
                           </text>
                           <image
                             style="width: 110px; height: auto;"
-                            x="535"
+                            x="520"
                             xlink:href="/static/image/owls/3d/leadership-lighthouse.svg"
-                            y="330"
+                            y="350"
                           />
                         </g>
                       </a>
@@ -1431,27 +1431,27 @@ exports[`map page renders cards page unchange 1`] = `
                             class="region__title"
                             style="fill: #00B16E; font-weight: 400; font-size: 1.6rem; text-transform: uppercase;"
                             text-anchor="middle"
-                            x="860"
-                            y="290"
+                            x="878"
+                            y="285"
                           >
                             <tspan
                               dy="1.2em"
-                              x="860"
+                              x="878"
                             >
                               Adaptability
                             </tspan>
                             <tspan
                               dy="1.2em"
-                              x="860"
+                              x="878"
                             >
                               Dunes
                             </tspan>
                           </text>
                           <image
                             style="width: 110px; height: auto;"
-                            x="890"
+                            x="900"
                             xlink:href="/static/image/owls/3d/adaptability-dunes.svg"
-                            y="240"
+                            y="225"
                           />
                         </g>
                       </a>
@@ -1464,27 +1464,27 @@ exports[`map page renders cards page unchange 1`] = `
                             class="region__title"
                             style="fill: #936EF1; font-weight: 400; font-size: 1.6rem; text-transform: uppercase;"
                             text-anchor="middle"
-                            x="580"
+                            x="600"
                             y="530"
                           >
                             <tspan
                               dy="1.2em"
-                              x="580"
+                              x="600"
                             >
                               Collaboration
                             </tspan>
                             <tspan
                               dy="1.2em"
-                              x="580"
+                              x="600"
                             >
                               Horizon
                             </tspan>
                           </text>
                           <image
                             style="width: 110px; height: auto;"
-                            x="660"
+                            x="680"
                             xlink:href="/static/image/owls/3d/collaboration-horizon.svg"
-                            y="500"
+                            y="470"
                           />
                         </g>
                       </a>
@@ -1497,20 +1497,20 @@ exports[`map page renders cards page unchange 1`] = `
                             class="region__title"
                             style="fill: lightgray; opacity: 1; font-weight: 400; font-size: 1.6rem;"
                             text-anchor="middle"
-                            x="1200"
+                            x="1210"
                             y="390"
                           >
                             <tspan
                               dy="1.2em"
                               style="padding: 30px;"
-                              x="1200"
+                              x="1210"
                             >
                               Learning Agility
                             </tspan>
                             <tspan
                               dy="1.2em"
                               style="padding: 30px;"
-                              x="1200"
+                              x="1210"
                             >
                               Oasis
                             </tspan>

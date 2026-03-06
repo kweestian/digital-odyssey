@@ -47,7 +47,6 @@ type Experience = {
   description: string;
   interaction: Interaction;
   bonus?: { description: string } & Interaction;
-  keyLearning: { text: string; additionalRessources?: AdditionalResources[] };
   coordinates: {
     x: number;
     y: number;
@@ -76,6 +75,10 @@ type Region = {
   };
   experiences: Experience[];
   available: boolean;
+  keyLearning: {
+    text: string;
+    additionalResources?: AdditionalResources[];
+  };
   regionalResources: RegionalResource[];
 };
 

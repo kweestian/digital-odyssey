@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { GameLayout } from '@/components';
 import { useMapData } from '@/hooks';
 
-import BasicOwl from '@/image/owls/3d/basic-owl.svg';
+import SilverOwl from '@/image/owls/3d/silver-owl.svg';
 import GoldOwl from '@/image/owls/gif/gold-owl.gif';
 
 import styles from './Owls.module.scss';
@@ -14,7 +14,7 @@ type Props = {};
 
 const Owls: NextPage<Props> = () => {
   const { data } = useMapData();
-  const timelessTundra = data.find(({ regionKey }) => regionKey === 'learning-agility-oasis');
+  const learningAgilityOasis = data.find(({ regionKey }) => regionKey === 'learning-agility-oasis');
 
   return (
     <GameLayout>
@@ -40,14 +40,14 @@ const Owls: NextPage<Props> = () => {
                 );
               }
 
-              return <Image key={regionKey} src={BasicOwl} width={219} height={130} alt={regionKey} />;
+              return <Image key={regionKey} src={SilverOwl} width={219} height={130} alt={regionKey} />;
             })}
         </div>
         <div className={styles.bigOwl}>
-          {timelessTundra?.available ? (
+          {learningAgilityOasis?.available ? (
             <Image src={GoldOwl} alt="Gold Owl" />
           ) : (
-            <Image src={BasicOwl} alt="Basic Owl" />
+            <Image src={SilverOwl} alt="Basic Owl" />
           )}
         </div>
         <p className={styles.textBox}>

@@ -210,59 +210,20 @@ exports[`cards page renders cards page unchange 1`] = `
                       type="button"
                     >
                       <div
-                        class="videoContainer"
+                        class="imageContainer"
                       >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/craft-quiz.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/craft-deevid.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/craft-gucci-snap.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
+                        <img
+                          alt="craft-canyon card"
+                          class="cardImage"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1663"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fcraft-canyon.png&w=1920&q=75"
+                          srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fcraft-canyon.png&w=1080&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fcraft-canyon.png&w=1920&q=75 2x"
+                          style="color: transparent;"
+                          width="936"
+                        />
                       </div>
                     </button>
                   </div>
@@ -278,7 +239,6 @@ exports[`cards page renders cards page unchange 1`] = `
                   >
                     CRAFT CANYON
                   </span>
-                   
                 </button>
               </div>
               <div
@@ -294,59 +254,20 @@ exports[`cards page renders cards page unchange 1`] = `
                       type="button"
                     >
                       <div
-                        class="videoContainer"
+                        class="imageContainer"
                       >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/efficiency-copilot.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/efficiency-pomellato-quiz.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/efficiency-vittorio-demo.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
+                        <img
+                          alt="efficiency-valley card"
+                          class="cardImage"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1663"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fefficiency-valley.png&w=1920&q=75"
+                          srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fefficiency-valley.png&w=1080&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fefficiency-valley.png&w=1920&q=75 2x"
+                          style="color: transparent;"
+                          width="936"
+                        />
                       </div>
                     </button>
                   </div>
@@ -362,7 +283,6 @@ exports[`cards page renders cards page unchange 1`] = `
                   >
                     EFFICIENCY VALLEY
                   </span>
-                   
                 </button>
               </div>
             </div>
@@ -382,59 +302,20 @@ exports[`cards page renders cards page unchange 1`] = `
                       type="button"
                     >
                       <div
-                        class="videoContainer"
+                        class="imageContainer"
                       >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/leadership-quiz.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/leadership-masterclass.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/leadership-video-challenge.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
+                        <img
+                          alt="leadership-lighthouse card"
+                          class="cardImage"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1663"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fleadership-lighthouse.png&w=1920&q=75"
+                          srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fleadership-lighthouse.png&w=1080&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fleadership-lighthouse.png&w=1920&q=75 2x"
+                          style="color: transparent;"
+                          width="936"
+                        />
                       </div>
                     </button>
                   </div>
@@ -465,59 +346,20 @@ exports[`cards page renders cards page unchange 1`] = `
                       type="button"
                     >
                       <div
-                        class="videoContainer"
+                        class="imageContainer"
                       >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/adaptability-object.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/adaptability-video-quiz.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/adaptability-lovable.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
+                        <img
+                          alt="adaptability-dunes card"
+                          class="cardImage"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1663"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fadaptability-dunes.png&w=1920&q=75"
+                          srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fadaptability-dunes.png&w=1080&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fadaptability-dunes.png&w=1920&q=75 2x"
+                          style="color: transparent;"
+                          width="936"
+                        />
                       </div>
                     </button>
                   </div>
@@ -548,59 +390,20 @@ exports[`cards page renders cards page unchange 1`] = `
                       type="button"
                     >
                       <div
-                        class="videoContainer"
+                        class="imageContainer"
                       >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/collaboration-dominic-video.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/collaboration-quiz.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="container isNotActive"
-                  >
-                    <button
-                      type="button"
-                    >
-                      <div
-                        class="videoContainer"
-                      >
-                        <video
-                          height="auto"
-                          width="85"
-                        >
-                          <source
-                            src="/static/video/cards/collaboration-awen.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
+                        <img
+                          alt="collaboration-horizon card"
+                          class="cardImage"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1663"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fcollaboration-horizon.png&w=1920&q=75"
+                          srcset="/_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fcollaboration-horizon.png&w=1080&q=75 1x, /_next/image?url=%2Fstatic%2Fimage%2Fcards%2Fcollaboration-horizon.png&w=1920&q=75 2x"
+                          style="color: transparent;"
+                          width="936"
+                        />
                       </div>
                     </button>
                   </div>
@@ -623,11 +426,9 @@ exports[`cards page renders cards page unchange 1`] = `
           <p
             class="textBox"
           >
-            You win a concept card after each completed experience.
+            You win a concept card after completing all experiences in a territory.
             <br />
-             Click on any illuminated card to read again the key learnings of the experience.
-            <br />
-             Once you have completed all the experiences of a region, you will be able to click on the region’s name to access some additional resources - including articles, books, podcasts and videos - to explore further the topic.
+             Click on any illuminated card to read the key learnings for that territory.
           </p>
         </div>
       </div>

@@ -3,7 +3,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable max-len */
 import { Fragment, useCallback, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import { useGlobalState } from '@/contexts/global';
 import { useUrlParams } from '@/hooks';
@@ -21,7 +20,6 @@ interface Props {
 const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
   const landContinentRef = useRef(null);
   const { getUrlParam, setUrlParam } = useUrlParams();
-  const router = useRouter();
 
   const currentRegion = getUrlParam('regionKey');
 
@@ -75,14 +73,11 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                 ) : (
                   <a
                     onClick={() => {
-                      if (available && regionKey === 'learning-agility-oasis') {
-                        router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
-                      } else {
-                        onClickActions(regionKey);
-                      }
+                      if (!available) return;
+                      onClickActions(regionKey);
                     }}
-                    onMouseEnter={() => setActiveRegion(regionKey)}
-                    style={{ cursor: 'pointer' }}
+                    onMouseEnter={() => available && setActiveRegion(regionKey)}
+                    style={{ cursor: available ? 'pointer' : 'default' }}
                     key={regionKey}
                     className="z-10"
                   >
@@ -116,66 +111,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
             const { regionKey, regionOwl, available, experiences, isComplete: isRegionComplete } = region;
 
             if (showIcon) {
-              if (regionKey === 'learning-agility-oasis') {
-                return (
-                  <a
-                    key={`pictos-${regionKey}`}
-                    onClick={() => {
-                      if (available) {
-                        router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
-                      } else {
-                        onClickActions(regionKey);
-                      }
-                    }}
-                    style={{ cursor: 'pointer' }}
-                    className="z-10"
-                  >
-                    <g>
-                      <text
-                        className={styles.region__title}
-                        x={region.title.coordinates.x}
-                        y={region.title.coordinates.y}
-                        style={{
-                          fill: available ? region.color : 'lightgray',
-                          fontWeight: '400',
-                          fontSize: '1.6rem',
-                          textTransform: 'uppercase',
-                        }}
-                        textAnchor="middle"
-                      >
-                        {region.title.textParts.map((text) => (
-                          <tspan x={region.title.coordinates.x} dy="1.2em" key={text} style={{ paddingTop: '30px' }}>
-                            {text}
-                          </tspan>
-                        ))}
-                      </text>
-                      {available ? (
-                        <image
-                          x={isRegionComplete ? Number(regionOwl.x) - 15 : regionOwl.x}
-                          y={isRegionComplete ? Number(regionOwl.y) - 15 : regionOwl.y}
-                          // width="110"
-                          // height="60"
-                          style={{ width: isRegionComplete ? 150 : 110, height: 'auto' }}
-                          xlinkHref={
-                            isRegionComplete
-                              ? `/static/image/owls/gif/${regionKey}.gif`
-                              : `/static/image/owls/3d/${regionKey}.svg`
-                          }
-                        />
-                      ) : (
-                        <image
-                          x={Number(regionOwl.x) + 60}
-                          y={Number(regionOwl.y) + 15}
-                          width="100"
-                          height="50"
-                          style={{ opacity: '0.6' }}
-                          xlinkHref="/static/image/map/picto/lock-svgrepo-com.svg"
-                        />
-                      )}
-                    </g>
-                  </a>
-                );
-              }
+              if (!available) return null;
               return (
                 <g className="z-20" key={`pictos-${regionKey}`}>
                   <ExperiencePictos experiences={experiences} regionKey={regionKey} />
@@ -187,8 +123,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
               return (
                 <a
                   key={`unavailable-${regionKey}`}
-                  // onClick={() => onClickActions(regionKey)}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'default' }}
                   className="z-10"
                 >
                   <g>
@@ -222,11 +157,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
               <a
                 key={`pictos-${regionKey}`}
                 onClick={() => {
-                  if (available && regionKey === 'learning-agility-oasis') {
-                    router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
-                  } else {
-                    onClickActions(regionKey);
-                  }
+                  onClickActions(regionKey);
                 }}
                 style={{ cursor: 'pointer' }}
                 className="z-10"
@@ -250,7 +181,7 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                       x={isRegionComplete ? Number(regionOwl.x) - 15 : regionOwl.x}
                       onClick={(evt) => {
                         // so it doesnt trigger zoom
-                        if (region.isComplete && regionKey !== 'learning-agility-oasis') {
+                        if (region.isComplete) {
                           evt.stopPropagation();
 
                           dispatch({
@@ -263,8 +194,6 @@ const Map = ({ customMap, zoomImageTrigger, zoom, initialScale }: Props) => {
                             },
                           });
                           setUrlParam('regionKey', regionKey);
-                        } else if (regionKey === 'learning-agility-oasis') {
-                          router.push('/game/map/learning-agility-oasis?regionKey=learning-agility-oasis');
                         } else {
                           onClickActions(regionKey);
                         }

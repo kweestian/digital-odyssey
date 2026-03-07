@@ -5,14 +5,13 @@ import useGetUserExperience from './api/user/experience/useUserExperience';
 const OASIS_REGION_KEY = 'learning-agility-oasis';
 
 /**
- * Used by:
- *  - ProgressBar (via GameLayout) -> progressPercent for current user
- *  - Owls page -> owls collected + isComplete per region for current user
- *  - Map page -> region availability + experience completion state
- *
- * Learning Agility Oasis unlocks when all 5 other regions are complete
- * (owlsCollected >= 5). Once unlocked, its completion is determined by
- * the player submitting its single challenge answer.
+ * Sequential unlock order:
+ * 1. Leadership Lighthouse  - always available
+ * 2. Collaboration Horizon  - always available
+ * 3. Efficiency Valley      - unlocks when 1 + 2 are complete
+ * 4. Craft Canyon           - unlocks when 3 is complete
+ * 5. Adaptability Dunes     - unlocks when 4 is complete
+ * 6. Learning Agility Oasis - unlocks when all 5 others are complete
  */
 const useMapData = () => {
   const { data: userExperienceData, isLoading } = useGetUserExperience();
@@ -27,18 +26,14 @@ const useMapData = () => {
     })),
   );
 
-  const oasisUnlocked = owlsCollected >= 5;
-
+  // First pass: compute isComplete for all regions
   const mapDataWithApiData: CustomMap = CustomMap.map((region) => {
     const allExperienceKeys = region.experiences.map(({ key }) => key);
     const completedExperiences = allUserExperiences.filter(
       ({ experience_key: experienceKey }) => experienceKey && allExperienceKeys.includes(experienceKey),
     );
 
-    const isRegionCompleted =
-      region.regionKey === OASIS_REGION_KEY
-        ? completedExperiences.filter(({ answer }) => answer).length >= 1
-        : completedExperiences.filter(({ answer }) => answer).length >= allExperienceKeys.length;
+    const isRegionCompleted = completedExperiences.filter(({ answer }) => answer).length >= allExperienceKeys.length;
 
     return {
       ...region,
@@ -63,14 +58,31 @@ const useMapData = () => {
     };
   });
 
-  const mapData = oasisUnlocked
-    ? mapDataWithApiData.map((region) => {
-        if (region.regionKey === OASIS_REGION_KEY) {
-          return { ...region, available: true };
-        }
-        return { ...region };
-      })
-    : mapDataWithApiData;
+  const isComplete = (key: string) => mapDataWithApiData.find((r) => r.regionKey === key)?.isComplete ?? false;
+
+  // Second pass: apply sequential unlock rules
+  const mapData: CustomMap = mapDataWithApiData.map((region) => {
+    let isAvailable = region.available;
+
+    switch (region.regionKey) {
+      case 'efficiency-valley':
+        isAvailable = isComplete('leadership-lighthouse') && isComplete('collaboration-horizon');
+        break;
+      case 'craft-canyon':
+        isAvailable = isComplete('efficiency-valley');
+        break;
+      case 'adaptability-dunes':
+        isAvailable = isComplete('craft-canyon');
+        break;
+      case OASIS_REGION_KEY:
+        isAvailable = owlsCollected >= 5;
+        break;
+      default:
+        break;
+    }
+
+    return { ...region, available: isAvailable };
+  });
 
   return { data: mapData, isLoading };
 };

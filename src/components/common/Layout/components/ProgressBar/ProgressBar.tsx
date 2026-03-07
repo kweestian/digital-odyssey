@@ -5,20 +5,9 @@ import styles from './ProgressBar.module.scss';
 
 const ProgressBar = () => {
   const { data } = useMapData();
-  const answers = [];
-  const allExperiences = data.map(({ experiences }) => experiences).flat();
-
-  allExperiences.forEach(({ interaction: { answer, bonus } }) => {
-    if (bonus) {
-      answers.push({});
-    }
-
-    if (answer) {
-      answers.push({});
-    }
-  });
-
-  const percentage = answers.length > 0 ? Math.round((answers.length / 20) * 100) : 0;
+  const allExperiences = data.flatMap(({ experiences }) => experiences);
+  const completedCount = allExperiences.filter(({ isCompleted }) => isCompleted).length;
+  const percentage = allExperiences.length > 0 ? Math.round((completedCount / allExperiences.length) * 100) : 0;
 
   return (
     <div className={styles.container}>

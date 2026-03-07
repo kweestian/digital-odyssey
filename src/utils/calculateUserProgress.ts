@@ -24,9 +24,12 @@ const OASIS_REGION_KEY = 'learning-agility-oasis';
 const REGULAR_REGIONS = CustomMap.filter(({ regionKey }) => regionKey !== OASIS_REGION_KEY);
 const OASIS_REGION = CustomMap.find(({ regionKey }) => regionKey === OASIS_REGION_KEY);
 
-// 5 regular regions x 3 answers + 1 oasis answer = 16
-const REGULAR_STEPS_PER_REGION = 3;
-const TOTAL_PROGRESS_STEPS = REGULAR_REGIONS.length * REGULAR_STEPS_PER_REGION + 1;
+// Only count experiences in statically available regions so progress reaches 100%
+// as the user completes the currently unlocked content.
+const AVAILABLE_REGULAR_REGIONS = REGULAR_REGIONS.filter(({ available }) => available);
+const TOTAL_PROGRESS_STEPS =
+  AVAILABLE_REGULAR_REGIONS.reduce((sum, r) => sum + r.experiences.length, 0) +
+  (OASIS_REGION?.available ? 1 : 0);
 
 /**
  * Calculates a user's progress across all regions given their completed experiences.
@@ -58,7 +61,7 @@ export const calculateUserProgress = (userExperiences: UserExperience[]): UserPr
     const completedExperiences = userExperiences.filter(
       ({ experienceKey, answer }) => experienceKey && allExperienceKeys.includes(experienceKey) && answer,
     );
-    const isComplete = completedExperiences.length >= 1;
+    const isComplete = completedExperiences.length >= allExperienceKeys.length;
     return { regionKey: OASIS_REGION_KEY, isComplete };
   })();
 
@@ -85,7 +88,7 @@ export const calculateUserProgress = (userExperiences: UserExperience[]): UserPr
     ).length;
   })();
 
-  const progressPercent = Math.round(((regularSteps + oasisSteps) / TOTAL_PROGRESS_STEPS) * 100);
+  const progressPercent = Math.min(100, Math.round(((regularSteps + oasisSteps) / TOTAL_PROGRESS_STEPS) * 100));
 
   return { regionProgress, owlsCollected, hasGoldenOwl, totalOwls, progressPercent };
 };

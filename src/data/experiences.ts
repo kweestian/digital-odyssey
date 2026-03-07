@@ -117,7 +117,7 @@ export const leadershipLighthouseExperiences: Experience[] = [
         },
       ],
     },
-    coordinates: { x: 595, y: 250 },
+    coordinates: { x: 600, y: 255 },
   },
   {
     name: 'Masterclass',
@@ -134,7 +134,7 @@ export const leadershipLighthouseExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your document',
     },
-    coordinates: { x: 560, y: 270 },
+    coordinates: { x: 685, y: 255 },
   },
   {
     name: 'Video Challenge',
@@ -154,7 +154,7 @@ export const leadershipLighthouseExperiences: Experience[] = [
       label: 'Upload your screenshot',
     },
     bonus: undefined,
-    coordinates: { x: 630, y: 260 },
+    coordinates: { x: 635, y: 310 },
   },
 ];
 
@@ -178,7 +178,7 @@ export const collaborationHorizonExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your reflection',
     },
-    coordinates: { x: 580, y: 530 },
+    coordinates: { x: 510, y: 490 },
   },
   {
     name: 'Collaboration Quiz',
@@ -254,7 +254,7 @@ export const collaborationHorizonExperiences: Experience[] = [
         },
       ],
     },
-    coordinates: { x: 600, y: 550 },
+    coordinates: { x: 640, y: 545 },
   },
   {
     name: 'AWEN',
@@ -269,7 +269,7 @@ export const collaborationHorizonExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your creation',
     },
-    coordinates: { x: 620, y: 570 },
+    coordinates: { x: 740, y: 490 },
   },
 ];
 
@@ -296,7 +296,7 @@ export const efficiencyValleyExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your reflection document',
     },
-    coordinates: { x: 780, y: 620 },
+    coordinates: { x: 720, y: 670 },
   },
   {
     name: 'Pomellato / AI Quiz',
@@ -371,7 +371,7 @@ export const efficiencyValleyExperiences: Experience[] = [
         },
       ],
     },
-    coordinates: { x: 800, y: 640 },
+    coordinates: { x: 810, y: 600 },
   },
   {
     name: 'Demo on Vittorio',
@@ -387,7 +387,7 @@ export const efficiencyValleyExperiences: Experience[] = [
       label: 'Upload your reflection',
     },
     bonus: undefined,
-    coordinates: { x: 820, y: 600 },
+    coordinates: { x: 890, y: 650 },
   },
 ];
 
@@ -532,7 +532,7 @@ export const craftCanyonExperiences: Experience[] = [
         },
       ],
     },
-    coordinates: { x: 1140, y: 620 },
+    coordinates: { x: 1070, y: 615 },
   },
   {
     name: 'DeeVid AI Challenge',
@@ -550,7 +550,7 @@ export const craftCanyonExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your video or still frame',
     },
-    coordinates: { x: 1060, y: 640 },
+    coordinates: { x: 1160, y: 675 },
   },
   {
     name: 'Gucci x Snap La Famiglia',
@@ -567,7 +567,7 @@ export const craftCanyonExperiences: Experience[] = [
       label: 'Upload your La Famiglia result',
     },
     bonus: undefined,
-    coordinates: { x: 1080, y: 700 },
+    coordinates: { x: 1110, y: 760 },
   },
 ];
 
@@ -590,7 +590,7 @@ export const adaptabilityDunesExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your list',
     },
-    coordinates: { x: 860, y: 290 },
+    coordinates: { x: 785, y: 285 },
   },
   {
     name: 'Video + Quiz',
@@ -608,7 +608,7 @@ export const adaptabilityDunesExperiences: Experience[] = [
       type: 'attachment',
       label: 'Upload your reflection',
     },
-    coordinates: { x: 880, y: 310 },
+    coordinates: { x: 880, y: 225 },
   },
   {
     name: 'Lovable',
@@ -629,7 +629,7 @@ export const adaptabilityDunesExperiences: Experience[] = [
       label: 'Upload your screenshot',
     },
     bonus: undefined,
-    coordinates: { x: 900, y: 270 },
+    coordinates: { x: 945, y: 265 },
   },
 ];
 

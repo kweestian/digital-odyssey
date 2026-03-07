@@ -47,6 +47,8 @@ before_script:
 
 deploy_staging:
   stage: deploy_staging
+  environment:
+    name: staging
   before_script:
     ##
     ## Install ssh-agent if not already installed, it is required by Docker.
@@ -100,6 +102,8 @@ deploy_staging:
 
 deploy_production:
   stage: deploy_production
+  environment:
+    name: production
   before_script:
     ##
     ## Install ssh-agent if not already installed, it is required by Docker.

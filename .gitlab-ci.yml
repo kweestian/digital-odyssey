@@ -47,6 +47,8 @@ before_script:
 
 deploy_staging:
   stage: deploy_staging
+  variables:
+    APP_ENV: staging
   environment:
     name: staging
   before_script:
@@ -102,6 +104,8 @@ deploy_staging:
 
 deploy_production:
   stage: deploy_production
+  variables:
+    APP_ENV: production
   environment:
     name: production
   before_script:

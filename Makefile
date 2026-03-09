@@ -2,6 +2,8 @@
 create-env: ## inject variables from gitlab context to docker
 	echo "NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}" > .env;
 	echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}" >> .env;
+	echo "APP_ENV=$${APP_ENV:-staging}" >> .env;
+	echo "NEXT_PUBLIC_APP_ENV=$${APP_ENV:-staging}" >> .env;
 
 
 .PHONY: build-development

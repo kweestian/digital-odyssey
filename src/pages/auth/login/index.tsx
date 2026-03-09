@@ -41,7 +41,10 @@ const Login: NextPageWithLayout = () => {
     setLoading(true);
     try {
       const { error: ssoError, data: ssoData } = await supabase.auth.signInWithSSO({
-        domain: 'kering.com',
+        domain:
+          process.env.APP_ENV === 'production'
+            ? 'learning-odyssey.kering.com'
+            : 'digital-odyssey-staging.enverselabs.com',
       });
 
       if (ssoError) {
